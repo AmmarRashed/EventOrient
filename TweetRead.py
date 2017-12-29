@@ -8,7 +8,7 @@ from tweepy.streaming import StreamListener
 import socket
 import pickle
 MY_TWITTER_ID = "291122559"
-sehirians_twitter_ids = pickle.load(open("datasets/sehirians_twitter_ids.json","rb"))+[MY_TWITTER_ID]
+sehirians_twitter_ids = pickle.load(open("datasets/sehirians_twitter_ids.pickl","rb"))+[MY_TWITTER_ID]
 
 # consumer_key = os.environ['TWITTER_CONSUMER_KEY']
 # consumer_secret = os.environ['TWITTER_CONSUMER_SECRET']
