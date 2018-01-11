@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ML_Analysis/__init__.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py" afterPath="$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py" />
+      <change beforePath="$PROJECT_DIR$/SparkDemo.py" afterPath="$PROJECT_DIR$/SparkDemo.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,17 +15,17 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Sehir_Network_Analysis$AdaptiveOnlineClustering.coverage" NAME="AdaptiveOnlineClustering Coverage Results" MODIFIED="1515160685285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ML_Analysis" />
+    <SUITE FILE_PATH="coverage/Sehir_Network_Analysis$TweetRead.coverage" NAME="TweetRead Coverage Results" MODIFIED="1515178474875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sehir_Network_Analysis$SparkDemo.coverage" NAME="SparkDemo Coverage Results" MODIFIED="1515178477404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AdaptiveOnlineClustering.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="68" lean-forward="true" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="86" column="31" lean-forward="true" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,6 +62,12 @@
       <find>cos_sim</find>
       <find>root_similarity</find>
       <find>print</find>
+      <find>ammar</find>
+      <find>ammarrashed</find>
+      <find>rdd</find>
+      <find>RDD</find>
+      <find>b</find>
+      <find>self.clusters</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -74,7 +80,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/TweetsListener.py" />
-        <option value="$PROJECT_DIR$/SparkDemo.py" />
         <option value="$PROJECT_DIR$/tweeql_users.py" />
         <option value="$PROJECT_DIR$/rittman.py" />
         <option value="$PROJECT_DIR$/cognitive_class.py" />
@@ -85,6 +90,7 @@
         <option value="$PROJECT_DIR$/AdaptiveOnlineClustering.py" />
         <option value="$PROJECT_DIR$/TweetRead.py" />
         <option value="$PROJECT_DIR$/ML_Analysis/__init__.py" />
+        <option value="$PROJECT_DIR$/SparkDemo.py" />
         <option value="$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py" />
       </list>
     </option>
@@ -96,10 +102,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="292" />
-    <option name="y" value="24" />
-    <option name="width" value="1400" />
-    <option name="height" value="1028" />
+    <option name="x" value="258" />
+    <option name="y" value="-4" />
+    <option name="width" value="1398" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -116,7 +122,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,16 +130,11 @@
               <item name="Sehir_Network_Analysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sehir_Network_Analysis" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Sehir_Network_Analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sehir_Network_Analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="ML_Analysis" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -153,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.AdaptiveOnlineClustering">
+  <component name="RunManager" selected="Python.SparkDemo">
     <configuration name="AdaptiveOnlineClustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -258,9 +259,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.AdaptiveOnlineClustering" />
-        <item index="1" class="java.lang.String" itemvalue="Python.SparkDemo" />
-        <item index="2" class="java.lang.String" itemvalue="Python.TweetRead" />
+        <item index="0" class="java.lang.String" itemvalue="Python.SparkDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Python.TweetRead" />
+        <item index="2" class="java.lang.String" itemvalue="Python.AdaptiveOnlineClustering" />
         <item index="3" class="java.lang.String" itemvalue="Python.toptal_spark" />
         <item index="4" class="java.lang.String" itemvalue="Python.toptal_reader" />
       </list>
@@ -292,17 +293,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="292" y="24" width="1865" height="1092" extended-state="6" />
+    <frame x="258" y="-4" width="1865" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29153606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38010472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30820033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2344524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -341,13 +342,31 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
+    <entry file="file://$PROJECT_DIR$/TweetRead.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkDemo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TweetRead.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkDemo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -355,9 +374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -365,9 +381,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -375,9 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
           <caret line="71" column="4" lean-forward="false" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,36 +597,40 @@
     <entry file="file://$PROJECT_DIR$/tweets/1514545370.021620/_SUCCESS" />
     <entry file="file://$PROJECT_DIR$/tweets/1514545370.021620/._SUCCESS.crc" />
     <entry file="file://$PROJECT_DIR$/tweets/1514545363.238660/._SUCCESS.crc" />
-    <entry file="file://$PROJECT_DIR$/SparkDemo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AdaptiveOnlineClustering.py" />
-    <entry file="file://$PROJECT_DIR$/TweetRead.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ML_Analysis/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.5/dist-packages/pyspark/streaming/dstream.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="608" column="6" lean-forward="false" selection-start-line="608" selection-start-column="0" selection-end-line="608" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SparkDemo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TweetRead.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="68" lean-forward="true" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="86" column="31" lean-forward="true" selection-start-line="86" selection-start-column="31" selection-end-line="86" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

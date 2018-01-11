@@ -35,7 +35,13 @@ lines = ssc.socketTextStream(IP, Port)
 # because that is the name of the directory in which the final part-00000 file is saved.
 # We use time.time() to make sure there is always a newly created directory, otherwise
 # it will throw an Exception.
-lines.foreachRDD(lambda rdd: rdd.filter(filter_tweets).coalesce(1).saveAsTextFile("./tweets/%f" % time.time()))
+# lines.foreachRDD(lambda rdd: rdd.filter(filter_tweets).coalesce(1).saveAsTextFile("./tweets/%f" % time.time()))
+
+def analyze(tweet):
+    print(tweet)
+
+
+lines.foreachRDD(lambda rdd: analyze(rdd))
 
 # You must start the Spark StreamingContext, and await process termination…
 ssc.start()

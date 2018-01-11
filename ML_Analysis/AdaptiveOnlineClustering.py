@@ -25,7 +25,6 @@ class Cluster:
         """
         return self.cos_sim(v1, self.cluster_vector)
 
-
     def get_top_n(self, n):
         """
         :param n: number of most similar vectors
@@ -66,7 +65,7 @@ class AdaptiveOnlineClustering:
         self.vector_size = vector_size
         self.turkish_stemmer = TurkishStemmer()
         self.similarity_threshold = similarity_threshold
-        self.clusters = list()
+        self.clusters = dict()
 
     def add(self, text, language="en", translate=True, stem=False):
         self.add_(self.vectorize(text, language, translate=translate, stem=stem))
@@ -74,7 +73,7 @@ class AdaptiveOnlineClustering:
     def add_(self, vector):
         highest_similarity = 0
         assigned_cluster = None
-        for cluster in range(len(self.clusters)):
+        for cluster in self.clusters:
             sim = self.clusters[cluster].root_similarity(vector)
             if sim > highest_similarity:
                 highest_similarity = sim
@@ -84,7 +83,13 @@ class AdaptiveOnlineClustering:
         else:
             new_cluster = Cluster()
             new_cluster.add(vector)
-            self.clusters.append(new_cluster)
+            self.clusters[len(self.clusters)] = new_cluster
+        self._update_clusters()
+
+    def _update_clusters(self):
+        for cluster in self.clusters:
+            if len(self.clusters[cluster].vectors) < 1:
+                del self.clusters[cluster]
 
     def vectorize(self, text, language, translate=True, stem=False):
         blob = self.clean(text, language, translate=translate, stem=stem)
@@ -109,7 +114,7 @@ class AdaptiveOnlineClustering:
             if stem:
                 text= ' '.join([self.turkish_stemmer.stem(w) for w in text.split()])
         blob = TextBlob(text)
-        if language != "en" and translate:
+        if translate and language != "en":
             blob = blob.translate(to="en")
         text = str(blob)
         text = re.sub(r"[^A-Za-z0-9^,!.\/'+-=]", " ", text)
