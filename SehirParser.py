@@ -60,7 +60,7 @@ class SehirParser:
             print(self.counter, "out of ", self.twitter_users_count)
         return sehir_matches
 
-    def filter_matches_by_threshold(self, matches_dict, threshold=0.85):
+    def filter_matches_by_threshold(self, matches_dict, threshold=85):
         filtered_dict = dict()
         for twitter_screen_name, matches in matches_dict.items():
             filtered = [(match, score) for match, score in matches if score > threshold]
@@ -115,23 +115,36 @@ class SehirParser:
                 return
             connection = psycopg2.connect('dbname=%s host=%s user=%s password=%s'%(self.sql_dbname, self.sqlhost, self.sqluser, self.sqlpass))
 
-            self.twitter_users = pd.read_sql("SELECT * FROM twitter_user", connection)
+            self.twitter_users = pd.read_sql("SELECT * FROM twitter_user", connection)\
+                .rename(columns={'id': cols["id"],
+                                 'name': cols["name"],
+                                 'description': 'profile_description',
+                                 'screen_name': cols['screen_name']})
+            self.cols = cols
             self.user_connections = pd.read_sql("SELECT * FROM twitter_connection", connection).drop('id', axis=1)
         else:
-            self.twitter_users = pd.read_csv(self.db_path).rename(columns=cols)
+            try:
+                self.twitter_users = pd.read_csv(self.db_path).rename(columns=cols)
+            except:
+                df = pd.read_csv(open("datasets/tw_users.csv", 'rU'), encoding='utf-8', engine='c')
+                df["GUID"] = df["GUID.1"]
+                self.twitter_users = df.drop("GUID.1", axis=1)
+                self.twitter_users.rename(columns=cols, inplace=True)
 
-        self.clean_twitter_users()
+            self.clean_twitter_users()
 
         self.twitter_users_count = len(self.twitter_users)
 
     def clean_twitter_users(self, min_len=5, junk_replacement=np.NaN):
         self.twitter_users["cleaned_twitter_name"] = self.twitter_users[self.cols["name"]].apply(
             lambda x: self.clean(x, min_len, junk_replacement))
-        self.twitter_users = self.twitter_users[self.twitter_users.full_name != np.NaN]
+        if self.db_path is None:
+            self.twitter_users = self.twitter_users[self.twitter_users.full_name != np.NaN]
+        else:
+            self.twitter_users = self.twitter_users[self.twitter_users.cleaned_twitter_name != np.NaN]
 
-    def get_sehir_matches_df(self, threshold=0.85, limit=1, min_len=5, junk_replacement=np.NaN):
+    def get_sehir_matches_df(self, threshold=85, limit=1):
         self.counter = 0
-        self.clean_twitter_users()
         if self.db_path is None and None in [self.sql_dbname, self.sqlhost, self.sqluser, self.sqlpass]:
             warnings.warn("Missing sql credentials. Call connect_db with the right credentials")
             return
@@ -144,3 +157,7 @@ class SehirParser:
 # cols = {"id":"id", "name":"full_name", "screen_name":"full_name"}
 # s = SehirParser('datasets/contacts.csv', "datasets/fb_users_toy.csv", cols)
 # merged, sehir_matches_df = s.get_sehir_matches_df()
+
+
+cols = {"id":"GUID", "name":"cleaned_twitter_name", "screen_name":"twitter_screen_name"}
+fb_sp = SehirParser('datasets/contacts.csv', "datasets/tw_users.csv", cols)
