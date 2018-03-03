@@ -125,7 +125,7 @@
                     });
             })
             .on("mouseout",function(d){
-                d3.select(this).style("r",10);
+                d3.select(this).style("r", function(d){return Math.max(d.degree/2,5);});
                 d3.selectAll(".focus").remove();
             });
 
@@ -145,7 +145,7 @@
         .attr('y2', d => d.target.y);
 
             node
-                .attr("r", 10)
+                .attr("r", function(d){return Math.max(d.degree/2,5);})
                 .style("fill", function(d){return color(d.lang);})
                 .style("stroke", "#969696")
                 .style("stroke-width","1px")
