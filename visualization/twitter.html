@@ -17,17 +17,31 @@
 
 <script>
 
-    d3.select("svg").attr("width", window.screen.width*5)
-                    .attr("height", window.screen.height*10);
+    d3.select("svg").attr("width", window.screen.width-80)
+        .attr("height", window.screen.height-150);
+
+    // d3.select("svg").attr("width", 960)
+    //     .attr("height", 500);
 
     const overhead = ["index","x","y","vy","vx"];
 
-    var svg = d3.select("svg"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height");
+    var svg2 = d3.select("svg"),
+        width = +svg2.attr("width"),
+        height = +svg2.attr("height"),
+        transform = d3.zoomIdentity;
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
 
+    var svg = svg2.append("g");
+
+    svg2.call(d3.zoom()
+        .scaleExtent([1 / 4, 8])
+        .on("zoom", zoomed));
+
+
+    function zoomed() {
+        svg.attr("transform", d3.event.transform);
+    }
 
 
     var simulation = d3.forceSimulation()

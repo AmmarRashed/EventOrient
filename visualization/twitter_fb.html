@@ -17,16 +17,31 @@
 
 <script>
 
-    d3.select("svg").attr("width", window.screen.width*5)
-                    .attr("height", window.screen.height*10);
+  d3.select("svg").attr("width", window.screen.width-80)
+                  .attr("height", window.screen.height-150);
+
+    // d3.select("svg").attr("width", 960)
+    //                 .attr("height", 500);
+
 
     const overhead = ["index","x","y","vy","vx"];
 
-    var svg = d3.select("svg"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height");
+    var svg2 = d3.select("svg"),
+        width = +svg2.attr("width"),
+        height = +svg2.attr("height"),
+        transform = d3.zoomIdentity;
+
+    svg2.call(d3.zoom()
+        .scaleExtent([1 / 4, 8])
+        .on("zoom", zoomed));
+
+    var svg = svg2.append("g");
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+    function zoomed() {
+        svg.attr("transform", d3.event.transform);
+    }
 
 
     var simulation = d3.forceSimulation()
@@ -89,8 +104,8 @@
                     "eigenvector_centrality: "+d.eigenvector_centrality];
                 // const nodeData =    [d.name, d.id];
                 focus.append('rect')
-                    .attr('height', 180*5)
-                    .attr('width', 300*6)
+                    .attr('height', 180*4)
+                    .attr('width', 300*4)
                     .attr("x", cx)
                     .attr("y", cy);
                 var x = 0.0;
@@ -102,7 +117,7 @@
                             .attr('y', cy+10)
                             .attr('dy', x + 'em')
                             .attr('dx', '.5em')
-                            .style("font-size", 40)
+                            .style("font-size", 30)
                             .text(metric +": "+d[metric]);
                     }
                 }
