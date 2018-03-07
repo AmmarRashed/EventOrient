@@ -17,8 +17,11 @@ def twitter_connections(request):
     return render_to_response("twitter_connections.html", {'twitter_connections_json':json.dumps(twitter_connections_json)})
 
 
+def load_twitter_connections_json(request):
+    return JsonResponse(twitter_connections_json, safe=False)
+
 def twitter_fb(request):
-    return JsonResponse(list(twitter_fb_json), safe=False)
+    return JsonResponse(twitter_fb_json, safe=False)
 
 def twitter_fb_connections(request):
     return render_to_response("twitter_fb.html", {})

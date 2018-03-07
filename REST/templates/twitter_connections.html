@@ -11,21 +11,37 @@
 <svg width="960" height="600"></svg>
 <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
 
-<body>
-{% load staticfiles %}
-<script type="text/javascript">
 
-    d3.select("svg").attr("width", window.screen.width*5)
-                    .attr("height", window.screen.height*10);
+
+<body>
+
+<script>
+
+    d3.select("svg").attr("width", window.screen.width-80)
+        .attr("height", window.screen.height-150);
+
+    // d3.select("svg").attr("width", 960)
+    //     .attr("height", 500);
 
     const overhead = ["index","x","y","vy","vx"];
 
-    var svg = d3.select("svg"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height");
+    var svg2 = d3.select("svg"),
+        width = +svg2.attr("width"),
+        height = +svg2.attr("height"),
+        transform = d3.zoomIdentity;
 
     var color = d3.scaleOrdinal(d3.schemeCategory10);
 
+    var svg = svg2.append("g");
+
+    svg2.call(d3.zoom()
+        .scaleExtent([1 / 4, 8])
+        .on("zoom", zoomed));
+
+
+    function zoomed() {
+        svg.attr("transform", d3.event.transform);
+    }
 
 
     var simulation = d3.forceSimulation()
@@ -33,8 +49,7 @@
         .force("charge", d3.forceManyBody().strength(-600))
         .force("center", d3.forceCenter(width/2, height/2));
 
-
-    d3.json({{ twitter_connections_json }}, function(error, graph){
+    d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, graph) {
     // d3.json("graphFile.json", function(error, graph){
         if (error) throw error;
 
