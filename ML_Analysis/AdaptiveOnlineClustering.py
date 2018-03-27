@@ -1,14 +1,13 @@
 import numpy as np
 from heapq import heappush, nlargest
-
+import warnings
 import unicodedata, re
 
 import warnings
 
 from TurkishStemmer import TurkishStemmer
 from textblob import TextBlob
-
-import gensim
+from textblob.exceptions import NotTranslated
 
 
 class Cluster:
@@ -47,8 +46,11 @@ class Cluster:
             # self.vectors_sim.append((self.root_similarity(vector), vector))
 
     def add(self, vector):
-        self.vectors.append(vector)
-        self.update_cluster_vector()
+        try:
+            self.vectors.append(vector)
+            self.update_cluster_vector()
+        except:
+            warnings.warn("An error occured during updating the cluster metrics. Last changes reveresed.")
 
     def __hash__(self):
         h = hash(str(self.cluster_vector))
@@ -68,7 +70,11 @@ class AdaptiveOnlineClustering:
         self.clusters = dict()
 
     def add(self, text, language="en", translate=True, stem=False):
-        self.add_(self.vectorize(text, language, translate=translate, stem=stem))
+        vec = self.vectorize(text, language, translate=translate, stem=stem)
+        if vec is None:
+            warnings.warn("Invalid text. Document skipped")
+        else:
+            self.add_(vec)
 
     def add_(self, vector):
         highest_similarity = 0
@@ -93,13 +99,15 @@ class AdaptiveOnlineClustering:
 
     def vectorize(self, text, language, translate=True, stem=False):
         blob = self.clean(text, language, translate=translate, stem=stem)
+        if not blob:
+            return
         vector = np.zeros(self.vector_size)
         if len(blob.words) < 1:
             return None
 
         for word in blob.words:
             try:
-                if language == "en":
+                if language == "en" or translate:
                     vector += self.en_w2v[word]
                 else:
                     vector += self.tr_w2v[word]
@@ -110,12 +118,15 @@ class AdaptiveOnlineClustering:
 
     def clean(self, text, language="en", translate=True, stem=False):
         text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').lower().decode("ascii")
-        if language == "tr":
-            if stem:
-                text= ' '.join([self.turkish_stemmer.stem(w) for w in text.split()])
+        # if language == "tr":
+        #     if stem:
+        #         text= ' '.join([self.turkish_stemmer.stem(w) for w in text.split()])
         blob = TextBlob(text)
         if translate and language != "en":
-            blob = blob.translate(to="en")
+            try:
+                blob = blob.translate(to="en")
+            except NotTranslated:
+                return
         text = str(blob)
         text = re.sub(r"[^A-Za-z0-9^,!.\/'+-=]", " ", text)
         text = re.sub(r'[0-9]', '#', text)
