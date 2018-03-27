@@ -5,16 +5,22 @@ import unicodedata, re
 
 try:
     from sklearn.metrics.pairwise import cosine_similarity
-
     usesklearn = True
 except ImportError:
     usesklearn = False
+try:
+    import networkx as nx
+except ImportError:
+    warnings.warn("Could not import networkx. Constructing cluster network is not available")
+    pass
 
-import warnings
+from itertools import product
 
 from TurkishStemmer import TurkishStemmer
 from textblob import TextBlob
 from textblob.exceptions import NotTranslated
+
+import gensim, pickle
 
 
 class Cluster:
@@ -189,4 +195,20 @@ class AdaptiveOnlineClustering:
         text = re.sub(r" u s ", " american ", text)
         return TextBlob(text)
 
-
+    def get_network_graph(self, print_prob=0.0):
+        network_dict = dict()  # {(from,to): weight}
+        for c in self.clusters.values():
+            for f, t in product(c.authors, c.authors):
+                if f == t: continue
+                if (f, t) in network_dict:
+                    network_dict[(f, t)] += 1
+                elif (t, f) in network_dict:
+                    network_dict[(t, f)] += 1
+                else:
+                    network_dict[(f, t)] = 1
+        g = nx.Graph()
+        for (f, t), weight in network_dict.items():
+            if np.random.choice(a=[False, True], p=[1 - print_prob, print_prob]):
+                print(f, t, weight)
+            g.add_edge(f, t, weight=weight)
+        return g
