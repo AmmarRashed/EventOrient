@@ -3,6 +3,13 @@ from heapq import heappush, nlargest
 import warnings
 import unicodedata, re
 
+try:
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    usesklearn = True
+except ImportError:
+    usesklearn = False
+
 import warnings
 
 from TurkishStemmer import TurkishStemmer
@@ -11,10 +18,14 @@ from textblob.exceptions import NotTranslated
 
 
 class Cluster:
-    def __init__(self):
+    def __init__(self, samples=5, keep_authors_status=False):
         self.cluster_vector = None
         self.vectors_sim = None  # [(similarity, np.zeros(vector_size))]
         self.vectors = list()  # [list of cluster vectors]
+        self.authors = dict()
+        self.keep_authors_status = keep_authors_status
+        self.samples = [None for i in range(samples)]
+        self._nonesamples = samples - 1
 
     def root_similarity(self, v1):
         """
@@ -24,7 +35,7 @@ class Cluster:
         """
         return self.cos_sim(v1, self.cluster_vector)
 
-    def get_top_n(self, n):
+    def get_top_n(self, n=5):
         """
         :param n: number of most similar vectors
         :return: most similar n vectors to that cluster
@@ -36,7 +47,10 @@ class Cluster:
 
     @staticmethod
     def cos_sim(v1, v2):
-        return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+        if usesklearn:
+            return np.float64(cosine_similarity(np.atleast_2d(v1), np.atleast_2d(v2)))
+        else:
+            return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
     def update_cluster_vector(self):
         self.vectors_sim = list()
@@ -44,13 +58,31 @@ class Cluster:
         for vector in self.vectors:
             heappush(self.vectors_sim, (self.root_similarity(vector), vector))
             # self.vectors_sim.append((self.root_similarity(vector), vector))
+        assert self.cluster_vector is not None
 
-    def add(self, vector):
-        try:
-            self.vectors.append(vector)
-            self.update_cluster_vector()
-        except:
-            warnings.warn("An error occured during updating the cluster metrics. Last changes reveresed.")
+    def addtext(self, text, author):
+        if self.keep_authors_status and author:
+            self.authors.setdefault(author, list())
+            self.authors[author].append(text)
+        else:
+            self.authors.setdefault(author, 0)
+            self.authors[author] += 1
+
+        if self._nonesamples >= 0:
+            self.samples[self._nonesamples] = text
+            self._nonesamples -= 1
+        elif np.random.choice([True, False]):
+            self.samples[np.random.randint(0, len(self.samples))] = text
+
+    def add(self, vector, text, author):
+        #         try:
+        self.vectors.append(vector)
+        self.addtext(text, author)
+        self.update_cluster_vector()
+
+    #         except:
+    #             warnings.warn("An error occured during updating the cluster metrics. Last changes reveresed.")
+    #             return True
 
     def __hash__(self):
         h = hash(str(self.cluster_vector))
@@ -61,22 +93,23 @@ class Cluster:
 
 class AdaptiveOnlineClustering:
 
-    def __init__(self, en_w2v, tr_w2v, similarity_threshold=0.75, vector_size=300):
+    def __init__(self, en_w2v, tr_w2v, similarity_threshold=0.75, cluster_nsamples=5, vector_size=300):
         self.en_w2v = en_w2v
         self.tr_w2v = tr_w2v
         self.vector_size = vector_size
         self.turkish_stemmer = TurkishStemmer()
         self.similarity_threshold = similarity_threshold
+        self.cluster_nsamples = cluster_nsamples
         self.clusters = dict()
 
-    def add(self, text, language="en", translate=True, stem=False):
+    def add(self, text, language="en", author=None, translate=True, stem=False):
         vec = self.vectorize(text, language, translate=translate, stem=stem)
         if vec is None:
             warnings.warn("Invalid text. Document skipped")
         else:
-            self.add_(vec)
+            self._add(vec, text, author)
 
-    def add_(self, vector):
+    def _add(self, vector, text, author):
         highest_similarity = 0
         assigned_cluster = None
         for cluster in self.clusters:
@@ -85,10 +118,10 @@ class AdaptiveOnlineClustering:
                 highest_similarity = sim
                 assigned_cluster = cluster
         if highest_similarity >= self.similarity_threshold:
-            self.clusters[assigned_cluster].add(vector)
+            self.clusters[assigned_cluster].add(vector, text, author)
         else:
-            new_cluster = Cluster()
-            new_cluster.add(vector)
+            new_cluster = Cluster(self.cluster_nsamples)
+            added = new_cluster.add(vector, text, author)
             self.clusters[len(self.clusters)] = new_cluster
         self._update_clusters()
 
