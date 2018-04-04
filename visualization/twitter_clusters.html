@@ -33,7 +33,6 @@
     var color = d3.scaleOrdinal(d3.schemeCategory10);
 
     var svg = svg2.append("g");
-
     svg2.call(d3.zoom()
         .scaleExtent([1/2, 64])
         .on("zoom", zoomed));
@@ -42,6 +41,20 @@
     function zoomed() {
         svg.attr("transform", d3.event.transform);
     }
+
+    svg.append('defs').append('marker')
+        .attrs({'id':'arrowhead',
+            'viewBox':'-0 -5 10 10',
+            'refX':13,
+            'refY':0,
+            'orient':'auto',
+            'markerWidth':4,
+            'markerHeight':10,
+            'xoverflow':'visible'})
+        .append('svg:path')
+        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+        .attr('fill', '#999')
+        .style('stroke','none');
 
 
     var simulation = d3.forceSimulation()
@@ -60,9 +73,11 @@
 
         var link = svg.append("g")
             .style("stroke","#aaa")
+            .style("stroke-opacity","0.8")
             .selectAll("line")
             .data(graph.links)
-            .enter().append("line");
+            .enter().append("line")
+            .attr('marker-end','url(#arrowhead)');
 
 
 
@@ -218,8 +233,7 @@
             node
                 .attr("r", node_scale)
                 .style("fill", function(d){return color(d.language);})
-                .style("stroke", "#969696")
-                .style("stroke-width","0.02px")
+                .style("stroke", "none")
                 .attr('cx', d => d.x)
         .attr('cy', d => d.y);
 
@@ -228,7 +242,7 @@
                 .attr("y", function(d){return d.y;})
                 .style("font-size", "1px")
                 .style("fill","#4393c3")
-                .text(function(d){return d.name;})
+                .text(function(d){return d.twitter_name;})
         }
 
 

@@ -42,7 +42,19 @@
     function zoomed() {
         svg.attr("transform", d3.event.transform);
     }
-
+    svg.append('defs').append('marker')
+        .attrs({'id':'arrowhead',
+            'viewBox':'-0 -5 10 10',
+            'refX':13,
+            'refY':0,
+            'orient':'auto',
+            'markerWidth':10,
+            'markerHeight':10,
+            'xoverflow':'visible'})
+        .append('svg:path')
+        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+        .attr('fill', '#999')
+        .style('stroke','none');
 
     var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function (d) {return d.id;}))
@@ -60,9 +72,11 @@
 
         var link = svg.append("g")
             .style("stroke","#aaa")
+            .style("stroke-opacity","0.8")
             .selectAll("line")
             .data(graph.links)
-            .enter().append("line");
+            .enter().append("line")
+            .attr('marker-end','url(#arrowhead)');
 
 
 
@@ -72,7 +86,6 @@
             .selectAll("circle")
             .data(graph.nodes)
             .enter().append("circle")
-            .attr("r", 1)
         // ;
             .call(d3.drag()
                 .on("start", dragstarted)
@@ -91,18 +104,18 @@
 
         svg.selectAll("circle")
             .on("mouseover", function(d){
-                d3.select(this).style("r",100);
+                d3.select(this).style("r",node_over);
 
                 const focus = svg.append('g')
                     .attr('class', 'focus');
                 const cx = d3.select(this).attr("cx");
                 const cy = d3.select(this).attr("cy");
-                const nodeData = ["Name: "+d.name,
-                    "Degree: "+d.degree,
-                    "parity: "+d.parity,
-                    "betweenness: "+d.betweenness,
-                    "closeness_centrality: "+d.closeness_centrality,
-                    "eigenvector_centrality: "+d.eigenvector_centrality];
+                // const nodeData = ["Name: "+d.name,
+                //     "Degree: "+d.degree,
+                //     "parity: "+d.parity,
+                //     "betweenness: "+d.betweenness,
+                //     "closeness_centrality: "+d.closeness_centrality,
+                //     "eigenvector_centrality: "+d.eigenvector_centrality];
                 // const nodeData =    [d.name, d.id];
                 focus.append('rect')
                     .attr('height', 300*5)
@@ -139,7 +152,7 @@
                     });
             })
             .on("mouseout",function(d){
-                d3.select(this).style("r", function(d){return Math.max(d.degree/2,5);});
+                d3.select(this).style("r", node_scale);
                 d3.selectAll(".focus").remove();
             });
 
@@ -159,10 +172,9 @@
         .attr('y2', d => d.target.y);
 
             node
-                .attr("r", function(d){return Math.max(d.degree/2,5);})
+                .attr("r", node_scale)
                 .style("fill", function(d){return color(d.lang);})
-                .style("stroke", "#969696")
-                .style("stroke-width","1px")
+                .style("stroke", "none")
                 .attr('cx', d => d.x)
         .attr('cy', d => d.y);
 
@@ -171,13 +183,14 @@
                 .attr("y", function(d){return d.y;})
                 .style("font-size", "10px")
                 .style("fill","#4393c3")
-                .text(function(d){return d.sehir_matches;})
+                .text(function(d){return d.twitter_screen_name;})
         }
 
 
     });
 
-
+    function node_scale(d){return Math.max(d.degree/2,5);}
+    function node_over(d){return Math.max(d.degree/2,10)*1.5;}
 
     function dragstarted(d){
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
