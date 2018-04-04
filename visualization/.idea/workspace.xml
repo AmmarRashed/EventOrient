@@ -27,8 +27,8 @@
       <file leaf-file-name="twitter_clusters.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="171" column="38" lean-forward="true" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="38" />
+            <state relative-caret-position="230">
+              <caret line="105" column="42" lean-forward="true" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -71,7 +71,6 @@
       <find>call</find>
       <find>circles</find>
       <find>dragged</find>
-      <find>circle</find>
       <find>svg</find>
       <find>font</find>
       <find>descri</find>
@@ -93,6 +92,9 @@
       <find>stroke</find>
       <find>out</find>
       <find>mousover</find>
+      <find>circle</find>
+      <find>link_weight</find>
+      <find>weight</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -214,12 +216,12 @@
       <workItem from="1520374608159" duration="556000" />
       <workItem from="1520375243202" duration="5552000" />
       <workItem from="1520620529378" duration="646000" />
-      <workItem from="1522834198875" duration="6096000" />
+      <workItem from="1522834198875" duration="9275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16336000" />
+    <option name="totallyTimeSpent" value="19515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="309" y="-4" width="1865" height="1092" extended-state="6" />
@@ -400,8 +402,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="171" column="38" lean-forward="true" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="38" />
+        <state relative-caret-position="230">
+          <caret line="105" column="42" lean-forward="true" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
           <folding />
         </state>
       </provider>
