@@ -5,6 +5,7 @@ import unicodedata, re
 
 try:
     from sklearn.metrics.pairwise import cosine_similarity
+
     usesklearn = True
 except ImportError:
     usesklearn = False
@@ -22,6 +23,14 @@ from textblob.exceptions import NotTranslated
 
 import gensim, pickle
 
+
+class ComparableVector(object):
+    def __init__(self, score, vector):
+        self.score = score
+        self.vector = vector
+
+    def __gt__(self, other):
+        return self.score>other.score
 
 class Cluster:
     def __init__(self, samples=5, keep_authors_status=False):
@@ -56,15 +65,16 @@ class Cluster:
         if usesklearn:
             return np.float64(cosine_similarity(np.atleast_2d(v1), np.atleast_2d(v2)))
         else:
-            return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+            return np.float64(np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2)))
 
     def update_cluster_vector(self):
         self.vectors_sim = list()
         self.cluster_vector = np.mean(np.array(self.vectors), axis=0)
         for vector in self.vectors:
-            heappush(self.vectors_sim, (self.root_similarity(vector), vector))
+            heappush(self.vectors_sim, ComparableVector(self.root_similarity(vector), vector))
             # self.vectors_sim.append((self.root_similarity(vector), vector))
-        assert self.cluster_vector is not None
+
+    #         assert self.cluster_vector is not None
 
     def addtext(self, text, author):
         if self.keep_authors_status and author:

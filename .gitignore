@@ -1,2 +1,5 @@
 *.bin
 *.vec
+cr
+*.pkl
+twitter_cluster_graph.json
