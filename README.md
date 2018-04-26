@@ -1,4 +1,4 @@
-# Sehir_Network_Analysis
+# EventOrient
 
 https://ammarrashed.github.io/Sehir_Network_Analysis/visualization/twitter.html
 
