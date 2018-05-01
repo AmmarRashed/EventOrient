@@ -34,7 +34,7 @@
 
     var svg = svg2.append("g");
     svg2.call(d3.zoom()
-        .scaleExtent([1/2, 64])
+        .scaleExtent([1/8, 64])
         .on("zoom", zoomed));
 
 
@@ -248,10 +248,10 @@
 
     });
 
-    function node_scale(d){return Math.max(d.degree/4,0.2);}
-    function node_over(d){return Math.max(d.degree/4,0.2)*1.5;}
-    function link_weight(d){return Math.max(d.weight/20, 0.1).toString();}
-    function link_over(d){return Math.max(d.weight/20, 0.1)*2.5.toString();}
+    function node_scale(d){return Math.max(d.degree/1.5,0.6);}
+    function node_over(d){return Math.max(d.degree/1.5,0.6)*1.5;}
+    function link_weight(d){return Math.max(d.weight/10, 0.1).toString();}
+    function link_over(d){return Math.max(d.weight/10, 0.1)*2.5.toString();}
 
 
     function dragstarted(d){

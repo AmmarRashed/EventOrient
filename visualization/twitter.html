@@ -17,8 +17,8 @@
 
 <script>
 
-    d3.select("svg").attr("width", window.screen.width-80)
-        .attr("height", window.screen.height-150);
+    d3.select("svg").attr("width", window.screen.width)
+        .attr("height", window.screen.height);
 
     // d3.select("svg").attr("width", 960)
     //     .attr("height", 500);
@@ -30,14 +30,12 @@
         height = +svg2.attr("height"),
         transform = d3.zoomIdentity;
 
-    var color = d3.scaleOrdinal(d3.schemeCategory10);
-
     var svg = svg2.append("g");
+
 
     svg2.call(d3.zoom()
         .scaleExtent([1 / 4, 8])
         .on("zoom", zoomed));
-
 
     function zoomed() {
         svg.attr("transform", d3.event.transform);
@@ -61,9 +59,19 @@
         .force("charge", d3.forceManyBody().strength(-600))
         .force("center", d3.forceCenter(width/2, height/2));
 
+
+
+
     d3.json("twitter_users_graph2.json", function(error, graph){
     // d3.json("graphFile.json", function(error, graph){
         if (error) throw error;
+
+        var colors = [];
+        var i;
+        for (i=0;i<graph.nodes.length; i++){
+            colors.push(getRandomColor());
+        }
+        var color = d3.scaleOrdinal(colors);
 
         graph.links.forEach(function(d){
             d.source = d.source;
@@ -104,6 +112,7 @@
 
         svg.selectAll("circle")
             .on("mouseover", function(d){
+
                 d3.select(this).style("r",node_over);
 
                 const focus = svg.append('g')
@@ -118,8 +127,8 @@
                 //     "eigenvector_centrality: "+d.eigenvector_centrality];
                 // const nodeData =    [d.name, d.id];
                 focus.append('rect')
-                    .attr('height', 300*5)
-                    .attr('width', 300*6)
+                    .attr('height', 300*3.5)
+                    .attr('width', 300*4)
                     .attr("x", cx)
                     .attr("y", cy);
                 var x = 0.0;
@@ -131,7 +140,7 @@
                             .attr('y', cy+10)
                             .attr('dy', x + 'em')
                             .attr('dx', '.5em')
-                            .style("font-size", 80)
+                            .style("font-size", 50)
                             .text(metric +": "+d[metric]);
                     }
                 }
@@ -173,7 +182,7 @@
 
             node
                 .attr("r", node_scale)
-                .style("fill", function(d){return color(d.lang);})
+                .style("fill", function(d){return color(d.community);})
                 .style("stroke", "none")
                 .attr('cx', d => d.x)
         .attr('cy', d => d.y);
@@ -207,6 +216,15 @@
         if (!d3.event.active) simulation.alphaTarget(0);
         d.fx = null;
         d.fy = null;
+    }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
     }
 
 </script>

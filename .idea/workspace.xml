@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ML_Analysis/.ipynb_checkpoints/sample-checkpoint.ipynb" afterPath="$PROJECT_DIR$/ML_Analysis/.ipynb_checkpoints/sample-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/ML_Analysis/sample.ipynb" afterPath="$PROJECT_DIR$/ML_Analysis/sample.ipynb" />
+      <change beforePath="$PROJECT_DIR$/.idea/Sehir_Network_Analysis.iml" afterPath="$PROJECT_DIR$/.idea/Sehir_Network_Analysis.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py" afterPath="$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py" />
+      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tweets_cluster_network-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tweets_cluster_network-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/notebooks/tweets_cluster_network.ipynb" afterPath="$PROJECT_DIR$/notebooks/tweets_cluster_network.ipynb" />
+      <change beforePath="$PROJECT_DIR$/notebooks/visualizing_twitter_followers_networkX.ipynb" afterPath="$PROJECT_DIR$/notebooks/visualizing_twitter_followers_networkX.ipynb" />
+      <change beforePath="$PROJECT_DIR$/visualization/.idea/workspace.xml" afterPath="$PROJECT_DIR$/visualization/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/visualization/twitter_cluster_graph_mini.json" afterPath="$PROJECT_DIR$/visualization/twitter_cluster_graph_mini.json" />
+      <change beforePath="$PROJECT_DIR$/visualization/twitter_clusters.html" afterPath="$PROJECT_DIR$/visualization/twitter_clusters.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +31,8 @@
       <file leaf-file-name="AdaptiveOnlineClustering.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="161" column="30" lean-forward="false" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
+            <state relative-caret-position="554">
+              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -43,8 +51,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>yield</find>
-      <find>loc</find>
       <find>cleaned_twitter</find>
       <find>filtered</find>
       <find>self.match</find>
@@ -73,6 +79,8 @@
       <find>0.</find>
       <find>vectorize</find>
       <find>jobli</find>
+      <find>construct</find>
+      <find>gensim</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -129,7 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,6 +153,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -309,12 +317,12 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
+      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12460733" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27517888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28838745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -496,8 +504,8 @@
     <entry file="file://$PROJECT_DIR$/SehirParser.py" />
     <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="161" column="30" lean-forward="false" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
+        <state relative-caret-position="554">
+          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

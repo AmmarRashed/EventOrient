@@ -205,19 +205,41 @@ class AdaptiveOnlineClustering:
         text = re.sub(r" u s ", " american ", text)
         return TextBlob(text)
 
-    def get_network_graph(self, print_prob=0.0):
+    def get_weight_threshold(self, weights, weight_threshold_std=2):
+        std = np.std(weights)
+        avg = np.mean(weights)
+        return (avg-std*weight_threshold_std, avg+std*weight_threshold_std)
+
+    def get_network_graph(self, weight_threshold=None, directed=False, weight_threshold_std=2, print_prob=0.0):
+        '''
+
+        :param weight_threshold:  (number: minw, number: maxw)
+        :param directed: Boolean
+        :param weight_threshold_std: (number: how many std units can the weight be from the mean)
+        :param print_prob: (probability of printing a connection while being added)
+        :return:
+        '''
         network_dict = dict()  # {(from,to): weight}
         for c in self.clusters.values():
             for f, t in product(c.authors, c.authors):
                 if f == t: continue
                 if (f, t) in network_dict:
                     network_dict[(f, t)] += 1
+                elif directed:
+                    network_dict[(f, t)] = 1
                 elif (t, f) in network_dict:
                     network_dict[(t, f)] += 1
                 else:
                     network_dict[(f, t)] = 1
+
+        if weight_threshold is None:
+            weight_threshold = self.get_weight_threshold(list(network_dict.values), weight_threshold_std)
+
+        minw, maxw = weight_threshold
+
         g = nx.Graph()
         for (f, t), weight in network_dict.items():
+            if weight < minw or weight>maxw: continue
             if np.random.choice(a=[False, True], p=[1 - print_prob, print_prob]):
                 print(f, t, weight)
             g.add_edge(f, t, weight=weight)
