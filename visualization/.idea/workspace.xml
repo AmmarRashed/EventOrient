@@ -26,8 +26,8 @@
       <file leaf-file-name="twitter_clusters.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="-924">
+              <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -35,8 +35,17 @@
       <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="129" column="43" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
+            <state relative-caret-position="625">
+              <caret line="264" column="40" lean-forward="true" selection-start-line="264" selection-start-column="40" selection-end-line="264" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="twitter_users_graph2.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/twitter_users_graph2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -52,26 +61,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>line</find>
-      <find>distance</find>
-      <find>force</find>
-      <find>rect</find>
-      <find>px&quot;</find>
-      <find>stroke</find>
-      <find>out</find>
-      <find>mousover</find>
-      <find>circle</find>
-      <find>link_weight</find>
       <find>weight</find>
       <find>mouseover</find>
       <find>d.degree</find>
       <find>mouseout</find>
-      <find>node_over</find>
       <find>var link</find>
       <find>arrow</find>
       <find>&quot;r&quot;</find>
       <find>stroke-width</find>
-      <find>node</find>
       <find>.name</find>
       <find>mini</find>
       <find>scale</find>
@@ -82,6 +79,18 @@
       <find>writl</find>
       <find>.k</find>
       <find>.transf</find>
+      <find>opacity</find>
+      <find>opacit</find>
+      <find>link</find>
+      <find>link_over</find>
+      <find>line</find>
+      <find>label</find>
+      <find>text</find>
+      <find>node_over</find>
+      <find>node_scale</find>
+      <find>var node</find>
+      <find>node</find>
+      <find>selectAll</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -154,25 +163,25 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.twitter.html (1)">
+    <configuration name="twitter_clusters.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/twitter_clusters.html" />
     <configuration name="twitter_clusters.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/twitter_clusters.html" />
     <configuration name="twitter_fb.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/twitter_fb.html" />
-    <configuration name="twitter_fb.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/twitter_fb.html" />
     <configuration name="twitter.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/twitter.html" />
     <configuration name="twitter.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/twitter.html" />
     <list>
       <item itemvalue="JavaScript Debug.twitter.html" />
       <item itemvalue="JavaScript Debug.twitter.html (1)" />
-      <item itemvalue="JavaScript Debug.twitter_fb.html" />
       <item itemvalue="JavaScript Debug.twitter_fb.html (1)" />
       <item itemvalue="JavaScript Debug.twitter_clusters.html" />
+      <item itemvalue="JavaScript Debug.twitter_clusters.html (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.twitter.html (1)" />
+        <item itemvalue="JavaScript Debug.twitter_clusters.html (1)" />
         <item itemvalue="JavaScript Debug.twitter_clusters.html" />
         <item itemvalue="JavaScript Debug.twitter_fb.html (1)" />
         <item itemvalue="JavaScript Debug.twitter.html" />
-        <item itemvalue="JavaScript Debug.twitter_fb.html" />
       </list>
     </recent_temporary>
   </component>
@@ -198,12 +207,12 @@
       <workItem from="1525171240969" duration="13000" />
       <workItem from="1525171281921" duration="14000" />
       <workItem from="1525171303918" duration="897000" />
-      <workItem from="1525202689802" duration="2946000" />
+      <workItem from="1525202689802" duration="7452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28941000" />
+    <option name="totallyTimeSpent" value="33447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
@@ -398,15 +407,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="-924">
+          <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter_users_graph2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="129" column="43" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
+        <state relative-caret-position="625">
+          <caret line="264" column="40" lean-forward="true" selection-start-line="264" selection-start-column="40" selection-end-line="264" selection-end-column="40" />
         </state>
       </provider>
     </entry>

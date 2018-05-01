@@ -5,8 +5,6 @@
 
 <style>
     body {font-family: 'Times', cursive;}
-
-
 </style>
 <svg width="960" height="600"></svg>
 <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
@@ -16,32 +14,23 @@
 <body>
 
 <script>
-
     d3.select("svg").attr("width", window.screen.width-80)
         .attr("height", window.screen.height-150);
-
     // d3.select("svg").attr("width", 960)
     //     .attr("height", 500);
-
     const overhead = ["index","x","y","vy","vx"];
-
     var svg2 = d3.select("svg"),
         width = +svg2.attr("width"),
         height = +svg2.attr("height"),
         transform = d3.zoomIdentity;
-
     var color = d3.scaleOrdinal(d3.schemeCategory10);
-
     var svg = svg2.append("g");
     svg2.call(d3.zoom()
-        .scaleExtent([1/8, 64])
+        .scaleExtent([1/6, 64])
         .on("zoom", zoomed));
-
-
     function zoomed() {
         svg.attr("transform", d3.event.transform);
     }
-
     svg.append('defs').append('marker')
         .attrs({'id':'arrowhead',
             'viewBox':'-0 -5 10 10',
@@ -55,22 +44,17 @@
         .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
         .attr('fill', '#999')
         .style('stroke','none');
-
-
     var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function (d) {return d.id;}))
-        .force("charge", d3.forceManyBody().strength(-300))
+        .force("charge", d3.forceManyBody().strength(-350))
         .force("center", d3.forceCenter(width/2, height/2));
-
     d3.json("twitter_cluster_graph_mini.json", function(error, graph){
         // d3.json("graphFile.json", function(error, graph){
         if (error) throw error;
-
         graph.links.forEach(function(d){
             d.source = d.source;
             d.target = d.target;
         });
-
         var link = svg.append("g")
             .style("stroke","#aaa")
             .style("stroke-opacity","0.8")
@@ -78,9 +62,6 @@
             .data(graph.links)
             .enter().append("line")
             .attr('marker-end','url(#arrowhead)');
-
-
-
 
         var node = svg.append("g")
             .attr("class","nodes")
@@ -91,7 +72,6 @@
                 .on("start", dragstarted)
                 .on("drag", dragged)
                 .on("end",dragended));
-
         //
         var label = svg.append("g")
             .attr("class","labels")
@@ -100,7 +80,6 @@
             .enter().append("text")
             .attr("class","label");
         // .text(function(d){return d.id;});
-
         svg.selectAll("line")
             .on("mouseover", function(d){
                 d3.select(this).style("stroke-width", link_over);
@@ -141,16 +120,13 @@
                 //     .attr('dy', '1.2em')
                 //     .attr('dx', '0.0em')
                 //     .text("Weight: "+d.weight.toString());
-
                 d3.select('.overlay')
                     .styles({
                         fill: 'none',
                         'pointer-events': 'all'
                     });
-
                 d3.selectAll('.focus')
                     .style('opacity', 0.9);
-
                 d3.selectAll('.focus rect')
                     .styles({
                         fill: '#CFEEF1',
@@ -164,7 +140,6 @@
         svg.selectAll("circle")
             .on("mouseover", function(d){
                 d3.select(this).style("r",node_over);
-
                 const focus = svg.append('g')
                     .attr('class', 'focus');
                 const cx = d3.select(this).attr("cx");
@@ -195,16 +170,13 @@
                             .text(metric +": "+d[metric]);
                     }
                 }
-
                 d3.select('.overlay')
                     .styles({
                         fill: 'none',
                         'pointer-events': 'all'
                     });
-
                 d3.selectAll('.focus')
                     .style('opacity', 0.9);
-
                 d3.selectAll('.focus rect')
                     .styles({
                         fill: '#CFEEF1',
@@ -218,10 +190,8 @@
         simulation
             .nodes(graph.nodes)
             .on("tick",ticked);
-
         simulation.force("link")
             .links(graph.links);
-
         function ticked(){
             link
                 .attr('x1', d => d.source.x)
@@ -229,14 +199,12 @@
         .attr('x2', d => d.target.x)
         .attr('y2', d => d.target.y)
         .style("stroke-width",link_weight);
-
             node
                 .attr("r", node_scale)
                 .style("fill", function(d){return color(d.language);})
                 .style("stroke", "none")
                 .attr('cx', d => d.x)
         .attr('cy', d => d.y);
-
             label
                 .attr("x", function(d){return d.x;})
                 .attr("y", function(d){return d.y;})
@@ -244,33 +212,27 @@
                 .style("fill","#4393c3")
                 .text(function(d){return d.twitter_name;})
         }
-
-
     });
+    function node_scale(d){return Math.max(d.degree,0.8);}
+    function node_over(d){return Math.max(d.degree,0.8)*1.5;}
 
-    function node_scale(d){return Math.max(d.degree/1.5,0.6);}
-    function node_over(d){return Math.max(d.degree/1.5,0.6)*1.5;}
-    function link_weight(d){return Math.max(d.weight/10, 0.1).toString();}
-    function link_over(d){return Math.max(d.weight/10, 0.1)*2.5.toString();}
-
+    function link_weight(d){return Math.max(d.weight/15, 0.15).toString();}
+    function link_over(d){return Math.max(d.weight/15, 0.15)*2.5.toString();}
 
     function dragstarted(d){
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
         d.fx = d.x;
         d.fy = d.y;
     }
-
     function dragged(d){
         d.fx = d3.event.x;
         d.fy = d3.event.y;
     }
-
     function dragended(d){
         if (!d3.event.active) simulation.alphaTarget(0);
         d.fx = null;
         d.fy = null;
     }
-
 </script>
 
 

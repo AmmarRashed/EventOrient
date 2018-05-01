@@ -8,17 +8,20 @@
 
 
 </style>
+<div class="ui-widget">
+    <input id="search", size='54'>
+    <button type="button" onclick="searchNode()">Find Node</button>
+    <button type="button" onclick="resetNodes()">Reset</button>
+</div>
 <svg width="960" height="600"></svg>
 <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
-
-
 
 <body>
 
 <script>
 
     d3.select("svg").attr("width", window.screen.width)
-        .attr("height", window.screen.height);
+        .attr("height", window.screen.height-150);
 
     // d3.select("svg").attr("width", 960)
     //     .attr("height", 500);
@@ -32,11 +35,13 @@
 
     var svg = svg2.append("g");
 
+    var zoom = d3.zoom()
+        .scaleExtent([1 / 8, 8])
+        .on("zoom", zoomed);
 
-    svg2.call(d3.zoom()
-        .scaleExtent([1 / 4, 8])
-        .on("zoom", zoomed));
+    svg2.call(zoom);
 
+    zoom.scaleTo(svg2, 1/4);
     function zoomed() {
         svg.attr("transform", d3.event.transform);
     }
@@ -60,10 +65,9 @@
         .force("center", d3.forceCenter(width/2, height/2));
 
 
-
+    var node;
 
     d3.json("twitter_users_graph2.json", function(error, graph){
-    // d3.json("graphFile.json", function(error, graph){
         if (error) throw error;
 
         var colors = [];
@@ -89,7 +93,7 @@
 
 
 
-        var node = svg.append("g")
+        node = svg.append("g")
             .attr("class","nodes")
             .selectAll("circle")
             .data(graph.nodes)
@@ -127,7 +131,7 @@
                 //     "eigenvector_centrality: "+d.eigenvector_centrality];
                 // const nodeData =    [d.name, d.id];
                 focus.append('rect')
-                    .attr('height', 300*3.5)
+                    .attr('height', 300*4)
                     .attr('width', 300*4)
                     .attr("x", cx)
                     .attr("y", cy);
@@ -161,7 +165,7 @@
                     });
             })
             .on("mouseout",function(d){
-                d3.select(this).style("r", node_scale);
+                d3.select(this).style("r", node_scale).style("fill-opacity",0.8);
                 d3.selectAll(".focus").remove();
             });
 
@@ -182,6 +186,7 @@
 
             node
                 .attr("r", node_scale)
+                .style("fill-opacity",0.8)
                 .style("fill", function(d){return color(d.community);})
                 .style("stroke", "none")
                 .attr('cx', d => d.x)
@@ -199,7 +204,7 @@
     });
 
     function node_scale(d){return Math.max(d.degree/2,5);}
-    function node_over(d){return Math.max(d.degree/2,10)*1.5;}
+    function node_over(d){return Math.max(d.degree/2,20)*4;}
 
     function dragstarted(d){
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -225,6 +230,40 @@
             color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
+    }
+
+    function searchNode() {
+        var selectedVal = document.getElementById('search').value;
+        if (selectedVal == 'none') {}
+        else {
+            var selected = node.filter(function (d, i) {
+                return (d.twitter_screen_name.includes(selectedVal) ||
+                    d.sehir_matches.includes(selectedVal) ||
+                    d.cleaned_twitter_name.includes(selectedVal));
+            });
+
+            var nonselected = node.filter(function (d, i) {
+                return !(d.twitter_screen_name.includes(selectedVal) ||
+                    d.sehir_matches.includes(selectedVal) ||
+                    d.cleaned_twitter_name.includes(selectedVal));
+            });
+
+            nonselected.style("opacity", "0.1");
+            selected.style("opacity", 1.0);
+            selected.style("r",node_over);
+            // var link = svg.selectAll(".link");
+            // link.style("opacity", "0");
+            d3.selectAll(".node, .link").transition()
+                .duration(3000)
+                .style("opacity", '1');
+        }
+    }
+    function resetNodes(){
+        var all_nodes = node.filter(function (d, i){
+            return true;
+        });
+        all_nodes.style("r", node_scale)
+            .style("opacity",0.8);
     }
 
 </script>
