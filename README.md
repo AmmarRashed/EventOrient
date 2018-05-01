@@ -1,7 +1,7 @@
 # EventOrient
 
-https://ammarrashed.github.io/Sehir_Network_Analysis/visualization/twitter.html
+https://ammarrashed.github.io/EventOrient/visualization/twitter.html
 
-https://ammarrashed.github.io/Sehir_Network_Analysis/visualization/twitter_fb.html
+https://ammarrashed.github.io/EventOrient/visualization/twitter_fb.html
 
-https://ammarrashed.github.io/Sehir_Network_Analysis/visualization/twitter_clusters.html
+https://ammarrashed.github.io/EventOrient/visualization/twitter_clusters.html
