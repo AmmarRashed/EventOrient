@@ -35,8 +35,8 @@
       <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="179" column="32" lean-forward="true" selection-start-line="178" selection-start-column="8" selection-end-line="179" selection-end-column="32" />
+            <state relative-caret-position="318">
+              <caret line="191" column="65" selection-start-line="191" selection-start-column="58" selection-end-line="191" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -61,7 +61,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d.degree</find>
       <find>mouseout</find>
       <find>var link</find>
       <find>arrow</find>
@@ -91,6 +90,7 @@
       <find>selectAll</find>
       <find>filterByDegree</find>
       <find>simulation</find>
+      <find>communi</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -209,12 +209,12 @@
       <workItem from="1525171303918" duration="897000" />
       <workItem from="1525202689802" duration="7452000" />
       <workItem from="1525263778270" duration="3096000" />
-      <workItem from="1525277734545" duration="673000" />
+      <workItem from="1525277734545" duration="1311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37216000" />
+    <option name="totallyTimeSpent" value="37854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
@@ -479,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="179" column="32" lean-forward="true" selection-start-line="178" selection-start-column="8" selection-end-line="179" selection-end-column="32" />
+        <state relative-caret-position="318">
+          <caret line="191" column="65" selection-start-line="191" selection-start-column="58" selection-end-line="191" selection-end-column="65" />
         </state>
       </provider>
     </entry>
