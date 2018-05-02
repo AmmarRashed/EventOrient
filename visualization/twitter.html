@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
 
@@ -12,6 +13,7 @@
     <input id="search", size='54'>
     <button type="button" onclick="searchNode()">Find Node</button>
     <button type="button" onclick="resetNodes()">Reset</button>
+    <input id="degree" type="range" value="0" min="0" max="100" step="1" onchange="filterByDegree()">
 </div>
 <svg width="960" height="600"></svg>
 <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
@@ -200,7 +202,6 @@
                 .text(function(d){return d.twitter_screen_name;})
         }
 
-
     });
 
     function node_scale(d){return Math.max(d.degree/2,5);}
@@ -266,6 +267,10 @@
             .style("opacity",0.8);
     }
 
+    function filterByDegree(){
+        var selectedDegree = document.getElementById('degree').value;
+
+    }
 </script>
 
 

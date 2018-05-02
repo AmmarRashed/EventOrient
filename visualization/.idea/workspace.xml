@@ -26,8 +26,8 @@
       <file leaf-file-name="twitter_clusters.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-924">
-              <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
+            <state relative-caret-position="1512">
+              <caret line="84" column="65" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -35,8 +35,8 @@
       <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="264" column="40" lean-forward="true" selection-start-line="264" selection-start-column="40" selection-end-line="264" selection-end-column="40" />
+            <state relative-caret-position="408">
+              <caret line="179" column="32" lean-forward="true" selection-start-line="178" selection-start-column="8" selection-end-line="179" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -61,8 +61,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>weight</find>
-      <find>mouseover</find>
       <find>d.degree</find>
       <find>mouseout</find>
       <find>var link</find>
@@ -91,6 +89,8 @@
       <find>var node</find>
       <find>node</find>
       <find>selectAll</find>
+      <find>filterByDegree</find>
+      <find>simulation</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -208,11 +208,13 @@
       <workItem from="1525171281921" duration="14000" />
       <workItem from="1525171303918" duration="897000" />
       <workItem from="1525202689802" duration="7452000" />
+      <workItem from="1525263778270" duration="3096000" />
+      <workItem from="1525277734545" duration="673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33447000" />
+    <option name="totallyTimeSpent" value="37216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
@@ -244,6 +246,62 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vega1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="84" column="65" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter_users_graph2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4878">
+          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vega1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter_users_graph2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4752">
+          <caret line="264" column="40" lean-forward="true" selection-start-line="264" selection-start-column="40" selection-end-line="264" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vega1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -407,8 +465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-924">
-          <caret line="84" column="65" lean-forward="true" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
+        <state relative-caret-position="1512">
+          <caret line="84" column="65" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -421,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="264" column="40" lean-forward="true" selection-start-line="264" selection-start-column="40" selection-end-line="264" selection-end-column="40" />
+        <state relative-caret-position="408">
+          <caret line="179" column="32" lean-forward="true" selection-start-line="178" selection-start-column="8" selection-end-line="179" selection-end-column="32" />
         </state>
       </provider>
     </entry>
