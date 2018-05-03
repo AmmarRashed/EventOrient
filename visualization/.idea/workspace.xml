@@ -35,8 +35,8 @@
       <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="191" column="65" selection-start-line="191" selection-start-column="58" selection-end-line="191" selection-end-column="65" />
+            <state relative-caret-position="372">
+              <caret line="194" column="30" lean-forward="true" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -209,16 +209,15 @@
       <workItem from="1525171303918" duration="897000" />
       <workItem from="1525202689802" duration="7452000" />
       <workItem from="1525263778270" duration="3096000" />
-      <workItem from="1525277734545" duration="1311000" />
+      <workItem from="1525277734545" duration="1728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37854000" />
+    <option name="totallyTimeSpent" value="38271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959743" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -479,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="191" column="65" selection-start-line="191" selection-start-column="58" selection-end-line="191" selection-end-column="65" />
+        <state relative-caret-position="372">
+          <caret line="194" column="30" lean-forward="true" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="30" />
         </state>
       </provider>
     </entry>

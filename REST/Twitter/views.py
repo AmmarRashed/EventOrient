@@ -7,7 +7,6 @@ from django.template import RequestContext
 from copy import deepcopy
 
 import os, json
-from copy import deepcopy
 
 import networkx as nx
 from networkx.readwrite import json_graph
@@ -17,31 +16,65 @@ root_dir = os.path.dirname(_dir)
 # twitter_connections_json = root_dir + "/static/networks/twitter_users_graph2.json"
 # twitter_fb_json = root_dir + "/static/networks/twitter_fb.json"
 
-twitter_connections_json = json.load(open(root_dir+ "/static/networks/twitter_users_graph2.json","r"))
-twitter_fb_json = json.load(open(root_dir + "/static/networks/twitter_fb.json", "r"))
+
+twitter_connections_path = root_dir+ "/static/networks/twitter_users_graph2.json"
+twitter_connections_json = json.load(open(twitter_connections_path,"r"))
+
+twitter_fb_path = root_dir + "/static/networks/twitter_fb.json"
+twitter_fb_json = json.load(open(twitter_fb_path, "r"))
 
 
 filtered_twitter_connections = deepcopy(twitter_connections_json)
 
 
-degree = 0
-
+degree_threshold = 0
+btw_threshold = 0.0
+pagerank_threshold = 0.0
+closeness_threshold = 0.0
+eigenvector_threshold = 0.0
+size_metric = "degree"
+size_metrics = ["degree", "in_degree", "out_degree",
+                "betweenness", "closeness_centrality", "eigenvector_centrality","pagerank","followers_count"]
 def twitter_connections(request):
 
     # return render_to_response("twitter_connections.html",{}, RequestContext(request))
-    global degree, filtered_twitter_connections
+    global degree_threshold, filtered_twitter_connections, \
+        btw_threshold, pagerank_threshold, closeness_threshold,\
+        eigenvector_threshold, size_metric,size_metrics
     if request.method == "POST":
-        degree = int(request.POST["degree_scroller"])
-        filtered_twitter_connections = filter_by(twitter_connections_json, degree, True)
-    degrees = [n["degree"] for n in filtered_twitter_connections["nodes"]]
-    return render(request,"twitter_connections.html",{"current_degree":degree,
-                                                      "minDegree":min(degrees),
-                                                      "maxDegree":max(degrees),
-                                                      "avgDegree":(sum(degrees)/float(len(degrees)))})
+        degree_threshold = int(request.POST["degree_scroller"])
+        btw_threshold = float(request.POST["btw_scroller"])
+        pagerank_threshold = float(request.POST["pagerank_scroller"])
+        closeness_threshold = float(request.POST["closeness_scroller"])
+        eigenvector_threshold = float(request.POST["eigenvector_scroller"])
+        size_metric = request.POST["size_metric"]
+        print("size_metric", size_metric)
+        filtered_twitter_connections = filter_by(twitter_connections_json,
+                                                 degree_threshold,
+                                                 btw_threshold,
+                                                 pagerank_threshold,
+                                                 closeness_threshold,
+                                                 eigenvector_threshold, directed=True)
+
+    sizes = [n[size_metric] for n in filtered_twitter_connections["nodes"]]
+    if len(filtered_twitter_connections["nodes"])<1:
+        sizes = [0]
+    return render(request, "twitter_connections.html", {"degree_threshold":degree_threshold,
+                                                      "minDegree":min(sizes),
+                                                      "maxDegree":max(sizes),
+                                                      "avgDegree":(sum(sizes)/float(len(sizes))),
+                                                      "btw_threshold":btw_threshold,
+                                                      "pagerank_threshold":pagerank_threshold,
+                                                      "closeness_threshold":closeness_threshold,
+                                                      "eigenvector_threshold":eigenvector_threshold,
+                                                      "size_metric":size_metric,
+                                                      "size_metrics":size_metrics})
 
 
-def filter_by(data_, degree, directed):
-    g = json_graph.node_link_graph(data_, directed=True)
+def filter_by(data_, degree, btw, pagerank, closeness, eigenv, directed=True):
+    metrics = {"degree":degree, "betweenness":btw, "pagerank":pagerank,
+               "closeness_centrality":closeness, "eigenvector_centrality":eigenv}
+    g = json_graph.node_link_graph(data_, directed=directed)
     if directed:
         try:
             g = g.to_directed()
@@ -49,7 +82,13 @@ def filter_by(data_, degree, directed):
             pass
     c = g.copy()
     for node in g.nodes():
-        if g.nodes[node]["degree"] < degree:
+        invalid = False
+        for metric in metrics:
+            threshold = metrics[metric]
+            if g.nodes[node][metric] < threshold:
+                invalid = True
+                break
+        if invalid:
             c.remove_node(node)
     return json_graph.node_link_data(c)
 
