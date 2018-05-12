@@ -76,14 +76,14 @@ def twitter_connections(request):
         eigenvector_threshold, size_metric,size_metrics, recalculate_checked
 
     do_filter = False
-
+    check = {"on":True, False:False}
     if request.method == "POST":
         degree_threshold = int(request.POST["degree_scroller"])
         btw_threshold = float(request.POST["btw_scroller"])
         pagerank_threshold = float(request.POST["pagerank_scroller"])
         closeness_threshold = float(request.POST["closeness_scroller"])
         eigenvector_threshold = float(request.POST["eigenvector_scroller"])
-        # recalculate_checked = 1 if "on" in request.POST["recalculate_metrics"] else 0
+        recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
 
         for i in [degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
             if int(i + 1) != 1:
@@ -120,7 +120,7 @@ def twitter_connections(request):
                "eigenvector_threshold": eigenvector_threshold,
                "size_metric": size_metric,
                "size_metrics": size_metrics,
-               "recalculate_checked":recalculate_checked}
+               "recalculate_checked":int(recalculate_checked)}
     if avgs:
         context.update(avgs)
 

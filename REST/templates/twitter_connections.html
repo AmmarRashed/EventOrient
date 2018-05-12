@@ -82,7 +82,8 @@
 <body>
 
 <script>
-    document.getElementById("recalculate_metrics").checked = {{recalculate_metrics}}
+    document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
+
     d3.select("svg").attr("width", window.screen.width)
         .attr("height", window.screen.height-150);
 
@@ -136,7 +137,6 @@
 
     selectedDegree = document.getElementById('degree').value;
     drawNetwork(selectedDegree, is_directed);
-
 
     function drawNetwork(degree, directed){
         d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, graph) {
@@ -347,10 +347,11 @@
                     d.sehir_matches.includes(selectedVal) ||
                     d.cleaned_twitter_name.includes(selectedVal));
             });
-
             nonselected.style("opacity", "0.1");
             selected.style("opacity", 1.0);
             selected.style("r",node_over);
+            centerNode(selected.attr("cx"), selected.attr("cy"));
+
             // var link = svg.selectAll(".link");
             // link.style("opacity", "0");
             d3.selectAll(".node, .link").transition()
@@ -372,6 +373,12 @@
         document.getElementById(widget).value=selectedDegree;
     }
 
+    function centerNode(xx, yy){
+        svg.transition()
+        .duration(500)
+        .attr("transform", "translate(" + (width/2 - xx) + "," + (height/2 - yy) + ")scale(" + 1 + ")")
+        .on("end", function(){ svg2.call(zoom.transform, d3.zoomIdentity.translate((width/2 - xx),(height/2 - yy)).scale(1))});
+        }
 
 </script>
 
