@@ -86,7 +86,6 @@ def twitter_connections(request):
         # recalculate_checked = 1 if "on" in request.POST["recalculate_metrics"] else 0
 
         for i in [degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
-            print(int(i + 1))
             if int(i + 1) != 1:
                 do_filter = True
                 break

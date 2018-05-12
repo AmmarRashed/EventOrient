@@ -297,12 +297,12 @@
         // .domain([{{minSize}},{{maxSize}}])
         // .range([1, 50]);
     function node_scale(d){
-        selectedDegree = ((parseInt(document.getElementById('degree').value)))+10;
-        return Math.max((d.{{size_metric}} - {{avgSize}})/({{maxSize}}-{{minSize}})*100, selectedDegree/10);
+        // selectedDegree = ((parseInt(document.getElementById('{{size_metric}}').value)))+10;
+        return Math.max((Math.abs(d.{{size_metric}} - {{avgSize}}))/({{maxSize}}-{{minSize}})*100, 5);
             }
     function node_over(d){
-        selectedDegree = ((parseInt(document.getElementById('degree').value)))+10;
-        return Math.max((d.{{size_metric}} - {{avgSize}})/({{maxSize}}-{{minSize}})* 180, selectedDegree/10);
+        // selectedDegree = ((parseInt(document.getElementById('{{size_metric}}').value)))+10;
+        return Math.max((Math.abs(d.{{size_metric}} - {{avgSize}}))/({{maxSize}}-{{minSize}})* 180, 200);
 
     }
 
