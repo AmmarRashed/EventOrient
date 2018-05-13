@@ -233,13 +233,14 @@ class AdaptiveOnlineClustering:
                     network_dict[(f, t)] = 1
 
         if weight_threshold is None:
-            weight_threshold = self.get_weight_threshold(list(network_dict.values), weight_threshold_std)
+            weight_threshold = self.get_weight_threshold(list(network_dict.values()), weight_threshold_std)
 
         minw, maxw = weight_threshold
 
         g = nx.Graph()
         for (f, t), weight in network_dict.items():
-            if weight < minw or weight>maxw: continue
+            # if weight < minw or weight>maxw: continue
+            if weight < minw: continue
             if np.random.choice(a=[False, True], p=[1 - print_prob, print_prob]):
                 print(f, t, weight)
             g.add_edge(f, t, weight=weight)

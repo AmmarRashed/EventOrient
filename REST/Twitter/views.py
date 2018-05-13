@@ -77,7 +77,9 @@ def twitter_connections(request):
 
     do_filter = False
     check = {"on":True, False:False}
+    filtering = False
     if request.method == "POST":
+        filtering = True
         degree_threshold = int(request.POST["degree_scroller"])
         btw_threshold = float(request.POST["btw_scroller"])
         pagerank_threshold = float(request.POST["pagerank_scroller"])
@@ -86,7 +88,7 @@ def twitter_connections(request):
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
 
         for i in [degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
-            if int(i + 1) != 1:
+            if i*1 != 0:
                 do_filter = True
                 break
 
@@ -105,6 +107,8 @@ def twitter_connections(request):
     if len(filtered_twitter_connections["nodes"])<1:
         sizes = [0]
     else:
+        if len(filtered_twitter_connections["nodes"]) == len(twitter_connections_json["nodes"]):
+            recalculate_checked = False
         if do_filter and recalculate_checked:
             filtered_twitter_connections=recalculate_metrics(filtered_twitter_connections)
         avgs = {"avg_"+metric:get_avg_metric(filtered_twitter_connections, metric) for metric in size_metrics}
@@ -120,7 +124,9 @@ def twitter_connections(request):
                "eigenvector_threshold": eigenvector_threshold,
                "size_metric": size_metric,
                "size_metrics": size_metrics,
-               "recalculate_checked":int(recalculate_checked)}
+               "recalculate_checked":int(recalculate_checked),
+               "nodes_number": len(filtered_twitter_connections["nodes"]),
+               "is_filtering":int(filtering)}
     if avgs:
         context.update(avgs)
 
