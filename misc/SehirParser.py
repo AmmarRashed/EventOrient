@@ -147,7 +147,7 @@ class SehirParser:
         self.counter = 0
         if self.db_path is None and None in [self.sql_dbname, self.sqlhost, self.sqluser, self.sqlpass]:
             warnings.warn("Missing sql credentials. Call connect_db with the right credentials")
-            return
+            pass
         sehir_matches_df = self.get_matches_dataframe(threshold=threshold, limit=limit)
         merged = sehir_matches_df.merge(self.twitter_users,
                                         left_on=self.cols["screen_name"], right_on=self.cols["screen_name"])
@@ -159,5 +159,5 @@ class SehirParser:
 # merged, sehir_matches_df = s.get_sehir_matches_df()
 
 
-cols = {"id":"GUID", "name":"cleaned_twitter_name", "screen_name":"twitter_screen_name"}
-fb_sp = SehirParser('datasets/contacts.csv', "datasets/tw_users.csv", cols)
+# cols = {"id":"GUID", "name":"cleaned_twitter_name", "screen_name":"twitter_screen_name"}
+# fb_sp = SehirParser('datasets/contacts.csv', "datasets/tw_users.csv", cols)

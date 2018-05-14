@@ -1,0 +1,2090 @@
+id,match_name,screen_name,tw_id,name,lang,followers_count,friends_count
+0,aigerim yergaliyeva,aikayerr,9.138462339570524e+17,Aigerim Yergaliyeva,en,12.0,46.0
+1, mehmet aytekin,mhmtaytkn,162427198.0,mehmet aytekin,en,427.0,486.0
+2, onder mutlu yilmaz,ondermy,294182546.0,Önder Mutlu Yılmaz,tr,134.0,56.0
+3,cigdem yuksel kendir,cgdmkendir,9.154868025464463e+17,çiğdem yüksel kendir,tr,25.0,133.0
+4,enes kemal boyraz,ekboyraz1903,9.38645392572502e+17,Enes Kemal Boyraz,tr,17.0,29.0
+5, zubeyir nisanci,ZubeyirNisanci,411064560.0,Zubeyir Nisanci,en,543.0,366.0
+6,omer faruk kacmen,kacmenomer,9.097352725265654e+17,Ömer Faruk Kaçmen,tr,47.0,195.0
+7,koray gulsum,koraygulsum,9.526326961441219e+17,Koray Gülsüm,tr,38.0,165.0
+8,mustafa emre teke,emreteke27,3421922319.0,Mustafa Emre Teke,tr,149.0,175.0
+9, ayse kaya goktepe,aysekayag,477621290.0,Ayşe Kaya Göktepe,tr,277.0,188.0
+10, mesut yä±lmaz,mesutylmz16,9.292289332828447e+17,mesutylmz,en,5.0,45.0
+11, ferhat kentel,ferhatkentel,1524419966.0,Ferhat Kentel,tr,15534.0,1031.0
+12,burak cimrenli,be__ce,175426030.0,Burak Cimrenli,tr,567.0,349.0
+13,hasan kalay,Ky_Hasan,8.159081368759378e+17,Hasan Kaya,tr,2.0,228.0
+14, cengiz kallek,cengizkallek,4124637371.0,Cengiz Kallek,tr,2248.0,269.0
+15,ahmet seba,ahmetSBA,9.638981599980421e+17,Ahmet SebA,en,48.0,432.0
+16, enes eryarsoy,eneseryarsoy,2213550694.0,Enes Eryarsoy,en,211.0,118.0
+17,omar hamzeh,0mar_hamzeh,818364804.0,Omar Hamzeh,ar,244.0,173.0
+18,elif kartal,eliffkaralar,7.23145558433493e+17,elif karalar,tr,11.0,55.0
+19,abdullah acun,MamunAbdullahiu,7.282030705266074e+17,Mamun Abdullah,en,99.0,345.0
+20,maral cankaya,meraldegilmaral,134147274.0,maral çankaya,tr,322.0,594.0
+21, yunus uäur,uguryunus,194475532.0,Yunus Ugur,en,774.0,143.0
+22,esra aldemir,esra_demir7,966522690.0,Esra Demir,tr,7.0,85.0
+23,zeynep merve bas,dijitalmerve,8.899141908147323e+17,Merve Zeynep,tr,13.0,66.0
+24,selma erol,Selmaeroll,9.25324908556628e+17,Selma Erol,tr,20.0,93.0
+25,mustafa aydin,mustafah_aydin,8.159729973874033e+17,Mustafa H. Aydın,tr,37.0,164.0
+26,ruveyda celik,rvydcelik,9.333413484213043e+17,Rüveyda Çelik,en,57.0,59.0
+27,ayse kaya,aysekaya25,579609620.0,AYŞE KAYA,tr,67.0,65.0
+28, elif ãelebi,_elifcelebi,3193917928.0,Elif Çelebi,en,268.0,268.0
+29,busra arslan,busra_arsllan,9.312544094131323e+17,Büşra Arslan,tr,74.0,326.0
+30, kasim kopuz,kkopuz,47148388.0,kasim kopuz,en,369.0,655.0
+31,muhammed caki,Muhamme87481050,9.290835141249884e+17,Muhammed Ali,tr,1.0,30.0
+32,gokhan ak,ak1gokhan,1729299919.0,Gökhan AK,tr,362.0,552.0
+33, mahmut koca,mkoca66,1439588580.0,Mahmut Koca,en,1369.0,42.0
+34,baran gunes,BaranGunes24,8.214228772788797e+17,Baran Gunes,tr,30.0,618.0
+35,bayram ozdemir,Bayramz97819440,9.359309178053509e+17,Bayram Özdemir,tr,3.0,106.0
+36,merve coban,merveca19023738,9.468377765484872e+17,merve can,tr,0.0,56.0
+37,asem okby,3asemshaban,599159655.0,Asem okby,en,386.0,195.0
+38,emre kaya,EmreOjk98077,9.511993155648799e+17,emre kaya,tr,1.0,87.0
+39,merve erol,merveerol14,900003228.0,Merve Erol 🐣,en,114.0,469.0
+40, muhammed ali caliskan,Mohtje61,743463824.0,Muhammed Aliskan,tr,11.0,127.0
+41, merve aydin,omeraydin979,8.533326543427133e+17,Omer AYDIN,tr,46.0,198.0
+42,yunus demir,GS_yunus75,9.486022652371476e+17,Yunus emre,tr,0.0,57.0
+43,taha kizmaz,taha_kacmaz17,9.116385871789711e+17,Taha KAÇMAZ,tr,34.0,882.0
+44,fatma turk,fatmaoztrkk,474857031.0,Fatma Öztürk,tr,144.0,90.0
+45,erhan algul,barbaros85,245552809.0,erhan akgul,en,43.0,140.0
+46,kubra metin,kbrmtin,8.919859822281892e+17,KÜBRA METİN,tr,297.0,122.0
+47,halil buyuksaka,halilbyksaka,2445384523.0,Halil Büyüksaka,tr,91.0,176.0
+48,mustafa kaya,MKayaLorbi,352233621.0,Mustafa Kaya,tr,946.0,1016.0
+49,sevde dogan,sevdedgnn,9.297962636583117e+17,Sevde Doğan,en,156.0,268.0
+50, gã¶khan ãetinsaya,cetinsayag,293976465.0,Gökhan Çetinsaya,en,29486.0,599.0
+51, ensar gul,ensargul,38666681.0,ensar  gül,en,233.0,103.0
+52,raafay ahmad,RaafayAhmad,7.833851971862569e+17,Raafay Ahmad,en,21.0,173.0
+53, mustafa alper gumus,malpergumus,209938923.0,Mustafa Alper Gümüş,tr,63.0,22.0
+54,merve durmus,_MerveDurmus,378589207.0,Merve Durmus,tr,234.0,210.0
+55,hande tuzlakoglu,handetuzlakoglu,9.721429815821148e+17,Hande Tuzlakoglu,en,55.0,85.0
+56,basak karaca,basakkaraca24,8.905775043727647e+17,Başak karaca,tr,2.0,16.0
+57, halil yekin guzel,HalilYekin,7.68871193470464e+17,Halil Yekin Güzel,tr,53.0,105.0
+58,merve eksi,MerveeEksi,453923695.0,Merve Ekşi,tr,70.0,60.0
+59,huzeyfe aydin,huzeyfe_313,9.004294430212751e+17,huzeyfe aydın,tr,13.0,207.0
+60,huseyin demir,HuseyiinDemir,7.78977823834923e+17,Hüseyin Demir,tr,37.0,59.0
+61,melek gulhan,melekgulhan,308106648.0,Melek glh,tr,176.0,131.0
+62,fatma nur ozcan,fatmanurozcan_,2246408021.0,Fatma Nur Özcan,tr,94.0,28.0
+63,dilara boyraz,dilaraboyraz,139032492.0,Dilara Boyraz,en,291.0,287.0
+64,mehmet uzun,uzunmehemet,2336600952.0,mehmet uzun,tr,260.0,431.0
+65,emre turhan,emretarhann11,7.608290073153044e+17,Emre Tarhan,tr,936.0,2304.0
+66,resadet imanov,Imanov_Resadet,2837993698.0,Resadet Imanov,en,54.0,63.0
+67,yunus bakir,yunusbakr08,8.857833562265354e+17,Yunus Bakır,tr,31.0,70.0
+68,suheyl uluturk,SuheylUluturk,9.606230698564854e+17,süheyl ulutürk,en,34.0,19.0
+69,selin caliskan,EminCaliskan8,9.32332121485652e+17,Emin Caliskan,tr,10.0,116.0
+70,murat er,erenm,18974605.0,Murat Eren,en,682.0,4997.0
+71, hatice erin,dr_haticecetin,4924089309.0,Hatice Çetin,tr,379.0,884.0
+72,bilal ayan,balikgoz,54145022.0,Bilal Ayan,tr,1751.0,663.0
+73,ceylin yagmur can,ceylinyagmurcan,350791386.0,Ceylin Yağmur Can,tr,344.0,89.0
+74,md al amin mia,mdalaminmia11_,8.426516052962058e+17,MD Al Amin Mia,en,37.0,129.0
+75,enes kemal boyraz,ekboyraz_19,7.244974394498785e+17,Enes Kemal Boyraz,tr,22.0,35.0
+76, mehmet akman,alan_f4tma,9.419479746613658e+17,Mehmet Man,en,0.0,69.0
+77, abdulhalik damar,ahdamar,164596213.0,abdulhalik damar,en,252.0,210.0
+78, hamdi irmak,hamdi_irmak,3151030181.0,Hamdi Irmak,tr,8577.0,450.0
+79,girisimcilik kulubu,SehirGirisim,8.350283620327424e+17,Girişimcilik Kulübü,tr,173.0,338.0
+80,mehmet uyar,MehmetU30328361,9.289109887951094e+17,Mehmet Ucar,tr,1.0,121.0
+81,ahmet sari,ahmetbasari1,9.522038519768596e+17,ahmetbasari,tr,1.0,71.0
+82,hamza uysal,hamzauysal_,9.903707381704663e+17,Hamza Uysal,tr,7.0,19.0
+83,ismail canpolat,dieskortes,452106609.0,İsmail Canpolat,tr,193.0,147.0
+84, emel turan,MelekonerturanM,3243960677.0,Melek Turan,tr,33.0,126.0
+85,asena okul,AsenaOkul,333999999.0,Asena Okul,tr,81.0,45.0
+86, cihan cobanoglu,cihansehiruni,758889025.0,Cihan Cobanoglu,tr,418.0,1002.0
+87,servethan dastan,servethandastan,8.954549519793111e+17,Servethan Daştan,tr,100.0,87.0
+88,halil ulusoy,haveyoumethalil,7.269027791644303e+17,Halil Ulusoy,tr,165.0,161.0
+89,feyzanur can,feyzacan98,9.15150663847379e+17,Feyzanur CAN,tr,0.0,3.0
+90, ahmet tan,AhmetTu32950654,9.340078342740378e+17,Ahmet Turan,tr,14.0,106.0
+91,deniz sahin,denizwxw,3528718637.0,Deniz Şahin,tr,380.0,219.0
+92,abdullah kaplan,kplnabdullahh,7.65969991825064e+17,Abdullah Kaplan,en,49.0,90.0
+93,busra kavurmaci,busrakavurmaci,9.381729339392655e+17,busrakavurmaci,tr,68.0,286.0
+94,suleyman emre aykut,Suleyman_AYKUT,847558932.0,Süleyman Emre AYKUT,tr,73.0,55.0
+95, hã¼seyin alptekin,husalptekin,434269864.0,Huseyin Alptekin,en,523.0,331.0
+96, mustafa sari,msugurturk,630560931.0,Mustafa S.,tr,304.0,217.0
+97, mustafa ãzel,50mustafayucel,458592123.0,mustafa yücel,tr,89.0,420.0
+98, mehmet fatih aysan,mfatihaysan,1537318436.0,Mehmet Fatih Aysan,en,980.0,383.0
+99, sehir fm,sehir_fm,1222491402.0,Şehir FM,tr,1018.0,85.0
+100,ahmet kursad koruyucu,kkoruyucu_,9.710446074705879e+17,Ahmet Kürşad Koruyucu,tr,96.0,203.0
+101,zeynep okur,ZynpRc,113428097.0,zeynep oruç,tr,104.0,1149.0
+102,ceylan aslanhan,ceylanaslanhnn,8.935832906822902e+17,Ceylan Aslanhan,tr,65.0,103.0
+103, yunus ali erol,yunusalierol,318006413.0,Yunus Ali Erol,tr,66.0,130.0
+104,furkan emer,mufues,8.783991837656023e+17,Furkan Eser,tr,55.0,372.0
+105,musa kurt,mustafa_kurt,66272921.0,Mustafa KURT,tr,593.0,2044.0
+106,busra dirican,busradrcnn,9.535294601664553e+17,Büşra Dirican,en,84.0,121.0
+107,ahmet emir,AhmetDe40,9.410002407689708e+17,Ahmet Demir,tr,1.0,76.0
+108, haluk cakir,halukcak,59743394.0,Haluk Çakır,tr,217.0,883.0
+109,omer faruk karakaya,KarakulaOmer,9.504237790579917e+17,Ömer Faruk KARAKULA,en,3.0,124.0
+110,zuhal akay,zuhalakay1,593036873.0,Zuhâl Akay,tr,114.0,118.0
+111,mahad abdullahi ali,mshmudwr,166245774.0,Abdullah  Al Mahmud,en,92.0,271.0
+112,berat aksak,berat_aksak,8.946602755672924e+17,Berat Aksak,tr,22.0,102.0
+113,hanife merve catan,hanifecatan,7.626832709664113e+17,Hanife Merve Çatan,tr,45.0,55.0
+114,mustafa celiker,mustafaceliker_,8.880773683630203e+17,Mustafa Çeliker,tr,76.0,114.0
+115,sevban ugurlu,SevbanU,1597201580.0,Sevban Uğurlu,tr,245.0,240.0
+116,bedirhan gultekin,bedirhangltkn16,7.508606253461709e+17,Bedirhan Gültekin,en,93.0,157.0
+117,furkan aydin,FurkanAYDIN44,118400394.0,M-Furkan AYDIN,tr,637.0,1291.0
+118, elif dogan,elifdogan411,9.764238471289119e+17,Elif Doğan,tr,1.0,43.0
+119,yusuf kayan,yusufkaraaa,153365461.0,Yusuf KARA,tr,236.0,413.0
+120,hatice meryem gelgor,hmeryemg,1596726998.0,hatice meryem g.,en,74.0,411.0
+121,muhammed unal,muhammeduysal20,590333765.0,Muhammed uysal,tr,155.0,290.0
+122,yunus emre kose,yunusemreokmen,9.337769836910264e+17,Yunus Emre Ökmen,tr,96.0,627.0
+123, aykut gulalanlar,agulalanlar,331537003.0,Aykut Gülalanlar,tr,945.0,953.0
+124,zeynep yavuz,zeynebyavuz_,8.46642751672406e+17,Zeynep Yavuz,tr,128.0,501.0
+125,furkan yasar,FurkanY71746343,9.51803948108845e+17,Furkan Yaşar,tr,4.0,57.0
+126, serhat dalgalidere,tohumfikir,4267326928.0,Serhat Dalgalıdere,tr,74.0,14.0
+127, mustafa ãzel,myel34,281127185.0,Mustafa YEL,tr,250.0,1593.0
+128,furkan aksoy,the_faksoy,7.228737739685028e+17,Furkan Aksoy,tr,33.0,12.0
+129,zulal sever,galaxyandskyx,2954643741.0,Zülal Sever,tr,105.0,193.0
+130,talha topan,talhatopan,8.787665753561784e+17,Talha Topan,tr,19.0,132.0
+131,bora tokgoz,boratokgoz,110804295.0,Bora Tokgöz,en,212.0,424.0
+132,ahmet semih bozkurt,asebozkurtt,371379659.0,Ahmet Semih Bozkurt,en,297.0,182.0
+133, ! abuse,manyagimnapican,3138261449.0,buse🍹,tr,722.0,88.0
+134,muhammet gul,MuhammetGuldal4,9.417459694729093e+17,Muhammet Guldal,tr,7.0,71.0
+135,engin inan,engininan,71736722.0,Engin İNAN,tr,288.0,461.0
+136,fatih kabas,FthKbs,2203396100.0,Fatih Kabas,tr,306.0,446.0
+137, hatice aynur,haticeaynurr,1058091331.0,Hatice Aynur,tr,673.0,230.0
+138,sultan altinsoy,AltnsoySultan,2379286169.0,Sultan Altınsoy,en,124.0,142.0
+139,murat demir,MuratDe49231258,9.263311281009377e+17,Murat Demirci,tr,2.0,100.0
+140, ozgur kavak,ozguralik,7.775995841640161e+17,Özgür KAVAK,tr,1473.0,509.0
+141,anis rouis,AnisRouis1,9.669860176045588e+17,Anis Rouis,en,9.0,186.0
+142,gokhan uyaroglu,GokhanUyaroglu,7.153893413090755e+17,Gökhan Uyaroğlu,tr,18.0,203.0
+143,enes sengul,_EnesSengul_,1851345926.0,Enes Şengül,tr,210.0,103.0
+144, tamer akan,av_sabantamer,393934272.0,saban tamer,tr,2263.0,2421.0
+145,yasin narman,ysnnarman,9.17281450868822e+17,Yasin Narman,tr,1.0,15.0
+146,mehmet kaya,Mehmet38830021,9.535068449364091e+17,Mehmet Çaba,en,130.0,419.0
+147,bekir turan,turnbekir,2199855997.0,Bekir Turan,tr,112.0,653.0
+148, emre urfali,emreurfali,19869574.0,Emre Urfalı,tr,3633.0,2291.0
+149,eda uysal,jbedajb99,508905512.0,Eda Uysal,tr,402.0,461.0
+150,omer faruk kose,creolemer,9.253370165098865e+17,Ömer Faruk Koç,tr,5.0,142.0
+151,ahmet bilgen,Ahmetlgen14,9.369585223229768e+17,Ahmet Ülgen,tr,10.0,251.0
+152, hasan kosebalaban,hkosebalaban1,2612870692.0,Hasan Kösebalaban,en,2862.0,356.0
+153,yusuf keser,gunaydinesen,3315594911.0,Yusuf Esen,tr,137.0,914.0
+154,oguzhan bahadir,ogzhnbahadir,9.355546575140823e+17,Oğuzhan Bahadır,tr,13.0,42.0
+155,ismail tan,ismailKotan11,8.944913845137367e+17,ismail Kotan,tr,618.0,2802.0
+156,yasemin kaleagasi,yaseminkaleagas,368958983.0,Yasemin Kaleağası,tr,25.0,56.0
+157,oznur sahin,znurahi60589154,9.823704963093545e+17,öznur şahin,en,3.0,65.0
+158,amna faisal,AnasObaidi,2435140705.0,Anas Faisal,en,18.0,77.0
+159,ahmet kahveciler,ahmetkahveciler,98857070.0,ahmetkahveciler,tr,506.0,209.0
+160, mesut yeäen,mesutyegen,231187264.0,Mesut Yeğen,en,39107.0,1506.0
+161,sedat gul,etoilerouges,51421753.0,Sedat Gül,tr,392.0,375.0
+162,zeynep yildiz,zeynebyildiz,306990461.0,Zeynep Yildiz,tr,91.0,906.0
+163,abdullah kaplan,abdyalman,236357942.0,Abdullah Yalman,tr,1206.0,4962.0
+164, merve kutuk,mervekurttt1,8.131100123274281e+17,Merve Kurt,en,0.0,164.0
+165,abdulsamet aydinli,AbdulsametAydi7,9.384602215377674e+17,Abdulsamet Aydin,tr,3.0,73.0
+166, mechanics ar-ge,MechanicsArGe,2937682529.0,Mechanics Ar-Ge,tr,107.0,67.0
+167,ahmet temizel,46dedee,806973368.0,Ahmet Temizel,tr,179.0,239.0
+168,ahmet emin pulcu,ae_pulcu,1938712285.0,Ahmet E. Pulcu,tr,198.0,248.0
+169,yasin koca,sadecetetik,2430997123.0,Yasin Koca,tr,281.0,325.0
+170,hassan khiara,HKhyara,3600650116.0,Hassan khyara,tr,38.0,46.0
+171, ahmet bulut,kral,14668733.0,Ahmet Bulut,en,243.0,62.0
+172,muhammed kaplan,Muhamme90284843,8.775870409379226e+17,Muhammed Arslan,tr,93.0,503.0
+173,tahir kaya,Mahirkaya,86333553.0,Mahir Kaya,tr,239.0,996.0
+174, efekan benlier,EfekanBenlier,2601258594.0,Efekan Benlier,tr,648.0,206.0
+175,burak yasar,aliburakyanar,433768507.0,burak yanar,tr,53.0,547.0
+176, ä°lke bã¼yã¼kduman,FigenIlke,3307936077.0,Ilke Buyukduman,en,94.0,181.0
+177,mehmet ali aydin,MehmetAliAyhan9,9.374487263895798e+17,Mehmet Ali Ayhan,tr,147.0,732.0
+178,yahya melikoplu,MelikogluYahya,1544515554.0,Yahya melikoğlu,tr,36.0,134.0
+179,elif sayin,sayinelifsayin,9.818944490548306e+17,Elif Sayın,en,11.0,47.0
+180,merve yilmaz,_istemiyabgu,8.713681789407437e+17,Merve Yılmaz,ar,100.0,215.0
+181,abdullah seyda aksakal,AbdullahSAksak9,9.271116531199386e+17,Abdullah S. Aksakal,tr,16.0,57.0
+182,valid hamza,HamzaValid,8.178504611182223e+17,Valid Hamza,sr,48.0,111.0
+183,ali osman aslan,aliosmanalmaz,919692006.0,ali osman çalmaz,tr,60.0,165.0
+184,beyza goz,beyzaagoz,1663475569.0,Beyza Göz,tr,117.0,348.0
+185,ferhan yilmaz,havva_goncu,9.413778830329692e+17,feriha yilmaz,tr,6.0,92.0
+186,furkan aktan,Furkanakts77,3335013430.0,Furkan Aktaş,en,443.0,270.0
+187, mehmet akinci,AkinciMehmet,344090521.0,Mehmet AKINCI,tr,189.0,219.0
+188, alim arlä±,alimarli_,630367566.0,Alim Arlı,tr,2651.0,1482.0
+189,abdullah eroglu,AbdullahKroglu2,9.43397135919272e+17,Abdullah Köroglu,en,7.0,118.0
+190,rumeysa yama,rumeysaciftcii,609379655.0,Rumeysa Yaşar,tr,70.0,514.0
+191,zeynep otgen,zgokcen2005,775735034.0,Zeynep Gökçen,tr,1476.0,1056.0
+192,semih tekin,semihtekin94,7.585811805475963e+17,Semih Tekin,tr,25.0,220.0
+193,ahmet salih alacaci,AhmetAlacac,7.183543404996157e+17,Ahmet Salih Alacacı,tr,52.0,874.0
+194,umre demir,Emredem68643940,8.586682501708718e+17,Emre demir,tr,5.0,296.0
+195,zeynep rida bozkurt,rida_bozkurt,8.953817070876385e+17,Zeynep Rida Bozkurt,tr,15.0,181.0
+196,mustafa karan,KUZEYEGE35,473329257.0,Mustafa KARA,tr,121.0,1391.0
+197,hasan ipek,Hasanie68642258,9.387024776748646e+17,Hasan Çiçek,tr,8.0,93.0
+198,furkan gunes,furkan_gan,2334160707.0,furkan gn,tr,126.0,727.0
+199,mustafa ozel,Mstfozl,376697378.0,mustafaozel,tr,963.0,605.0
+200,furkan sefer,FurkanSefer,522417267.0,furkan sefer,tr,60.0,230.0
+201, merve aydin,omeraydn_,1474311786.0,Ömer AYDIN,tr,86.0,236.0
+202,mahmut ozdemir,mahmuutozdemir,9.354302098594488e+17,Mahmut Özdemir,tr,42.0,110.0
+203,sevde zeynep ocak,svdzeynep,8.609310541311304e+17,Sevde Zeynep Ocak,tr,66.0,472.0
+204,rabia sungar,rabia_sungar,9.107414770887434e+17,Rabia Sungar,tr,16.0,23.0
+205,faruk ahmeti,ahmetfaruksari2,9.293198121736315e+17,Ahmet Faruk,tr,0.0,42.0
+206,necip fazil donmez,nfdonmez27,9.142258811781407e+17,Necip Fazıl Dönmez,tr,3.0,41.0
+207,fatmanur puytu,nurpuytu,572370285.0,Fatmanur Puytu,tr,354.0,142.0
+208, abdurrahman atcil,aatcil,1400588754.0,Abdurrahman Atçıl,en,1183.0,451.0
+209,senih tuccar,senihtuccar,9.367613075875881e+17,senih tüccar,tr,76.0,284.0
+210,ahmet ugurlu,siyadari,253259284.0,ahmet uğurlu,tr,8.0,48.0
+211,md al amin mia,al_amin_mia,9.268539868499067e+17,Al Amin Mia,en,2.0,84.0
+212,muhammed akkus,muhamme86529550,9.475054463818506e+17,muhammed aksu,tr,2.0,42.0
+213,dogukan tek,dtkan_tek,9.251090319744328e+17,Doğukan Tek,tr,58.0,153.0
+214, halil arslan,halilhatayi,8.31765693917954e+17,halil arslan,tr,150.0,400.0
+215,abdurrahman nur,abdurrahmancnr,333949504.0,Abdurrahman Çınar ®️,tr,562.0,1102.0
+216, ahmet ademoglu,ahmet_ademoglu,253616057.0,Ahmet Ademoglu,en,1332.0,83.0
+217, reyyan bilge,ReyyanBilge,32660008.0,reyyan bilge,en,1643.0,392.0
+218,fatmanur buyukcakir,Ftmnrbykckr,9.848713365929697e+17,Fatmanur Büyükçakır,en,53.0,99.0
+219,hafsa nur aslanoglu,narkabuguhna,9.68880888594518e+17,Hafsa Nur Aslanoğlu,tr,144.0,219.0
+220,samet gungordu,Smtgngrdu,454888215.0,Samet GÜNGÖRDÜ,tr,158.0,50.0
+221, zeynep kurt,zenurerden,1161252276.0,Zeynep Nur,tr,279.0,406.0
+222, sadi evren seker,sadievrenseker,162310009.0,Sadi Evren SEKER,en,4395.0,65.0
+223,ayse kaya,hayse__,4923825285.0,Ayşe Kaya,tr,13.0,236.0
+224, fatih altuä,altunerrfatih,306126414.0,Fatih ALTUNER ✏✏✏,tr,10298.0,1887.0
+225,enes erkan,meneserkan,7.640219071716639e+17,Enes ERKAN,en,739.0,114.0
+226, fatima tuba yaylaci,fatimatubapetek,2674866582.0,Fatıma Tuba Yaylacı,en,852.0,246.0
+227,ahmet karaca,Ahmetkaraaa67,9.311898154622444e+17,Ahmetkaraaa,tr,1.0,61.0
+228,ahmet goren,goren_15,1538853944.0,Ahmet Gören,tr,389.0,366.0
+229, levent yalcin,LeventYalcin38,9.3646826969489e+17,Levent Yalçın,tr,10.0,136.0
+230,betul hurma,betulhurma,333528691.0,Betül HURMA,tr,371.0,116.0
+231, ertugrul avci,ertugrulcil2,7.025152758083052e+17,ertugrul cil,tr,72.0,329.0
+232, mehmet ali buyukkara,malibuyukkara,2214758677.0,Mehmet Ali Büyükkara,tr,15121.0,481.0
+233,meryem yilmaz,meryeemylmaz1,8.767896102942556e+17,Meryem yılmaz,tr,25.0,30.0
+234,ismail sevim,isocan58,332423281.0,ismail selvi,tr,1217.0,4893.0
+235, suleyman ekici,SULEYMANEKICI11,9.401308791454966e+17,SULEYMAN Ekici,tr,2.0,124.0
+236,sezgin karakas,SezginKarada16,9.31979193365205e+17,Sezgin Karadağ,tr,2.0,92.0
+237, serap saraã§lä±,serapsaracli,81094202.0,Serap Saraçlı,tr,214.0,352.0
+238, candan karlitekin,Candan_Dost,239496829.0,Candan Karlıtekin,en,4506.0,192.0
+239,hatice dag,hatice_arig,9.290698154987233e+17,hatice.arig,tr,0.0,95.0
+240,mucahit turhan,mucahitturhann,9.207443414208553e+17,Mücahit Turhan,tr,2.0,39.0
+241,burak kapan,Burakkoci,9.449775787120968e+17,Burak Koçan,tr,16.0,175.0
+242, sami erdem,konevim,611652164.0,Sami Erdem,tr,216.0,305.0
+243, ä°lke bã¼yã¼kduman,ilkebu,108036479.0,Ilke Buyukduman,en,247.0,402.0
+244,ahmet kusol,AHMETKU48417841,9.392062412341821e+17,AHMET KUS,tr,4.0,29.0
+245, ali ulker,Ali_Ulker,995806488.0,Ali Ülker,en,13885.0,35.0
+246,ahmed esad ekentok,esadekentok,2743729859.0,ahmed esad ekentok,tr,21.0,45.0
+247, abdulkerim kar,abdulkeriminar1,9.36342567976874e+17,abdulkerimçinar,en,3.0,88.0
+248, cengiz benli,ycbenli,603268093.0,Cengiz Benli,en,116.0,304.0
+249,fatma betul ozdemir,fatmabetul23,7.869537369628385e+17,Fatma Betül Özdemir,tr,56.0,87.0
+250, mustafa ãzel,MustafaOzelden,946886773.0,Mustafa Özel,tr,3895.0,0.0
+251, berna yilmaz,Brkylmaz0405,7.093279037507912e+17,Berk YILMAZ,tr,48.0,182.0
+252,hatice zahide cetinkaya,HaticeZahide,9.712450382976492e+17,Hatice Zahide Cetinkaya,tr,3.0,13.0
+253,mustafa kilicaslan,lemkaross,3097486012.0,Mustafa kılıçaslan,tr,30.0,30.0
+254,abdulkadir aksu,AbdulkadirAksu8,7.542571213577953e+17,Abdulkadir Aksu,tr,100.0,187.0
+255, temur kayhan,timkayhan,8.115427280352379e+17,Timur Kayhan,tr,10.0,115.0
+256,ahmet sefa toprak,AhmetSToprak,350224188.0,Ahmet Sefa Toprak,tr,291.0,314.0
+257, talha kã¶se,Talha_Kose1,618131962.0,Talha Köse,en,4630.0,1144.0
+258,aykut sahin,Boyut34Ahin,1122852230.0,aykut şahin,tr,86.0,893.0
+259,ecenur bavas,ecebvss,9.188529345443185e+17,Ecenur Bavaş,tr,15.0,63.0
+260,yusuf can ekmekci,yusuffcan98,373538140.0,Yusuf Can Ekmekçi,tr,33.0,44.0
+261, ! sepher,becauseitsfunn,2850891504.0,Seher,tr,225.0,452.0
+262, ebru kayaalp,ebrukayaalp,113954902.0,Ebru Kayaalp,en,241.0,280.0
+263,yusuf adiguzel,yusuf_adgzl,8.344924082765988e+17,Yusuf Adıgüzel,tr,162.0,187.0
+264,serhat ermis,ermiserhat,9.641259156629463e+17,Serhat Ermiş,tr,18.0,164.0
+265, yusuf ãalä±åkan,Ycaliska10,2445072732.0,Yusuf ÇALIŞKAN,en,401.0,200.0
+266,kubilay ucak,kubilayucak1,526458676.0,Kubilay Uçak,tr,1002.0,37.0
+267,sena alkan,senna_kalkan,9.388801955824804e+17,sena kalkan,tr,0.0,78.0
+268,muhammet demir,memrern,9.561775459044925e+17,Muhammed Emir,tr,45.0,140.0
+269,mehmet ozgan,mehmeto64,148714162.0,MEHMET ÖZKAN,tr,118.0,477.0
+270,elif kilavuz,elfklvz,8.36326702817108e+17,Elif Kılavuz,tr,33.0,130.0
+271, onur oner,onuroner_1907,298020453.0,Onur ÖNER,tr,301.0,298.0
+272,yunus demir,yunusemr_01,9.140630266214195e+17,Yunus emre,tr,11.0,82.0
+273,enise aktas,aktasenes665,9.470371444675052e+17,enes aktas,tr,0.0,61.0
+274,merve senel,senaercaan,362653116.0,merve sena,tr,239.0,37.0
+275,busra kesekler,YazeLBusra,594598174.0,Büşra KesekLer,tr,140.0,199.0
+276,ahmet akyol,akyollahmet,405717491.0,Ahmet Akyol,tr,446.0,218.0
+277,sehir cycling club,SehirCycling,8.477412042046341e+17,Şehir Cycling Club,tr,123.0,92.0
+278, kagan koc,kaankursad,79819842.0,Kagan Koc,en,445.0,484.0
+279,ali koc,akalikoc,179250667.0,Ali KOÇ,tr,533.0,345.0
+280, ! sehir kariyer fest,sehircareerfest,8.416829082848788e+17,Şehir Kariyer Fest,tr,241.0,220.0
+281,mustafa gez,MustafaGezz,1563324960.0,Mustafa Gez,tr,16.0,102.0
+282,mustafa duman,Mustafadurmaz07,45644419.0,Mustafa Durmaz,tr,3634.0,5001.0
+283,aziz  fatih gunaydin,Azizfatihg34,9.92114858807251e+17,Aziz Fatih Günaydın,tr,43.0,136.0
+284,elif karabas,ehandek,9.507974282566328e+17,elif karaca,tr,1.0,80.0
+285,ahmet selim burak,aSelimburak,1621357615.0,Ahmet Selim Burak,tr,135.0,104.0
+286, gulcan ayral,GulcanAyral,3207360807.0,Gülcan Ayral,tr,10.0,16.0
+287,selman zenger,selman__zenger,7.820855909593907e+17,SELMAN ZENGER,tr,178.0,73.0
+288, fatih altuä,fatialtug,950487481.0,Fatih Altug,en,870.0,529.0
+289,ahmet seba,SefaahmetY,2462061599.0,Ahmet sefa,tr,453.0,216.0
+290,yelda olcer,olceryeldaa,4249555475.0,Yelda ÖLÇER,tr,107.0,158.0
+291,nur muhammed sahin,seyhurreis,9.591943820365373e+17,Nur Muhammed Şahin,tr,34.0,134.0
+292,ahmed ahmed,MhmedAhmd6,9.413804485084324e+17,Mhmed Ahmd,ar,13.0,72.0
+293,beyza cengiz,Cengizbeyza,334139315.0,Beyza Cengiz,tr,641.0,313.0
+294,omer faruk beser,Omerfb504,8.408144723694469e+17,Ömer Faruk Beşer,en,14.0,34.0
+295,nisanur hekimoglu,nisanurhekim,246973630.0,Nisanur Hekimoğlu,en,383.0,411.0
+296,hakan bayrak,hakanbayrakk,377901136.0,Hakan Bayrak,tr,376.0,283.0
+297, kadem,ademcucen,4323102927.0,Adem,en,15.0,88.0
+298,murat erkara,murat1907karaa,9.441992074136003e+17,murat kara,tr,0.0,47.0
+299,nisa nur cavusoglu,cavusoglu_nisa,3369721882.0,Nisa Nur Çavuşoğlu,tr,470.0,384.0
+300,ilayda ulubas,Ulubasilayda,1528130275.0,ilayda ulubas,tr,88.0,132.0
+301,abdullahi abubakar,aa_kaks,9.633893087816868e+17,Abdullahi Abubakar,en,24.0,147.0
+302,ahsen nur bostanci,nazendesultann,952347667.0,Ahsen Nur Bostancı,tr,110.0,215.0
+303,mustafa cetin89,MstfMetin42,8.813862230294077e+17,Mustafa Metin,tr,644.0,2063.0
+304, didem ardali,DidemArdali,2749898057.0,Didem Ardali,tr,146.0,1403.0
+305,elif sunnetci,sunnetci_elif,9.109167426958418e+17,Elif Sünnetci,tr,1.0,8.0
+306, onur gã¼zey,OnurGuzey,81516526.0,Onur Güzey,en,55.0,27.0
+307, seyma nur demiray,SeymaNurDEMRAY,1534359642.0,Şeyma Nur Demiray,en,52.0,231.0
+308,gulsah mican,gulsahmican,1637772900.0,Gülşah Mican,tr,157.0,98.0
+309,mahmut ergin,Faniisani,425411580.0,"ergin, MAHMUT",tr,289.0,3197.0
+310,muhammed unal,muhammeddnas,9.07154399549694e+17,Muhammed Nas,en,5.0,47.0
+311,omer celebi,omerclb,37036731.0,Omer Celebi,en,527.0,375.0
+312,mucahit kavaz,mchtkavaz,3376596665.0,Mücahit Kavaz‼️,tr,386.0,245.0
+313,moustapha aliou,Mousty93,4829057662.0,Moustapha Aliou,fr,79.0,220.0
+314,yasemin kurt,kurtyasemin,273339620.0,Yasemin Kurt,tr,41.0,62.0
+315,tunahan cetin,cetintunahan,414278433.0,Tunahan Cetin,tr,421.0,191.0
+316,mustafa aydin,mustafaydinlar,3301583789.0,Mustafa Aydın,tr,33.0,212.0
+317,nefise fedakar,nefisefedakar,465062899.0,Nefise Fedakar,tr,106.0,171.0
+318,abdullah bardakci,abdullahbardkci,3068366386.0,Abdullah Bardakcı,tr,323.0,469.0
+319,zuhal akay,zuhalalpay,335784720.0,Zuhal Alpay,tr,28.0,189.0
+320,efe kaplan,kaplan_efe,441584584.0,Efe Kaplan,tr,96.0,113.0
+321,sumeyye kalkan,kalkansumm,2148222070.0,Sümeyye Kalkan,tr,345.0,41.0
+322,emine akbulut,emineakbulut72,1713798288.0,Emine Akbulut,tr,80.0,186.0
+323,bengu demir,demirr3015,7.549638390876815e+17,Bengü Demir,tr,65.0,148.0
+324,semanur tiren,semanurturkmen1,8.673596894824038e+17,Semanur Türkmen,tr,46.0,392.0
+325,selimhan cakir,selimhancakirr,1225071402.0,Selimhan Çakır,tr,177.0,161.0
+326,ali cetinkaya,alicetinkaya12,861384775.0,Ali Çetinkaya,tr,138.0,216.0
+327,muhammed ekrem tecim,etecim,454715128.0,Muhammed Ekrem Tecim,tr,79.0,95.0
+328,mehmet arif ergun,ErgunMehmetA,7.57405478003413e+17,Mehmet Ali Ergun,en,41.0,145.0
+329,ozlem oz,tfrit,145385950.0,özlem öz,tr,86.0,216.0
+330, ahmet tan,can_ahmetttt,7.3720819117235e+17,Ahmet Can,tr,5.0,27.0
+331,elif nursacan,ENursacan,850130101.0,Elif Nursaçan,tr,68.0,97.0
+332,gulnihal erdem,GulnihalErdem,4339537834.0,Gülnihal Erdem,tr,19.0,184.0
+333,abdullah yilmaz,abdullahpdr,2216307547.0,Abdullah YILMAZ,tr,36.0,277.0
+334,derya guven,deryaguvenn,2496631999.0,Derya Güven,tr,88.0,125.0
+335,muhammet akkus,muhammetakkus,633302673.0,Muhammet Akkuş,tr,87.0,196.0
+336,bunyamin gurler,bunyamingurler,400579145.0,Bünyamin Gürler,tr,263.0,325.0
+337,habib ayrilmaz,HabibAyrlmz,1460414918.0,Habib Ayrılmaz,tr,780.0,574.0
+338,elif yilmaz,Elifylmz12345,4840316463.0,Elif yılmaz,tr,1.0,15.0
+339,emre ozer,emreerrr,312854037.0,Emre Er,tr,137.0,1161.0
+340,burcu karaagin,burrcukaraman,518844534.0,Burcu Karaman,tr,53.0,594.0
+341,elif gulce yavuz,elifgulceyavuz,8.525278321987707e+17,Elif Gülce Yavuz,tr,36.0,126.0
+342,ahmet sari,asamiozen,1392631148.0,Ahmet Sami,tr,141.0,279.0
+343,huseyin sahin,hhsshn,396165965.0,Hüseyin Şahin,tr,326.0,893.0
+344,amr azzazy,AmrAzzazy,386419724.0,AmrAzzazy,en,144.0,543.0
+345,firat ravci,firatravci,878145554.0,Fırat RAVCI,tr,91.0,198.0
+346,mohamad najib,NajibGaacuur,8.362469909209252e+17,Najib Mohamoud,en,160.0,702.0
+347,elif nur kalkan,elifnkalkan,3092455517.0,Elif Nur Kalkan,tr,159.0,84.0
+348,berkay gok,berkaygk1907,342343913.0,Berkay Gök,tr,136.0,119.0
+349,aleyna ebru ucar,aleynaucuyoo,247465439.0,Aleyna Ebru Uçar,tr,245.0,84.0
+350,muhammet salih okur,okur_msaid,6.949643776617349e+17,Muhammed Said Okur,tr,55.0,283.0
+351,muhammed furkan kinik,dr_mufrkn,597831714.0,Muhammed Furkan Isık,tr,37.0,476.0
+352,emre sucu,emresucu_,1654806812.0,Emre Sucu,tr,45.0,50.0
+353,abdulkarim auwal,akarim711,715580484.0,Abdulkarim Auwal,en,62.0,270.0
+354,abdullah tok,abdullahtokk,1454947890.0,Abdullah Tok,tr,180.0,119.0
+355,erdem ergul,erdemergul_,330546053.0,Erdem ERGÜL,tr,149.0,272.0
+356,ismail demir,iedmr57,7.202217746260992e+17,İsmail Demir,en,17.0,69.0
+357,sebahattin aydin,AYDINSEBAHATTIN,239427912.0,Sebahattin AYDIN,en,183.0,226.0
+358,merve koca,birmerve,478731173.0,Merve Koca,tr,115.0,59.0
+359, hamit okur,hamitokur,429101069.0,hamitokur,tr,9.0,45.0
+360,koray demir,KorayDemrr,3311816145.0,Koray Demir,tr,86.0,433.0
+361,hafsa ulusal,hafsaulusall,2298503191.0,Hafsa Ulusal,tr,627.0,159.0
+362,selma slocum,selmanslocum,2831415666.0,selman slocum,en,23.0,347.0
+363,rahime aksa boyraz,aksaboyraz,765369582.0,rahime aksa boyraz,tr,129.0,119.0
+364,hasan atan,aytarhasan34,7.596565888315884e+17,Hasan Aytar,tr,33.0,255.0
+365,furkan vardi,VaricliFurkan,3889140382.0,Furkan Variçli,tr,385.0,1352.0
+366,mehmet kara,karamhmtt,489239437.0,Mehmet Kara,tr,48.0,123.0
+367, ebys,atomkarinca,471015004.0,Eby,tr,1582.0,1329.0
+368,ayhan yilmaz,TweetAyhan,3065890732.0,Ayhan Yilmaz,en,35.0,289.0
+369,bahadir ozdemir,bambahadir,484181599.0,Bahadır OZDEMIR,tr,241.0,123.0
+370,selda nur emir,sdnremr,1209381008.0,Seda Nur Emir,tr,212.0,242.0
+371,anisa tahiri,anisatahiri,7.822272738229862e+17,Anisa Tahiri,en,28.0,184.0
+372,ali yalcinkaya,Apbalet,297499043.0,Ali Yalçınkaya,tr,50.0,85.0
+373,amit kachroo,amit_kachroo,45085620.0,Amit Kachroo,en,841.0,2035.0
+374, zeynep kaplan,SZeynepkaplan,2189225452.0,Zeynep Kaplan,tr,50.0,147.0
+375,zeynep ilgin,ZeynepILGIN34,8.740316508077015e+17,Zeynep ILGIN,tr,602.0,3868.0
+376,yunus emre yasaroglu,yasaremreyunus,8.84070436983722e+17,Yunus Emre Yaşaroğlu,tr,63.0,229.0
+377,nursena ozcan,NursenaOzcan,8.243026007240253e+17,Nursena Özcan,tr,55.0,63.0
+378,yalcin atik,yalcinatik1,2469146258.0,Yalçın Atik,tr,26.0,192.0
+379, federico donelli,fededonelli,31462811.0,Federico Donelli,en,463.0,1334.0
+380,ferhat basboga,basbogaferhat,8.619319970605302e+17,Ferhat basboga,tr,15.0,88.0
+381,ayhan turkoglu,talha_turkoglu,595297280.0,Talha Turkoglu,en,71.0,310.0
+382,emre meral,Emre_meraal,355058617.0,Emre Meral,tr,146.0,163.0
+383,seyma inal,symainall,8.398655312179528e+17,Şeyma İnal,tr,36.0,55.0
+384,huzaifa asim,huzasim,2966940226.0,Huzaifa Asim,en,41.0,86.0
+385,betul ozkan,Betlzka98867281,7.324664581610865e+17,Betül Özkan,tr,2.0,61.0
+386,seniha sipahioglu,senihasph,1055519240.0,Seniha Sipahioğlu,tr,444.0,266.0
+387,salih kaya,salihakaynarr,7.769346054925517e+17,Saliha Kaynar,tr,20.0,160.0
+388,ahsen kotan,AhsenKotan,968544654.0,Ahsen Kotan,tr,172.0,153.0
+389, mustafa ãzel,h_mustafaozel,1482905478.0,Mustafa ÖZEL,tr,7341.0,577.0
+390,aysenur irk,aysenurirk,320746999.0,Aysenur Irk,tr,214.0,251.0
+391,batuhan isik,batuhanskp1,2261760691.0,batuhan üsküp,tr,67.0,1725.0
+392,afra betul ozdemir,afrabett,8.078482820557046e+17,Afra Betül Özdemir,tr,15.0,36.0
+393,ecehan yucesoy,ecelikooo,1639587990.0,Ecehan Yücesoy,tr,219.0,58.0
+394,fatih beyhan,FatihCe38998631,2953977629.0,Fatih Ceyhan,tr,56.0,325.0
+395,abdurrahman nur,AbdurrahmanNu16,8.60200590835626e+17,Abdurrahman Nuray,tr,238.0,2785.0
+396,zeynep zahide cakmak,zzahidec,4128068103.0,Zeynep Zahide ÇAKMAK,tr,151.0,179.0
+397, mert celik,MertCelik78,303712444.0,Mert Çelik,tr,77.0,181.0
+398,zeynep ilgin,ZeyLacin,3060338502.0,Zeynep Laçin,tr,23.0,186.0
+399, ! amazon,illybastug,2399809336.0,Amazon,tr,294.0,189.0
+400,zeynep boran,zeynebbus,4128428650.0,zeynep büşra,tr,137.0,122.0
+401,sevim kumbasar,SevimKumbasar,8.18782100119765e+17,sevim kumbasar,tr,12.0,45.0
+402,rumeysa karaca,rumeysakrc7,2193918772.0,Rumeysa Karaca,tr,50.0,200.0
+403,sena gulseren,senagulseren_,7.565966491584102e+17,Sena Gülseren,tr,49.0,222.0
+404,seyma celikkaya,seymcelikkaya,7.837184391606108e+17,Şeyma Çelikkaya,tr,171.0,156.0
+405,murat er,MuratDere6,541532568.0,Murat Dere,tr,192.0,178.0
+406, mehmet aytar,Mehmetacar53,1481697061.0,MEHMET ACAR,tr,719.0,640.0
+407,ismail sahin,ismaillssahinn,8.70348278285652e+17,ismailsahin,tr,33.0,177.0
+408,zeynep nisa guler,zeynepgllrr,4142346153.0,Zeynep Nisa Güler,en,15.0,37.0
+409,murat tan,dersem_nolur,577023027.0,murat taş,tr,73.0,144.0
+410, ceren akbulut,zcerenakbulut,8.332109405690307e+17,Ceren Akbulut,tr,54.0,136.0
+411, samet topsever,samtiyyy,594766612.0,samet topsever,tr,34.0,55.0
+412, orhan erdem,Erhaner62305711,3346977394.0,Erhan erdem,en,1102.0,3656.0
+413, aysegul baser,aysegulbaser,66317901.0,aysegul baser,en,473.0,279.0
+414,talia sebaai,taliasibai,524627325.0,talia sibai,en,89.0,175.0
+415,busra nur sazan,busranur_y,1089935672.0,Büşranur Sazan,tr,119.0,155.0
+416,akylai raimbekova,Mehhji,2914268747.0,Akylai Raimbekova,en,4.0,108.0
+417,esra nur donmez,EsraNrDnmz,189850674.0,Esra Nur Dönmez,tr,253.0,170.0
+418,emin mert gunes,hamitoglu,626461453.0,emin mert güneş,tr,24.0,79.0
+419, unutma istanbul,unutmaistanbul,8.390503595323679e+17,Unutma İstanbul,tr,365.0,52.0
+420,furkan cakar,cglrfurkan,3151687947.0,furkan caglar,tr,94.0,306.0
+421,ismail bal,ialigil,2264912681.0,İsmail ALİ,tr,0.0,373.0
+422,enes temel,EnsTml,180628720.0,Enes Temel,tr,107.0,1241.0
+423,miray turhan,mirayyturhann,7.09465725648425e+17,mirayturhan,tr,124.0,273.0
+424,enis sahin,Enisahin_,7.173467353712067e+17,Enis Şahin,tr,8.0,61.0
+425,cansu karadag,CansuKARADAG,74959905.0,Cansu KARADAĞ,tr,206.0,220.0
+426,esra ozsoy,ezraozsoy,8.076976461022126e+17,Esra Özsoy,tr,46.0,106.0
+427,havanur korkut,nurrkorkut,253229470.0,Havvanur Korkut,tr,22.0,125.0
+428,rumeysa bayram,rumeysaabayram,7.996816923531305e+17,Rümeysa Bayram,tr,202.0,251.0
+429,orhan yener,orhanyener,83846816.0,Orhan YENER,en,160.0,267.0
+430,mustafa meral,mstfmert,1888032829.0,Mustafa Mert,tr,1353.0,682.0
+431,elif can,DELCAN2,433408496.0,DELİCAN,tr,86.0,1975.0
+432, zeynep erol,Zeynaper,8.401219607176684e+17,Zeynep Eroğlu,tr,78.0,131.0
+433,oguzhan bitmis,Btmoguzhan,772130078.0,Oguzhan Bitmis,tr,174.0,581.0
+434,emin eminov,Emin_EMlN,7.554818947294781e+17,Emin Emin,tr,267.0,814.0
+435,mert senel,mertsnel,3065458210.0,Mert Şenel,tr,199.0,259.0
+436,elif aynaci,elifaynaci,7.388230227449037e+17,Elif Aynacı,en,60.0,113.0
+437,yusuf umur,yusufftemurr,4920395609.0,Yusuf Temur,tr,146.0,309.0
+438,ayse beyza gurlu,AyseGurlu,7.579196753219092e+17,Ayşe Beyza Gürlü,en,56.0,845.0
+439, genc tema,Genc_TEM_2023,7.865479658128015e+17,genctem,tr,118.0,1221.0
+440,omer safa adali,OmerSafaFB,322065951.0,Ömer Safa Adalı,tr,713.0,643.0
+441,yasin tikici,yasinTii,7.4998604854605e+17,Yasin Tikici,tr,34.0,132.0
+442, mehmet dã¼lger,MehmetDeri,297573230.0,Mehmet Deri,tr,698.0,1711.0
+443,murat cinar,acarendi,895516783.0,Murat Acar,tr,299.0,697.0
+444,meryem akdemir,Ebabilbird1,3994786402.0,Meryem Aydemir,tr,93.0,685.0
+445,hasan kocaturk,hasannkocaturk,344339030.0,Hasan Kocatürk,tr,579.0,1001.0
+446,mert erbudak,merterbudak,826480844.0,mert erbudak,tr,14.0,56.0
+447, hasan gã¼ã§lã¼,ergulhasan_,7.726981413343314e+17,Hasan Ergül,tr,182.0,919.0
+448,mehmet nart,Ozarmehmet,593459051.0,Mehmet Özar,tr,427.0,391.0
+449,abdullah acun,abdullah_acun,1403447797.0,Abdullah Acun,en,180.0,276.0
+450,yasin corekci,yasin_corekci,3909072875.0,Yasin Çörekci,tr,14.0,226.0
+451,abdulsamet aca,musahipzade,202593040.0,Abdulsamet AĞDAŞ,tr,207.0,1152.0
+452,mustafa karaca,karatascavus,7.551779604041236e+17,Mustafa Karataş,tr,79.0,449.0
+453,bilal tan,bilalTn,589516467.0,Bilal TAN,tr,122.0,340.0
+454,erkan turk,KSerkanT,478812772.0,Serkan Türk,tr,166.0,118.0
+455,ammar rasid,AmmarRashed_MB,291122559.0,Ammar Rashed,en,385.0,335.0
+456,orhan fatih bayazit,orhanfatihb,734074579.0,Orhan Fatih BAYAZIT,tr,8.0,74.0
+457,bilal oztemiz,bilaloztemiz,614524241.0,bilal öztemiz,tr,1.0,10.0
+458,ebubekir torun,ebu_torun,383903153.0,Ebubekir Torun,tr,55.0,65.0
+459,mehmet demir,mhmt622,965124865.0,Mehmet Demir,tr,47.0,336.0
+460,guldane tas,gldnts,2242103274.0,Güldane Taş,tr,111.0,126.0
+461,ali arslanoglu,arslanoglualii,3041394825.0,Ali Arslanoğlu,tr,110.0,132.0
+462,kaan kahraman,Canan87153497,3386695809.0,Canan Kahraman,en,80.0,851.0
+463,samuele tavani,DengSamPing,4568868677.0,Samuele Tavani,en,58.0,799.0
+464,semanur konuk,semanurkonuk_,2717217147.0,Semanur Konuk,tr,284.0,389.0
+465, tamer yilmaz,byomeryilmaz,1525686697.0,Ömer YILMAZ,tr,201.0,769.0
+466,seyit huseyin eren,SeyidEren,1670420490.0,Seyid Hüseyin EREN,tr,500.0,317.0
+467,furkan eken,FurkanEken5,474399263.0,Furkan Eken,tr,32.0,176.0
+468, samil bolat,samil46bolat,4089142647.0,Şamil Bolat,tr,7.0,25.0
+469,rabiul islam,islam_rabiul82,2568525291.0,Rabiul islam,en,56.0,433.0
+470,abdirahman khadar yoonis,khadaryoonis,2806956776.0,Abdirahman K. Yoonis,en,421.0,490.0
+471,mustafa zenelhasani,M_Zenelhasani,4539004883.0,Mustafa Zenelhasani,en,39.0,204.0
+472,mustafa aydin,mxadn,152015204.0,TC Mustafa AYDIN,tr,410.0,2019.0
+473,recep tosun,RecepTo67570225,7.61998391844991e+17,Recep TOSUN,tr,42.0,205.0
+474,mayasa dablan,DablanMayasa,4282307963.0,Mayasa Dablan,en,10.0,47.0
+475,elif kartal,karalarinelif,7.4749969930172e+17,ELİF KARA,tr,34.0,97.0
+476,anna zharkova,czarina92,167872330.0,Anna Zharkova,tr,155.0,185.0
+477,yunus celik,yunusceltik,743227844.0,yunus çeltik,tr,52.0,431.0
+478,zeynep demir,zeyy_demir,2862703149.0,Zeynep Demir,tr,170.0,119.0
+479,ahmet karaca,krc_ahmed,7.96798717210792e+17,Ahmet Karaca,tr,151.0,2018.0
+480,sumeyra yerinde,sumeyrayerinde,944226110.0,Sümeyra Yerinde,tr,109.0,94.0
+481,merve baysan,hpbrnaudrey,468494717.0,Merve Aslan,tr,79.0,323.0
+482,aysenur demir,_gidiyorumbu,2857071465.0,Ayşe Nur Özdemir,tr,15.0,66.0
+483,irem dut,dutirem,4212608085.0,İrem Dut,tr,43.0,63.0
+484,ismail comert,i_comert,355155899.0,ismail cömert,tr,125.0,78.0
+485,sena aldemir,obirseyyah,1536619370.0,Ünal Aldemir,tr,20431.0,588.0
+486,mustafa celen,mustafacelen70,413849104.0,Mustafa ÇELEN,tr,49.0,888.0
+487,berna celik,brncelik_,7.964481766140232e+17,Berna Çelik,tr,12.0,11.0
+488,mahmut aydemir,MahmtAydemir,2220315899.0,Mahmut Aydemir,tr,83.0,98.0
+489,burak gozutok,burakgozutok,4842645441.0,Burak Gözütok,en,71.0,53.0
+490,ensar tastan,TastanEnsar,1413084848.0,Ensar Taştan,tr,231.0,347.0
+491,merve keskin,parya_,326288590.0,Merve Keskin,tr,327.0,530.0
+492,salih sari,salih__sari,266045888.0,Salih Sarı,tr,150.0,332.0
+493,suleyman roj akil,SuleymanRoj,722364482.0,Süleyman Roj Akıl,tr,250.0,592.0
+494,fatih dogan,f_dogan_,68714550.0,Fatih Doğan,tr,142.0,140.0
+495, mehmet genã§,keskinfm,233263828.0,Mehmet Gençay,tr,1057.0,4402.0
+496,muharrem aras,akarsu4141,3041235688.0,Muharrem Akarsu,tr,0.0,1036.0
+497,burak kibar,burakkiibar,7.678079747819479e+17,Burak Kibar,en,27.0,41.0
+498, nuri aktemur,NuriMyn,1570652671.0,Nuri Aktemur,tr,1.0,27.0
+499,sude karanfil,sudee_karanfil,8.136464172270387e+17,Sude Karanfil,tr,1.0,59.0
+500,enes acar,enes_avar,294753579.0,Enes Avar,tr,314.0,709.0
+501,bedirhan tuz,TUZBEDIRHAN,181709561.0,BEDIRHANTUZ,tr,184.0,253.0
+502,abdul wahab,abdulvahabyld,804472196.0,abdulvahab,tr,8.0,204.0
+503,zeynep ercetin,zeynpereen,8.195436367403377e+17,Zeynep Eren,tr,74.0,105.0
+504,ervanur kaya,edanuurkaya4,2974465797.0,Edanur Kaya,tr,159.0,469.0
+505,mustafa karan,mstfkrn9,1670894454.0,mustafa karan,tr,126.0,179.0
+506,furkan kesen,FurkanKesen7,8.004567727795241e+17,Furkan Kesen,tr,22.0,30.0
+507,busra akdemir,akdemirbusraa,588523789.0,büşra akdemir,tr,267.0,168.0
+508,makram klach,MakremKlach,2301095318.0,MAKRAM KLACH,en,656.0,300.0
+509,mirac girit,konohali,215036184.0,Miraç Girit,tr,136.0,955.0
+510,zeynep arslan,ZTursan,3022844661.0,zeynep türsan,tr,2.0,118.0
+511,enes atif saylam,enesatif,216008568.0,Enes Atıf Saylam,tr,134.0,145.0
+512,ceyhun okutan,cyhn_oktn,1886790302.0,ceyhun okutan,tr,104.0,639.0
+513,zeynep koyuncu,zeynepkoyuncu_,3093872810.0,Zeynep Koyuncu,tr,55.0,159.0
+514,huseyin demir,soldejesoul,8.174373142133637e+17,Huseyin Demirdag,en,138.0,157.0
+515,beyzanur kocak,beyzanurkocak_,4590125417.0,beyzanur kocak,tr,22.0,56.0
+516,abdullah arslan,Akarslan__,7.02840903963177e+17,abdullah kılıçarslan,tr,25.0,415.0
+517,seda tosun,SedaTosun97,503254088.0,seda tosun,tr,25.0,45.0
+518,ayyuce aydin,ayyuceaydn,3688600403.0,Ayyüce Aydın,tr,348.0,170.0
+519,merve sancaktar,sancaktarmerve,189881254.0,Merve Sancaktar,tr,147.0,149.0
+520,elif bag,Elfaydin_,346469570.0,Elif a.,tr,156.0,216.0
+521, arzu taygar,ATaygar,1241036822.0,Arzu Taygar,tr,39.0,124.0
+522,ahmet balci,ahmetbardakci1,603816326.0,Ahmet Ali,tr,772.0,2058.0
+523,ahmet temel,AhmetTe05096378,8.270750938178519e+17,Ahmet Temel,tr,15.0,105.0
+524,osman terzioglu,mekaniksosis,108271772.0,Osman Terzioğlu,tr,489.0,1840.0
+525, erdem goktepe,erdemgoktepe_,212613861.0,Erdem Göktepe,tr,40.0,130.0
+526,esra aldemir,esramir24,2247716822.0,esra emir,tr,46.0,252.0
+527,onur sarikaya,nasarikaya,1053274086.0,Nur Sarıkaya,tr,230.0,325.0
+528,muhammed ali sit,muhammedalisit,7.079388129163305e+17,Muhammed Ali Sit,en,52.0,214.0
+529,melike bilge,melikebilge96,8.01368455303852e+17,Melike Bilge,tr,104.0,126.0
+530,ipek erdemir,IpekErdemir,7.671176418531041e+17,İpek Erdemir,tr,42.0,85.0
+531,sinem aslan,sineemaslannn,7.877451021731799e+17,Sinem Aslan,tr,213.0,223.0
+532,mustafa meydanci,sutor41,2909767132.0,mustafa meydancı,tr,264.0,254.0
+533,hasan atan,hasan_atan,3624969136.0,Hasan ATAN,tr,13.0,281.0
+534, asli avci,akorubozuk,895992314.0,Ali Avci,tr,409.0,140.0
+535,sedat ulusoy,eulusoyyy,3435184299.0,esat ulusoy,tr,32.0,319.0
+536,fatih tali,enoldkap,1367751516.0,fatih topal,en,295.0,474.0
+537,ece uslu,eceusl,4343872353.0,Ece Uslu,en,60.0,142.0
+538,serdar habil,serdar_habil,3234065324.0,Serdar Habil ★⭐️★,tr,263.0,392.0
+539,dilara ocak,dilaraocak9652,3195755224.0,dilara ocak,tr,181.0,124.0
+540,yilmaz filiz,Yilmaz_FI,718984389.0,Yilmaz FI,en,60.0,406.0
+541,dogukan demirci,demircidogukann,2901330273.0,Doğukan Demirci,tr,68.0,157.0
+542,esra balanli,balanli_esra,766348868.0,esra balanli,tr,181.0,519.0
+543,enes ozderya,EnesOzderya,8.591033255932396e+17,Enes Özderya,tr,29.0,125.0
+544,necati yesil,yesil_necati,7.369987812296008e+17,Necati Yeşil,tr,2.0,28.0
+545, mehmet baysan,MehmetA16360494,8.704783044192256e+17,Mehmet Aslan,tr,12.0,759.0
+546,isa yusuf cetin,avyusufcetin,7.602108911031419e+17,İsa Yusuf Çetin,tr,3.0,68.0
+547,rahime sus,rahimesus,2358102654.0,rahimesüs,tr,194.0,118.0
+548,sena buyukcolpan,senacolpan,1634096228.0,Sena Büyükçolpan,tr,100.0,63.0
+549,leyla zeynep vercin,leylavercin,624787113.0,Leyla Zeynep Verçin,tr,159.0,171.0
+550,hakan altunkaya,Hakanankaya12,7.172313382738289e+17,Hakan Çankaya,tr,27.0,408.0
+551,nexhat cokli,NCokli,879994615.0,nexhat cokli,en,48.0,189.0
+552,ahmet ermis,atunbenbedbah,484172571.0,ahmet ermiş,tr,103.0,56.0
+553,nur aydin,NurcanAYDINN,3380493136.0,Nurcan AYDIN,tr,244.0,769.0
+554, yusuf arslan,y_aslan22,3143441188.0,Yusuf ASLAN,tr,75.0,881.0
+555,ahmet er,kurtubadan,242922610.0,Ahmet Ozer,tr,245.0,5000.0
+556,ismail ucak,urtenu101,3143394171.0,ismail ucak,en,32.0,197.0
+557,ahmet orhan,enyorum,2787503142.0,ahmet orhan,tr,692.0,983.0
+558,mert furkan uzum,mrt__frkn,208615405.0,mert furkan üzüm,tr,27.0,138.0
+559,burak kaya,burakkya,265700526.0,Burak Kaya,tr,316.0,827.0
+560,nusret aydin,NusretAydn15,7.97767915386835e+17,Nusret Aydın,tr,48.0,78.0
+561,abdullah sanli,abdullahksanli,3024457842.0,abdullahksanlı,tr,178.0,413.0
+562,reyta akdeniz,reyta_akdeniz,2821526922.0,reyta akdeniz,tr,8.0,26.0
+563,cenk dincturk,cenkdincturk,634113441.0,Cenk Dinçtürk,tr,86.0,95.0
+564,ibrahim cansu,ibocansiz,436128741.0,ibrahim Cansiz,tr,24.0,166.0
+565,sehir atolye,sehiratolye,8.268460078749737e+17,Şehir Atölye,tr,155.0,38.0
+566,taha enes uzun,tenesuzun,7.836009693933036e+17,Taha Enes Uzun,en,77.0,202.0
+567,onur okun,onurokun,4536962596.0,Onur Okun,tr,72.0,138.0
+568,sevde erdogan,Svdrdgn,8.471766604116664e+17,Sevde Erdoğan,tr,86.0,70.0
+569,edanur demir,ednrdmr1,3343025991.0,Edanur Demir,tr,68.0,126.0
+570, sosyoloji dukkani,SosyolojiDukkan,1559354052.0,Sosyoloji Dükkânı,tr,3957.0,72.0
+571,hatice sena yildiz,hsenayildiz,2800566506.0,Hatice Sena Yıldız,tr,22.0,123.0
+572,mustafa sahin,MustafaOzshn,1011657686.0,Mustafa Ozsahın,tr,92.0,825.0
+573,busra demirel,BusraDemirel1,150035340.0,Büşra Demirel,tr,376.0,275.0
+574, zeynep erol,erol_zeyneb,3338451801.0,Zeynep Erol,tr,6.0,106.0
+575, levent yalcin,LeventYaln10,8.148324340344709e+17,Levent Yalçın,tr,4.0,41.0
+576,mustafa kaymaz,Mustafa_F_Ayvaz,765953690.0,Mustafa Ayvaz,en,113.0,659.0
+577,zeynep yilmaz,Zeynep10201,2843990967.0,Zeynep Yılmaz,tr,11.0,48.0
+578,mucahit yilmaz,mucahidyilmaz,464763402.0,Mücahit Yılmaz,tr,185.0,632.0
+579,beyza kara,beyzaakara_,8.082296955443282e+17,beyzaakara,tr,0.0,34.0
+580,ismail bal,BasIsmail,390780286.0,Ismail Baş,en,323.0,646.0
+581,abdulhakim allahdad,a_allahdad99,8.597868706576097e+17,Abdulhakim Allahdad,en,18.0,127.0
+582,eda karagozlu,EdaKaragozlu,181276229.0,Eda Karagözlü,tr,784.0,877.0
+583,abdullah dursun,AbdullahhDurmus,4490186055.0,Abdullah Durmuş,tr,203.0,334.0
+584,deniz arslan,cengizarslan72,1169913805.0,Cengiz Arslan,tr,3410.0,4994.0
+585,mehmet toker,mehmettoker_,2215330154.0,Mehmet Toker,tr,56.0,45.0
+586,imdat sarialioglu,SariAliOglu,25553860.0,imdat Sarialioglu,tr,340.0,1775.0
+587, emrah avci,kolagasiavci,8.094002605314867e+17,Emrah Avcı,tr,72.0,444.0
+588,muhammet gul,mhmttgul,464740734.0,Muhammet Gul,tr,733.0,2355.0
+589,furkan emer,furkanemer43,8.280205558026076e+17,Furkan Emer,tr,163.0,187.0
+590,betul buse oruc,betulbuseorucc,2889210113.0,Betül Buse Oruç,tr,127.0,182.0
+591, barbaros ãmeroälu,BAOMEROGLU,8.514248477584916e+17,Barbaros ÖMEROĞLU,tr,2.0,6.0
+592,balgyn zaurbekova,BalgynZ,2369142757.0,Balgyn Zaurbekova,ru,0.0,19.0
+593,zeki akbulut,ZekiAkbulut,265254213.0,Zeki AKBULUT,tr,1155.0,1560.0
+594,mehmet can erim,MCanErim,3234142326.0,Mehmet Can Erim,tr,52.0,141.0
+595,busra demirel,busradmry,735169543.0,Busra demiralay,tr,75.0,281.0
+596,esra akdil,esraakdil,313467951.0,Esra Akdil,tr,220.0,276.0
+597,nurevsah aymak,nurevsan__,2183785426.0,Nurevşan Aymak,tr,528.0,640.0
+598,sumeyye arda,SmyyAkdas,221387190.0,Sumeyye Akdas,tr,4.0,87.0
+599,rumeysa duygun,RumeysaDuygun,8.390251068946022e+17,Rümeysa Duygun,en,24.0,66.0
+600,emine nur sen,eminenur_sen,1249439005.0,Emine Nur ŞEN,tr,109.0,221.0
+601,enes oruc,OrucEness,534601323.0,Enes Oruç,tr,399.0,482.0
+602,seyma berberoglu,seymaberberoglu,7.013628824292639e+17,Şeyma Berberoğlu,tr,106.0,268.0
+603,engin alan,kiuskudar,3147369199.0,Ayla Engin,tr,4579.0,5210.0
+604,betul ceylan,Betulcyln,203121479.0,Betül Ceylan,tr,208.0,307.0
+605,mehmet sahin,cbmehmetsahin,8.156332624963502e+17,Mehmet Şahin,tr,29.0,98.0
+606, gulsen nisli,gulsennisli,586372643.0,gulsennisli,tr,57.0,457.0
+607,seyma karaca,krcseyma,4265357273.0,karacaseyma95,tr,24.0,56.0
+608,rumeysa ergun,RumeysaErgin,1566858492.0,Rümeysa Ergin,tr,68.0,581.0
+609,eren ucar,ERNUCAR,294541974.0,Eren Uçar,tr,175.0,157.0
+610,al? osman karaoglu,LawyerKaraoglu,1584916188.0,Ali Osman Karaoglu,en,850.0,638.0
+611,mehmet ali parlar,Parlar0180,1480721666.0,Mehmet Parlar,tr,233.0,1043.0
+612,ahmet taha celik,tahacelik0,8.370238085235384e+17,Ahmet Taha Çelik,tr,94.0,156.0
+613,merve nur bayraktar,MerveNurBayrak3,904465758.0,Merve Nur Bayraktar,tr,352.0,735.0
+614,bahar albayrak,baharalb,7.108001740676547e+17,Bahar Albayrak,tr,49.0,149.0
+615,aghaali huseynov,h_aghaali,7.187259391658353e+17,Aghaali Huseynov,en,23.0,53.0
+616,betul celik,betticelik,7.731180592382853e+17,Betül Çelik,tr,39.0,237.0
+617,zeliha donmez,zelihadnmz,7.547176941051249e+17,Zeliha Dönmez,tr,42.0,155.0
+618,mustafa durdu,mustidurdu,112014757.0,Mustafa Durdu,tr,56.0,85.0
+619,muslum guder,muslum_guder,8.195846199767818e+17,MUSLUM GUDER,en,0.0,6.0
+620,eylul okur,soceylul,7.406702721063117e+17,Eylül Okur,tr,40.0,227.0
+621,can ozgur,alpmertcan,526757009.0,Can Özgür,tr,449.0,780.0
+622,ahmet ekim,ASKpsycholog,8.491653744698778e+17,Ahmet Selim,tr,73.0,784.0
+623,mustafa celen,mcelenkoglu,1635029690.0,Mustafa ÇELENK,tr,286.0,951.0
+624,burak ozdemir,brkzdemr,2724262273.0,Burak Özdemir,tr,1.0,945.0
+625,merve karan,MervearasMerve,2979031509.0,Merve Aras,tr,55.0,202.0
+626,muhammed said baktir,MuhammedBaktir,477970480.0,Muhammed Said Baktır,tr,0.0,192.0
+627,esra oruc,esoruc,1039307658.0,Esra Oruç,tr,163.0,458.0
+628,abbas kutay,medineliak,7.959590806198354e+17,Abbas KUTAY,en,57.0,103.0
+629,hicran gunay,hicran_gny,2234861247.0,Hicran Günay,tr,515.0,375.0
+630,hakan erdogan,HakanErdoganPhD,2271265066.0,Hakan Erdoğan,tr,16.0,196.0
+631,meryem sahin,MeryemMsahin,713432174.0,meryem şahin,tr,446.0,1679.0
+632,cuneyd uzun,cuneyduzun,193020479.0,Cuneyd uzun,en,285.0,668.0
+633,abdurrahman demirel,abdemirel,310141719.0,abdurrahmandemirel,tr,118.0,156.0
+634,bilal yilmaz,bllylmzz,7.936070902501458e+17,Bilal Yılmaz,en,6.0,384.0
+635,abdullah eren,_abdullah_eren,1672861045.0,abdullah eren,tr,101.0,116.0
+636,mahmut zahit ergun,_batumi,8.218342618923704e+17,Mahmut Zahid ERGÜN,tr,111.0,461.0
+637,aykut sahin,ayktsahin56,2882050603.0,Aykut Şahin,tr,279.0,141.0
+638,suha demirsoy,suha_demirsoy,1289457744.0,süha demirsoy,tr,18.0,36.0
+639,mert huseyin ergul,ergulmhuseyin,301674726.0,Mert Hüseyin Ergül,tr,222.0,987.0
+640,vildan ibisoglu,vildanibisoglu,888378156.0,Vildan Ibisoglu,tr,62.0,93.0
+641,ahmet yasin oncu,ayasinoncu,2289439224.0,Ahmet Yasin Öncü,tr,212.0,149.0
+642,esra bayraktar,sercanbayrakta4,399967543.0,sercan bayraktar,tr,1.0,3457.0
+643,alperen cetinkaya,alperencetinka,4777972294.0,Alperen ÇETINKAYA,en,28.0,61.0
+644,abdurrahman duman,Abdogan34,1457952038.0,Abdurrahman Doğan,tr,102.0,165.0
+645,mehmet isik,mehmetcicek34,310779239.0,mehmet çiçek,tr,734.0,789.0
+646,bekir batuhan sekili,batuhansekili,7.45389817765204e+17,Bekir Batuhan SEKİLİ,tr,86.0,130.0
+647,sumeyye arda,SumeyyeParildar,4196684704.0,sumeyye parildar,en,245.0,367.0
+648,ebru araci,ebruaraci,831804464.0,Ebru Aracı,tr,387.0,314.0
+649,muhammed akbulut,Makbuluttt,369836872.0,Muhammed Akbulut,en,145.0,163.0
+650, hande yildirim,mhandeyildirim,7.548513172318413e+17,Hande Yildirim,tr,2.0,51.0
+651,ceren caliskan,ercancaliskan4,2186558848.0,ercan caliskan,tr,5.0,82.0
+652,esra bayraktar,kevserbyrktr,7.626788294207816e+17,Kevser Bayraktar,tr,60.0,275.0
+653,burak cakir,burakdalkir,347641244.0,BURAK DALKIR,tr,1011.0,3617.0
+654,mahmut ramazan ertas,ertasmr,7.085927089448305e+17,Mahmut Ramazan Ertaş,tr,65.0,105.0
+655,hatice aygen,HaticeAygen_,8.278413724598477e+17,Hatice Aygen,en,65.0,188.0
+656, kariyer merkezi,ikmkariyer,7.694793659608269e+17,İst. Kariyer Merkezi,tr,135.0,1065.0
+657,dilara bulun,dilarabulun,8.07149924215296e+17,Dilara Bulun,tr,0.0,4.0
+658,cihat arslan,carslan61,8.12283761899475e+17,Cihat Arslan,en,41.0,497.0
+659, nesibe yazgan uslu,NesibeYazgan,295379645.0,Nesibe YAZGAN USLU,tr,806.0,675.0
+660,omer can,mertcantwitt,7.56967799856173e+17,Mert Can,tr,64.0,148.0
+661,nagehan sakizci,Nagehanskzc,7.781645964022292e+17,Nagehan sakızcı,tr,2.0,34.0
+662,enes yucer,yceens,2585793726.0,Enes Yüce,tr,108.0,447.0
+663,zeynep yikilmaz,Zeynepyikilmaz,262747106.0,Zeynep Yıkılmaz,tr,517.0,169.0
+664,furkan ucar,ucar6795,783141463.0,Furkan Uçar,tr,207.0,300.0
+665,feyyaz derinoglu,FeyyazDerinoglu,363307336.0,Feyyaz Derinoğlu,tr,303.0,253.0
+666,gonca sahin,gonca1sahin,1472121924.0,goncasahin,en,30.0,546.0
+667,burcu saglam,burcu_saglam,71784886.0,Burcu Sağlam,tr,560.0,787.0
+668,saide palavar,PalavarSaide,2340975473.0,Saide Palavar,tr,42.0,84.0
+669,oguzhan yilmaz,OgunYilmaz73,2805183813.0,Ogun Yilmaz,tr,46.0,176.0
+670,hulya karadeniz,hulyakdz,476704348.0,Hülya Karadeniz,tr,194.0,139.0
+671, halil yildiz,zidliyila,1111643504.0,Ali YILDIZ,tr,235.0,691.0
+672,cihan kara,mcozrs,614766123.0,Cihan Özaras,tr,408.0,1056.0
+673,mehmet sercan ercan,msercanercan,227806410.0,mehmet sercan ercan,tr,534.0,345.0
+674,yusuf demir,Emilliano95,349251513.0,Yusuf Emre,tr,40.0,71.0
+675,merve akalin,meurvve,2446009202.0,Merve Çakal,tr,10.0,81.0
+676,melis erkus,mlsmelis96,2877303565.0,Melis Erkuş,tr,34.0,136.0
+677,ihsan gursoy,gursoyihsan,194196967.0,ihsan gürsoy,tr,32.0,184.0
+678,tarik terzi,tarikterz,180301990.0,Tarık TERZI,tr,447.0,324.0
+679,mehmet caner,merzen72,2820137110.0,MEHMET CAN,tr,135.0,664.0
+680,oznur hasanoglu,oznurhasanoglu,267138109.0,öznur hasanoğlu,tr,264.0,178.0
+681,semih yilmaz,SemiiYILMAZ69,1595340320.0,semih yılmaz,en-gb,171.0,185.0
+682,oguzcan tezel,oguzcantezel96,166886925.0,Oğuzcan Tezel,tr,277.0,387.0
+683,huseyin hasilci,huseyinasilll,2686881573.0,Huseyin Asil,tr,30.0,197.0
+684,samet sevgi,SametSvg,1475517169.0,Samet Sevgi,en,13.0,72.0
+685,ummu gulsum vural,matmazeldedigin,2194811827.0,ümmü gülsüm vural,tr,113.0,202.0
+686,emre yavuz,m_emreyavuz1,2924411623.0,M.Emre Yavuz,tr,5.0,58.0
+687,mustafa sahin,MusaSahin1903,1449078230.0,Musa SAHIN,tr,211.0,270.0
+688,salih akpinar,AkpinarSalih,889187688.0,Salih Akpinar,en,58.0,52.0
+689, rä±dvan ahmet,ahmetardan,380578210.0,Ahmet Ardan,tr,236.0,563.0
+690,irfan akkoyun,irfan__akkoyun,88899411.0,irfan akkoyun,tr,122.0,259.0
+691,abdulrahman hossam,abdoibnkhaldon,158635358.0,Abdulrahman Hossam,en,234.0,240.0
+692,ali suheyl ersozlu,asersozlu,385055613.0,Ali Süheyl Ersözlü,tr,27.0,45.0
+693,havva nur kor,hhavvanurr1,2644456425.0,Havva Nur Kor,tr,88.0,153.0
+694, tolga demir,TolgaDemiryol,13753732.0,Tolga Demiryol,en,1042.0,3073.0
+695,meryem sahin,meryemsahinnn,2608609233.0,Meryem Şahin,tr,56.0,58.0
+696,burak fevzi cansiz,bcansiz61,321387139.0,Burak Fevzi Cansız,tr,277.0,188.0
+697,mustafa bal,mustafabal,69275239.0,Mustafa Bal,en,272.0,172.0
+698,omer faruk ozcetin,farukozcetin,1941673615.0,Ömer Faruk Özçetin,tr,131.0,341.0
+699,omer aslan,omeraslan_tweet,3505337541.0,Ömer ASLAN,tr,6.0,23.0
+700,enise onder,EEnisoner,2420944089.0,enis oner,tr,1.0,4550.0
+701,mehmet nazif koca,MehmetNazifKOCA,1501568389.0,Mehmet Nazif KOCA,tr,325.0,165.0
+702,ahmed san,hasaanprince33,3270851502.0,Hasaan Ahmed,en,16.0,44.0
+703,veysi furkan bisen,Veysi_Furkan,260874526.0,Veysi Furkan Bisen,en,32.0,83.0
+704,enes elamri,eneselamriNS,2866935552.0,Enes Elamri,en,36.0,167.0
+705,aygun ismayilova,aygunkcr,3100290275.0,Aygun İsmayilova,tr,744.0,181.0
+706,mahmut sait arslan,SaitMahmut,900508574.0,Mahmut Sait Arslan,en,318.0,247.0
+707,berkan demirer,berkandemirer,2212743424.0,Berkan Demirer,tr,187.0,191.0
+708,omer fatih yildirim,Al_iOsmanAhfadi,2888331225.0,M. Fatih YILDIRIM,tr,38.0,182.0
+709,zeynep binnur unsal,zebiun,3329017558.0,Zeynep Binnur Ünsal,tr,203.0,173.0
+710, mehmet erken,merkan_merkan,227292161.0,mehmet erkan,tr,1257.0,654.0
+711,beyza kara,BeyzaYkaya,2575376700.0,Beyza Ykaya,tr,41.0,179.0
+712,sertaã§ tez,SertaTEZ,314791870.0,Sertaç TEZ,tr,38.0,104.0
+713,celil kececi,celilkcc,1235457578.0,Celil Keçeci,tr,113.0,106.0
+714, tamer akan,kariyerkocutr,2793945633.0,Tamer Akın,en,423.0,931.0
+715,emirhan ozkan,eozkan13,2478876085.0,Emirhan Özkan,en,213.0,200.0
+716,busra ozzengin,busraozzngn,2561789739.0,Busra Ozzengin,tr,26.0,34.0
+717,humeyra yilmaz,meyrabi_love,3209037394.0,sumeyra yilmaz,tr,51.0,144.0
+718,tevfik melih ertuzun,MelihErtuzun,612191649.0,Tevfik Melih Ertüzün,tr,90.0,120.0
+719,haldun meric erbay,HaldunMeric,1329434690.0,Haldun Meriç ERBAY,en,35.0,54.0
+720,onur alimoglu,OnurAlimoglu106,3654123621.0,Onur Âlimoğlu,tr,96.0,323.0
+721,selcuk yasan,selcukyasar,66713738.0,Selcuk Yasar,tr,582.0,520.0
+722,m rami tawakol,MRTawakol,195129988.0,M Rami Tawakol,en,136.0,82.0
+723,senol akbulak,senolakbulak,159022691.0,Senol Akbulak,en,18.0,41.0
+724,emin eminov,EminEminov8,1637753119.0,Emin Eminov,tr,24.0,50.0
+725,sinem pala,Sinemmpala,345589356.0,Sinem Pala,tr,255.0,235.0
+726,murat demir,demircimurat_,1420366369.0,Murat Demirci,tr,268.0,371.0
+727,ibrahim enes gundogdu,IGundogdu28,1498816818.0,Ibrahim Gundogdu,nl,211.0,1716.0
+728,ebranur ulema,ebraulema,944224878.0,ebra ulema,tr,179.0,388.0
+729,tuba yuce,yce_tugba,1475031356.0,Tuğba Yüce,tr,23.0,203.0
+730,abdullah karakas,Abdullah_Karaca,252526178.0,Abdullah KARACA,tr,486.0,2021.0
+731,omer can,omerr_ce,37630813.0,Omer C.,en,346.0,1191.0
+732,ahmet faruk eker,ahmetfarukeker,2874955830.0,Ahmet Faruk Eker,tr,73.0,170.0
+733,hilal uysal,huysal95,2672003055.0,Hilal Uysal,tr,105.0,165.0
+734,ali okumus,aliokumus97,2342562128.0,ALİ OKUMUS 🏆,tr,148.0,235.0
+735,huseyin koru,hseyin_koru,1472970224.0,Hüseyin KORU,tr,318.0,413.0
+736,zeynep ulucam,zynpulucam,222571773.0,Zeynep Uluçam,tr,62.0,169.0
+737,faruk ahmeti,muverrihnamzeti,2151420548.0,Ahmet Faruk,tr,425.0,370.0
+738,aliye kara,AliKARA4421,429063698.0,Ali KARA,tr,288.0,2045.0
+739,zeynep dogan,szeynepguran,309201932.0,Zeynep Güran,tr,144.0,310.0
+740,mehmet akif erbey,ersoyakifmehmet,414772348.0,mehmet akif ersoy,tr,326.0,447.0
+741,naveed tahir,nedtahir,595592832.0,Naveed Tahir,en,186.0,244.0
+742,ahmet aslan,talhadurma,2199773261.0,ahmet aslan,tr,138.0,1791.0
+743,elif maden,eliifcim,2342824649.0,Elif Maden,tr,51.0,244.0
+744,ibrahim mutlu,ibrahimutlu38,2394728189.0,Ibrahim mutlu,tr,118.0,107.0
+745,sherife slocum,SherifeSlocum,3046864980.0,Sherife Slocum,en,9.0,112.0
+746,huseyin ablak,HsynAblak,2582221616.0,Hüseyin Ablak,tr,45.0,21.0
+747,sifa cavusoglu,fesrac,2171108909.0,Esra Cavusoglu,en,84.0,313.0
+748,edman yilmaz,EdmanYilmaz,838081099.0,Edman Yilmaz,ru,24.0,51.0
+749,ahmet erkam ozturk,helebilo,578175970.0,Ahmet Erkam Öztürk,tr,260.0,243.0
+750,muhammed tok,ozturkmuhammed,65997310.0,Muhammed Öztürk,tr,178.0,925.0
+751,emrah kaya,emrah2015,1012621166.0,Emrah Kaya,tr,6.0,29.0
+752, ãmit koã§er,kocerumit,15746974.0,Ümit Koçer,tr,24.0,58.0
+753,elif gulden uzel,eliffuzell,2365745598.0,Elif Gülden Uzel,tr,508.0,294.0
+754,fatma seker,FatimaFtmanur,2256838459.0,Fatma Küçüker,tr,297.0,1418.0
+755,ali korkmaz,m01705327,1566799562.0,m.ali korkmaz,tr,99.0,282.0
+756,mehmet caner,MehmetCan184,1330802905.0,Mehmet Can ,tr,172.0,1262.0
+757,muhammed ekici,muhammedeekinci,2810110713.0,Muhammed Ekinci,en,6.0,20.0
+758,aysenur baltaci,aybaltc,455903388.0,Ayşenur Baltacı,tr,266.0,224.0
+759,feyza topuk,feyzatoprak36,2866579732.0,Feyza Toprak ,tr,74.0,726.0
+760,nur aydin,nuraydin7,1353539161.0,Nur Aydın,en,2.0,77.0
+761,omer faruk erturk,OmerFrkErturk,310389796.0,Ömer Faruk Ertürk,tr,161.0,106.0
+762,oguz yasin cihan,oyc01,266826023.0,Oguz Yasin Cihan,en,83.0,71.0
+763,fatih cagatay gulmez,FCgtyG,152711589.0,Fatih Çağatay Gülmez,en,73.0,149.0
+764,yusuf alper cete,CeTeTR,2464863426.0,Yusuf Alper Çete,tr,0.0,36.0
+765,duygu iyiaktas,duyguiyiaktas,1107405890.0,DuyguIyıaktas,tr,68.0,124.0
+766,muhammed ali kaya,makarabd,2393303809.0,Muhammed Ali Kara,tr,53.0,716.0
+767,mehmet ali kaplan,4Mak92,2295234044.0,Mehmet Ali Kaplan,tr,59.0,247.0
+768,abduhalim albakkor,Halimalbakkor,3314633705.0,Abduhalim Albakkor,en,60.0,247.0
+769,behcet sahin,Behcetahin,2207627077.0,Behcet Şahin,en-gb,4.0,37.0
+770,baraa kekhia,baraakekhia,887182146.0,baraa kekhia,en,201.0,282.0
+771,sehriban bozan,BozanSehriban,3408479039.0,Şehriban Bozan,tr,103.0,117.0
+772,beliz ozturk,belizeee,329625372.0,Beliz Öztürk,tr,566.0,276.0
+773,ersin onur erdogan,ersinoe,206661587.0,ersin onur erdoğan,en,184.0,156.0
+774,yunus emre acar,y_eacar,2740742208.0,Yunus Emre Acar,tr,88.0,126.0
+775,emirhan arslan,emrhanarslan,3630754639.0,Emirhan Arslan,tr,197.0,266.0
+776,pelin zeytun,pelinzeytun,720740640.0,Pelin Zeytun,tr,119.0,114.0
+777,sena yilmaz,ssnylmzz,2957208605.0,Sena Yılmaz,en,47.0,131.0
+778,ahsen busra dilipak,ahsenbusra,2984559473.0,Ahsen Büşra Dilipak,tr,755.0,345.0
+779, mustafa aksu,mstfaykut,1612914606.0,Mustafa Aykut,tr,56.0,318.0
+780, omer bahca,omerbahca,329947646.0,Ömer Bahça,tr,18.0,77.0
+781, mehmet karakose,Mehmetkkoseist,2831292040.0,mehmet karaköse,tr,24.0,74.0
+782,yunus celik,YunusMelikCelik,492441614.0,Yunus Çelik,tr,67.0,214.0
+783,sena uslu,senaausslu,1331891166.0,sen4 uslu,tr,124.0,264.0
+784,yasir bali,A_AliJnr,2357961415.0,Yassir Ali,en,187.0,219.0
+785,dilara kose,DKose__,2788562244.0,Dilara Köse,tr,122.0,140.0
+786,mehmet demir,mdemir_61,422423791.0,Mehmet Demir,tr,156.0,491.0
+787,yonca baran,BaranYonca,586815260.0,yonca baran,tr,125.0,153.0
+788,yakup silingec,yakupsilingec,1392659191.0,Yakup Silingec,tr,140.0,111.0
+789,yasir yilmaz,yasiryilmaz,93613640.0,Yasir Yılmaz,tr,233.0,521.0
+790, mehmet alpatli,alpatli,174641976.0,Mehmet ALPATLI,en,342.0,813.0
+791,bedirhan albayrak,BedirhanAlbayrk,944322026.0,Bedirhan Albayrak,tr,128.0,127.0
+792,mustafa demir,mstfdemirsoy,2147936166.0,Mustafa Demirsoy,tr,59.0,176.0
+793,majdi nissrine,MajNissrine,3019892279.0,Nissrine Majdi,en,7.0,126.0
+794,muhammet fatih dogan,mfatihdgn1,294687724.0,muhammet fatih dogan,tr,787.0,94.0
+795,huseyin gayretli,HsynGayretli,1475720010.0,Hüseyin Gayretli,tr,157.0,153.0
+796,yunus moroglu,yunusmoroglu,1632868675.0,yunus moroglu,tr,286.0,233.0
+797,ibrahim cansu,ibrahimcansu_,3068335031.0,ibrahim cansu,tr,53.0,523.0
+798,yusuf yildiz,yusufyildiz92,329590627.0,Yusuf YILDIZ,tr,128.0,363.0
+799,ilyas atakan yasak,AtakanYasak,1941077114.0,İlyas Atakan Yasak,tr,163.0,354.0
+800,merve kandemir,Mrve_Dmr1453,2337130460.0,Merve Demir,tr,46.0,317.0
+801,ayse turhan,turhanays,425432346.0,Ayse Turhan,tr,121.0,148.0
+802,abdullah oncu,abdtopcu53,1522566300.0,Abdullah TOPCU,tr,207.0,235.0
+803,vildan kadioglu,VildanKadioglu,2257712995.0,Vildan Kadıoğlu,tr,87.0,155.0
+804,busra karahan,burakarahann,3299390187.0,Burak Karahan,tr,141.0,182.0
+805,miray polat,eipolat,175419097.0,emir polat,en,18.0,223.0
+806, ali ãakmak,alicakmaka,2150626906.0,Ali Çakmak,en,26.0,29.0
+807,serdar kayali,kayakay,31365302.0,serdar kaya,en,106.0,210.0
+808,bilal sadi,BSahin_,406145526.0,Bilal Sahin ℘,tr,420.0,1662.0
+809,meryem hamidi,hamidimeryem,475761925.0,Meryem Hamidi,tr,67.0,126.0
+810,betul erdem,drerdemir,540087524.0,Betul Erdemir,tr,229.0,1464.0
+811,baris erdal,erdal__ardic,1500596868.0,Erdal ARDIÇ,tr,165.0,250.0
+812,cemal vehbi gunaydin,cemalgunaydn,1650479899.0,Cemal Vehbi Günaydın,tr,152.0,117.0
+813, asli abak,asliabak,229517534.0,asli abak,tr,19.0,31.0
+814,ayse muge hatipoglu,a_mugeline,767649666.0,Ayşe Müge Hatipoğlu,tr,21.0,69.0
+815,sumeyye zengin,summeye,145723363.0,Sümeyye Zengin,tr,117.0,359.0
+816,oguzhan erdem,OuzhanErdem,250912657.0,Oğuzhan ERDEM,tr,376.0,294.0
+817,berat kasarci,ksrcberat,1972193798.0,Berat Kasarcı,tr,228.0,113.0
+818,hilmi turhan,TurhanHilmi,608454023.0,Hilmi Turhan,tr,96.0,95.0
+819,baha ulug,UlugBaha,331489061.0,Baha Uluğ,en-gb,135.0,227.0
+820, hatice erin,haticersan,1542046692.0,Hatice ERSAN,tr,348.0,1534.0
+821,humeyra topuz,humeyratpz,3344489901.0,Hümeyra Topuz,tr,238.0,420.0
+822,celal tellioglu,ctellioglu,369583895.0,Celal Tellioğlu,tr,1339.0,577.0
+823,yusuf bir,BirgulYusuf,3305745190.0,Yusuf Birgul,tr,105.0,686.0
+824,zeynep aslan,zeynepAslihan,2328724157.0,Zeynep Aslıhan ,tr,31.0,79.0
+825, betul demiroz,zbetuldemirel,409792066.0,Betül Demir,tr,195.0,475.0
+826,ali aydin,aliaydinkoc,2723507125.0,ali aydın,tr,5.0,17.0
+827,vedat ata,vedat_dastan,2714413726.0,Vedat Dastan,tr,427.0,1415.0
+828,seyma kaya,kyseymaa,2890897330.0,şeyma kaya,tr,173.0,205.0
+829,arafat gurbuz,gurbuzarafat,612776757.0,ArafatGürbüz,tr,46.0,102.0
+830,beyzanur ayar,BeyzanurAyar,371206338.0,Beyzanur Ayar,tr,338.0,206.0
+831,pinar solmaz,PNarrr03,2845341652.0,pınarsolmaz,en,16.0,112.0
+832,betul nur ozturk,betulistanbul,626385181.0,betul ozturk,tr,492.0,1221.0
+833,ahmet cem iman,ahmetcemiman,476201697.0,Ahmet Cem İman,tr,151.0,179.0
+834,rukiye bircan,rukiyebircan,405692297.0,Rukiye Bircan,tr,181.0,167.0
+835,mahmut karagoz,mhkrgz,2573575712.0,Mahmut Karagöz,tr,81.0,176.0
+836,muhammet tahmazoglu,MT_Tahmazoglu,358094060.0,Muhammet Tahmazoğlu☝,tr,1891.0,275.0
+837,emre tonba,emrtnb,45125220.0,Emre TONBA,en,29.0,192.0
+838,asma alian,AsmaaElyan,1019233874.0,Asma Alian,en,109.0,297.0
+839,osman serdar ugurlu,serdarug,3345850408.0,Osman Serdar Uğurlu,tr,101.0,174.0
+840,zeynep ayan,Kaya384Z,2874355690.0,Zeynep Kaya,tr,54.0,203.0
+841,selma sirin,tarcinlielmali,594065508.0,selma şirin,tr,278.0,413.0
+842, ahmet sahin,ahmetsahin23,965098470.0,Ahmet Şahin,tr,393.0,259.0
+843, duygu masal,duygumasall,414107608.0,Duygu MASAL,tr,45.0,208.0
+844,vildan beyza yesil,vildan_beyza,571942545.0,Vildan Beyza Yeşil,tr,82.0,133.0
+845,samet yilmaz,Ahmeetyil,914048918.0,Ahmet Yilmaz,tr,42.0,78.0
+846,muhammet can ceylan,muhammetcceylan,1525337772.0,Muhammet CEYLAN,tr,361.0,249.0
+847,muhammet mazi,mhmmtmz,939057318.0,Muhammet Mazı,tr,215.0,441.0
+848,elif okur,gokseyircisi,2301123770.0,Elif Okur,en,164.0,550.0
+849,melis erkus,erkus_melis,3212523526.0,Melis Erkuş,tr,186.0,566.0
+850,hatice ozkan,htuski,2264626832.0,Hatice Özkan,tr,136.0,150.0
+851,ramazan oduncu,ramazanodunccu,2982997695.0,ramazan oduncu,tr,110.0,293.0
+852,salih sahin,nihashilas,786513674.0,Salih Sahin,tr,713.0,624.0
+853,mustafa bal,baskan_mustafa,1494231439.0,Mustafa B.,tr,154.0,1951.0
+854, secil akca,secilakca,116874386.0,seçil akca,tr,239.0,398.0
+855,enes yalniz,mezkurrrrrr,2807215252.0,Enes Yarli,tr,44.0,83.0
+856,betul cilasun,beyjey,224727919.0,betul cilasun,en,236.0,349.0
+857,aykut ucar,aykutucr27,924167054.0,Aykut Uçar,tr,122.0,190.0
+858,ahmed dirar gungordu,AD_gungordu,1618006970.0,ahmed dırar güngördü,tr,492.0,850.0
+859,ibrahim kurban,ikrbn6465,2232249405.0,İbrahim Kurban,en,66.0,170.0
+860,elif oktay,elftky,127349539.0,elif tokay,en,72.0,254.0
+861,zeynep aslihan satar,zynpaslihn,2905068995.0,Zeynep Aslihan Satar,tr,27.0,64.0
+862,seyma nur ates,seyma353,351030914.0,Şeyma Nur Ateş,en,264.0,331.0
+863,deniz kaya,denizkayakar,3298803633.0,Deniz Kaya,tr,92.0,490.0
+864,abdullah mursel,AbdullahMursel,3246496217.0,Abdullah Mürsel,tr,22.0,64.0
+865, ãmit cizre,umitcizre,2401795988.0,umit cizre,en,1349.0,282.0
+866,mert mengu,Mertmengu,426075771.0,Mert Mengü,tr,390.0,179.0
+867,omer faruk can,515Omer,436045690.0,Ömer Faruk Can,tr,138.0,56.0
+868, abdulkader badlah,abdulkaderbadla,3753440423.0,abdulkaderBadlah,ar,50.0,119.0
+869,zeynep ayan,zeynepkaya5858,1483212169.0,zeynep kaya,tr,1210.0,2343.0
+870,berke tufenk,berketufenk,188101479.0,Berke Tüfenk,tr,111.0,101.0
+871,vahid bahrami,VahidBahrami1,358999317.0,Vahid Bahrami,en,12.0,21.0
+872,ahmet oztemiz,AhmetOztemz,1475948256.0,Ahmet Öztemiz,tr,71.0,56.0
+873,mehmet demir,MehmetGurcuoglu,202625973.0,Mehmet Demir,en,344.0,589.0
+874, sotiris mitralexis,sotmitral,604993855.0,Sotiris Mitralexis,en,678.0,464.0
+875,fatma deniz,fatma_denizz,1270478928.0,fatma deniz,en,112.0,234.0
+876,ilkan ada,norton34,148016688.0,ilkan ada,en,34.0,184.0
+877,khaled tawakol,khalidtawakol,352843735.0,Khaled Tawakol,en,77.0,107.0
+878,mohamad kannan idris,Kan3anio,425096207.0,Mohamad Kannan Idris,en,164.0,197.0
+879,soumeya ahmed aden,SoumyZayLia3,833429630.0,Soumy Ahmed Aden,fr,421.0,282.0
+880,meryem yilmaz,meryemyilmazz,462209339.0,Meryem YILMAZ,tr,52.0,334.0
+881,zehra celik,zekracelik,580268792.0,zekra çelik,en,80.0,273.0
+882,canberk cengiz,canberkcengiz,374146195.0,Canberk Cengiz,tr,46.0,145.0
+883,mehmet zahid erer,zahiderer,1691704831.0,Mehmet Zahid Erer,tr,258.0,248.0
+884, pervin somer,ProfPervinSomer,3124424271.0,PervinSomer,tr,703.0,375.0
+885,islomjon nabiev,islomjonnabiev,2368940444.0,Islomjon Nabiev,tr,35.0,224.0
+886,mustafa demir,mstfdmrls,1475027762.0,Mustafa demirel,tr,26.0,86.0
+887,ali abbas fidan,FdnAli,179985645.0,Ali Abbas Fidan,tr,56.0,172.0
+888,mikail altan,mikailaltan,1470279325.0,Mikail Altan,tr,63.0,110.0
+889,amena abdullah,rahatullahmemon,2158901503.0,Abdullah memon,tr,22.0,133.0
+890,zeynep bala,zeyneptrkanbaz,420553408.0,zeynep baz,tr,106.0,239.0
+891, abdurrahman ihtibar,ihtibar1414,618201430.0,abdurrahman ihtibar,tr,18.0,82.0
+892,yasemin ergin,yasemingozeler,69710870.0,yasemin meriç,tr,166.0,858.0
+893,hamza gunaydin,hamza_gunaydin,2331842948.0,hamza günaydın,tr,77.0,383.0
+894,ozan gumus,OzanGumuss,398652596.0,Ozan Gumus,tr,158.0,140.0
+895,hanife ergun,ergun_hanife,2588334444.0,Hanife Ergün,tr,38.0,67.0
+896,muhammet fatih dogan,drmfatihdogan,2250925051.0,Muhammet Fatih Doğan,tr,42.0,241.0
+897, ibrahim akar,ihacar2,2237690468.0,Ibrahim Acar,en,354.0,1158.0
+898, nezih erdogan,neziherdogan,93385894.0,Nezih Erdogan,en,473.0,243.0
+899,merve seydanlioglu,opsesiff,500949442.0,Merve Seydanlıoğlu,tr,529.0,385.0
+900,sadi nalcacigil,sadinalcacigil,443899062.0,Sadi Nalçacıgil,tr,249.0,191.0
+901,mehmet kaya,MehmetKavak__,1557597264.0,Mehmet KAVAK,tr,31.0,381.0
+902,onur baba,BabaOnurbaba02,1570496725.0,Onur Baba,tr,43.0,100.0
+903, serkan demir,dmrserra,2149482223.0,serra demir,tr,131.0,123.0
+904,abdullah kir,abdulahkr,1718678106.0,abdullah kır,tr,56.0,46.0
+905,burak altunbas,burakaltunbas,1662607663.0,Burak Altunbaş,tr,82.0,72.0
+906,fatma korkut,parlanay,2459079670.0,fatma korkut,tr,266.0,658.0
+907,murat gokdemir,mrtgokdemir,712567496.0,Murat Gökdemir,tr,154.0,248.0
+908,hilal dursun,hilaldursun2206,3393842032.0,Hilal Dursun,en,266.0,215.0
+909,emine karaman,emycini,2904850036.0,Emine Karaoğlan,tr,698.0,3382.0
+910,serdar buyuksimitci,serdarbs,179238549.0,Serdar Büyüksimitci,tr,260.0,237.0
+911,ebru nur ates,ebrunuratess,3397297743.0,Ebru Nur Ateş,tr,179.0,148.0
+912,talha onur yilmaz,talhayilmazz,119926869.0,Talha Onur Yılmaz,tr,76.0,75.0
+913,hamed hamzeh,HamedHamzeiy,3341252397.0,Hamed Hamzeiy,en,5.0,11.0
+914,muniba habbaba,mimohababa,2291494418.0,Muniba Habbaba,ar,30.0,89.0
+915,deniz arslan,1DenizArslann,612625044.0,Deniz Arslan,tr,135.0,53.0
+916,mert okumus,mertokumu5,329306654.0,Mert Okumuş,tr,53.0,85.0
+917, baris arslan,_baris_arslan,2799720711.0,Baris Arslan,en,10.0,8.0
+918,adeogun olumide sunday,lummydan,596614146.0,Adeogun .S. Olumide,en,49.0,369.0
+919,ibrahim bektas,ibektas6134,1487988584.0,Ibrahim Bektaş,tr,465.0,1130.0
+920,senanur solmaz,solmazzsnnr,2655289146.0,Senanur Solmaz,tr,105.0,162.0
+921,jeton pllna,jPllana,314762385.0,Jeton Pllana,en,146.0,300.0
+922,ayse selin zorlu,slnzrl,118382186.0,Ayse Selin Zorlu,tr,244.0,467.0
+923,ali omer baltaci,aliomerbaltaci,312722165.0,Ali Ömer Baltacı,tr,296.0,139.0
+924,tevfik melih ertuzun,tvfkmlhertzn,2883951994.0,Tevfik Melih Ertüzün,tr,216.0,301.0
+925,elif ozturk,e_elif_e,1691970415.0,elif ozturk,tr,18.0,107.0
+926,enes ilter,Enes_Ilter_,627173540.0,Enes İlter,tr,45.0,164.0
+927,nurcan tuyluoglu,nnurcantuyluogl,2948587163.0,Nurcan Tuyluoglu,tr,30.0,97.0
+928, zeynep sisman,ZeyneepSinan,243135866.0,Zeynep Sinan,en,506.0,254.0
+929,muhammet nazim akin,muhammetnazmakn,498787068.0,muhammet nazım akın,tr,19.0,101.0
+930,berke sahin,berkesahin77,626355638.0,berke şahin,tr,50.0,344.0
+931,enfal nur ozyayla,NurOzyayla,3296272632.0,Enfal Nur Özyayla,en,227.0,447.0
+932,aysel isler,psikologvari,1006485510.0,Aysel İşler,tr,113.0,176.0
+933,ibrahim guler,ibrahimgulermi,263167320.0,Ibrahim Güler,tr,206.0,193.0
+934,mehmet faruk guloglu,MFGuloglu,1649037025.0,Mehmet Faruk Güloğlu,tr,201.0,284.0
+935,abdullah kaplan,clubfizik,397256797.0,Abdullah Özkan,tr,557.0,2082.0
+936,kardelen meric,kardelenmeric,1492751425.0,Kardelen Meriç,tr,147.0,104.0
+937,ilker ucun,ilkerucun,294301041.0,İlker Ucun,tr,179.0,357.0
+938, faruk deniz,faik_deniz,1335465402.0,faik deniz,en,44.0,280.0
+939,gul kabadayi,GulKabadayi,2418408443.0,Gül Kabadayı,tr,60.0,241.0
+940,ahmet gundogdu,ahmdgun,1918088563.0,Ahmet Gündoğdu,tr,187.0,217.0
+941,abdullah oncu,abdtopcu,96445938.0,abdullah-topcu,en,39.0,295.0
+942,ilkan ada,IlkanAda,2762664303.0,ilkan Ada,tr,17.0,137.0
+943,merve akgun,kelemezgo,2462977789.0,merve aksu,tr,0.0,22.0
+944,alihan koca,alihankoca,155576359.0,alihan koca,en,195.0,296.0
+945,mehmet mert kesti,mehmetmertkesti,173968248.0,Mehmet Mert KESTİ,en,422.0,316.0
+946,merve sevinc,sevincmervee,420697026.0,merve sevinc,tr,231.0,963.0
+947,zeynep ayan,ZeyAyan,539055869.0,Zeynep Ayan,tr,147.0,243.0
+948,fatma dagli,fatima_ali55,3429261982.0,Fatima Ali,en,13.0,120.0
+949,melike bilge,melikebilgee,362552611.0,Melike Bilge,tr,155.0,140.0
+950,emre ayar,ea_ay,2157718803.0,Emre Ay,tr,49.0,179.0
+951,yigiter bayar,BayarYigiter,3035288060.0,Yiğiter Bayar,tr,87.0,212.0
+952,abdullah mursel,AbdullahMRSL,476086009.0,Abdullah MÜRSEL,tr,24.0,39.0
+953,merve keskin,fmervekeskin,3404645212.0,Merve Keskin,tr,113.0,984.0
+954,abdullah aydin,abdullahaydin29,1478304535.0,abdullah aydın,tr,68.0,696.0
+955, tuba dogan,TbDgnn,484078145.0,Tuba Doğan,tr,224.0,118.0
+956,talha sagdan,tsagdan,620865724.0,Talha Sagdan,tr,115.0,194.0
+957,mustafa salih oguz,MSalih_Oguz,272016074.0,Mustafa Salih Oğuz,tr,209.0,278.0
+958,beyza sari,lnleviathan,2908027480.0,sare beyza,tr,157.0,151.0
+959,fatma demir,fdmr,29951400.0,Fuat Demir,tr,96.0,752.0
+960,ahmet metin,amtmtn,755388661.0,ahmet metin,tr,420.0,287.0
+961,berna celik,bernacelik96,2762684318.0,Berna Çelik,tr,8.0,25.0
+962,dilruba gul kulunk,DilrubaKlnk,338591622.0,Dilruba Gül Külünk,tr,72.0,118.0
+963,mustafa koc,mmmustafaku,2964594478.0,mustafa k,tr,3.0,47.0
+964,elif gul,sarserry,632018954.0,Elif Gönül,tr,45.0,173.0
+965,halid aydin,halidaydin,492654914.0,HALİD AYDIN,tr,80.0,91.0
+966,hilal aslan,HillallAkaslan,1686149892.0,Hilal Akaslan,tr,50.0,424.0
+967,fazlurrahman yaman,fazlur61,3229214397.0,Fazlurrahman Yaman,tr,187.0,247.0
+968, kubra tolak,kubratolak,1548374474.0,Kübra Tolak,tr,289.0,682.0
+969,yunus emre gokce,Gkcyunusemre,2191576163.0,Yunus Emre Gökçe,tr,2.0,4.0
+970,onur aksoy,onuraks012,738511766.0,ONUR AKSOY,tr,125.0,58.0
+971,melihcan dodurgali,MDodurgali,2645310060.0,Melihcan Dodurgalı,tr,122.0,264.0
+972,elif demirel,ElifDemirr34,1656388291.0,Elif Demir,tr,1.0,26.0
+973,burak gultekin,burkii93,2724664235.0,Burak Gültekin,de,4.0,41.0
+974,suheda ercan,Ercan1S,3380651145.0,şüheda ercan,tr,10.0,30.0
+975, coåkun ãakä±r,coskuncakir60,3161272803.0,Coşkun Çakır,tr,25987.0,300.0
+976,alper bozkurt,alperilealper,2177060726.0,alper bozkurt,tr,91.0,147.0
+977,tahir kaya,TKaya_1,371964113.0,Tahir kaya,en,179.0,535.0
+978,murat boz,mrbozz,848876610.0,Murat Boz,tr,93.0,53.0
+979,yahya yacoob,YacoobYahya,1922395680.0,Yahya Yacoob,tr,2.0,7.0
+980,ahmet furkan kurt,AhmetFurkanKURT,445806392.0,Ahmet Furkan KURT,tr,108.0,131.0
+981, elif sezer,el_sezer,3386137895.0,Elif Sezer,en,56.0,60.0
+982,mert kilic,umeyri,316036479.0,ÖMER KILIÇ,tr,50.0,53.0
+983,aliye kara,aaliyekara,2881159525.0,Aliye Kara,tr,128.0,130.0
+984,melike metintas,melmetintas,1063900364.0,Melike Metintaş,tr,274.0,317.0
+985,meltem ozgan,meltem_ozgan,972634886.0,meltem ozgan,tr,25.0,180.0
+986,mustafa karan,mkarailetisim,271521207.0,MUSTAFA KARA,tr,1008.0,4930.0
+987, eda yucesoy,eda_yucesoy,1520474768.0,eda yucesoy,en,11.0,9.0
+988, tea talk,teatalk_sehir,3094162623.0,Tea & Talk,tr,291.0,59.0
+989,beyza ozen,ozerenbeyza,99528248.0,Beyza Ozeren,tr,104.0,110.0
+990,emre kayar,fb_emre10,550121465.0,Emre Kayar,tr,75.0,58.0
+991,alajdin rustami,AlajdinR,843246206.0,Alajdin Rustemi,en,50.0,108.0
+992,yigit bozkurt,yigit_bozkurt,400393919.0,Yiğit Bozkurt,tr,83.0,448.0
+993,hakan inan,SinanHASKAN,941472044.0,Sinan Haskan,tr,15.0,337.0
+994,fatih dogan,fatih46071,218121042.0,Fatih DOĞAN,tr,70.0,531.0
+995,ozan oztel,Ozantel,376312970.0,Ozan Öztel,tr,44.0,130.0
+996,civan kacar,KacarCivan,1420059606.0,Civan Kacar,tr,267.0,768.0
+997,muhammad haykal,haykallmuhammad,166501878.0,Muhammad Haykal,en,428.0,240.0
+998,serkan dem?rbas,dmrbsserkan,1259756966.0,Serkan DEMİRBAŞ,tr,51.0,126.0
+999,salih gundogdu,salihhgundogdu,2829837013.0,salih GÜNDOGDU,tr,13.0,33.0
+1000,muharrem aras,M_Aras04,622724647.0,aras muharrem,tr,40.0,188.0
+1001,sumeyye kalkan,sumeyye0511,3198075594.0,Sümeyye Kaplan,tr,52.0,188.0
+1002,sehir mun,sehirmun,2540658620.0,Şehir MUN,en,10.0,33.0
+1003,irfan batur,irfan_batur,2915919923.0,irfan batur,en,5980.0,485.0
+1004,dogukan karakoc,KarakocDogukan,1604492863.0,DogukanKarakoc,tr,109.0,146.0
+1005,burak un,Burak_un3234,944281436.0,Burak Ün,tr,2.0,56.0
+1006, omer bahca,omrbahca,3019552846.0,Ömer BAHÇA,tr,7.0,3.0
+1007,aise gul akkoyun,AAkkoyunn,1665093331.0,Aise Gül Akkoyun,en,167.0,382.0
+1008,nuriye akbiyik,Nuriyeakbiyik,495298466.0,Nuriye akbiyik,tr,15.0,25.0
+1009,taha enes kurtulmus,TEKurtulmus,786963288.0,Taha Enes Kurtulmus,en,199.0,209.0
+1010,emre adiyaman,emreeadymn,753173821.0,Emre Adıyaman,tr,201.0,137.0
+1011,zeynep yildiz,yvzynp0409,2764045797.0,zeynep yildiz,tr,6.0,20.0
+1012,ceyhun elgin,CeyhunElgin,1885612807.0,Ceyhun Elgin,en,1411.0,1312.0
+1013,yahya yacoob,Yahyayacoob,133878521.0,Yahya Yacoob,en,450.0,494.0
+1014,sinan delikaya,sinandeli36,1570536104.0,Sinan Delikaya,de,16.0,55.0
+1015,huseyin demir,mhuseyindemir,235278334.0,M Hüseyin Demir,tr,167.0,461.0
+1016, lobbying school,lobbyingsschool,3080417236.0,Lobbying School,tr,1057.0,95.0
+1017,oguz demirbasci,oguz_dem,191374657.0,Oguz Demirtas,tr,41.0,365.0
+1018,gulsah mert,GulsahMrt,576473680.0,GulsahMert,tr,184.0,171.0
+1019,ozlem bayram,1ozlembayram,3233851747.0,Özlem Bayram,tr,55.0,108.0
+1020,mustafa erkan,42meken,2382434263.0,Mustafa Eken,tr,122.0,312.0
+1021,abdulsamet aydinli,sametaydnl,314147819.0,Abdulsamet Aydınlı,tr,61.0,129.0
+1022,abdullah kaplan,abdullahozkan,103653461.0,abdullah özkan,tr,1433.0,491.0
+1023, dogucan uslu,Dogucano,572892491.0,Doğucan uslu,tr,123.0,384.0
+1024, ibrahim kaya,ofliibrahim61,2221049984.0,ibrahim ozkaya,tr,35.0,284.0
+1025,merve senel,EmresenelHuveet,2162528284.0,EMRE SENEL,tr,22.0,94.0
+1026,elif keskin,ali_keskin90,2874079141.0,Ali Keskin,tr,10.0,42.0
+1027,sinan ates,SNANATES,304526198.0,Sinan Ateş,tr,183.0,372.0
+1028,seid behluli,seidbehluli,1956316291.0,Seid Behluli,en,44.0,73.0
+1029,yavuz demir,DemirlerinYavuz,367968322.0,Yavuz Demir,tr,327.0,240.0
+1030,mustafa topcu,mustafatopcu061,2610121232.0,Mustafa TOPCU,tr,182.0,839.0
+1031,yasemin ergin,yaseminsezgin_,233241107.0,Yasemin Sezgin,tr,391.0,280.0
+1032, hande baltaci,HandeBaltaci,529401410.0,Hande Baltacı,tr,41.0,134.0
+1033,emre sahin,07EmreSahin,1668552506.0,Emre Şahin,tr,77.0,67.0
+1034,emine sueda yilmaz,aaminesueda,2849938298.0,Âmine Süeda Yılmaz,en,396.0,434.0
+1035,meryem solmaz,SolmazMeryem,89195407.0,Meryem Solmaz,tr,65.0,229.0
+1036,ibrahim eser,eseribrahim_,609982219.0,ibrahim eser,tr,97.0,118.0
+1037,sumeyye eryilmaz,SumeyyErylmz,1957107049.0,Sümeyye Eryılmaz,tr,19.0,100.0
+1038,zafer demir,ZaferDemir_fr,209749537.0,Zafer Demir,fr,448.0,1812.0
+1039,merve karan,MerveKa79659229,1707457663.0,Merve Kaya,tr,261.0,1313.0
+1040,alper yilmaz,Alperyiilmaz,604462343.0,Alper Yılmaz,tr,211.0,281.0
+1041,batuhan aykiri,aykiriiii,521385988.0,batuhan aykırı,tr,71.0,48.0
+1042,rumeysa akkaya,kayarumeysa672,3087490851.0,rumeysa kaya,tr,9.0,95.0
+1043,tuba yuce,tuba_yuce,2612450719.0,Tuba Yüce,tr,102.0,31.0
+1044,douaa abbara,DODOABBARA,737912659.0,DOUAA ABBARA,ar,127.0,131.0
+1045,ikranur guler,guler_ikranur,3423583071.0,İkranur Güler,tr,194.0,172.0
+1046, burcu tã¼rk saracoglu,brctrk_,2180687802.0,Burcu Türk Saracoglu,tr,239.0,219.0
+1047,ahmet burak kaya,ahmetbugrakara,3390817305.0,Ahmet Buğra KARA,tr,98.0,440.0
+1048,mehmet yilmaz,MehmetY38209386,1153441993.0,Mehmet Yılmaz,tr,199.0,586.0
+1049,mustafa mican,sofistmusti,1027390153.0,Mustafa Mican,tr,1075.0,287.0
+1050,osamah al-ghammari,Sam_Al_Ghammari,986265062.0,Sam Al-Ghammari,en,1071.0,167.0
+1051, pinar batova,batovapinar,169021655.0,Pınar Batova,tr,32.0,593.0
+1052,sener cavga,SenerCavga,147888506.0,Şener Çavga,en,157.0,466.0
+1053,burak mangiroglu,BurakMangiroglu,3293133290.0,Burak Mangıroğlu,tr,188.0,512.0
+1054,aysenur tuter,yeakyea,349157676.0,Ayşenur Tüter,en,205.0,84.0
+1055,sedat kaya,sdtkayaa,2874911918.0,Sedat Kaya,tr,12.0,66.0
+1056,yusuf kayan,yusuftayman,2441309748.0,Yusuf Tayman,tr,377.0,1207.0
+1057,momen al khatib,Kh5Momen,1040795040.0,Momen Al Khatib,en,39.0,45.0
+1058,mustafa kaya,mkaya343406,2775786167.0,Mustafa Kaya,tr,654.0,4840.0
+1059,sefa yildiz,sedatyildizcom,2400285698.0,Sedat YILDIZ,en,1764.0,2613.0
+1060, abdurrahman ihtibar,itibar1414,2619229812.0,abdurrahman ihtibar,tr,39.0,100.0
+1061,semih sargin,semihsarginn,943662601.0,Semih Sargın,tr,157.0,164.0
+1062,gokhan belek,BelekGokhan,62616625.0,Gökhan Belek,tr,248.0,626.0
+1063,mustafa said safi,Msaidsafi,2389573400.0,Mustafa Said Safi,tr,82.0,77.0
+1064,hazel kaba,hazelkaba,388384708.0,Hazel Kaba,tr,229.0,192.0
+1065, ! tarih,tarihci_talebe,1357380847.0,tarihçi,tr,218.0,658.0
+1066,ibrahim bayraktar,IbrhmBayraktar,471153734.0,İbrahim Bayraktar,tr,15.0,10.0
+1067,zeynep sena kurtul,zskurtul,170793146.0,Zeynep Sena Kurtul,tr,239.0,209.0
+1068,ayse nur gelgor,aysenurgelgor,2250579819.0,Ayşe Nur Gelgör,tr,47.0,128.0
+1069,aysenur ergul,ergul_aysenur,2875840455.0,aysenur ergul,en,65.0,118.0
+1070,merve fidan,mervefidan95,3052081924.0,Merve Fidan,tr,60.0,98.0
+1071,harun sahin,harun_sahin,180538637.0,Harun Şahin,tr,114.0,290.0
+1072, ayhan kaygusuz,KaygusuzA,192444527.0,Ayhan Kaygusuz,en,20.0,52.0
+1073,ismail ergin,ierdin,245069388.0,İsmail Erdin,tr,161.0,299.0
+1074,abdurrahman duman,abdurrahman_ada,358337688.0,Abdurrahman Ada,tr,6326.0,1797.0
+1075,ahmet sari,Saraczade,85943154.0,Ahmet SARAÇ,tr,548.0,2042.0
+1076, dilem hizlan,dihizlan,138348596.0,Dilem Hizlan,en,128.0,461.0
+1077,mustafa cevik,cin_fikir,256431457.0,Mustafa Çevik,tr,214.0,632.0
+1078,zeyneb ipek,zeynepipek55,939530648.0,ZEYNEP İPEK,tr,3.0,61.0
+1079,mehmet ortac,mehmetortac,20244720.0,Mehmet Ortaç,tr,1515.0,230.0
+1080,ahmed sherifi,AhmedSherifi,182325686.0,Ahmed Sherifi,en,69.0,114.0
+1081,sena darici,senadarici,636429203.0,SENA DARICI,tr,283.0,304.0
+1082,esra unver,unveresra,357042122.0,Esra Ünver,tr,53.0,73.0
+1083,elif demirel,elif34demir,285101999.0,elif demir,tr,16.0,183.0
+1084,mehmet ali ozdemir,MehmetAlizdemi6,372162808.0,Mehmet Ali Özdemir,tr,129.0,1255.0
+1085,yasin koca,yasin_kocabas,173168153.0,yasin Kocabaş,tr,121.0,206.0
+1086,ismail erkam oztã¼rk,smlerkam,431102126.0,İsmail Erkam Öztürk,tr,257.0,358.0
+1087,bengi buse budak,Bngbsbdk,449199437.0,Bengi Buse Budak,tr,183.0,200.0
+1088,busra aytekin,AytekinBusra,458720938.0,Büşra Aytekin,tr,237.0,195.0
+1089,mustafa ayan,mustafaapan,55900863.0,mustafa apan,tr,100.0,790.0
+1090,burak altun,burak_altun_,178728184.0,burak altun,en,423.0,444.0
+1091,hakan sen,hakan_seckin,1201266661.0,Hakan Seckin,en,0.0,352.0
+1092, kariyer merkezi,BilkentKariyer,283967550.0,B.Ü. Kariyer Merkezi,en,5031.0,436.0
+1093,serhat uzun,serapase,784758692.0,serap uzun,tr,110.0,1108.0
+1094,merve bayram,mrvebayram,527765077.0,Merve Bayram,tr,240.0,270.0
+1095,mustafa yildirim,mustafa27yildiz,1149345013.0,Mustafa YILDIZ,tr,1576.0,1994.0
+1096,yunus karakaya,yunuzo,1015222154.0,yunus karakaya,tr,128.0,123.0
+1097,reha ayhan,rehaayhan,789462997.0,Reha Ayhan,tr,32.0,67.0
+1098,mustafa emre,musatafaemre,86594374.0,Mustafa EMRE,tr,32.0,47.0
+1099,salih orhan,SalihOrhan_,613357064.0,Salih Orhan,tr,103.0,42.0
+1100,yusuf demir,av_yusufdemir,287084927.0,Yusuf Demir,tr,1662.0,4899.0
+1101,hakan bayrak,HakanBayrakHB,982160659.0,Hakan Bayrak,tr,112.0,230.0
+1102,reyhan merve kayikci,mrve_r,170786149.0,Merve Reyhan Kayıkçı,en,835.0,1251.0
+1103,yunus celik,yunuscelik83,71758894.0,yunus celik,en,165.0,2629.0
+1104,abdullah ayasun,abyasun,315941679.0,Abdullah Ayasun,en,4825.0,1575.0
+1105,rumeysa betul ceylan,RbCeylan,972451742.0,Rumeysa Betül Ceylan,tr,186.0,389.0
+1106,armed tusha,Armed_Tusha,1098813882.0, Armed Tusha,en,8.0,34.0
+1107,sevde korkmaz,SedKorkmaz,1216331006.0,Sedef Korkmaz,tr,52.0,57.0
+1108,kubra yildiz,yildizzzzzzz12,576604621.0,kübra yldz,tr,26.0,406.0
+1109,elyesa turgut,elyesaturgut,265839474.0,Elyesa Turgut,tr,273.0,248.0
+1110,can ipekli,ipeklican,223989726.0,Can Ipekli,en,198.0,667.0
+1111,ayse enise abamor,ayseenise,251141714.0,Ayse Enise Abamor,en,36.0,76.0
+1112,cemalettin orkcu,Cemalettinorkcu,582097020.0,Cemalettin Örkcü,tr,486.0,89.0
+1113,merve ozcelik,merveon,156591865.0,Merve On Ozcelik,en,261.0,1078.0
+1114,umut karci,Cediddi,74547978.0,Umut Karcı,en,262.0,387.0
+1115,neslihan celik,NeslihanCelik_,269906264.0,Neslihan Celik,tr,180.0,418.0
+1116,talha demir,taylan_demir,382016015.0,taylan demir,tr,53.0,720.0
+1117,sinan yavuz,Sinan53Yavuz,827129070.0,Sinan Yavuz,tr,124.0,95.0
+1118,banu saatci,banusaatci,121806922.0,Banu Saatçi,en,426.0,632.0
+1119,semra celik,armes91,312840462.0,semra çelik,en,33.0,98.0
+1120,ahmet corduk,ahmetcorduk,273393599.0,ahmet corduk,tr,93.0,188.0
+1121, talha kã¶se,kosetalha,164570071.0,Talha Köse,en,590.0,634.0
+1122,fatma koktas,fatmakoktas,380853548.0,Fatma Köktaş,tr,98.0,571.0
+1123, murat kezer,MuratGezer16,63703013.0,Murat Gezer,tr,287.0,1062.0
+1124, kulup kulturel,kulupkulturel,337116246.0,Kulüp Kültürel,tr,73.0,62.0
+1125,cigdem dogan berber,cigdemdoganbrbr,404286732.0,Cigdem Dogan Berber,en,313.0,386.0
+1126,ahmet catma,sitefin123,1562996754.0,ahmet atmaca,tr,140.0,597.0
+1127,muhammed aydin,muhammedakaydin,78030552.0,muhammed akaydın,tr,757.0,479.0
+1128,yusuf kayan,yusuf__akkaya,404136121.0,yusuf akkaya,tr,408.0,1286.0
+1129,berna golcicek,bernagolcicek,1620173989.0,bernagolcicek,en,1.0,4.0
+1130,furkan erdogan,furkaneryagan,392250645.0,furkan eryagan,tr,37.0,212.0
+1131,cem karatas,karatasemre78,434136661.0,Emre Karatas,tr,319.0,1274.0
+1132,pipin yusmar yusuf,yousmart,43853642.0,P. Yusmar Yusuf,en,318.0,379.0
+1133,sedat kaya,sedakaya88,470615153.0,Seda Kaya,tr,3.0,15.0
+1134,nurgul ekecik,nurgulekecik,1168713674.0,Nurgül Ekecik,tr,118.0,225.0
+1135,ibrahim asgerli,Aesgaerli,1208025931.0,Ibrahim Asgerli,en,31.0,55.0
+1136,nazlican kara,penahgah,184755297.0,nazan kara,tr,69.0,331.0
+1137,furkan gok,frkngok,1137125454.0,Furkan Gök,tr,44.0,471.0
+1138,mehmet emin cihangir,mec10wes,353631855.0,Mehmet Emin Cihangir,tr,66.0,557.0
+1139,elif develi,elifdevelii,347250524.0,Elif Develi,tr,164.0,119.0
+1140,sumeyra erel,sumeyra_erel,1247080080.0,sümeyra erel,tr,53.0,56.0
+1141,rahmi cetin,rahmi_cetin,223067017.0,Rahmi ÇETİN,tr,54.0,177.0
+1142,aysegul algan,aysegulalgan,379221395.0,Ayşegül Algan,tr,214.0,689.0
+1143,eyup gokce,EyupGokcee,428560048.0,eyupgokce,tr,167.0,150.0
+1144,betul yilmaz,sukufeeee,539474777.0,betül yilmaz,tr,123.0,951.0
+1145,rukiye gokce,gokrukiye,107828839.0,Rukiye Gök,tr,94.0,353.0
+1146,mustafa gez,gencmustafa61,469654164.0,Mustafa Genç,tr,119.0,417.0
+1147, nida aksoy,Nidaaksoy,287251843.0,Nida Aksoy,en,272.0,208.0
+1148,aysenur eser,aysnresr,271062336.0,Aysenur Eser,en,72.0,125.0
+1149,aysenur altuntas,AysenurAll,342302461.0,Aysenur Altuntas,en,323.0,391.0
+1150,hasan basri bulbul,BasriBlbul,710625824.0,Hasan Basri Bülbül,en-gb,459.0,644.0
+1151,ahmet emir,ahmetcklc,321309857.0,Ahmet Cemil,tr,287.0,253.0
+1152,sait zengin,SaidZenginSZ,986917596.0,Said Zengin,tr,6.0,45.0
+1153,orhan guler,orhanguler1,203065438.0,Orhan GÜLER,tr,133.0,288.0
+1154, hamdi irmak,1VARNALI,396480979.0,HAMDİ IRMAK,tr,152.0,215.0
+1155,musa andac,andacmusa,475116738.0,Musa Andaç,tr,157.0,188.0
+1156,merve akalin,merveak50432411,1451024724.0,merve akan,tr,6.0,16.0
+1157,ceyda tatari,ceydatatari,162081482.0,Ceyda Tatari,en,192.0,184.0
+1158,emrah sezer,emrahgezerr,1063747742.0,emrah gezer,tr,1.0,19.0
+1159,yasir bali,Yaska_Ali,112725211.0,Yassir Ali,en,127.0,298.0
+1160,neslihan ozhan,ozhanneslihan,165159065.0,neslihan özhan,tr,229.0,521.0
+1161,huseyin uyanik,Hsyn_Uynk,300425517.0,hüseyin uyanık,tr,114.0,178.0
+1162, begum kaya,Begon_ya,276882364.0,Begum Kaya,tr,48.0,270.0
+1163, kariyer merkezi,kariyermerkezi,300804736.0,FÜ Kariyer Merkezi,tr,975.0,384.0
+1164,kemal yildiz,esmknyldz,381997869.0,esma yildiz,tr,45.0,216.0
+1165, adem baba,babadem,54890014.0,adem baba,tr,65.0,358.0
+1166,mahmud emini,MahmudEmini,1079409680.0,Mahmud Emini,en,169.0,1306.0
+1167,goktug taner,GoktugTaner,753514176.0,Goktug Taner,en,25.0,74.0
+1168,enes malik gurgoze,egurgoze,149522762.0,Enes Malik Gürgöze,tr,560.0,606.0
+1169,ahmet yavru,AhmetYa78405019,1606625095.0,Ahmet Yavuz,tr,1.0,16.0
+1170,yunus emre demirhan,YUNEMDEM,261788983.0,Yûnus Emre Demirbaş,tr,381.0,758.0
+1171,murat cinar,avmuratacir,215736090.0,Murat ACIR,tr,466.0,1727.0
+1172,elkhalifi oussama,KhaOussama,767669089.0,Elkhalifi Oussama,fr,6.0,102.0
+1173, yusuf ãalä±åkan,yusufpala,248716602.0,Yusuf Pala,de,305.0,887.0
+1174,hande nur sezgin,handeesezgin,485735472.0,hande sezgin,tr,99.0,174.0
+1175,fatma mizan,ftmzn,269014960.0,fatma mizan,tr,498.0,1558.0
+1176,fatma nur alan,quasileo,99568436.0,fatmanur aysan,en,120.0,691.0
+1177,merve armagan,mrvarmagan,791665500.0,Merve Armagan,tr,3789.0,327.0
+1178,furkan demir,_furkandemir,93845096.0,Furkan DEMİR,en,40.0,100.0
+1179,usame degirmenci,usamedegirmenci,256163951.0,üsame değirmenci,en,151.0,146.0
+1180, tuna kocaman,tunakocaman,625979067.0,Tuna Kocaman,tr,156.0,408.0
+1181,ibrahim durna,888Inzip,1052152093.0,ibrahim dundar ,tr,39.0,519.0
+1182,mehmet topalomer,mehmettopalomer,627607859.0,Mehmet Topalömer,en,3.0,37.0
+1183,zeynep gultepe,zynbgltp,713214488.0,zeyneb gültepe,tr,58.0,389.0
+1184,sena nur sezgin,asenasezgin,118471216.0,A.Sena Sezgin,en,492.0,842.0
+1185, nihat erdogmus,nihaterdogmus,170012983.0,Nihat Erdogmus,en,998.0,500.0
+1186,ahmet kaya,muhammedkahya83,314125778.0,ahmet kaya,tr,317.0,1573.0
+1187,melike akkus,melikeakkus,85105655.0,melike akkus,en,298.0,527.0
+1188,aynur yilmaz,aynuryl66097645,1411089702.0,aynur yılmaz,tr,12.0,18.0
+1189, ayten koldemir,aytenkoldemir,52171453.0,Ayten Koldemir,en,226.0,185.0
+1190,muhammed yunus aktas,surdangecti,319629696.0,Muhammed Yunus Aktaş,tr,233.0,697.0
+1191,mehmet ozdinc,ozdincmehmet,931667750.0,mehmet özdinç,tr,131.0,243.0
+1192,sena senol,senasen_ol,335343050.0,sena 'şenol,tr,91.0,122.0
+1193,berkan ersoz,ERSOZZ,92367481.0,Berkan Ersoz,tr,460.0,1988.0
+1194, azra celik,AzraSancak,249158589.0,AzraÇelik,tr,217.0,354.0
+1195,nisa reis,NisaReis,819616339.0,nisa reis,tr,13.0,41.0
+1196,zeynep ulusan,UlusalZ,1083635264.0,zeynep ulusal,tr,49.0,320.0
+1197,zeynep babali,zchouroro,342114048.0,zeynep babali,en,328.0,468.0
+1198,betul bal,zbakyildiz,345944506.0,b.betul,tr,277.0,169.0
+1199,fatih unal,unlfatih,350907157.0,Fatih Ünal,tr,288.0,256.0
+1200,omercan kacar,omercan94,505464968.0,Ömercan KAÇAR,tr,128.0,215.0
+1201,sevgi bilgic,sevgiblgc,55220437.0,Sevgi Bilgiç,en,125.0,402.0
+1202,talha celik,tlhclk,849339692.0,Talha Çelik,tr,173.0,242.0
+1203,hasan burak eyupoglu,hburakeyupoglu,234536504.0,Hasan Burak Eyüpoğlu,en,169.0,236.0
+1204,abdullah tunc,AbdullahOncu,497539183.0,Abdullah Öncü,tr,15.0,22.0
+1205,abdullah dursun,sismanadam,90976741.0,Abdullah Dursun,tr,154.0,478.0
+1206,emin topkaraoglu,emintopkaraoglu,495928885.0,Emin Topkaraoğlu,tr,402.0,274.0
+1207,kubra ozdemir,ElKadarAborgine,715252212.0,Kübra Özdemir,tr,125.0,389.0
+1208,gazi giray gunaydin,gaziigiray,151606317.0,gazi giray günaydın,tr,497.0,347.0
+1209,hasan atan,053Atac,486721124.0,Hasan Ataç,tr,736.0,1930.0
+1210,mahmut celik,mahmutcelik,94549014.0,Mahmut Çelik,tr,1289.0,1597.0
+1211,mustafa duman,mustafaduman19,215282778.0,Mustafa DUMAN,tr,92.0,95.0
+1212,merve akkus,merakks,915539516.0,merve akkuş,tr,60.0,247.0
+1213,ahsen busra dilipak,ahhsenbusra,96342812.0,Ahsen Büşra Dilipak,tr,1964.0,305.0
+1214,samet yilmaz,_samet_yilmaz,455110108.0,Samet Yılmaz,tr,11.0,62.0
+1215,ercin ozbedir,ercinozbedir,293675480.0,ERCİN OZBEDİR,tr,57.0,86.0
+1216,nur banu gencten,GnctnN,1060743823.0,Nur Banu Gençten,tr,6.0,121.0
+1217, zeynep erol,zeyneb_erol,1036789573.0,Zeynep Erol,tr,78.0,159.0
+1218,nurgul ozturk,nurozturk,76618538.0,Nur Ozturk,en,48.0,64.0
+1219,merve duman,merveduman294,1416228451.0,merve duman,tr,3.0,16.0
+1220,muhittin ozkan,muhittinEozkan,378536512.0,Muhittin Özkan,en,233.0,728.0
+1221,ziya coban,yigitziya,570173146.0,Ziya Çoban,tr,8.0,91.0
+1222,sedat ulusoy,_sedatulusoy,214511627.0,Sedat Ulusoy,en,297.0,315.0
+1223,murat tasyurek,MurattTASYUREK,1416098935.0,Murat TAŞYÜREK,tr,127.0,78.0
+1224,muleyke beyza yavuz,Muleyke_B,159075428.0,Müleyke Beyza Yavuz,en,103.0,306.0
+1225,huseyin tarik aydin,huseyintarik,156784740.0,Hüseyin Tarık Aydın,tr,20696.0,1431.0
+1226,samet orkun gul,kloro55,365164239.0,Samet Orkun Gül,tr,37.0,428.0
+1227,merve senel,mervesenel_,903639980.0,Merve Şenel,tr,274.0,227.0
+1228,mehmet yilmaz,VATANLI89,185153719.0,MUHAMMET YILMAZ,tr,12.0,171.0
+1229,busra karakas,BusraKrks,182171898.0,Busra Krks,en,50.0,94.0
+1230,ebra usta,ebrausta,168113833.0,Ebra Usta,tr,595.0,401.0
+1231,beyza yenigun,byzyenigun,376693951.0,Beyza Yenigun,tr,77.0,119.0
+1232,nafiye polat,nafiye_polat,1373238780.0,nafiye polat,en,27.0,279.0
+1233,tuba bedir,tubabedirr,1553075684.0,tuba bedir,tr,6.0,59.0
+1234,selman demir,selmanaydemir,45372498.0,Selman AYDEMİR,tr,244.0,711.0
+1235, eyyã¼p yä±lmaz,EyyupYILMAZ66,633680339.0,Eyyup YILMAZ,tr,46.0,37.0
+1236,lutfiye toprak,lltoprak,1013674856.0,Lütfiye Toprak,tr,411.0,573.0
+1237,suleyman begenjov,S_Begenjov,228337100.0,Suleyman Begenjov,en,687.0,168.0
+1238,ebru acar,Acaristaan,1076267664.0,Ebru Acar,tr,150.0,187.0
+1239,talha celik,ATalhaC,301379399.0,A Talha Çelik,tr,227.0,280.0
+1240,yasin saglam,YasinSaglam7,1545633186.0,Yasin Saglam,en,54.0,161.0
+1241,nafiye polat,nafiyemb,837482173.0,nafiye polat,en,30.0,301.0
+1242,koral ozgunay,koralozgunay,140518821.0,Koral Ozgunay,en,32.0,100.0
+1243,gokhan balci,Goqhany,97741707.0,Gökhan Balcı,en,42.0,165.0
+1244,abdullah gokmen,ABDULLAHGOKMN,1031237664.0,ABDULLAH GÖKMEN,tr,2.0,7.0
+1245,mehmet caner,mehmetcangir,223232948.0,Mehmet Cangir,en,73.0,1180.0
+1246,murat samli,Said_Murat,167853326.0,Said Murat,tr,159.0,590.0
+1247,furkan cakmak,furkancakmak,151050084.0,Furkan Çakmak,tr,200.0,293.0
+1248, ahmet tekin,ahmetttufekci65,395883401.0,Ahmet Tüfekçi,tr,144.0,152.0
+1249,abdullah tok,abdullahocak,74691550.0,Abdullah Ocak,en,325.0,640.0
+1250, alim arlä±,alimucar,100495940.0,Alim Uçar,tr,512.0,892.0
+1251,ersan aydin,Nizanim,280162312.0,Erhan Aydin,tr,17.0,183.0
+1252,abdurrahman zengin,azenginn,712307286.0,Abdurrahman Zengin,tr,1075.0,396.0
+1253,burak yilmaz,burakyl40775263,1341812748.0,burak yılmaz,tr,5.0,32.0
+1254, ismail kose,yksel_ismail,300824758.0,ismail yüksel,tr,174.0,1432.0
+1255, ali uzun,uzunali24,465947189.0,Ali Uzun,en,42.0,166.0
+1256,huzaifa meshal,HuzaifaMashal,231933288.0,Huzaifa Mashal,en,115.0,672.0
+1257,mustafa yenilmez,akkoca03,330176873.0,Mustafa YILMAZ,tr,429.0,2011.0
+1258,sait zengin,saidzengin,1540697210.0,Sait Zengin,tr,8.0,166.0
+1259,abdulkayyum uckun,kayyum1905,146954686.0,Abdulkayyum Uçkun,en,530.0,397.0
+1260,yunus demir,AvYunusDemirBey,1339439076.0,Yunus Demir,tr,95.0,151.0
+1261,havvanur ozdemir,fragileworldamn,233548506.0,Havva Nur Ozdemir,en,100.0,188.0
+1262,abdil okulu,Dilokulubul,583086730.0,Dil Okulu,tr,413.0,1446.0
+1263,feride ozbey,feridetpozbey,326959160.0,Feride Top Özbey,tr,42.0,314.0
+1264,maad sharaf,MaadSharaf,943884296.0,Maad Sharaf,en,369.0,173.0
+1265,ebrar aydin,EbrarAydn5,544378302.0,Ebrar AYDIN,tr,164.0,183.0
+1266,tugrul cosgun,tugrulcosgun,241277446.0,Tuğrul COSGUN,tr,45.0,85.0
+1267,sinan filizler,filizlersinan,339702866.0,Sinan Filizler,tr,188.0,735.0
+1268,mehmet tanagardi,Tanagardi,72286625.0,Mehmet Tanağardı,tr,67.0,131.0
+1269,sezanur sezgin,SezanurSezgin,342264107.0,Sezanur Sezgin,tr,443.0,375.0
+1270, mesut yä±lmaz,mesutyilmaz61,153019444.0,MESUT YILMAZ,en,114.0,312.0
+1271, mesut ãztã¼rk,mesutozturk1988,259404430.0,Mesut Öztürk,tr,227.0,420.0
+1272,ezgi canbaz,ezgcnbz,166720591.0,Ezgi Canbaz,tr,272.0,282.0
+1273,sait celebi,SaitCelebi,410078458.0,Sait Celebi,en,28.0,53.0
+1274,murat ciftci,murciftci,254863982.0,Murat Çiftçi,tr,2331.0,677.0
+1275,mustafa karan,myplasman,194760655.0,Mustafa KARTAL,tr,130.0,1105.0
+1276,dilan engin,dilan_engin,784689086.0,Dilan Engin,tr,85.0,98.0
+1277,ibrahim mutlu,1056Mutlu,851743944.0,Ibrahim mutlu,en,19.0,150.0
+1278,omer faruk kose,omerfkose,1135190689.0,Ömer Faruk Köse,tr,226.0,439.0
+1279,senanur avci,sen_a_nur,204943693.0,senanur avcı,tr,289.0,366.0
+1280,deniz arslan,DenizBaran_db,370047774.0,Deniz Baran,tr,2703.0,760.0
+1281,aslan bakirov,abekir,222408208.0,Aslan Bakirov,en,148.0,1178.0
+1282,meryem yetkin,meryemyetkin,327649487.0,Meryem Yetkin,tr,85.0,277.0
+1283,arif celik,arceliks7,587744027.0,arif çelik,tr,40.0,81.0
+1284,yusuf yigit,_yyigit_,387801894.0,Yusuf Yiğit,en,146.0,348.0
+1285,mehmet kara,darulselam,230850831.0,Mehmet Kara,tr,93.0,336.0
+1286,osman nurettin sen,osmanshen,150052532.0,Osman Nurettin ŞEN,en,415.0,1002.0
+1287, merve surukli,MerveSrkli,1069075538.0,Merve Sürükli,tr,71.0,91.0
+1288,bã¼sra altay,serraaltay,148682703.0,Serra Altay,tr,233.0,435.0
+1289,berna golcicek,BernaGlcck,453005019.0,Berna Gölçiçek,tr,81.0,95.0
+1290, mehmet baysan,XMAYANIST,78947711.0,mehmet ayan,tr,150.0,605.0
+1291,bora meteoglu,bmeteoglu,552748176.0,Bora Meteoğlu,tr,178.0,128.0
+1292,mustafa karan,Mus_Kap,367273697.0,Mustafa Kaplan,tr,89.0,281.0
+1293,mehmet burak dikmen,MehmetBurakDikm,447440907.0,Mehmet Burak Dikmen,en,169.0,214.0
+1294,emre kaya,emrekaya88,55362929.0,Emre Kaya,tr,39.0,209.0
+1295,mehmet kara,omkaragoz,252988145.0,Mehmet Karagöz,en,265.0,650.0
+1296,selcuk sivrioglu,sselcuk_jdm,146158953.0,Selçuk Sivrioğlu,en,64.0,93.0
+1297,melda ademoglu,meldademoglu,462282747.0,Melda Ademoğlu,tr,265.0,289.0
+1298,ahmet er,ahmet_ors,375464021.0,Ahmet Örs,tr,3619.0,2040.0
+1299,abdulhamit yildirim,bosnarehberi,360884464.0,Abdulhamit YILDIRIM,tr,255.0,510.0
+1300,heset brahimi,HesetBrahimi,1013998447.0,Heset Brahimi,en,47.0,143.0
+1301,zeynep karlitekin,zynpkrltkn,248388604.0,Zeynep Karlıtekin,tr,233.0,590.0
+1302,omer faruk kafali,OmerFarukKafali,369714081.0,Ömer - Faruk Kafali,de,441.0,449.0
+1303, nurettin dogan,nurettindogan,78843752.0,Nurettin DOĞAN,tr,11.0,56.0
+1304,ubeydullah keles,ubeydkeles,39937481.0,Ubeydullah Keles,en,99.0,763.0
+1305,mehmet kara,mkisar,331180008.0,Mehmet Kısar,tr,187.0,472.0
+1306,yasemin erdem,Freuudd,761450988.0,Yasemin Erdem,tr,82.0,111.0
+1307,merve kecoglu,merve_koseoglu_,173168200.0,Merve Koseoglu,en,191.0,1080.0
+1308,behram koca,behramkoca,773205608.0,Behram Koca,tr,188.0,111.0
+1309,kemal cihan bastak,kemalbastak,314449538.0,Kemal Cihan Baştak,tr,128.0,315.0
+1310,bunyamin cansev,BnyaminCansev,309935068.0,bünyamin cansev,tr,4.0,20.0
+1311,mustafa demir,Mustafa_Dmry,300277618.0,Mustafa Demiray,tr,2587.0,1279.0
+1312,zafarbek sulaimanov,Zsulaimanov,591203147.0,Zafarbek Sulaimanov,en,10.0,12.0
+1313, merve kubra oncel,mervekubraoncel,315476090.0,Merve Kübra Öncel,en,37.0,54.0
+1314,bilal akbasoglu,BilalAkbasoglu,373300661.0,Bilal Akbaşoğlu,tr,156.0,173.0
+1315,seyma arslan,eseyman,97239341.0,şeyma arslan,en,144.0,385.0
+1316,omer eren ertin,omerertin,97707163.0,Ömer Eren Ertin,tr,68.0,359.0
+1317, kutsal koruk,kutsalkoruk,66645671.0,Kutsal Koruk,tr,77.0,160.0
+1318,yazan alterkawi,YATFFF,865363622.0,Yazan Alterkawi,en,459.0,389.0
+1319,zeray kar,zry_kr,1413069108.0,Zeray Kar,tr,35.0,52.0
+1320,mehmet kaya,mehmetalyat,260735091.0,mehmet alyat,tr,887.0,2153.0
+1321,hussein ali,Hssn_Snds,955502694.0,Hossein Ali,tr,35.0,136.0
+1322,melih talu,MelihTalu,111450444.0,Melih Talu,tr,185.0,453.0
+1323,merve bayram,MerveBajram,968364324.0,Merve Bayram,tr,21.0,81.0
+1324, berna yilmaz,berndemir,1270853180.0,berna ylmazzz,tr,65.0,380.0
+1325,selahattin kaplan,sabahkaplan,457506888.0,Sabahattin Kaplan,tr,672.0,874.0
+1326,busra kilic,bsr_kilic,273495838.0,busra kilic,en,154.0,352.0
+1327,muratcan tanyolac,mtanyolac,322601600.0,Muratcan Tanyolaç,tr,77.0,130.0
+1328,ozlem oz,kardio2,403630164.0,Özlem Öz,tr,128.0,120.0
+1329,mehmet fatih kocalar,MFatihKOCAMAN,370655981.0,Mehmet Fatih KOCAMAN,tr,86.0,262.0
+1330,tugba gayretli,tugbagayretli,320244557.0,Tuğba Gayretli,tr,160.0,205.0
+1331, mehmet aytekin,mgulteking,184983932.0,Mehmet Gültekin,tr,498.0,989.0
+1332,abdul basit adeel,abadeeel,501944828.0,Abdul Basit Adeel,en,819.0,158.0
+1333,busra yildirim,busraholmes,1067853644.0,Busra Yildirim,en,148.0,470.0
+1334, abdullah altundal,abdullahaltun55,587388006.0,abdullah altun,tr,55.0,794.0
+1335,rukiye uke,rukiyeuke,362327119.0,Rukiye Uke,en,120.0,174.0
+1336,belal tulimat,BelalToulimat,1103201906.0,belal toulimat,ar,24.0,34.0
+1337,muhammet sait ergun,msaidergun,598187305.0,Muhammed Said Ergün,tr,265.0,405.0
+1338,fatma aladag,fatmaaladag,175334832.0,Fatma Aladağ,tr,843.0,614.0
+1339,kerime albayrak,albayrakerime,325741469.0,Kerime Albayrak,tr,80.0,146.0
+1340,mehmet korkmaz,M_Ali_Korkmaz,410242678.0,Mehmet Ali Korkmaz,tr,73.0,101.0
+1341,merve akgun,merveakn39,1411282446.0,merve akın,tr,6.0,16.0
+1342,ceren ozturk,erennozturkk,65634180.0,eren öztürk,tr,10.0,225.0
+1343, ayse guler,esyagul,208737155.0,Ayse Gul,en,30.0,151.0
+1344,betul serdengecti,bnoktadino,221370428.0,Betül Serdengeçti öz,tr,183.0,93.0
+1345, ramazan aydin,rmznydgn17,1029326960.0,Ramazan Aydoğan,tr,17.0,95.0
+1346,abdurrahman ali yildirim,Ayyildirim,144299966.0,Abdurrahman yildirim,tr,256.0,2095.0
+1347, serkan demir,serkan_dmr1,360181915.0,Serkan Demir,tr,33.0,32.0
+1348,mahmut ergin,mahmutergin34,878638669.0,MAHMUT ERGİN,tr,326.0,408.0
+1349,emrah kaya,emrahkayad,891177368.0,emrah kaya,en,198.0,142.0
+1350, ! sepher,SeherBoydas,180698952.0,Seher,en,97.0,383.0
+1351,merve uzun,MerveUzunsamsun,1381488158.0,Merve Uzun,tr,0.0,108.0
+1352,hatice ozkan,hozkan12,811374260.0,Hatice Özkan,tr,255.0,829.0
+1353,merve solak,m_colak_,209491402.0,Merve ÇOLAK,tr,344.0,871.0
+1354,murat er,muratdergo,895191864.0,Murat Es,en,141.0,988.0
+1355, mustafa korkmaz,mkorkmaz99,238165726.0,Mustafa Korkmaz,tr,119.0,190.0
+1356,faruk teksen,farukteksen,1051403629.0,Faruk Tekşen,tr,94.0,175.0
+1357,bilge ozun,nurbilge,21803514.0,Bilge Ozgun,en,108.0,280.0
+1358,muhammet demir,muhamme22178389,514220222.0,muhammed  demir,tr,199.0,1467.0
+1359,ahmet solmaz,MhmtSlmz,196572401.0,Mehmet Solmaz,en,27527.0,1285.0
+1360,ceren dilmen,dilmencern,806216310.0,Ceren Dilmen,tr,256.0,141.0
+1361,sena kuzu,senakuzu,9434942.0,Sena Kuzu,en,42.0,69.0
+1362,nihan yapar,nihanyapar,243820223.0,Nihan Yapar,tr,230.0,319.0
+1363,meryem kahriman,MERYEMKARAMAN7,1069165129.0,MERYEM KARAMAN,tr,4.0,17.0
+1364,elif gul,elifgl58935078,1415296428.0,elif gül,tr,5.0,18.0
+1365, yusuf ãalä±åkan,YUSUFYALKIN,409175023.0,YUSUF YALKIN,tr,271.0,1673.0
+1366,deniz cenk demir,DenizCenkDemir,49669079.0,Deniz Cenk Demir,en,684.0,1476.0
+1367,salih mete,meleksalih1,398540741.0,melek salih,tr,36.0,280.0
+1368, mustafa gayir,AKIRMustafa,385353577.0,Mustafa ÇAKIR,tr,20.0,78.0
+1369,bilal ayan,bilalaybakan,1729214646.0,Bilal AYBAKAN,tr,1795.0,273.0
+1370,emre ayar,AynaEmre,8.636316897923318e+17,Emre Ayna,tr,4.0,68.0
+1371, erkan erdemir,eerkan_erdemir,2994889984.0,Erkan Erdemir,de,230.0,460.0
+1372, ahmet tan,tasanahmet12,9.55494889021739e+17,ahmet Taşan,tr,11.0,147.0
+1373,aydan kaya,aydnkay48264566,2378449608.0,aydın kaya,tr,98.0,739.0
+1374,hasan coskun,hsncskn91,4259338222.0,Hasan Coskun,en,148.0,483.0
+1375,zeynep akan,zeeynepak,1729345106.0,Zeynep Ak,tr,127.0,131.0
+1376,aliriza farimaz,alirizafarimaz,2864146096.0,Alirıza Farımaz,tr,105.0,172.0
+1377,abdullah yilmaz,yilmaabdullah,1340056614.0,Abdullah Yılmaz,tr,229.0,774.0
+1378,mehmet kaya,Mehmeta21153207,8.703850702506107e+17,Mehmet Çaba,tr,88.0,290.0
+1379,cihan gul,cihaneskisehir,7.662193890960671e+17,Cihan Gül,tr,15.0,380.0
+1380,harika sevval ozhan,sevvalozhann,371316178.0,Harika Şevval Özhan,tr,616.0,114.0
+1381,sefa yildiz,safakyildiznil1,7.562604437112996e+17,Safak Yildiz,tr,3.0,185.0
+1382,yasemin kurt,yasminkumru,2676406371.0,Yasemin Kumru,tr,1144.0,2981.0
+1383,ahmet faruk eker,ahmetfarukclk,1042754604.0,Ahmet Faruk Çelik,tr,327.0,352.0
+1384,mehmet korkmaz,mehmet_1234,101483235.0,Mehmet Korkmaz,tr,149.0,349.0
+1385, ahmet tan,Bertanahmet190,2317909400.0,Ahmet Bertan,tr,207.0,470.0
+1386,murat erkan,erkan_ural_,1535919828.0,erkan ural,tr,359.0,554.0
+1387,merve kucuk,meryemkucukk,2300321527.0,meryem kucuk,tr,31.0,127.0
+1388,omer aslan,_OmerAslan,4902504880.0,Ömer Aslan,tr,928.0,532.0
+1389,merve ozturk,mervesefatgbs43,2186560473.0,Merve Öztürk,tr,3.0,110.0
+1390,esra nur akbulak,esraakbulak____,1938798758.0,Esra Akbulak,tr,104.0,135.0
+1391,omer faruk altinay,omerdumgiriz,614068021.0,ömer faruk altay,en,93.0,175.0
+1392,esra ozdil,essraozdil,450840581.0,esraozdil,en,258.0,403.0
+1393, onay budak,SUPEREGOID,185711683.0,Onay Budak,tr,151.0,185.0
+1394,merve kaplan,mervekaplan_,947934061.0,Merve Kaplan,tr,93.0,91.0
+1395, ahmet tan,ahmetcanberlioz,2560945254.0,Ahmet Can,tr,223.0,440.0
+1396,usame yolcu,usame_yolcu,8.417459568319283e+17,Usame YOLCU,tr,1.0,72.0
+1397,furkan ahiska,erkan_ahiska,1543669435.0,Erkan Ahiska,tr,1842.0,1925.0
+1398,dilara kuru,monarkkelebegi,284677803.0,Dilara Oruç,tr,104.0,190.0
+1399,yusuf bedir,ysfbedr,8.170116295230915e+17,Yusuf Bedir,tr,15.0,41.0
+1400,mehmed celik,MehmetCelik55,345445988.0,Mehmet Çelik,tr,1327.0,4545.0
+1401, muhammet ali taskin,malisahinn,125642126.0,Muhammet Ali Şahin,tr,265.0,341.0
+1402,abdullah gelgor,abdullah_gocer,314173268.0,abdullah göçer,tr,85.0,884.0
+1403,yusuf cicek,yusuf_iek,611576273.0,yusuf çiçek,tr,638.0,627.0
+1404,burak sari,zumruduankaaaa,7.746411305457459e+17,Burak Narin,tr,81.0,170.0
+1405,fatih aslan,fatih_alkn,594766560.0,Fatih Alkan,de,173.0,656.0
+1406,zeynep aydin,zezegsaydn,3391926779.0,Zeynep Aydın,tr,87.0,1018.0
+1407,muhammed keles,muhammedelmas41,3374961982.0,muhammed elmas,tr,184.0,876.0
+1408,mustafa karaca,KaratasM_25,7.710335955237888e+17,Mustafa Karataş,tr,495.0,163.0
+1409,muhammed fatih erdogan,mfe56,594620574.0,Muhammed Fatih Eren,tr,649.0,360.0
+1410,omer kaya,Omerkaya10711,7.801375308219351e+17,ÖMER🍁KAYA,tr,1061.0,4697.0
+1411,eda kurt,Kurt81459980,9.010694084744765e+17,A.KURT,tr,221.0,494.0
+1412, mehmet genã§,hmgunay,976478600.0,Mehmet Günay,tr,1544.0,744.0
+1413,aydan kaya,HaydarK2012,375559208.0,Haydar Kaya,de,293.0,1751.0
+1414,fatma dikmen,fnurilhandikmen,9.261777014840238e+17,Fatmanur Dikmen,tr,93.0,288.0
+1415, mehmet genã§,mgunay34,2257023887.0,Mehmet Günay,tr,195.0,428.0
+1416, ibrahim kalin,ikalin1,153772652.0,Ibrahim Kalin,en,1213172.0,746.0
+1417,elif istif,istifeliff,9.569706616452547e+17,Elif İstif,tr,45.0,66.0
+1418,mustafa gunel,mustafagelec38,217096732.0,Mustafa Geleç,tr,240.0,2144.0
+1419,mustafa hussaini,duyunuumumiye11,4901343291.0,Mustafa İhsan,en,50.0,550.0
+1420,muhammad haroon ali,imsians,89676054.0,Muhammad Haroon,en,1.0,102.0
+1421,semra kaya,semraakay,208125268.0,semra akay,en,563.0,206.0
+1422,miray turhan,TarhanZekiye,3224774153.0,Miray TARHAN,tr,187.0,689.0
+1423,abdullah karakas,ehibba,951772602.0,abdullah karakaş,tr,110.0,224.0
+1424,kerem erdem,erdemeren2234,2766329874.0,Erdem Eren,tr,33970.0,14802.0
+1425,yunus demir,yuunusemre7,9.704827335238328e+17,Yunus Emre,en,0.0,68.0
+1426,kaveh nematipour,knematipour,30725104.0,Kaveh Nematipour,en,158.0,304.0
+1427,faruk bayhan,bayarfaruk1,8.300653811591619e+17,Faruk Bayar,tr,187.0,3224.0
+1428,hilal yavuz,hilalyavu,4354816696.0,Hilal Yavuz,tr,29.0,363.0
+1429, mehmet akman,MehmetKutman,392582368.0,Mehmet Kutman,tr,39.0,209.0
+1430,muhammed aydin,maydin52,2163743239.0,Muhammed Aydın,tr,795.0,721.0
+1431,ebubekir caglar,CaglarEbubekir,3317179335.0,Ebubekir Çağlar,tr,322.0,676.0
+1432,seyma karamese,karameseseyma,251200312.0,seyma karameşe,en,27.0,69.0
+1433,sibel evecen,ssewecen,195842934.0,Sibel Evecen,en,193.0,425.0
+1434,enes kavas,MuhabbetiAgah,9.004696801917911e+17,Enes Kavas,tr,112.0,269.0
+1435,irem canan,YIsaretler,2913439379.0,Canan Erdem,en,287.0,1182.0
+1436, mehmet aytar,mehmetkhalit,367997832.0,mehmet ayar,tr,87.0,449.0
+1437,seyma arslan,suleymanarslan_,521494559.0,Süleyman Arslan,tr,677.0,351.0
+1438,furkan aktan,furkan_aktas24,546145630.0,Furkan AKTAŞ,tr,84.0,165.0
+1439,mustafa celiker,mustafaeker58,1570413997.0,Mustafa EKER,tr,203.0,587.0
+1440,tugba firat,TugbaFrat,585449351.0,TUĞBA FIRAT,tr,224.0,62.0
+1441,yasemin kurt,_YaseminBozkurt,424287256.0,Yasemin Bozkurt,de,656.0,449.0
+1442, ! sepher,Seher86805298,9.711375409495122e+17,Seher,tr,93.0,350.0
+1443,kadir kir,kadirkidir,2747548179.0,Kadir Kidir,tr,125.0,313.0
+1444, genc yesilay,gencyesilayci,2315544908.0,Genç Yeşilay,en,5610.0,58.0
+1445,evin demir,eminedemir139,464068021.0,Emine Demir,tr,68.0,206.0
+1446,huseyin demir,HuseyinEmreS,393033154.0,Huseyin Emre,tr,176.0,586.0
+1447,ferhat koyun,_ferhatkoc,1154115780.0,Ferhat Koç,tr,119.0,268.0
+1448,mustafa enes balci,MustafaEnesBal1,7.272228148859863e+17,Mustafa Enes Balcı,tr,57.0,183.0
+1449,yunus emre atalay,YunusEmreAlann,8.405385419312988e+17,YUNUS EMRE ALAN,tr,30.0,516.0
+1450,mehmet yilmaz,MehmetY83921220,2255309924.0,Mehmet Yılmaz,tr,132.0,752.0
+1451, ebubekir ceylan,ceylaneb,1520427962.0,ebubekir ceylan,tr,2809.0,1259.0
+1452,elif oktay,ElifOkt86499316,8.881181060186604e+17,Elif Oktay,tr,8.0,68.0
+1453,hasan battal,muhtefiii,1417985233.0,Hasan Balta,tr,188.0,315.0
+1454,murat yilmaz,MuratAtaKut,9.409723162254008e+17,Murat Yılmaz,tr,90.0,384.0
+1455, eyyã¼p yä±lmaz,eyyup_2016,7.549317368999485e+17,Eyyüp Yılmaz,tr,22.0,230.0
+1456,muhammet demir,mhmmddmr69,2985372927.0,Muhammed Demir,tr,197.0,1116.0
+1457, mehmet akman,mehmetakinim,550093886.0,mehmet akın,tr,1915.0,1074.0
+1458, zerrin yildiz cavdar,zerrintt,226593537.0,Zerrin YILDIZ ÇAVDAR,tr,43.0,48.0
+1459,fatma tekin,fatma_teken,7.648739034790871e+17,Fatma Teken,tr,15.0,85.0
+1460,mustafa dereli,mustafajejeli,8.122090779505746e+17,mustafa jejeli,tr,52.0,644.0
+1461, elif gulen,fuldenelif,2364544998.0,fulden elif,en,84.0,151.0
+1462,hasan demirci,HasanDemir26,979272110.0,Hasan Demir,tr,67.0,257.0
+1463,adil sava,carmenderjr,8.19172968022573e+17,Adil Sava,tr,23.0,68.0
+1464,mustafa karaca,mkaratas15,478070221.0,MUSTAFA KARATAŞ,tr,313.0,2072.0
+1465,sinan sari,Sinan_Sari_,55941289.0,Sinan Sarı 🇹🇷,tr,104.0,114.0
+1466,mustafa karan,MustafaKrhlmstf,2396700314.0,mustafa karahanlı,tr,33.0,264.0
+1467,merve ozer,merve_sezerr,182183673.0,merve sezer,tr,16.0,265.0
+1468,ugur altun,duygu_altun42,7.996489078317588e+17,Duygu ALTUN,tr,30.0,517.0
+1469,fatma turk,fatma_tutuk,1861637761.0,Fatma Tutuk,tr,219.0,333.0
+1470,ismail sahin,ismailsahin4334,419720340.0,İsmail Şahin,tr,139.0,146.0
+1471,vedat demirbilek,DemirbilekVedat,753998209.0,Vedat Demirbilek,tr,70.0,199.0
+1472,merve ozturk,merveztrk__,9.502788038042952e+17,merve öztürk,tr,22.0,138.0
+1473, ismail ozen,ismozer3455,8.024550400908493e+17,ismail Özer,tr,228.0,959.0
+1474, farabi -,mehmetfarabi870,1520466764.0,FARABİ,tr,256.0,2879.0
+1475,gokcen sari,sabriGokce2,9.2972101863313e+17,sabri Gokce,tr,0.0,34.0
+1476,emir arslan,istanbuldedi,9.158502687802286e+17,aslan demir,tr,422.0,2621.0
+1477,ceylan aykut,ceyoaksu,8.0008744920866e+17,Ceylan Aksu,tr,12.0,31.0
+1478,ahmet alkas,ahmetardaalkan,784706286.0,Ahmet Alkan,tr,194.0,1298.0
+1479,muhammet aba,AcarMuhacar,2938999150.0,Muhammet Acar 🏆,tr,162.0,226.0
+1480,zeynep sancaktutan,Sancaktutan_Z,7.565449885074145e+17,Zeynep Sancaktutan,tr,13.0,138.0
+1481,ahmet gundogdu,gamzegundogdu,98001294.0,Gamze Gundogdu,tr,373.0,780.0
+1482,ozle cetinkaya,OzleCetinkaya,4636480401.0,Özle Çetinkaya,en,4.0,37.0
+1483,mustafa ozel,sameks34,1482715562.0,mustafa oz,tr,190.0,1875.0
+1484,eren turker,turkerergen,73634379.0,turker ergen,en,58.0,483.0
+1485,cihat arslan,c56r6n,342186149.0,Cihat BARAN,tr,38.0,34.0
+1486,zeynep yavuz,seyyahzeynep,247001652.0,Zeynep Yavuz,tr,385.0,1052.0
+1487,omer aslan,om_aslan,2252765234.0,Ömer Aslan,tr,631.0,992.0
+1488,fatih gunes,Fatihgunel00,9.199684467246735e+17,Fatih Günel,tr,27.0,304.0
+1489,nuriye akbiyik,Nuriyeakb,9.395658197717197e+17,nuriye akbıyık,tr,10.0,64.0
+1490,recep kaba,rekavak,76992743.0,recep kavak,tr,267.0,1979.0
+1491,abdulkadir aksu,akadiraksoy,99160473.0,Abdulkadir Aksoy,tr,133.0,702.0
+1492, ali ihsan aydin,aydinnaliihsan,218628820.0,Ali ihsan Aydın,en,101.0,214.0
+1493,sukran kondur,KondurSukran,2651173519.0,Sukran Kondur,en,1.0,31.0
+1494,seyma coskun,seymaacoskun,4248938627.0,seyma coskun,tr,6.0,41.0
+1495,safiye nur gultekin,1safiye,944285684.0,Safiye Nur Gültekin,tr,150.0,133.0
+1496,zeynep onat,zeynepdrsn_,425430975.0,Zeynep Bolat,tr,19.0,154.0
+1497,mustafa kucuk,VahiyleDogrulm,7.721002110491116e+17,Mustafa Koyuncu,tr,502.0,1247.0
+1498,mehmet kara,kamehveras,8.319106636352184e+17,Mehmet Kara,tr,376.0,1397.0
+1499,hacer esra derinsu,hederinsu,59225068.0,Hacer Esra Derinsu,tr,50.0,7.0
+1500, halil ibrahim duzenli,duveliyy,751575350.0,Halil ibrahim develi,tr,253.0,369.0
+1501,muhammed cakir,Muhammed_195,2972105135.0,Muhammed Çakır,tr,141.0,529.0
+1502, ! tarih,tarihdergi,1560015468.0,#tarih,en-gb,145050.0,100.0
+1503, mustafa saymeh,SaymehSayme,548750474.0,mustafa saymeh,en-gb,48.0,76.0
+1504, ! sosyoloji,sosyoIoji,7.047649948570788e+17,Sosyoloji,tr,18.0,57.0
+1505,mehmet kaya,MEHMETA48002151,9.35597116231168e+17,MEHMET AĞAÇ,tr,638.0,2784.0
+1506,ufuk hakki uzak,uhuzak,334192431.0,Ufuk Hakkı Uzak,tr,274.0,193.0
+1507,mehmet unsal,mehmet_unsay,2751133965.0,Mehmet Ünsay,tr,7.0,129.0
+1508,rumeysa ertan,rumeysaervan,1476827280.0,rumeysa ervan,tr,68.0,440.0
+1509,burak arslan,BuraqLeon,4759192037.0,Burak Arslan,tr,63.0,409.0
+1510,emin uzun,mneuzunyol,233837120.0,Mine Uzun,tr,468868.0,168.0
+1511, ! sap,snanapa1,7.115873494325043e+17,Sapa,tr,47.0,132.0
+1512, sinema televizyon,Isik_STV,7.277929776665559e+17,isikSinemaTelevizyon,en,41.0,15.0
+1513, ramazan aydin,RamazanMacin,507190385.0,Ramazan Maçin,tr,207.0,365.0
+1514,deniz ersoy,eroldeniz45,1857180914.0,erol deniz,tr,81.0,733.0
+1515,sumeyra yavuz,sumeyrayvz6,7.968000121225216e+17,sümeyra yavuz,tr,121.0,245.0
+1516, ahmet sahin,ahmedaga70,2188623945.0,Ahmet Şahin,tr,6.0,367.0
+1517,hasan kalay,tuhtluhasankale,301633591.0,Hasan KALE,tr,454.0,1263.0
+1518,mustafa meral,MstfmrllMustafa,2634195363.0,Mustafa Maral,tr,5.0,128.0
+1519,mehmet bilal yavas,mehmedbilal__,9.185002855297106e+17,Mehmet Bilâl Yamak,tr,358.0,400.0
+1520, mehmet genã§,mehmetgunduz42,287168721.0,Mehmet Gündüz,tr,194.0,1943.0
+1521,kaan kurt,KveKurt,1599652974.0,Kaan Kurt,tr,109.0,400.0
+1522,hasan topuz,HasanOGUZ79,7.565921539089613e+17,Hasan OĞUZ,tr,67.0,384.0
+1523,ahmet orhan,BurhanAhmet1,610741960.0,Burhan Ahmet,tr,86.0,441.0
+1524,zeynep demir,ZeynepDemirIST,1305485694.0,Zeynep Demir,tr,385.0,407.0
+1525,selim sarac,Selimaraci,7.601922945323172e+17,Selim Aracı,tr,134.0,167.0
+1526, orhan erdem,reyhanerdem6,1484068927.0,Reyhan Erdem,tr,770.0,3032.0
+1527,enes acar,Enesakca15,8.5765883205043e+17,Enes akca,tr,42.0,332.0
+1528,ahmet seba,ahmetmisevbanmi,380457647.0,Ahmet Sevban,tr,316.0,405.0
+1529,semih yilmaz,smhylmz41,4114202595.0,Semih Yilmaz,tr,25.0,301.0
+1530,abdullah arslan,asaf_abdullah,1971001777.0,Asaf Abdullah,tr,222.0,1392.0
+1531,zeynep aydin,GogoAydn,720629749.0,Zeynep Aydın,tr,142.0,1206.0
+1532,emre toktas,emre_toktas,3322627907.0,Emre toktaş,en,4.0,23.0
+1533,mustafa aydin,mustafaaydin_52,2235081726.0,mustafa aydın,tr,48.0,412.0
+1534, gã¶khan ãetinsaya,GokhanCsaya,296186755.0,Gökhan Çetinsaya,tr,634.0,0.0
+1535, omer terzi,terziomer,2364080761.0,Ömer Terzi,tr,6725.0,664.0
+1536,burak eren,brkturten,187446872.0,Burak Türten,tr,386.0,348.0
+1537, kadem,bilalac,276697619.0,Adem,en,24.0,245.0
+1538,mehmed celik,celik,2520245965.0,Mehmet Çelik,en,2837.0,1099.0
+1539,muhammed celik,mhmmtclk95,8.004514247735173e+17,muhammet çelik,tr,20.0,503.0
+1540,mustafa sahin,Mustafa_2145,8.67631558517289e+17,Mustafa Şahin,tr,415.0,178.0
+1541,muharrem kazak,muharremkazak,513696454.0,Av. Muharrem Kazak,tr,34.0,52.0
+1542,beyza kara,k_bbeyzaa,3419841922.0,beyza kaya,tr,1.0,43.0
+1543,zeynep akan,caliskan_zynp12,4284489143.0,Zeynep Çalışkan,en,40.0,138.0
+1544,fatih aslan,Fatih_AKAN_,1037379223.0,Fatih AKAN,tr,98.0,871.0
+1545, kubra erdem,kbra602,2780755604.0,kübra erdem,tr,171.0,336.0
+1546, omer bahca,bahca_omer,9.243414331920589e+17,Ömer BAHÇA,tr,0.0,14.0
+1547, kerim kar,akar_kerim,1565060294.0,Kerim Akar,tr,95.0,185.0
+1548,hulya yildirim,yildirimyahya,215238439.0,Yahya YILDIRIM,tr,319.0,298.0
+1549,hasan pehlivan,hasanpehlivan0,2989298344.0,Hasan Pehlivan,en,4.0,28.0
+1550,mehmet uyar,Mehmet_Uyarmr,3157400549.0,Mehmet Uyar,tr,22.0,102.0
+1551,naciye yanik,naciyeyanik,2916111868.0,Naciye Yanık,tr,27.0,136.0
+1552, ! sosyoloji,SOSociolog,9.467972484946862e+17,SSosyoloji,tr,92.0,52.0
+1553,okan celik,osmancelik88,2920412567.0,Osman Celik,tr,79.0,488.0
+1554,ahmet celik,CelikAhmetCLK,985120873.0,Ahmet Çelik,tr,18.0,194.0
+1555, dursun saat,saitdursunn,2974995249.0,Sait Dursun,en,1.0,4.0
+1556,sergen buyukkaya,BuyukkayaSergen,2932271573.0,sergen Büyükkaya,en,16.0,97.0
+1557,omer gurbuz,merveegrbz,496989212.0,merve gurbuz,tr,146.0,486.0
+1558, mustafa sayim,mustafaonsay,216031891.0,Mustafa ÖNSAY,tr,2035.0,893.0
+1559,mustafa bal,ebuseyityasin,246040835.0,Mustafa Balcı,tr,149.0,1185.0
+1560,mustafa bal,alimustafa61,448306370.0,ali mustafa,tr,67.0,742.0
+1561,eren soylu,soylu_merve,303710763.0,Merve Soylu,tr,59.0,175.0
+1562,nisanur yukruk,nisanurykrk,9.572193632072049e+17,Nisanur Yükrük,tr,54.0,102.0
+1563,betul tutar,ttubabetul,7.989661505331528e+17,TUBA BETUL,tr,8.0,114.0
+1564,irem ozturk,iiremoozturk,8.087554135292723e+17,İrem Öztürk,en-gb,16.0,52.0
+1565,bayram taser,tasbayram,229235347.0,bayram tas,tr,42.0,1124.0
+1566, levent gurun,leventgurun,38041240.0,Levent Gurun,tr,116.0,338.0
+1567,mustafa torgut,_mustafaoruc_,1020328004.0,Mustafa Oruç,tr,31.0,173.0
+1568,abdulrahman alshibli,Abdul_shibli,386018373.0,abdulrhman alshibli,en,76.0,156.0
+1569,leyla turkan,beyazit_leyla80,8.119685229937254e+17,Leyla Tufan,tr,346.0,668.0
+1570,levent tasci,Levent_Tas_,275966437.0,Levent Tas,tr,6.0,19.0
+1571,furkan ecevit,97Ecevit,1595795366.0,Furkan Ecevit,tr,30.0,125.0
+1572, ! akademik,btlyurt,7.779580302185021e+17,Akademik,tr,126.0,204.0
+1573, ilknur baran,NurBaran10,8.870330218697728e+17,Nur Baran,tr,12.0,105.0
+1574,mustafa yildirim,mustafa_yldz82,7.318848359842816e+17,Mustafa YILDIZ,tr,271.0,287.0
+1575,ahmad aljalmoud,Aljalmoud,986846172.0,Ahmad jalmoud,en,44.0,90.0
+1576,fatma demir,DemrFtm,1435285928.0,fatma demir,tr,0.0,36.0
+1577,murat demir,AsMilat,3607351095.0,murad demir,tr,256.0,471.0
+1578,ahmet balci,mrdahirali,2876676015.0,Ahmet Ali,en,7.0,128.0
+1579,enes etlik,EnesEtlik,2835718624.0,Enes Etlik,en,80.0,258.0
+1580,fatma dikmen,fnur_i,1457836632.0,Fatmanur Dikmen,tr,102.0,234.0
+1581, global,GlobalHE,256898859.0,GlobalHE,en,8991.0,8122.0
+1582,hakan gunes,hakkian,2361734094.0,Hakan Güneş,tr,1.0,63.0
+1583,mehmet yegin,MEHMETS25510855,7.662831534053376e+17,MEHMET SEZGIN,tr,128.0,1299.0
+1584,ahmed taskinirmak,AhmedTaskinirm1,3080410331.0,Ahmed Taskinirmak,tr,9.0,17.0
+1585,seyma kaya,SeymKya,519871438.0,Şeyma Kaya,tr,345.0,120.0
+1586,murat dursun,muratdursun1974,2962807305.0,Murat Dursun,tr,19.0,196.0
+1587,sinem onal,sinemonay1,3379500531.0,Sinem Onay,tr,125.0,201.0
+1588,muhammed horasan,muhammedhann,302536009.0,Muhammed Han,tr,85.0,641.0
+1589,sinan bakioglu,BakiogluSinan,8.881091677218529e+17,Sinan Bakioğlu,tr,32.0,79.0
+1590, seyfullah sefer,SeyfullahEfe,2539404208.0,Seyfullah Efe,tr,344.0,60.0
+1591,mehmet korkmaz,mehmet3021,2346771736.0,Mehmet Korkmaz,tr,273.0,261.0
+1592, facebook -,facebook,2425151.0,Facebook,en,14026314.0,136.0
+1593,zeynep akan,tzeypt,7.771170883390996e+17,zeynep aktaş,tr,55.0,135.0
+1594,sumeyye koca,smyykc,331103502.0,Sümeyye Koca,tr,194.0,293.0
+1595,aysegul sen,EnezAysegul,9.50726781211947e+17,Aysegul enez,tr,11.0,137.0
+1596,rumeysa bayram,rvyd_bayram,3740044054.0,Ruveyda Bayram,tr,163.0,235.0
+1597,filiz kayan,fafiemkaya,9.332985512827167e+17,Filiz Kaya,tr,16.0,348.0
+1598,fatma koc,kccftmm,8.641955317232067e+17,Fatma Koç,tr,77.0,128.0
+1599,abdulrahim kannout,abdulrhem3,527886906.0,Abdulrahim Kannout,en,23.0,144.0
+1600,murat can,MuratCHAN1,315302043.0,Murat CİHAN,tr,67.0,288.0
+1601,hasan bozkurt,TheGreyWolff,580832386.0,Hakan Bozkurt,tr,708.0,491.0
+1602,enes yilmaz,enesismindebiri,7.34360943254229e+17,Enes Yılmaz,tr,275.0,1606.0
+1603,abdulkadir aksu,ayka_kadir,1943642528.0,Abdulkadir AYKAÇ,tr,129.0,1022.0
+1604,muhammed tok,ootoman,3091637818.0,muhammed topçu,en,45.0,220.0
+1605, ! sosyoloji,okansosyoloji,9.21723771748307e+17,O'Sosyoloji,tr,61.0,99.0
+1606,seyma inal,seyma_i,178450017.0,Seyma İnal,tr,176.0,361.0
+1607,yusuf adiguzel,Adiguzel_Yusuf,413783054.0,Yusuf Adıgüzel,tr,4212.0,419.0
+1608,fatma dagli,FatimaSomali,3246738151.0,Fatima Ali,en,6734.0,2220.0
+1609, mehmet aytar,mehmeta16163557,3869291247.0,mehmet acar,tr,88.0,169.0
+1610, ahmet tekin,aevin7778,412706082.0,ahmet evin,en,26.0,457.0
+1611,alikamal gulfanov,alikemalahiska,7.562242433067295e+17,Alikamal Gulfanov,ru,53.0,110.0
+1612,mehtap gunay,MehtapGunay4,8.525520927073239e+17,Mehtap Gunay,tr,3.0,28.0
+1613,emirkan celik,tunaliankara,552450611.0,erkan çelik,tr,444.0,4564.0
+1614,feichal abdou moumouni,FeichalAbdou,3123242385.0,Feichal Abdou Moumou,en,1.0,3.0
+1615,yusuf kayan,yusufkaya4779,3386403971.0,YUSUF KAYA,tr,106.0,1104.0
+1616,serhat beyan,serhatbeyi,8.114841444506337e+17,Serhat Beyi,tr,27.0,142.0
+1617,abdullah tunc,abdullahtrhn38,7.339653572166328e+17,Abdullah Turhan,en,382.0,2190.0
+1618,merve altas,merveeatas,4237457615.0,Merve Ataş,en,153.0,397.0
+1619,mehmet caner,mcan_agca,355162108.0,mehmet can,tr,158.0,846.0
+1620, hamdi irmak,HamdiIrmak1,1490104831.0,Hamdi Irmak,tr,11.0,16.0
+1621,zuleyha temel,SosyologZulisT,7.702194897031291e+17,Züleyha Temel,tr,0.0,135.0
+1622,elif sert,94_afra,3375136894.0,elif er,en,1.0,39.0
+1623,mohammed elkhateeb,Hatib2014,610743648.0,Mohammad Elkhateeb,en,88.0,70.0
+1624,serkan akcay,serkankocaa,2918209875.0,Serkan KOCA,tr,1042.0,707.0
+1625,ozcan bozkurt,ouzhanbozkurt18,919174640.0,oğuzhan bozkurt,tr,7.0,139.0
+1626, ! sosyoloji,sosyoloogi,8.97606726203179e+17,Sosyologi,tr,23.0,38.0
+1627,emine guler,eminegur2,936438036.0,emine gur,tr,151.0,1104.0
+1628,aysel mutlu,Ayse__Mutlu,338268946.0,Ayse Mutlu,tr,291.0,518.0
+1629,busra meral,meralburak121,2864245187.0,meral burak,tr,85.0,292.0
+1630,ahmet seba,SrbgaAhmet,4506570147.0,ahmet srbga,tr,23.0,63.0
+1631,mehmet kaplan,MehmetKaplan199,4306171395.0,Mehmet Kaplan,tr,1487.0,5001.0
+1632,aysegul bilgic,ayysegulkilic,2925157241.0,Aysegul Kilic,tr,43.0,151.0
+1633,ali tercuman,aliercanar,4892370321.0,Ali Ercan,tr,148.0,153.0
+1634,mehmet ozdemir,19ZDEMR,480728930.0,MEHMET ÖZDEMİR,tr,108.0,231.0
+1635,ibrahim hayal,ibrahimhata79,2357685854.0,ibrahim Hata,tr,36.0,144.0
+1636, elif kaya,ELFKAYA2342,4450832517.0,ELİF KAYA,tr,19.0,48.0
+1637,mehdi nuruzade,mikhaylo_,2795701211.0,Mehdi Nuruzade,en,12.0,30.0
+1638,ismail canpolat,canbulaismail,2651792659.0,ismail canbulat,tr,370.0,2460.0
+1639, ali erken,demalieren,8.803016750425334e+17,ali eren,tr,31.0,544.0
+1640,ahmet yaman,ahmetyamanmesob,9.412139482626703e+17,AHMET YAMAN,tr,190.0,2776.0
+1641,furkan aksoy,Erki0421,9.068422633844777e+17,Erkan Aksoy,tr,13.0,216.0
+1642,zeynep onat,zeynepsonata,7.881461597013565e+17,Zeynep Sonata,tr,1.0,39.0
+1643,ahmet mursel dogan,AhmetMrselDGN42,8.675101129902367e+17,Ahmet Mürsel DOĞAN,tr,5.0,46.0
+1644,muhammed caki,muhayyali,9.188603082691584e+17,muhammed ali,tr,65.0,248.0
+1645,umre demir,yemredemirr,7.089217876907008e+17,Emre Demir,en,74.0,330.0
+1646,filiz kayan,filizKaya2017,8.851334638373888e+17,Filiz Kaya,tr,72.0,189.0
+1647,yasemin ergin,ErgnYasin,327376734.0,Yasin Ergin,tr,100.0,989.0
+1648,merve karan,MerveKaran12,7.239264656796467e+17,Merve Karan,en,41.0,169.0
+1649,serenay akgun,ArunSerenay,7.685212833027523e+17,serenay arun,tr,28.0,169.0
+1650,samet eser,sameteser__,9.191150930817761e+17,Samet Eşer,tr,59.0,102.0
+1651,sinan bakioglu,sinan_bakioglu,3183392741.0,Sinan Bakioğlu,tr,2917.0,100.0
+1652,melih koyuncu,zeliha_koyuncu,3025178191.0,Zeliha Koyuncu,tr,51.0,120.0
+1653,metehan mete,_erwinrommel,7.105954565822259e+17,Ahmet Metehan,tr,278.0,1425.0
+1654, berna yilmaz,busrayilmaz326,3184160020.0,Büşra YILMAZ,tr,141.0,698.0
+1655,abdul selam seyidoglu,ASydglu,2917298687.0,Abdul Selam Sydglu,en,17.0,32.0
+1656,esra yilmaz,Esraylmz274949,9.152782927727043e+17,Esra yılmaz,tr,148.0,158.0
+1657,emirkan celik,celiksserkan,4722439037.0,Serkan Celik,en,110.0,225.0
+1658,elif erdem,ElifErtem12,7.408391416766136e+17,Elif Ertem,tr,9.0,48.0
+1659,yaren kaplan,sareekaplan,849664309.0,sare kaplan,tr,135.0,110.0
+1660,elif esra boz,ElifEsraBozz,1259077356.0,Elif Esra Boz,tr,89.0,91.0
+1661,ayse kaya,AysaSV,9.274431629054157e+17,Ayşe Kaya,tr,2.0,148.0
+1662,ahmet karaca,a_karatas63,1429778930.0,Ahmet Karataş,en,58.0,145.0
+1663,hasan esenkoylu,HasanEsenkoylu,7.360982053062164e+17,Hasan ESENKÖYLÜ,tr,2.0,72.0
+1664, mehmet baysan,MHMTSLN,298628831.0,MEHMET ASLAN,tr,1075.0,973.0
+1665,ahmet tarik eren,ahmettarikeren,3576163462.0,Ahmet Tarık Eren,tr,131.0,162.0
+1666, kariyer merkezi,izukariyer,2938287970.0,İZÜ Kariyer Merkezi,tr,1190.0,73.0
+1667, kubra erdem,kbraaerden,2310603539.0,Kübra Erden,tr,207.0,159.0
+1668,ervanur dundar,ErvanurDundar,7.007074490792018e+17,Ervanur Dündar,en,124.0,505.0
+1669, ayse guler,ayseguler,96313649.0,ayse güler,tr,77.0,145.0
+1670,omer yalcinkaya,omeryaIcinkaya,7.543968591211643e+17,Ömer Yalçınkaya,tr,55.0,70.0
+1671,mehmet ortac,Mehmet_Orann,9.486149762851717e+17,Mehmet Oran,tr,37.0,91.0
+1672,ahmet sari,ahmetsari25,3184652715.0,Ahmet Sarı,tr,2167.0,2405.0
+1673,zafer demir,ZaferGuder,483712512.0,ZAFER GÜDER,tr,389.0,1035.0
+1674,mohammed a. a. alsawada,AAlsaw,2720552397.0,Mohammed A. A. Alsaw,en,0.0,3.0
+1675,mustafa enes kilinc,meneskilinc,7.931774191296922e+17,Mustafa Enes Kılınç,tr,317.0,714.0
+1676,saad qamar iqbal,SaadQIqbal,146166034.0,Saad Qamar Iqbal,en,55.0,105.0
+1677,zekeriya beyhan,ZekeriyaBeyhan,9.783756164614636e+17,Zekeriya Beyhan,tr,8.0,17.0
+1678,emrah kaya,Emrhyv,2265638794.0,Emrah Hayva,tr,22.0,28.0
+1679,ezgi ozdemir,ezgizdemir5,357098332.0,ezgi özdemir,tr,7.0,25.0
+1680,mohammed seba,med_seba,2394654749.0,Mohammed Seba,en,6.0,50.0
+1681,berkant kaya,Berkan_Kayaa,900028934.0,KAYA berkan,tr,67.0,157.0
+1682, mustafa ãzel,bygunahkar,7.803152952778056e+17,Mustafa ÖZBEK,tr,52.0,2754.0
+1683, ayse guveli,ayseguveli,380163113.0,Ayse Guveli,en,441.0,274.0
+1684, abdullah dogan,abdullahdogru5,1223662904.0,abdullah dogru,tr,131.0,1789.0
+1685, zeynep kurt,zeynepakkurt222,3729160587.0,Zeynep Akkurt,tr,66.0,126.0
+1686,merve han,HancarMerve,3816896542.0,Merve Hançar,tr,14.0,73.0
+1687,evin demir,MetinDe77476524,8.042038488187167e+17,Metin Demir,tr,9.0,50.0
+1688,fatih enes usta,fatihenesus,7.14460093966848e+17,Fatih Enes Usta,tr,1.0,12.0
+1689, elif dogan,pelitttt,3667532895.0,Elif Doğan,tr,80.0,171.0
+1690,ucan hali,_alicaneren_,3590844089.0,Ali Can,tr,272.0,913.0
+1691,sinan tekin,SOztekin20,3339142871.0,Sinan Öztekin,tr,58.0,335.0
+1692,mehmet nuri akyol,mhmetnuri,1137869251.0,Mehmet Nuri Akı,tr,59.0,149.0
+1693,ilkim bayram,dilki_bayram,2482212661.0,bayram dilki,tr,1111.0,3209.0
+1694,rumeysa ozdemir,g_sosyolog,3074837559.0,Rumeysa Demirci,tr,800.0,774.0
+1695,cansu ulus,CanUlus7,8.611961740359967e+17,Can Ulus,tr,9.0,329.0
+1696,nurselin balci,Balci_selin25,7.036903219815465e+17,selin balci,tr,6.0,40.0
+1697,hatice ozkan,hatceozcn,1876579640.0,Hatice Özcan,tr,123.0,407.0
+1698, halil arslan,halilaslansos,9.008179928162263e+17,Halil Aslan,tr,468.0,1099.0
+1699,mustafa gez,ogutmustafaa,7.327967779848643e+17,Mustafa Ögüt,tr,76.0,424.0
+1700,zekeriya beyhan,BeyhanZekeriya,2343452087.0,zekeriya beyhan,tr,26.0,95.0
+1701,merve dinc,merveinci,113372770.0,merve inci,tr,38.0,125.0
+1702,seda eren,serdar_erden35,863827040.0,Serdar Erden,tr,666.0,463.0
+1703,zeynep betul kaban,zebeka,275158687.0,Zeynep Betül KAVAK,tr,166.0,692.0
+1704,sedat kaya,SevdaKaya228377,9.076212943798149e+17,Sevda Kaya,tr,14.0,153.0
+1705, ! philosophy,philosopherbee,2973009443.0,Philosophy,tr,47.0,370.0
+1706,ahmad aljalmoud,AAljalmoud,1380755774.0,Ahmad Aljalmoud,ar,0.0,10.0
+1707, omer dincer,merdiner8,894736261.0,ömer dinçer,tr,64.0,331.0
+1708,fatih hacioglu,FatihHacolu7,9.823726360879432e+17,Fatih Hacıoğlu,en,7.0,58.0
+1709,hakan yilmaz,Hakanylmz38,364870310.0,Hakan YILMAZ,tr,73.0,327.0
+1710,emine karaman,emnkrgln,8.264708060876718e+17,Emine Karaoglan,tr,112.0,1009.0
+1711,merve akgun,MMervenida,3078221585.0,merve aksu,tr,8.0,570.0
+1712,oguzhan adak,oguzhan007,111653887.0,Oguzhan Adak,en,40.0,233.0
+1713,emrah yilmaz,EmrahhYILMAZ,631426132.0,Emrah YILMAZ,tr,206.0,822.0
+1714,merve akcay,mrv_kyz,7.774982280235172e+17,Merve Akyüz,tr,31.0,184.0
+1715,dila albayrak,HilalAl16219833,7.186989884221727e+17,Hilal Albayrak,tr,480.0,4573.0
+1716,ecem gunal,ecemgunall,315757507.0,Ecem Günal,tr,349.0,237.0
+1717,mustafa arslan,mustafa_arslan_,179954793.0,mustafa arslan,tr,214.0,393.0
+1718,ezgisu celik,ezgiclkk,1610248820.0,Ezgi Çelik,tr,570.0,557.0
+1719, tamer yilmaz,sosyolog64,3148543767.0,Omer yilmaz,tr,99.0,508.0
+1720, mehmet baysan,mehmetaslanma,2755560268.0,Mehmet Aslan,tr,224.0,173.0
+1721,elif senturk,ahofu,215003598.0,Elif Şentürk,en,176.0,132.0
+1722,elif ceylan,BedensizKadin,106784643.0,Elif Ceyhan,tr,169.0,586.0
+1723,zehra saglam,saglamzehra,1053673993.0,Zehra Sağlam,tr,374.0,1299.0
+1724,burhan isik,ISIKBurhaN,389652275.0,Burhan IŞIK,tr,457.0,727.0
+1725,leyla demir,zleyhademir5,1718308525.0,züleyha demir,tr,2.0,31.0
+1726,esra uysal,uysalesmaa,2733104853.0,esma uysal,tr,162.0,480.0
+1727,sacit cesitcioglu,sacitces,741129642.0,Sacit Cesitcioglu,tr,137.0,24.0
+1728,melek buyurucu,mbbuyurucu,8.129900180463288e+17,Melek Buyurucu,tr,0.0,7.0
+1729,elif can,elifan9,201160937.0,elif an,tr,7.0,46.0
+1730,furkan sahin,mfurkansahinn,2535780383.0,Furkan Şahin,tr,210.0,161.0
+1731, ! philosophy,CFelsefe,3630624612.0,philosophia,tr,577.0,2643.0
+1732, yasemin kã¼ã§ã¼kã¶meroälu,yasemineroll,178730069.0,yasemin erol,tr,103.0,200.0
+1733,ahmet er,ahmetoner01,472149195.0,ahmet öner,tr,264.0,845.0
+1734,elif demirel,elifdemir63,422637683.0,elif demir,tr,93.0,393.0
+1735, zeynep erol,zeynepergl64,759374388.0,Zeynep ERGÜL,tr,480.0,2716.0
+1736, esra ozdemir,EsraEsraguclu,980847679.0,Esra Özdem,tr,57.0,147.0
+1737,damla baydemir,BaydemirDamla,1610103654.0,damla baydemir,tr,20.0,51.0
+1738,merve kandemir,33mervecan,3066076882.0,merve demir ,tr,2.0,4.0
+1739,huseyin dikmen,eksi_zeytin,218095010.0,hüseyin dikmen,tr,613.0,335.0
+1740,tubanur caliskan,tbcaliskan,986564156.0,Tugba Caliskan,tr,237.0,2180.0
+1741,betul durmus,BtlDuru06,9.343723963829903e+17,Betül Duru,tr,14.0,64.0
+1742,cansu karadag,cns274,3121031120.0,Cansu Karadoğan,tr,22.0,173.0
+1743, ! computer science,CompSciFact,220145170.0,Computer Science,en,189232.0,19.0
+1744,ali kaya,aytacali66,4093398393.0,Ali Aytaç,tr,640.0,850.0
+1745, ahmet okumus,Ahmet_OKCUM,928554660.0,AHMET OKCUM,tr,92.0,851.0
+1746,yunus bektasoglu,bektasogluyunus,1394299495.0,yunus bektaşoğlu,tr,345.0,1898.0
+1747,mustafa erol,mistefaa,624955242.0,mustafa erler,tr,23.0,188.0
+1748,muhammed caki,maliustun,401477209.0,muhammed ali,tr,351.0,283.0
+1749,baran altuncu,BaranAltuncu,52458947.0,Baran Altuncu,en,24.0,79.0
+1750,oguzhan tezel,oguzhaantezel,8.63473065488941e+17,Oğuzhan Tezel,tr,52.0,116.0
+1751,edebiyat kulubu,EdebiSU,821777761.0,SU Edebiyat Kulübü,tr,313.0,704.0
+1752,fatma atbas,Fatmaabay6,3596913677.0,Fatma abay,tr,114.0,658.0
+1753, mert celik,mert__celik,314320500.0,Mert Çelik,tr,107.0,722.0
+1754,ali selman burak,seelemeane,356478549.0,Ali Selman Burak,tr,98.0,60.0
+1755,muhammed emin eyup kose,eypemnk,2829611749.0,Muhammed emin eyüp K,tr,3.0,13.0
+1756,berna celik,celikkbrn,3235889153.0,Berna Çelik,tr,9.0,17.0
+1757,eda kaplan,EdaKplan,1166412223.0,Eda Kaplan,tr,107.0,257.0
+1758,beste erarslan,besterarslan,219327899.0,beste erarslan,en,146.0,229.0
+1759,mustafa aygun,mstfygn,125094226.0,mustafa aygün,tr,102.0,299.0
+1760,kadir san,Mrksarban,715925660.0,Kadir Sarban,tr,730.0,142.0
+1761,halime karayel,Haluket,146874707.0,Halime Karayel,tr,275.0,159.0
+1762,merve aksoy,EmreAksoy_07,617524123.0,Emre Aksoy,tr,79.0,123.0
+1763,berkan ozdemir,ErkanOzdemir59,7.134153662910956e+17,Erkan Özdemir,en,39.0,313.0
+1764,abdullah enes aydin,abenesay,1479419172.0,abdullah enes aydın,en,857.0,431.0
+1765,murat cinar,Acar4707,2252611453.0,murat acar,tr,56.0,154.0
+1766,ibrahim hayal,ibrahimay11,374155814.0,ibrahim ay,tr,9.0,139.0
+1767,hilal ariturk,hilalakturk1,608450588.0,hilal akturk,tr,27.0,135.0
+1768, ibrahim senay,ibrahimyeniay1,394220255.0,ibrahim yeniay,tr,8.0,22.0
+1769,ebru aslan,Burcu_denizAsln,213112450.0,Burcu Aslan,tr,129.0,641.0
+1770,burak eren,dniester,89016571.0,Burak Eren,tr,45.0,207.0
+1771, mustafa aktan,MuratDa70627798,4882086095.0,Mustafa Koçan,tr,437.0,1483.0
+1772,elif senturk,veronaluminal,8.794256126367212e+17,Elif Şentürk,tr,9.0,277.0
+1773,ozlem kaya,ozlemdundarkaya,489594259.0,özlem kaya,tr,19.0,390.0
+1774,ebru yildirim,sediragaci1,7.94592427474559e+17,z. t. ebru yildirim,tr,401.0,1166.0
+1775,burcu yaman,yebru2,186114009.0,Ebru YAMAN,tr,440.0,1659.0
+1776,esma demir,MrFilozof34,140428015.0,kemal demir,tr,93.0,942.0
+1777, ! sosyoloji,Sosyolojin,3066727779.0,Sosyolojî,tr,211.0,1055.0
+1778,ahmet burak karahan,AhmetBurakKurt1,487811880.0,Ahmet Burak Kurtaran,tr,1.0,21.0
+1779,deniz sahin,cengizov53,2785445823.0,Sahin Cengiz,tr,25.0,188.0
+1780,busra telli,arsub_b,350340754.0,Büşra Telli,en,140.0,299.0
+1781,abdullah yilmaz,psikolog72,1648377632.0,abdullah solmaz,tr,316.0,1108.0
+1782, yasemin kã¼ã§ã¼kã¶meroälu,Yaseminerolu18,8.396382331306107e+17,Yasemin eroğlu,tr,60.0,169.0
+1783,abdullah eser,abdullahkose11,3237072318.0,Abdullah Köse,tr,32.0,148.0
+1784,yahya ahmet doganay,AhmedDoganay,605452164.0,Yahya Ahmed Doğanay,tr,539.0,236.0
+1785,kaan bayram,gokbay_b,1483697970.0,Gökhan Bayram,tr,6.0,84.0
+1786,gizem akel,GizemAkell,315899534.0,Gizem Akel,tr,112.0,67.0
+1787,emre sahin,SahinSahinemre,3602301015.0,şahin emre,tr,18.0,276.0
+1788, sevdanur arslan,Sevda_rsln,1345370124.0,sevda arslan,tr,90.0,491.0
+1789, ! sosyoloji,AkuSosyoloji,2871498767.0,AKÜ SOSYOLOJİ,tr,183.0,164.0
+1790,elif kaplan,elifkalay6,1326861206.0,elif kalay,tr,82.0,226.0
+1791,emre yavuz,gurub_vakti,1850757278.0,Merve Yavuz,tr,399.0,357.0
+1792,bilal altunbas,bilalaltunbas16,4371937936.0,Bilal Altunbaş,tr,1206.0,4977.0
+1793, mehmet dã¼lger,mehmetguler35,7.015308692453376e+17,MEHMET GÜLER,tr,23.0,67.0
+1794,sumeyra yavuz,smeyrayavuz4,1596300691.0,sümeyra yavuz,tr,122.0,136.0
+1795,merve vural,ofmoriste,579186200.0,Merve VURAL,tr,258.0,101.0
+1796,sude beyaz,SudeBeyaz_,586809124.0,Sude Beyaz,tr,302.0,198.0
+1797,semra arslan,EsmaArslan19,572970054.0,Esma Arslan,de,442.0,959.0
+1798,suheyb erdemci,shybrdmci,136255136.0,süheyb erdemci,tr,67.0,107.0
+1799,enes altunbas,enesaltunbas,2895284199.0,Enes Altunbaş,tr,4634.0,254.0
+1800,miray gokmen,mrygokmen,518787696.0,Miray Gökmen,tr,275.0,183.0
+1801,selim saka,SelimSayca,1525181294.0,Selim Sayca,tr,98.0,412.0
+1802,ismail hatip,hatip_ismail,99515495.0,İsmail Hatip,tr,214.0,448.0
+1803,betul erdem,serefraz1,2941965843.0,Betül Erdem,tr,20.0,49.0
+1804,mustafa cam,CakmakMustafa66,2294594599.0,Mustafa Cakmak,tr,190.0,872.0
+1805,oguzhan eraydin,eraydinn,438546587.0,Oğuzhan ERAYDIN,tr,18.0,28.0
+1806,zeynep ilgin,meszey,354327131.0,Zeynep Ülgen,tr,30.0,300.0
+1807,yasmin celik,Yaseminelik10,373568051.0,Yasemin Çelik,tr,3.0,463.0
+1808,ecem ozel,ecemozeel,2717655635.0,Ecem Özel,tr,244.0,246.0
+1809,selma slocum,SelmaSlocum,1702176386.0,Selma Slocum,en,11.0,22.0
+1810,ali atakan erol,aa_erol,2333455057.0,Ali Atakan Erol,tr,101.0,148.0
+1811,ezgi meral,ezgimera,2742499535.0,ezgimera,tr,10.0,111.0
+1812,reyyan demirayak,Reyhandemirka,2763494363.0,Reyhan Demirkaya,tr,8.0,56.0
+1813,selin karaca,selinkaracaaa,724602042.0,Selin Karaca,tr,148.0,153.0
+1814,saliha tuna,SalihTun20,4878460713.0,Salih Tunç,tr,23.0,182.0
+1815,kemal karaca,kkaraca53,159967656.0,Kemal Karaca,tr,238.0,166.0
+1816,ebrar yaman,EbrarYamn,288974820.0,Ebrar Yaman,tr,256.0,132.0
+1817,yusuf emre demir,yemrefe,290665863.0,Yuğus Emre Demir,tr,217.0,886.0
+1818,elif ozaydin,elifozaydin,138499403.0,Elif Özaydın,tr,211.0,180.0
+1819,selman kaya,selman_kaban,8.557005985697915e+17,selman kaban,tr,0.0,18.0
+1820,dilara murat,dilaraomur,211606120.0,Dilara Omur,en,745.0,157.0
+1821,sumeyye bulut,smyyebulut,8.156932060966748e+17,sümeyye bulut,tr,83.0,231.0
+1822,ezgi mermer,ezgimermer,343676097.0,ezgimermer,tr,292.0,393.0
+1823,merve uzun,merveuzunz,379052096.0,merve uzunöz,tr,130.0,299.0
+1824,esra tunc,arsetncy,346700986.0,esra tuncay,tr,41.0,158.0
+1825,elif gulay,elifgulay_,2585266972.0,Elifgülay,tr,28.0,121.0
+1826,hande atasoy,rabiahande,2255825730.0,Hande Atasoy,tr,117.0,280.0
+1827,huseyin ocak,HasaneynKoca,2189985029.0,Hüseyin Koca,tr,155.0,435.0
+1828, zeynep uysal,nzeynepuysal,1471706816.0,Zeynep Uysal,tr,411.0,486.0
+1829,egemen turhan,engintuna7,754247136.0,EGEMEN TURAN,tr,21.0,107.0
+1830,omer faruk demirci,ofdmed,416598788.0,Ömer Faruk Demirel,tr,306.0,1062.0
+1831, mehmet aytar,mmhhmmttb,738475597.0,Mehmet Bayraktar,tr,214.0,371.0
+1832,sibel kon,SArkonac,2784958571.0,sibel arkonaç,tr,437.0,345.0
+1833,ahmet celik,semi_94,1601646272.0,Ahmet Çelik,en,7.0,30.0
+1834,elifnur akpinar,AkpnrElif,1249590522.0,Elifnur Akpınar,tr,33.0,153.0
+1835,beyza karaca,merhabanam,531509972.0,Beyza Karaca,tr,118.0,223.0
+1836, mehmet ercek,mehmeterte,241495799.0,Mehmet Erte,tr,1419.0,424.0
+1837,zeynep yilmaz,zeynep2,103012327.0,zeynep yılmaz,en,18.0,199.0
+1838,ali koc,51alihaydar,2341022142.0,Ali koc,tr,6.0,32.0
+1839,semra celik,yazaremrahcelik,1068291626.0,Emrah Çelik,tr,1711.0,4120.0
+1840,erkan turk,_ErkanOzturk_,1537190797.0,Erkan Öztürk,tr,63.0,236.0
+1841,ahmet ugurlu,UygurluAhmet,9.152994328323973e+17,AHMET UYGURLU,tr,256.0,596.0
+1842,huseyin kesim,HKesim,321885193.0,Hüseyin KESİM,tr,39.0,194.0
+1843,ahmet asa,yitikgazel,479354915.0,S. Ahmet,tr,751.0,384.0
+1844,oguz kaan pehlivan,ouz_pehlivan,1235224801.0,Oğuz Kaan Pehlivan,tr,1756.0,1333.0
+1845,umut burgaz,umutborges,392899986.0,Umut Burgaz,tr,100.0,31.0
+1846,amena abdullah,ahmetabdallah,1442895878.0,Ahmet Abdullah,tr,1205.0,359.0
+1847,mehmet kaya,mehmetkaya_1453,2425610849.0,mehmet kaya,tr,6.0,138.0
+1848,zeynep eksim,zeynepeksi64,1540922090.0,Zeynep Ekşi,tr,132.0,530.0
+1849,sedat kaya,sedatkucukbay,961261422.0,Sedat Küçükbay,tr,347.0,257.0
+1850,zeynep yilmaz,Zeyneb_55_,291146299.0,Zeynep YILMAZ,tr,43.0,291.0
+1851,mohamed yusuf,ebediyetinfecri,9.236814783194644e+17,Muhammed Yusuf,tr,105.0,301.0
+1852,berk ceylan,berkemceylan,51198775.0,Berkem Ceylan,en,11965.0,3221.0
+1853, akin tek,nedesemeskidi,182770876.0,Akın Tek,en,224.0,452.0
+1854,umut yilmaz,umutommy,203978009.0,umut yılmaz,en,14.0,1211.0
+1855,husnu yilmaz,husnuyilmaz34,2286877436.0,HÜSNÜ YILMAZ,tr,90.0,123.0
+1856,ali cebeci,Alihebebci,288579456.0,Ali Hebebci,tr,303.0,937.0
+1857,bilal yazar,BilalYasar_,343282757.0,Bilal Yaşar,en,178.0,361.0
+1858,zeynep boran,zeynepmecitoglu,1528132494.0,zeynep bora,tr,125.0,884.0
+1859,merve erol,havadabulut6,2758800547.0,Merve Ergul,tr,67.0,330.0
+1860, esra ozdemir,esmaozdmr,157616590.0,Esma Özdemir,en,720.0,380.0
+1861,ahmet durmaz,ahmetduman19,368263459.0,ahmet duman,tr,93.0,495.0
+1862, mehmet genã§,megungor06,1512698870.0,Mehmet Güngör,tr,258.0,424.0
+1863,fatma beyza eren,fatmabeyzaeren,629318739.0,Fatma Beyza Eren,tr,94.0,48.0
+1864,zeynep safi,zeynepsak95,7.325299513002762e+17,Zeynep SAK,tr,1.0,61.0
+1865,fidan tas,Fidan_tas,1588839876.0,Fidan TAŞ,tr,232.0,212.0
+1866,taha ayhan,tahaayhan,52177613.0,Taha AYHAN,en,35605.0,1087.0
+1867,muhammed hasan celik,muhammed_hasan,236443603.0,Muhammed Hasan ÇELİK,en,38.0,65.0
+1868,aydin demir,aydnbadboy,3151740563.0,aydın özdemir,en,44.0,512.0
+1869,edanur savas,simorgilas,87700605.0,Edanur Savaş,tr,242.0,283.0
+1870,mehmet nart,payizawwa,1299478068.0,mehmet öner . . .,tr,167.0,1176.0
+1871,zeynep yilmaz,Kuzulakk,8.558216832734577e+17,Zeynep Yılmaz,tr,14.0,344.0
+1872,emine ozbey,yozbey1,315395533.0,Emre Ozbey,en,119.0,52.0
+1873,ferhan yilmaz,FE3370,7.775645027453829e+17,Ferhat YILMAZ,tr,49.0,147.0
+1874,dila albayrak,dilaalbayrakkkk,7.553784241899684e+17,Dila Albayrak,tr,162.0,152.0
+1875,ilknur boyaci,ilknurbyc,541188174.0,ilknur byc,tr,70.0,533.0
+1876, esra almas,elmesra,108943377.0,esra elmas,tr,1744.0,1785.0
+1877,burcu karaagin,BurkuKarahan,2360077705.0,Burcu Karahan,en,98.0,252.0
+1878,muhammet mazi,MaSanatkar,309766014.0,muhammet mağ,tr,723.0,411.0
+1879,kubra cicek,kbraaCc,2539026773.0,Kübra Cicek,tr,24.0,107.0
+1880,burak ozcan,burakcantwitte,8.814892843390484e+17,Burak Can,tr,146.0,1562.0
+1881,kadir tekin,Kadirztekin,1897034766.0,Kadir Öztekin,tr,87.0,541.0
+1882, ahmet tan,ahmetcan1500,4624708096.0,AHMET CAN,tr,33.0,197.0
+1883,muhammet emin tak,demirtash_37,287896846.0,Muhammet DEMİRTAŞ,tr,630.0,2786.0
+1884,duygu dalyanoglu,duygudal,105865333.0,Duygu Dalyanoglu,en,535.0,490.0
+1885,gulcin kayhan,GulinKayhan,249747208.0,Gulin Kayhan,en,37.0,279.0
+1886,kubra akat,kbrakt1,868134272.0,Kübra Akat,tr,50.0,91.0
+1887,onur arslan,arslanonurr,482851338.0,Onur Arslan,tr,73.0,41.0
+1888,hasan pehlivan,hasanpehlivan87,160188040.0,Hasan Pehlivan,tr,136.0,174.0
+1889,ferit caldir,Feritocal,2865839314.0,Ferit Öcal,tr,235.0,1422.0
+1890,burak ozdemir,zdmrburak,1392005665.0,Burak Özdemir,tr,262.0,388.0
+1891, isa sertkaya,esra_sertkaya_,2240089048.0,Esra Sertkaya,tr,169.0,223.0
+1892,mustafa sahin,MstfShn,78342853.0,Mustafa Sahin,en,546.0,739.0
+1893, mustafa korkmaz,mustafakz1453,2993840453.0,Mustafa Korkmaz,tr,191.0,479.0
+1894, ahmet tan,ahmet_turan77,3167004776.0,Ahmet Turan,en,56.0,678.0
+1895,furkan karayaka,furkanch99,2646483419.0,Furkan Karakaş,tr,74.0,100.0
+1896,sevim erdem,cemrenil,134531097.0,sevim erdemir,tr,25.0,204.0
+1897,semihcan elik,smhclk86,1109190656.0,Semih Çelik,tr,669.0,1432.0
+1898,fatma demirbas,fatmadmrbs,863569502.0,fatma demirbas,en,7.0,65.0
+1899,serare gokdeli,gokserare,7.667410251802296e+17,Şerare Gökdeli,tr,138.0,94.0
+1900,aylin tuncay,ayliintnc,9.923300933798461e+17,Aylin Tuncay,en,5.0,6.0
+1901,rateb altal,RatebAltal,2964744178.0,Rateb Altal,en,38.0,20.0
+1902,elif yilmaz,elifylmz9235,2817904831.0,elif ylmz,tr,18.0,175.0
+1903,kaan bayram,vkaanbayram,2250881286.0,Kaan Bayram,tr,94.0,184.0
+1904,zeynep bala,mzbalkas,194228463.0,Zeynep Balkaş,en,141.0,252.0
+1905,kubra turk,kubratrk1,4318570337.0,Kübra Türk,tr,54.0,81.0
+1906,furkan yasar,furkanysr,403994496.0,Furkan Yaşar,tr,173.0,188.0
+1907,bilal sadi,sgrbll,465080605.0,Bilal Sagir,en,181.0,162.0
+1908,ahmet zahit ekren,azotkun,384239719.0,Ahmet Zahit Ötkün,tr,1860.0,185.0
+1909,omer cinal,OmerCinal,369542523.0,Ömer Çinal,en,33.0,53.0
+1910, ahmet tan,ahmetcanw,110792094.0,Ahmet Can,tr,1189.0,2268.0
+1911,ahmet kaya,ahmetkaya1299,9.797699923621437e+17,Ahmet KAYA,tr,198.0,1338.0
+1912,selma erol,selmaneroglu,310102507.0,Selman EROĞLU,tr,753.0,1215.0
+1913,mahmut enes arslan,III_Mahmut,1283799366.0,Mahmud Enes Arslan,tr,202.0,312.0
+1914,rasul satymov,rasul385,311496438.0,Rasul Satymov,en,7.0,22.0
+1915,mehmet fatih korkut,Korkut__Fatih,7.629752380029665e+17,Mehmet Fatih Korkut,tr,143.0,257.0
+1916, yusuf ãalä±åkan,tigerkpl,105936329.0,Yusuf KAPLAN,tr,76.0,353.0
+1917,agon ziberi,agzeyy,304053651.0,AGON ZYBERI,en,218.0,112.0
+1918,abdurrahman duman,durmaz_39,611717768.0,Abdurrahman Durmaz,tr,14.0,209.0
+1919,omer kars,OmerKars,274153857.0,Ömer Kars,tr,1516.0,154.0
+1920,ahmet cakmak,ahmetcakmak1,99391224.0,ahmet çakmak,tr,175.0,2315.0
+1921,merve karan,KaracaMrv,533209040.0,Merve Karaca,tr,153.0,903.0
+1922,batuhan sari,Batuusarii,329287649.0,Batuhan Sarı,tr,199.0,150.0
+1923, emrah karabulut,EbruuuK,309708960.0,Ebrû Karabulut,tr,472.0,305.0
+1924,beyza guler,GulerBeyzaaa,8.475192169872425e+17,Beyza Guler,tr,12.0,44.0
+1925,furkan enes cakar,Furkanncakarr,4120059441.0,Furkan Enes Çakar,tr,56.0,115.0
+1926,ahmet solmaz,ahmetomac,634033654.0,Ahmet Omaç,tr,258.0,1123.0
+1927,hakan erdogan,hakanergunrock,7.929902562115666e+17,Hakan Ergün,tr,62588.0,26755.0
+1928,yesim keskin,yesimksknn,1295872634.0,yesim keskin,tr,102.0,116.0
+1929,esra uslupat,EsraUslupat,498084086.0,Esra Uslupat,en,180.0,175.0
+1930,eray tunc,eraytuncc,353008893.0,Eray Tunç,tr,89.0,53.0
+1931,nurgul arslan,nurgullrslan,9.354486993245102e+17,Nurgül ARSLAN,tr,56.0,143.0
+1932,simge nur kara,SimgeNurKaraa,254960250.0,Simge Nur Kara,tr,350.0,165.0
+1933,omer faruk karakaya,ofkderler,1562628360.0,ömer faruk karakaya,tr,230.0,128.0
+1934,esra nur avcilar,ehuntres,252265677.0,Esra Nur Avcilar,tr,265.0,91.0
+1935,elif donmez,DonmezElcin,3995446492.0,Elçin Dönmez,tr,30.0,218.0
+1936,betul yilmaz,betul72bal,614168962.0,betül yılmaz,tr,189.0,1637.0
+1937,ali furkan ak,AliFurkanAk97,8.457060764231188e+17,Ali Furkan Ak,tr,38.0,139.0
+1938,merve yilmaz,Merrveylmazzz,9.294650722289951e+17,Merve Yılmaz,tr,38.0,77.0
+1939, tamer yilmaz,avtameryilmaz,9.931855977192366e+17,Tamer Yılmaz,tr,12.0,187.0
+1940,abdulhamit yilmaz,AHamitYilmaz,243899097.0,Abdulhamit Yılmaz,en,2546.0,376.0
+1941,dilara demir,DilaraDemir3,323999505.0,Dilara Demir,tr,709.0,230.0
+1942,ayse sena okuyan,AyseSenaOkuyan,187485055.0,Ayşe Sena Okuyan,tr,2721.0,79.0
+1943,omer can,omercanucar,968809260.0,ömer can,tr,12.0,80.0
+1944,elif altin,ae_alican,2896622171.0,Alican Elif,tr,0.0,40.0
+1945,melis dursun,marvelreklam,322441632.0,Dursun çelik,tr,49251.0,32244.0
+1946,burak yilmaz,seskeks,276090463.0,Burak Yılmaz,tr,254.0,115.0
+1947, ahmet tan,AhmetCnKorkmaz,176654514.0,Ahmet Can,tr,1227.0,235.0
+1948,harun oruc,harun_oruc,378772526.0,Harun Oruç,tr,44.0,213.0
+1949,onur bay,1dkbakarmisnLan,342444434.0,Onur Bey,tr,2824.0,137.0
+1950,korhan pehlivanlar,PehlivanliOrhan,1531039190.0,Orhan PEHLİVANLI,tr,112.0,410.0
+1951,semih arin,ArnSemih,1545701178.0,Semih Arın,tr,165.0,248.0
+1952,nursen yuksel,nursenyuksel_,9.337932341779702e+17,Nurşen Yüksel,tr,21.0,86.0
+1953,aya aldakkak,Ayaaldakkak,2956361386.0,Aya Aldakkak,en,135.0,77.0
+1954,merve akyurek,merveeakyurek,537591456.0,Merve Akyürek,en,279.0,175.0
+1955,dilara kaya,KaynarDilara,610832296.0,dilara kaynar,tr,35.0,222.0
+1956,renan gulen,renangulen,170758481.0,Renan Gülen,tr,1297.0,0.0
+1957,usame erdogan,UsamErdogan,295374344.0,Üsame Erdoğan,tr,951.0,216.0
+1958, ahmet tan,Ahmettunc12,566164744.0,Ahmet Tunç,tr,0.0,8.0
+1959,emre suzgun,Emre_Uzun_05,323790636.0,Emre UZUN,tr,320.0,2788.0
+1960,deniz ersoy,Denizbey_ihke,7.482922477125714e+17,Deniz ÖZSOY,tr,15.0,242.0
+1961,ismail mese,FlagellumDei434,4840210619.0,ismailmeşe,tr,5.0,36.0
+1962,elif ozturk,bidikshowtime,2924769794.0,Elif Öztürk,en,45.0,144.0
+1963,hamza albayrak,hamzalbayrak,11723602.0,Hamza Albayrak,tr,1055.0,295.0
+1964,omer faruk can,farukcanomer,1327371013.0,Ömer Faruk Can,tr,46.0,98.0
+1965,emre kayaci,emrekayaci2,367738612.0,Emre Kayaci,tr,136.0,37.0
+1966, zeynep kurt,arslantaszeynep,301378912.0,Zeynep Kurt,tr,301.0,173.0
+1967,furkan kapramci,kapramci1,187936863.0,Furkan Kapramcı,tr,165.0,131.0
+1968,omer emec,mermecmer,1071990402.0,Ömer Emeç,tr,104.0,350.0
+1969,ahmet ekim,takiptekiyim,7.20738358876586e+17,Ahmet Selim,tr,8.0,67.0
+1970,abdurrahman yavuz,ayvz25,1630493340.0,Abdurrahman Yavuz,tr,149.0,144.0
+1971, ! psikoloji,Psikoloji_TV,2543387586.0,Psikoloji TV,tr,288.0,237.0
+1972,burak eren,burak55bfr,4362698897.0,Burak Er,tr,14.0,463.0
+1973,ahmet semih basyigit,BasyigitSemih,8.522335400161444e+17,Ahmet Semih Başyiğit,tr,24.0,103.0
+1974,halime demir,demirhalime_,9.192637581276897e+17,Halime Demir,tr,1.0,115.0
+1975,huseyin gocek,HseyinGek,464042364.0,Hüseyin Göçek,tr,163.0,288.0
+1976,fatih mus,mfatihsen,705840475.0,M.Fatih,tr,104.0,99.0
+1977,bilal deniz,BilalDeniz9,613125684.0,Bilal Deniz,tr,45.0,587.0
+1978,omer halil unal,omerhalilunal,8.42824096572457e+17,Ömer Halil Ünal,tr,74.0,376.0
+1979,fatih aytekin,fatihayt3kin,1653144812.0,Fatih Aytekin,en,383.0,228.0
+1980,begum ugurgel,Melodia_B,142751421.0,Begüm Uğurgel,en,215.0,161.0
+1981,kursat ince,Arturobandinic,8.939291276942705e+17,murat ince,tr,8.0,238.0
+1982,ayfer kirkaya,ayfakaya,1310989184.0,ayfer kaya,tr,174.0,534.0
+1983,murat uzuner,muratuzun22,448956624.0,murat uzun,tr,8336.0,137.0
+1984,rabiye turlak,rabiaturlak,890777905.0,Rabia Turlak,tr,563.0,116.0
+1985,halime demir,Rosican1,317270977.0,Halime Demir,tr,62.0,323.0
+1986,mehmet demir,AvMehmetDemir,328899293.0,Mehmet Demir,tr,13008.0,13090.0
+1987,omer faruk yilmaz,omrfarukyilmaz,8.916423252770488e+17,Ömer Faruk Yılmaz,tr,142.0,138.0
+1988,sumeyye bayraktar,sumeyyebyrktr29,7.42893192941609e+17,Sümeyye Bayraktar,en,50.0,53.0
+1989,berna celik,celikberna_,8.520652170602373e+17,Berna Çelik,tr,12.0,19.0
+1990,durali topal,DuraliTopal,488335702.0,Durali topal,tr,86.0,71.0
+1991,yaser karabulut,omerkarabulut58,2314358348.0,Ömer Karabulut,tr,242.0,650.0
+1992,sevde cobanoglu,sevdecee,293105127.0,Sevde Çobanoğlu,tr,58.0,227.0
+1993,zeynep altun,ZeynpAltun,2764716461.0,Zeynep Altun,tr,131.0,114.0
+1994,ozge turan,Avturanozer,742390130.0,turan ozer,tr,287.0,754.0
+1995, åehir ãniversitesi,beuiktisat,4145327783.0,Eren Üniversitesi,tr,88.0,224.0
+1996,vecihe yavuz,vecisyvz,7.988255570644992e+17,Vecihe Yavuz,tr,179.0,47.0
+1997,berkay sahin,_berkays_,294837568.0,Berkay Şahin,tr,221.0,182.0
+1998,beyza karaca,byzkarahan,1566264452.0,Beyza KARAHAN,tr,192.0,122.0
+1999,seyma abbas,abse001,3297272610.0,abbas seymen,en,79.0,644.0
+2000,saleh mustafa,ItsSalihM,341461693.0,Salih Mustafa,en,3408.0,380.0
+2001,merve kandemir,1996Erv,3207583684.0,merve demir,tr,50.0,300.0
+2002,tugba bayraktaroglu,tugbabayraktaro,346548903.0,Tuğba Bayraktaroğlu,tr,145.0,153.0
+2003,kadir yesilyurt,kyesilyurt,1029426332.0,Kadir Yeşilyurt,tr,498.0,166.0
+2004,mehtap akbas,AsMehtap,593831289.0,Mehtap as,tr,41.0,246.0
+2005,ahmet furkan balta,ahmedfbalta,9.036670299657134e+17,Ahmed Furkan Balta,tr,10.0,95.0
+2006,muhammet ali ozkul,maliokur34,2282776958.0,muhammet ali okur,tr,437.0,1563.0
+2007,recep kuzu,recepkuzuu,3357413789.0,Recep Kuzu,tr,66.0,86.0
+2008,melih adatepe,melihadatepe,246998721.0,Melih Adatepe,tr,267.0,218.0
+2009,sena aritan,sena_aran,171220010.0,Sena Aran,tr,398.0,1344.0
+2010,safak simsek,SafakSimsek,462352198.0,Safak Simsek,tr,131.0,47.0
+2011,berk demirkoparan,Simurger,532567918.0,Berk Demirkoparan,en,186.0,120.0
+2012,beyza sari,beyzaasari,7.971937708024832e+17,Beyza Sarı,tr,71.0,179.0
+2013,sevim eyupoglu,sevimey,3401407990.0,sevim eyüpoğlu,tr,102.0,121.0
+2014,ali baver aslan,AliBaveer,2885172979.0,Ali Baver Aslan,tr,177.0,197.0
+2015,huseyin kara,ozkaruse,631045703.0,hüseyin özkar,tr,17.0,61.0
+2016,metin okkali,metinokkali,109986538.0,Metin Okkalı,tr,304.0,111.0
+2017,bunyamin aktas,AkaBunyamin,2716030649.0,Bunyamin Aka,tr,960.0,1106.0
+2018,omer faruk unver,omerfarukunver,236735997.0,ömer faruk ünver,en,1286.0,650.0
+2019,burhan caglar,Nurhancaglar,854979631.0,nurhancaglar,tr,2764.0,1729.0
+2020,melik ahmet daye,melikdaye,306293307.0,Melik Ahmet Daye,tr,121.0,81.0
+2021,merve guzel yucal,MerveGuzel123,1947398803.0,Merve Güzel YÜCAL,tr,177.0,168.0
+2022,suha kagan kose,skagankose,4590451846.0,Süha Kağan Köse,en,32.0,0.0
+2023,zeynep altun,islamicgarden,3795163175.0,Zeynep altunbaş,tr,25.0,138.0
+2024,onur dogu,onur_aydogduu,625969617.0,Onur Aydogdu,fr,42.0,309.0
+2025,reyyan aynur alp,reyyanaynur,7.834130288511631e+17,Reyyan Aynur,tr,118.0,104.0
+2026,merve yilmaz,mrv_ylmaz_,7.543611846278554e+17,Merve Yılmaz,tr,0.0,53.0
+2027,onur korkmaz,KorkmazNuray,546265034.0,nuray korkmaz,tr,60.0,319.0
+2028,yasir yilmaz,myasirylmaz,1601066576.0,yasiryılmaz,tr,65.0,114.0
+2029, hukuk kulubu,CULawClub,2944997410.0,ÇÜ Hukuk Kulübü,tr,1170.0,441.0
+2030,burak arslan,aslanerbrk,354229319.0,Burak Aslaner,tr,270.0,484.0
+2031,eda kurt,KurtBedan,609292828.0,Bedan Kurt,tr,16.0,108.0
+2032,mustafa celikel,Celikel_muu,162417303.0,Mustafa Celikel,tr,162.0,185.0
+2033,emre kaplan,ylmdk,928134109.0,Emre Kaplan,tr,171.0,1109.0
+2034,elif yilmaz,aliyilmaztrt,1171976556.0,ali yilmaz,tr,130.0,1846.0
+2035,omer kaya,hukuk27,185762586.0,ömer kaya,en,53.0,280.0
+2036,merve fidan,FBmerve1218,2420195627.0,Merve Fidan,tr,2.0,29.0
+2037,halil demir,erdemir_halil,2184397665.0,halil erdemir,tr,172.0,1132.0
+2038,ahmet aslan,AhmetHa61253083,9.35460342947373e+17,Ahmet Hasan,tr,12.0,165.0
+2039,mehmet yilmaz,MHMTYLZ27,7.939555537226998e+17,#Mehmet YILMAZ,tr,24.0,108.0
+2040,emre sucu,emresocu,1405700774.0,Emre SÖCÜ,tr,431.0,589.0
+2041,muhammet gul,muhammetgul46,999498842.0,Muhammet Gül,tr,11.0,63.0
+2042,meryem ciftkaya,meryemciftkaya,3082508726.0,Meryem Çiftkaya,tr,216.0,197.0
+2043, ilhan suzgun,DilanUzgun,1473371760.0,Dilan Uzgun,tr,188.0,686.0
+2044,mehmet kara,avukatkaragoz,312017848.0,MEHMET KARAGÖZ,tr,44.0,308.0
+2045,mehmet kaya,birbileklik,2961602871.0,Mehmet Kaya,tr,180.0,836.0
+2046,sedat kaya,sedacankayaa,2384334542.0,seda çankaya,tr,16.0,61.0
+2047,mehmet yilmaz,ylmzmehmtt,4853793717.0,Mehmet Yılmaz,tr,9.0,33.0
+2048,sena donmez,sena_donmez,479673085.0,Sena Dönmez,tr,243.0,259.0
+2049, mehmet bahtiyar,Bahtiyarious,2207012868.0,Bahtiyar Mehmed,tr,654.0,1217.0
+2050,koray can talu,koraytalu,3035574670.0,Koray Can Talu,en,8.0,15.0
+2051,ahmet er,Ahmet_Mert79,236749440.0,Ahmet Mert,tr,635.0,2565.0
+2052,fatih kabas,fatihkaya28,337127132.0,fatih kaya,tr,125.0,1020.0
+2053,sevde celik,757sevdaCelik,611717447.0,sevda celik,tr,10.0,54.0
+2054, hukuk kulubu,unihukuk,1254785095.0,HUKUK KULÜBÜ,tr,702.0,203.0
+2055,hakan biyik,AvHakanBIYIK,434723411.0,HAKAN BIYIK,tr,352.0,1983.0
+2056,mehmet sahin,mehmetshnx,2773949398.0,Mehmet Şahin,tr,7.0,59.0
+2057,omer aslan,AOmer76,2943883113.0,Omer Aslan,tr,88.0,289.0
+2058,behlul karakaya,karakaya_behlul,7.925204708181238e+17,Behlül Karakaya,tr,34.0,37.0
+2059,beyzanur yilmaz,acepneka,760324014.0,beyza nur yılmaz,tr,90.0,176.0
+2060,emil gaziev,emil_gaz,742806176.0,Emil Gazi,ru,27.0,1.0
+2061,can yildirim,protechman,472923438.0,R.Caner YILDIRIM,tr,3751.0,863.0
+2062,mustafa duman,mdumanx,2261418104.0,musa duman,tr,88.0,381.0
+2063,mustafa erdogan,merdogan030,1545408007.0,Mustafa Erdogan,nl,151.0,483.0
+2064,emine bayraktar,cemilebayraktr,38907127.0,Cemile Bayraktar,en,113836.0,1168.0
+2065, rusen ayata,Rsnayata,201203999.0,Rusen ayata,tr,191.0,187.0
+2066,aysenur demir,aysenurozzdmr,716588863.0,Ayşe Nur Özdemir,tr,648.0,467.0
+2067,murat demir,muratde27155140,533235143.0,murat demir,tr,8.0,54.0
+2068,yusuf akbulut,YusufKARA5CC5,968789162.0,Yusuf KARABULUT,tr,51.0,97.0
+2069,feyza nur ak,nuruayri,8.877996364796273e+17,feyza nur ak,tr,57.0,121.0
+2070,ahmethan cengiz,ACengizAC,3368291049.0,Ahmethan Cengiz,tr,167.0,172.0
+2071,muhammet ali tanyildizi,tnyldzmuhammed,7.162825498243072e+17,Muhammed Tanyildizi,tr,3.0,25.0
+2072,merve ozcelik,276merve,1219142066.0,merve özçelik,tr,20.0,30.0
+2073, mehmet erken,eremero4,8.22909215996072e+17,Mehmet Eren,tr,115.0,944.0
+2074,erdem ozcan,akrepkral6038,430958386.0,ekrem özcan,tr,75.0,484.0
+2075,fatma demir,FatmaDE35838121,9.074892146438185e+17,Fatıma Demir,tr,48.0,293.0
+2076,emre eroglu,EmreeErol,353550005.0,Emre Erol,tr,346.0,326.0
+2077,beyza aksoy,beyzaaksoy__,1832031217.0,Beyza Aksoy,tr,111.0,169.0
+2078,edanur develi,EdaDeveli2,7.648677683783598e+17,Eda Develi,tr,5.0,153.0
+2079,can yildirim,canerartvin,1321984932.0,Caner YILDIRIM,tr,653.0,441.0
+2080, esra ozdemir,Esraozdemir13,1259301612.0,Esra ozdemir,tr,1.0,259.0
+2081,enes bulut,defnebulut11,3902468655.0,defne bulut,tr,46.0,210.0
+2082,mehmet demir,demirmemet13,941338374.0,Mehmet Demir,tr,97.0,415.0
+2083,mahmut yavuz,mahmuteminyavuz,2411383444.0,Mahmut Yavuz,tr,203.0,178.0
+2084,huseyin bayar,huseynbayar,367288942.0,Hüseyin Bayar,tr,21.0,32.0
+2085,dogukan kotan,dogukankotan,272623984.0,Doğukan KOTAN,tr,276.0,141.0
+2086,mustafa tonoglu,tonoglumustafa,286150122.0,Mustafa Tonoglu,tr,185.0,119.0
+2087,melike eroglu,AvsaBeylice,2797534835.0,Melike Eroğlu ,tr,81.0,201.0
+2088,mustafa gunel,MustafaGozel,450157672.0,Mustafa Gözel,tr,31210.0,95.0

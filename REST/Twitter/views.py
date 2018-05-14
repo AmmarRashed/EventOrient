@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from functools import lru_cache
+
 from django.http import JsonResponse
 from django.shortcuts import render, render_to_response
+import pandas as pd
+from datetime import datetime
+import unicodedata
 from django.template import RequestContext
+import psycopg2
+
 from copy import deepcopy
 
 import os, json
@@ -13,8 +20,69 @@ from networkx.readwrite import json_graph
 
 _dir = os.path.dirname(os.path.realpath(__file__))
 root_dir = os.path.dirname(_dir)
+
+user = "postgres"
+password = "1_sehir_1"
+dbname = "link_formation"
+connection = psycopg2.connect('dbname=%s host=localhost user=%s password=%s'%(dbname, user, password))
+# twitter_users = pd.read_sql("SELECT * FROM twitter_user", connection)
+# twitter_users = twitter_users.where(twitter_users.match_name.str.len()>6)\
+#                             .where(twitter_users.match_ratio>85)\
+#                              .where(~twitter_users.name.str.contains("(?i)sehir"))\
+#                              .dropna().set_index("id")
+
+user_connections = pd.read_sql("SELECT * FROM twitter_connection", connection).drop('id', axis=1)
+twitter_users = pd.read_csv(root_dir+ "/static/twitter_users.csv")
+
+
+def clean(name):
+    return unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').lower().decode("ascii")
+
+@lru_cache(maxsize=None)
+def calculate_metrics(G):
+    evc = nx.eigenvector_centrality(G)
+    closeness = nx.closeness_centrality(G)
+    betweenness = nx.betweenness_centrality(G)
+    metrics = {"eigenvector_centrality": evc,
+               "closeness_centrality": closeness,
+               "betweenness": betweenness}
+    return metrics
+
+
+def construct_network(connections):
+    G = nx.DiGraph()
+    for _, row in connections.iterrows():
+        from_ = row["from_user_id"]
+        to = row["to_user_id"]
+        if from_ in twitter_users.tw_id and to in twitter_users.tw_id:
+            G.add_edge(from_, to)
+
+    augs = ["name", "screen_name", "match_name", "followers_count", "friends_count"]
+    for node in G.nodes():
+        user = twitter_users.loc[node]
+        for aug in augs:
+            if type(user[aug]) == str:
+                m = clean(user[aug])
+            else:
+                m = user[aug]
+            G.nodes[node][aug] = m
+
+    evc = nx.eigenvector_centrality(G)
+    closeness = nx.closeness_centrality(G)
+    betweenness = nx.betweenness_centrality(G)
+    pagerank = nx.pagerank(G)
+    metrics = {"eigenvector_centrality": evc,
+               "closeness_centrality": closeness,
+               "betweenness": betweenness,
+               "pagerank": pagerank}
+    for metric_name, metric in metrics.items():
+        for ix, v in metric.items():
+            G.nodes[ix][metric_name] = v
+    return G
+
+
 # twitter_connections_json = root_dir + "/static/networks/twitter_users_graph2.json"
-# twitter_fb_json = root_dir + "/static/networks/twitter_fb.json"
+# twitter_fb_j<son = root_dir + "/static/networks/twitter_fb.json"
 
 
 twitter_connections_path = root_dir+ "/static/networks/twitter_users_graph2.json"
@@ -33,9 +101,29 @@ pagerank_threshold = 0.0
 closeness_threshold = 0.0
 eigenvector_threshold = 0.0
 recalculate_checked = 1
+date_index = 0
 size_metric = "degree"
 size_metrics = ["degree", "in_degree", "out_degree",
                 "betweenness", "closeness_centrality", "eigenvector_centrality","pagerank","followers_count"]
+
+
+def get_connections_by_date(date):
+    nw = deepcopy(user_connections)
+    for_col = nw.formation.apply(lambda x: date in x and x[date])
+    return user_connections[for_col == True]
+
+def get_dates():
+    all_dates = set()
+    str2date = lambda strdate: datetime.strptime(strdate, '%Y.%m.%d')  # 2018.05.08
+
+    for dates in user_connections.formation.apply(lambda x: list(x)):
+        for date in dates:
+            all_dates.add(str2date(date))
+    return [d.strftime('%Y.%m.%d') for d in sorted(all_dates)]
+
+
+dates = get_dates()
+
 
 def get_avg_metric(graph, metric):
     result = 0.0
@@ -43,8 +131,7 @@ def get_avg_metric(graph, metric):
         result += node[metric]
     return result/len(graph["nodes"])
 
-def recalculate_metrics(filtered_twitter_connections):
-    nxg = json_graph.node_link_graph(filtered_twitter_connections, directed=True)
+def recalculate_metrics(nxg):
     for ix, deg in nxg.degree(nxg.nodes()):
         nxg.node[ix]['degree'] = deg
 
@@ -72,12 +159,14 @@ def recalculate_metrics(filtered_twitter_connections):
 def twitter_connections(request):
 
     global degree_threshold, filtered_twitter_connections, \
-        btw_threshold, pagerank_threshold, closeness_threshold,\
-        eigenvector_threshold, size_metric,size_metrics, recalculate_checked
+        btw_threshold, pagerank_threshold, closeness_threshold, \
+        eigenvector_threshold, size_metric,size_metrics, recalculate_checked, \
+        dates, date_index
 
     do_filter = False
     check = {"on":True, False:False}
     filtering = False
+
     if request.method == "POST":
         filtering = True
         degree_threshold = int(request.POST["degree_scroller"])
@@ -85,32 +174,42 @@ def twitter_connections(request):
         pagerank_threshold = float(request.POST["pagerank_scroller"])
         closeness_threshold = float(request.POST["closeness_scroller"])
         eigenvector_threshold = float(request.POST["eigenvector_scroller"])
+        date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
 
-        for i in [degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
-            if i*1 != 0:
-                do_filter = True
-                break
+        if date_index >= 0:
+            for i in [degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
+                if i*1 != 0:
+                    do_filter = True
+                    break
 
         size_metric = request.POST["size_metric"]
         if do_filter:
-            filtered_twitter_connections = filter_by(twitter_connections_json,
-                                                 degree_threshold,
-                                                 btw_threshold,
-                                                 pagerank_threshold,
-                                                 closeness_threshold,
-                                                 eigenvector_threshold, directed=True)
+            if date_index > 0:
+                connections = get_connections_by_date(dates[date_index])
+                nw = construct_network(connections)
+                data = nx.node_link_data(nw)
+            else:
+                data = deepcopy(twitter_connections_json)
+
+            g = json_graph.node_link_graph(data, directed=True)
+
+            filtered_twitter_connections = filter_by(g,
+                                                     degree_threshold,
+                                                     btw_threshold,
+                                                     pagerank_threshold,
+                                                     closeness_threshold,
+                                                     eigenvector_threshold,
+                                                     recalculate_checked,
+                                                     directed=True)
         else:
             filtered_twitter_connections = deepcopy(twitter_connections_json)
 
     avgs = None
     if len(filtered_twitter_connections["nodes"])<1:
         sizes = [0]
+
     else:
-        if len(filtered_twitter_connections["nodes"]) == len(twitter_connections_json["nodes"]):
-            recalculate_checked = False
-        if do_filter and recalculate_checked:
-            filtered_twitter_connections=recalculate_metrics(filtered_twitter_connections)
         avgs = {"avg_"+metric:get_avg_metric(filtered_twitter_connections, metric) for metric in size_metrics}
         sizes = [n[size_metric] for n in filtered_twitter_connections["nodes"]]
 
@@ -126,22 +225,20 @@ def twitter_connections(request):
                "size_metrics": size_metrics,
                "recalculate_checked":int(recalculate_checked),
                "nodes_number": len(filtered_twitter_connections["nodes"]),
-               "is_filtering":int(filtering)}
+               "is_filtering":int(filtering),
+               "dates":dates,
+               "dates_dumped":json.dumps(list(dates)),
+               "date_index":date_index}
     if avgs:
         context.update(avgs)
 
     return render(request, "twitter_connections.html", context)
 
 
-def filter_by(data_, degree, btw, pagerank, closeness, eigenv, directed=True):
+@lru_cache(maxsize=None)
+def filter_by(g, degree, btw, pagerank, closeness, eigenv, recalculate_node_metrics, directed=True):
     metrics = {"degree":degree, "betweenness":btw, "pagerank":pagerank,
                "closeness_centrality":closeness, "eigenvector_centrality":eigenv}
-    g = json_graph.node_link_graph(data_, directed=directed)
-    if directed:
-        try:
-            g = g.to_directed()
-        except:
-            pass
     c = g.copy()
     for node in g.nodes():
         invalid = False
@@ -152,6 +249,8 @@ def filter_by(data_, degree, btw, pagerank, closeness, eigenv, directed=True):
                 break
         if invalid:
             c.remove_node(node)
+    if recalculate_node_metrics and len(c.nodes) != len(twitter_connections_json["nodes"]):
+        return recalculate_metrics(c)
     return json_graph.node_link_data(c)
 
 

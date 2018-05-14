@@ -15,17 +15,22 @@
     <br>
     <form method="POST">
         {% csrf_token %}
+        <p id="textDate">Date: {{dates.0}}</p>
+        <input type="range" id="date_scroller" name="date" min="0" max="{{dates|length|add:"-1"}}" step="1" value="{{date_index}}"
+                        style="width: 500px"
+                onchange="updateDateText(this.value)">
+        <br>
         Recalculate node metrics:
         <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
         <br>
-        degree: <input type="text" id="textInput" value="{{degree_threshold}}" style="width: 50px"
+        degree: <input type="text" id="textInputDegree" value="{{degree_threshold}}" style="width: 50px"
                        name="degree_scroller"
                         onchange="updateScroll(this.value, 'degree')">{{avg_degree}}<br>
 
         0<input id="degree"
                 type="range" value="{{degree_threshold}}" min="0" max="100" step="1"
                 style="width: 500px"
-                onchange="updateText(this.value, 'textInput')">100
+                onchange="updateText(this.value, 'textInputDegree')">100
         <br>
 
         betweenness: <input type="text" id="textInputBtw" value="{{btw_threshold}}" style="width: 50px"
@@ -295,7 +300,7 @@
                     .style("font-size", "10px")
                     .style("fill", "#4393c3")
                     .text(function (d) {
-                        return d.twitter_screen_name;
+                        return d.screen_name;
                     })
             }
 
@@ -345,19 +350,20 @@
         if (selectedVal == 'none') {}
         else {
             var selected = node.filter(function (d, i) {
-                return (d.twitter_screen_name.includes(selectedVal) ||
-                    d.sehir_matches.includes(selectedVal) ||
-                    d.cleaned_twitter_name.includes(selectedVal));
+                return (d.screen_name.includes(selectedVal) ||
+                    d.match_name.includes(selectedVal) ||
+                    d.name.includes(selectedVal));
             });
 
             var nonselected = node.filter(function (d, i) {
-                return !(d.twitter_screen_name.includes(selectedVal) ||
-                    d.sehir_matches.includes(selectedVal) ||
-                    d.cleaned_twitter_name.includes(selectedVal));
+                return !(d.screen_name.includes(selectedVal) ||
+                    d.match_name.includes(selectedVal) ||
+                    d.name.includes(selectedVal));
             });
             nonselected.style("opacity", "0.1");
             selected.style("opacity", 1.0);
             selected.style("r",node_over);
+            alert("Found: "+selected.size().toString());
             centerNode(selected.attr("cx"), selected.attr("cy"));
 
             // var link = svg.selectAll(".link");
@@ -387,6 +393,11 @@
         .attr("transform", "translate(" + (width/2 - xx) + "," + (height/2 - yy) + ")scale(" + 1 + ")")
         .on("end", function(){ svg2.call(zoom.transform, d3.zoomIdentity.translate((width/2 - xx),(height/2 - yy)).scale(1))});
         }
+
+    function updateDateText(date_index){
+        var dates = {{dates_dumped|safe}};
+        document.getElementById("textDate").innerHTML = dates[date_index];
+    }
 
 </script>
 
