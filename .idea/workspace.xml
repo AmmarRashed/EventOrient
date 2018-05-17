@@ -2,74 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/REST/Twitter/views.py" afterPath="$PROJECT_DIR$/REST/Twitter/views.py" />
-      <change beforePath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" />
-      <change beforePath="$PROJECT_DIR$/REST/templates/twitter_connections.html" afterPath="$PROJECT_DIR$/REST/templates/twitter_connections.html" />
-      <change beforePath="$PROJECT_DIR$/datasets/tweets_cluster_graph_sample.gpickle" afterPath="$PROJECT_DIR$/datasets/tweets_cluster_graph_sample.gpickle" />
-      <change beforePath="$PROJECT_DIR$/misc/SehirParser.py" afterPath="$PROJECT_DIR$/misc/SehirParser.py" />
-      <change beforePath="$PROJECT_DIR$/nano.save" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/metrics_graphs-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/REST/static/twitter_users.csv" afterPath="$PROJECT_DIR$/REST/static/twitter_users.csv" />
+      <change beforePath="$PROJECT_DIR$/datasets/twitter_users.csv" afterPath="$PROJECT_DIR$/datasets/twitter_users.csv" />
       <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tweets_cluster_network-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tweets_cluster_network-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/visualizing_twitter_followers_networkX-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/visualizing_twitter_followers_networkX-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" afterPath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/metrics_graphs.ipynb" afterPath="" />
       <change beforePath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" afterPath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/tweets_cluster_network.ipynb" afterPath="$PROJECT_DIR$/notebooks/tweets_cluster_network.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/notebooks/twitter_users_graph2.json" />
-      <change beforePath="$PROJECT_DIR$/notebooks/visualizing_twitter_followers_networkX.ipynb" afterPath="$PROJECT_DIR$/notebooks/visualizing_twitter_followers_networkX.ipynb" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177820.037427/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177820.037427/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177830.032198/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177830.032198/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177840.024056/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177840.024056/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177850.024245/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177850.024245/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177860.021908/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177860.021908/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177870.033960/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177870.033960/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177880.011384/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177880.011384/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177890.008620/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177890.008620/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177900.022085/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177900.022085/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177910.008969/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177910.008969/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177920.021842/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177920.021842/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177930.020362/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177930.020362/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177940.021467/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177940.021467/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177950.019499/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515177950.019499/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178030.063919/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178030.063919/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178040.011067/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178040.011067/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178050.024025/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178050.024025/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178060.022622/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178060.022622/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178070.023210/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178070.023210/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178080.035447/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178080.035447/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178090.006869/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178090.006869/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178100.018987/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178100.018987/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178110.020135/._SUCCESS.crc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/tweets/1515178110.020135/_SUCCESS" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/visualization/.idea/workspace.xml" afterPath="$PROJECT_DIR$/visualization/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/visualization/twitter_cluster_graph_mini.json" afterPath="$PROJECT_DIR$/visualization/twitter_cluster_graph_mini.json" />
-      <change beforePath="$PROJECT_DIR$/visualization/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/visualization/twitter_users_graph2.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,25 +24,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="249" column="19" lean-forward="true" selection-start-line="249" selection-start-column="19" selection-end-line="249" selection-end-column="19" />
+            <state relative-caret-position="612">
+              <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1526314519175" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-                <marker date="1526314519175" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
+                <marker date="1526544654721" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+                <marker date="1526544654721" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="313" column="102" lean-forward="true" selection-start-line="313" selection-start-column="102" selection-end-line="313" selection-end-column="102" />
+            <state relative-caret-position="18">
+              <caret line="313" column="102" lean-forward="false" selection-start-line="313" selection-start-column="102" selection-end-line="313" selection-end-column="102" />
               <folding>
                 <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -115,8 +53,8 @@
       <file leaf-file-name="twitter_users_graph2.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88624">
-              <caret line="5219" column="9" lean-forward="true" selection-start-line="5219" selection-start-column="9" selection-end-line="5219" selection-end-column="9" />
+            <state relative-caret-position="2270">
+              <caret line="5219" column="9" lean-forward="false" selection-start-line="5219" selection-start-column="9" selection-end-line="5219" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -125,7 +63,7 @@
       <file leaf-file-name="AdaptiveOnlineClustering.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="2970">
               <caret line="168" column="100" lean-forward="false" selection-start-line="168" selection-start-column="15" selection-end-line="168" selection-end-column="100" />
               <folding />
             </state>
@@ -135,12 +73,12 @@
       <file leaf-file-name="SehirParser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/misc/SehirParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="1566">
               <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1526309799061" expanded="true" signature="4902:4928" ph="SELECT * FRO... twitter_user" />
-                <marker date="1526309799061" expanded="true" signature="5269:5301" ph="SELECT * FRO... twitter_connection" />
+                <marker date="1526314958692" expanded="true" signature="4902:4928" ph="SELECT * FRO... twitter_user" />
+                <marker date="1526314958692" expanded="true" signature="5269:5301" ph="SELECT * FRO... twitter_connection" />
               </folding>
             </state>
           </provider>
@@ -229,8 +167,8 @@
         <option value="$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py" />
         <option value="$PROJECT_DIR$/REST/REST/settings.py" />
         <option value="$PROJECT_DIR$/misc/SehirParser.py" />
-        <option value="$PROJECT_DIR$/REST/Twitter/views.py" />
         <option value="$PROJECT_DIR$/REST/templates/twitter_connections.html" />
+        <option value="$PROJECT_DIR$/REST/Twitter/views.py" />
       </list>
     </option>
   </component>
@@ -261,6 +199,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -302,7 +241,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,12 +391,12 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5041277" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
+      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31937173" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3318657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31870428" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3357182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -630,7 +568,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ML_Analysis/AdaptiveOnlineClustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="2970">
           <caret line="168" column="100" lean-forward="false" selection-start-line="168" selection-start-column="15" selection-end-line="168" selection-end-column="100" />
           <folding />
         </state>
@@ -638,42 +576,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/misc/SehirParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="1566">
           <caret line="98" column="29" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1526309799061" expanded="true" signature="4902:4928" ph="SELECT * FRO... twitter_user" />
-            <marker date="1526309799061" expanded="true" signature="5269:5301" ph="SELECT * FRO... twitter_connection" />
+            <marker date="1526314958692" expanded="true" signature="4902:4928" ph="SELECT * FRO... twitter_user" />
+            <marker date="1526314958692" expanded="true" signature="5269:5301" ph="SELECT * FRO... twitter_connection" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88624">
-          <caret line="5219" column="9" lean-forward="true" selection-start-line="5219" selection-start-column="9" selection-end-line="5219" selection-end-column="9" />
+        <state relative-caret-position="2270">
+          <caret line="5219" column="9" lean-forward="false" selection-start-line="5219" selection-start-column="9" selection-end-line="5219" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="249" column="19" lean-forward="true" selection-start-line="249" selection-start-column="19" selection-end-line="249" selection-end-column="19" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-            <marker date="1526314519175" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-            <marker date="1526314519175" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="313" column="102" lean-forward="true" selection-start-line="313" selection-start-column="102" selection-end-line="313" selection-end-column="102" />
+        <state relative-caret-position="18">
+          <caret line="313" column="102" lean-forward="false" selection-start-line="313" selection-start-column="102" selection-end-line="313" selection-end-column="102" />
           <folding>
             <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1526544654721" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+            <marker date="1526544654721" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
           </folding>
         </state>
       </provider>

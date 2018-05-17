@@ -49,6 +49,17 @@ def calculate_metrics(G):
     return metrics
 
 
+def homophily(nw, metric="lang"):
+    langs_probs = dict()
+    for n in nw.nodes():
+        user = nw.nodes[n]
+        langs_probs.setdefault(user[metric], 0)
+        langs_probs[user[metric]] += 1
+    heterogeneity_fraction_norm = 1 - sum([(float(i)/len(nw.nodes()))**2 for i in langs_probs.values()])
+    cross_edges = sum([int(nw.nodes[f][metric] != nw.nodes[t][metric] ) for f,t in nw.edges()])
+    return cross_edges/float(len(nw.edges())), heterogeneity_fraction_norm
+
+
 def construct_network(connections):
     G = nx.DiGraph()
     for _, row in connections.iterrows():
