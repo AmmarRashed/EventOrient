@@ -7,34 +7,34 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 261154148,ahmet talha haberdar,a_asilturk,90,2611541480.0,Haberdar,tr,1.0,1038.0,False
 929350005,caner duran,Caner33948154,90,9.293500053826806e+17,Caner,en,4.0,70.0,False
 981894449,elif sayin,sayinelifsayin,90,9.818944490548306e+17,Elif Sayın,en,11.0,47.0,False
-954787574,nur betã¼l yerli,betuulkeresteci,90,9.547875741067715e+17,Betül,en,17.0,79.0,False
+954787574,nur betã¼l yerli,betuulkeresteci,90,9.547875741067716e+17,Betül,en,17.0,79.0,False
 352871863,deniz sahin,denizwxw,91,3528718637.0,Deniz Şahin,tr,380.0,219.0,False
 919697426,ahmet okuyan,omeruyan_,90,919697426.0,Uyan,tr,60.0,71.0,False
 274372985,ahmed esad ekentok,esadekentok,100,2743729859.0,ahmed esad ekentok,tr,21.0,45.0,False
 933776983,yunus emre kose,yunusemreokmen,87,9.337769836910264e+17,Yunus Emre Ökmen,tr,96.0,627.0,False
 901812152, merve aydin,3erve,90,9.018121524697743e+17,merve,tr,32.0,121.0,False
-933710420,rahmi cetin,Rahmi17562751,90,9.337104205941023e+17,Rahmi,en,7.0,175.0,False
+933710420,rahmi cetin,Rahmi17562751,90,9.337104205941024e+17,Rahmi,en,7.0,175.0,False
 351008632,abdurrahim furkan akbulut,Afurkanakbulut,90,351008632.0,furkan akbulut,tr,212.0,177.0,False
 253259284,ahmet ugurlu,siyadari,92,253259284.0,ahmet uğurlu,tr,8.0,48.0,False
 949353459, mert celik,Mert87776524,90,9.493534592241418e+17,Mert,en,7.0,113.0,False
 758982054,zekiye bilen,ZekiyeAglak,90,7.589820544406036e+17,Zekiye**,tr,72.0,182.0,False
 224673292, mehmet akinci,acimiyorsan,90,2246732925.0,mehmet,tr,1370.0,200.0,False
 929083514,muhammed ali kaya,Muhamme87481050,95,9.290835141249884e+17,Muhammed Ali,tr,1.0,30.0,False
-950028996, facebook -,F16645416,90,9.500289966406943e+17,F,en,0.0,126.0,False
+950028996, facebook -,F16645416,90,9.500289966406944e+17,F,en,0.0,126.0,False
 334139315,beyza cengiz,Cengizbeyza,100,334139315.0,Beyza Cengiz,tr,641.0,313.0,False
-938843118, emine bulur,minexxd,90,9.388431184257925e+17,mine,tr,0.0,86.0,False
+938843118, emine bulur,minexxd,90,9.388431184257924e+17,mine,tr,0.0,86.0,False
 952504364, hilal ay,hilalbuyukgoz,90,952504364.0,hilal,tr,297.0,166.0,False
 121491983,ahsen akpinar,ahseenka,90,1214919834.0,Ahsen,tr,291.0,168.0,False
 939178482,baris can kaya,Cank73236728,90,9.391784824327086e+17,Can Ökçü,tr,5.0,80.0,False
 986932472, gmail -,Mohammad0539gm3,90,9.869324726665216e+17,Mohammad0539 @gmailcom 05396255731,ar,21.0,102.0,False
 221475867, mehmet ali buyukkara,malibuyukkara,95,2214758677.0,Mehmet Ali Büyükkara,tr,15121.0,481.0,False
-930131469, mehmet emin artuk,cakiciemin,90,9.301314698419159e+17,Emin,tr,2.0,140.0,False
+930131469, mehmet emin artuk,cakiciemin,90,9.30131469841916e+17,Emin,tr,2.0,140.0,False
 111082356, sehir sehir,sehirlibrary,95,1110823566.0,Sehir Library,tr,911.0,43.0,True
 139032492,dilara boyraz,dilaraboyraz,100,139032492.0,Dilara Boyraz,en,291.0,287.0,False
-935554657,oguzhan bahadir,ogzhnbahadir,87,9.355546575140823e+17,Oğuzhan Bahadır,tr,13.0,42.0,False
+935554657,oguzhan bahadir,ogzhnbahadir,87,9.355546575140824e+17,Oğuzhan Bahadır,tr,13.0,42.0,False
 988437587,nurcan yildirim,Nurcan50159990,90,9.884375876846223e+17,Nurcan,en,6.0,190.0,False
 209938923, mustafa alper gumus,malpergumus,89,209938923.0,Mustafa Alper Gümüş,tr,63.0,22.0,False
-950114406, zeki murat karakoc,zekiatmaca641,90,9.501144061800161e+17,zeki,tr,1.0,94.0,False
+950114406, zeki murat karakoc,zekiatmaca641,90,9.50114406180016e+17,zeki,tr,1.0,94.0,False
 244538452,halil buyuksaka,halilbyksaka,93,2445384523.0,Halil Büyüksaka,tr,91.0,176.0,False
 258427033, fatma meliha sen,krkncolu,90,258427033.0,meliha,tr,37.0,186.0,False
 236357942,abdullah kaplan,abdyalman,87,236357942.0,Abdullah Yalman,tr,1206.0,4962.0,False
@@ -44,20 +44,20 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 959559658, erasmus -,Ra37137105,90,9.595596588884582e+17,Rüýa,en,2.0,97.0,False
 342192231,mustafa emre teke,emreteke27,100,3421922319.0,Mustafa Emre Teke,tr,149.0,175.0,False
 153731843, mehmet fatih aysan,mfatihaysan,100,1537318436.0,Mehmet Fatih Aysan,en,980.0,383.0,False
-929382231, bk,bassakkaraca3,90,9.293822319273779e+17,bkklok,tr,1.0,83.0,False
+929382231, bk,bassakkaraca3,90,9.29382231927378e+17,bkklok,tr,1.0,83.0,False
 819530141, ! academic,Intradersorg,90,8.195301411141878e+17,InTraders Academic Platform,tr,902.0,4431.0,False
 968553557, erasmus -,emirogluu,90,9.685535575312876e+17,E,tr,18.0,125.0,False
 916300721, ! arge,argela_org,90,9.16300721691222e+17,www argela.ORG,tr,2734.0,4684.0,False
 941337490, erhan inegol,ERHAN14620780,90,9.413374902119588e+17,ERHAN,en,1.0,89.0,False
 185841775, muzehher leyla burak,BurakErenTR,90,1858417754.0,Burak,tr,308.0,256.0,False
-947930196, ahmet ademoglu,Ahmet98708506,90,9.479301962037043e+17,Ahmet,tr,0.0,15.0,False
+947930196, ahmet ademoglu,Ahmet98708506,90,9.479301962037044e+17,Ahmet,tr,0.0,15.0,False
 941790999, filiz topaloglu,uzatmafili,90,9.417909995291156e+17,fili,en,0.0,58.0,False
 360065011,hassan khiara,HKhyara,92,3600650116.0,Hassan khyara,tr,38.0,46.0,False
 219808565, saliha ayåegã¼l demiray,MiCoban,90,2198085651.0,Miray,tr,234.0,418.0,False
 267486658, fatima tuba yaylaci,fatimatubapetek,89,2674866582.0,Fatıma Tuba Yaylacı,en,852.0,246.0,False
 285089150, ! sepher,becauseitsfunn,91,2850891504.0,Seher,tr,225.0,452.0,False
 330793607, ä°lke bã¼yã¼kduman,FigenIlke,89,3307936077.0,Ilke Buyukduman,en,94.0,181.0,False
-917746439,emine kevser pekcan,kevsermumcuoglu,90,9.177464396017377e+17,Kevser,tr,164.0,116.0,False
+917746439,emine kevser pekcan,kevsermumcuoglu,90,9.177464396017376e+17,Kevser,tr,164.0,116.0,False
 962844904,reyhan reyhan,neyyireyhan,95,9.628449042075484e+17,neyyire reyhan,tr,14.0,46.0,False
 298020453, onur oner,onuroner_1907,94,298020453.0,Onur ÖNER,tr,301.0,298.0,False
 230067492,tuba zain alabidin,MZainButt,90,230067492.0,Zain.,en,1434.0,220.0,False
@@ -68,12 +68,12 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 274989805, didem ardali,DidemArdali,100,2749898057.0,Didem Ardali,tr,146.0,1403.0,False
 921640114,evin demir,elvin_kokdemir,87,9.216401144885617e+17,Elvin Kökdemir,tr,6.0,93.0,False
 762683270,hanife merve catan,hanifecatan,97,7.626832709664113e+17,Hanife Merve Çatan,tr,45.0,55.0,False
-968468734,utku ozbal,utkuozbal1,90,9.684687342675763e+17,utkuozball,en,12.0,32.0,False
+968468734,utku ozbal,utkuozbal1,90,9.684687342675764e+17,utkuozball,en,12.0,32.0,False
 947882698,fatih er,FatihErien8,90,9.47882698831487e+17,Fatih Erişen,en,0.0,72.0,False
 918065047,abdullah harun erbay,ahAslanbey,90,9.180650470830694e+17,Harun Erbay,tr,139.0,175.0,False
 936958522,ahmet bilgen,Ahmetlgen14,91,9.369585223229768e+17,Ahmet Ülgen,tr,10.0,251.0,False
 848845722, melisa akdag,moonslost,90,8.488457222293873e+17,melis,tr,6.0,83.0,False
-944199207,murat erkara,murat1907karaa,91,9.441992074136003e+17,murat kara,tr,0.0,47.0,False
+944199207,murat erkara,murat1907karaa,91,9.441992074136004e+17,murat kara,tr,0.0,47.0,False
 818364804,omar hamzeh,0mar_hamzeh,100,818364804.0,Omar Hamzeh,ar,244.0,173.0,False
 791691751,muberra kapusuz,muberra_g,90,7.916917518451671e+17,Muberra,tr,86.0,521.0,False
 219985599,bekir turan,turnbekir,100,2199855997.0,Bekir Turan,tr,112.0,653.0,False
@@ -98,12 +98,12 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 913846233,aigerim yergaliyeva,aikayerr,100,9.138462339570524e+17,Aigerim Yergaliyeva,en,12.0,46.0,False
 261287069, hasan kosebalaban,hkosebalaban1,97,2612870692.0,Hasan Kösebalaban,en,2862.0,356.0,False
 935430209,mahmut ozdemir,mahmuutozdemir,96,9.354302098594488e+17,Mahmut Özdemir,tr,42.0,110.0,False
-929458392, adnan dovan,Adnan28880301,90,9.294583929634365e+17,Adnan,tr,17.0,629.0,False
+929458392, adnan dovan,Adnan28880301,90,9.294583929634364e+17,Adnan,tr,17.0,629.0,False
 340049661,eda gamze aday,edagamzea,95,3400496615.0,Gamze Aday,tr,41.0,126.0,False
 817850461,valid hamza,HamzaValid,100,8.178504611182223e+17,Valid Hamza,sr,48.0,111.0,False
 330185738,ahmad muhammad fouad,fousense,90,3301857381.0,fou,tr,41.0,370.0,False
-926331128,murat demir,MuratDe49231258,92,9.263311281009377e+17,Murat Demirci,tr,2.0,100.0,False
-940583073, oktay adalier,ali95095523,90,9.405830731960033e+17,ali,tr,0.0,105.0,False
+926331128,murat demir,MuratDe49231258,92,9.263311281009376e+17,Murat Demirci,tr,2.0,100.0,False
+940583073, oktay adalier,ali95095523,90,9.405830731960032e+17,ali,tr,0.0,105.0,False
 786953736,fatma betul ozdemir,fatmabetul23,94,7.869537369628385e+17,Fatma Betül Özdemir,tr,56.0,87.0,False
 100468883, meryemelif argun,tubaelifbilgin,90,1004688830.0,Elif,tr,5.0,128.0,False
 754394557, meryemelif argun,huzur_meryem66,90,7.543945575262085e+17,Meryem,tr,1.0,74.0,False
@@ -117,11 +117,11 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 948267069, gmail -,akarsufirat062,90,9.482670697447793e+17,akarsufirat062@gmail.com,tr,0.0,53.0,False
 740721020,fatma ebru ademoglu,EbruAdemoglu,95,740721020.0,Ebru Ademoglu,en,6.0,53.0,False
 308612540, oktay adalier,ferhatyildirim1,90,308612540.0,Ada,tr,151.0,177.0,False
-976724429, oktay adalier,ali52209682,90,9.767244299411579e+17,ali,tr,2.0,29.0,False
+976724429, oktay adalier,ali52209682,90,9.76724429941158e+17,ali,tr,2.0,29.0,False
 179250667,ali koc,akalikoc,92,179250667.0,Ali KOÇ,tr,533.0,345.0,False
 754257121,abdulkadir aksu,AbdulkadirAksu8,100,7.542571213577953e+17,Abdulkadir Aksu,tr,100.0,187.0,False
 985165525, ilknur baran,vancolik_baran,90,9.85165525474005e+17,baran,tr,5.0,63.0,False
-929319812,ahmet faruk yazi,ahmetfaruksari2,95,9.293198121736315e+17,Ahmet Faruk,tr,0.0,42.0,False
+929319812,ahmet faruk yazi,ahmetfaruksari2,95,9.293198121736316e+17,Ahmet Faruk,tr,0.0,42.0,False
 113954902, ebru kayaalp,ebrukayaalp,100,113954902.0,Ebru Kayaalp,en,241.0,280.0,False
 382361297,muhammet musa turgut,niksizsiniz,90,3823612972.0,Turgut,tr,81.0,1069.0,False
 333501343,furkan aktan,Furkanakts77,92,3335013430.0,Furkan Aktaş,en,443.0,270.0,False
@@ -130,14 +130,14 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 162310009, sadi evren seker,sadievrenseker,100,162310009.0,Sadi Evren SEKER,en,4395.0,65.0,False
 928846201, meryemelif argun,Meryem05968550,90,9.288462010002022e+17,Meryem,en,0.0,25.0,False
 297632835,leen altaki,Leen_Nabil,90,297632835.0,Leen,en,340.0,576.0,False
-931921184,gamze ilaslan,GamzeAs76525147,92,9.319211842115625e+17,Gamze Aslan,tr,0.0,45.0,False
+931921184,gamze ilaslan,GamzeAs76525147,92,9.319211842115624e+17,Gamze Aslan,tr,0.0,45.0,False
 754341097, ! x test,fubsociety,90,7.543410976949535e+17,x,tr,717.0,92.0,False
 618131962, talha kã¶se,Talha_Kose1,100,618131962.0,Talha Köse,en,4630.0,1144.0,False
 237928616,sultan altinsoy,AltnsoySultan,93,2379286169.0,Sultan Altınsoy,en,124.0,142.0,False
 938172933,busra kavurmaci,busrakavurmaci,97,9.381729339392655e+17,busrakavurmaci,tr,68.0,286.0,False
 32660008, reyyan bilge,ReyyanBilge,100,32660008.0,reyyan bilge,en,1643.0,392.0,False
 760829007,emre turhan,emretarhann11,91,7.608290073153044e+17,Emre Tarhan,tr,936.0,2304.0,False
-933341348,ruveyda celik,rvydcelik,92,9.333413484213043e+17,Rüveyda Çelik,en,57.0,59.0,False
+933341348,ruveyda celik,rvydcelik,92,9.333413484213044e+17,Rüveyda Çelik,en,57.0,59.0,False
 871368178,merve yilmaz,_istemiyabgu,92,8.713681789407437e+17,Merve Yılmaz,ar,100.0,215.0,False
 995806488, ali ulker,Ali_Ulker,94,995806488.0,Ali Ülker,en,13885.0,35.0,False
 223524129, taylan yurtbakan,TUBA_TurkBlmAkd,90,2235241292.0,TÜBA,tr,9998.0,767.0,False
@@ -149,7 +149,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 112173728,muge sevval kilic,SezenSevval,90,1121737285.0,Sevval,tr,36.0,45.0,False
 940482302,mustafa erol,UgurluTanju,87,9.404823028026122e+17,Mustafa Öner,en,6.0,38.0,False
 462442454, muhammed ali aydin,malizkl,90,4624424549.0,muhammed,tr,44.0,146.0,False
-929065355, bologna -,busrabilenn,90,9.290653555904225e+17,B.,en,62.0,106.0,False
+929065355, bologna -,busrabilenn,90,9.290653555904224e+17,B.,en,62.0,106.0,False
 936468269, levent yalcin,LeventYalcin38,88,9.3646826969489e+17,Levent Yalçın,tr,10.0,136.0,False
 231849288, ozlem altinkaya genel,Yavheknk,90,2318492884.0,Özlem.,tr,32.0,563.0,False
 140058875, abdurrahman atcil,aatcil,91,1400588754.0,Abdurrahman Atçıl,en,1183.0,451.0,False
@@ -158,7 +158,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 462163057,mehmet ali aydin,aydinmehmetk,88,462163057.0,Mehmet Kadir AYDIN,tr,256.0,270.0,False
 936541698, ahmet ademoglu,Ahmet47987039,90,9.365416981419008e+17,Ahmet,tr,1.0,31.0,False
 758889025, cihan cobanoglu,cihansehiruni,100,758889025.0,Cihan Cobanoglu,tr,418.0,1002.0,False
-971044607,ahmet kursad koruyucu,kkoruyucu_,93,9.710446074705879e+17,Ahmet Kürşad Koruyucu,tr,96.0,203.0,False
+971044607,ahmet kursad koruyucu,kkoruyucu_,93,9.71044607470588e+17,Ahmet Kürşad Koruyucu,tr,96.0,203.0,False
 938702477,hasan ipek,Hasanie68642258,95,9.387024776748646e+17,Hasan Çiçek,tr,8.0,93.0,False
 915228168,mohammadanas almaaz,derdorjarjor,90,9.152281685371126e+17,maaz,tr,291.0,2667.0,False
 172846089, meryemelif argun,elifdonmez,90,172846089.0,Elif,en,322.0,229.0,False
@@ -169,28 +169,28 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 166347556,beyza goz,beyzaagoz,94,1663475569.0,Beyza Göz,tr,117.0,348.0,False
 891985982,kubra metin,kbrmtin,91,8.919859822281892e+17,KÜBRA METİN,tr,297.0,122.0,False
 947505446,muhammed akkus,muhamme86529550,89,9.475054463818506e+17,muhammed aksu,tr,2.0,42.0,False
-936238751, faruk asicioglu,Faruk25992842,90,9.362387513863619e+17,Faruk,en,1.0,47.0,False
+936238751, faruk asicioglu,Faruk25992842,90,9.36238751386362e+17,Faruk,en,1.0,47.0,False
 139426585, oktay adalier,agngormez,90,1394265854.0,Ali,tr,64.0,93.0,False
-943846174, ramazan aydin,ramazan42231113,90,9.438461741377659e+17,ramazan,en,0.0,60.0,False
+943846174, ramazan aydin,ramazan42231113,90,9.43846174137766e+17,ramazan,en,0.0,60.0,False
 19869574, emre urfali,emreurfali,91,19869574.0,Emre Urfalı,tr,3633.0,2291.0,False
 938645392,enes kemal boyraz,ekboyraz1903,100,9.38645392572502e+17,Enes Kemal Boyraz,tr,17.0,29.0,False
 950487481, fatih altuä,fatialtug,95,950487481.0,Fatih Altug,en,870.0,529.0,False
 359661500,fatih can,fatihcanakay,90,359661500.0,Fatih Can Akay,tr,0.0,79.0,False
 941412509, mehmet serkan apaydin,Serkan80579580,90,9.414125093949194e+17,Serkan,tr,1.0,71.0,False
-950115950, salih salih,salih_ozdamar,95,9.501159504430653e+17,Salih Özdamar,tr,47.0,467.0,False
+950115950, salih salih,salih_ozdamar,95,9.501159504430652e+17,Salih Özdamar,tr,47.0,467.0,False
 593036873,zuhal akay,zuhalakay1,95,593036873.0,Zuhâl Akay,tr,114.0,118.0,False
 958383348, dilara kilic,Dila_Shakir,90,9.583833484973834e+17,Dila,en,2.0,30.0,False
 121392206, meryemelif argun,KabataslardanM,90,1213922064.0,Meryem,tr,217.0,416.0,False
 911216747, meryemelif argun,butimarvari,90,9.11216747176489e+17,Meryem,tr,74.0,161.0,False
 928955774, hã¼seyin alptekin,ekin23398370,90,9.28955774713389e+17,ekin,en,1.0,117.0,False
 164801652, celalettin ates,ElaCeryan,90,1648016520.0,ela,tr,241.0,66.0,False
-929399003, fatih altuä,Fatih14154295,90,9.293990031833047e+17,Fatih,tr,0.0,125.0,False
-941358613, merih erol,4477Meric,90,9.413586137629245e+17,meriç,tr,0.0,79.0,False
+929399003, fatih altuä,Fatih14154295,90,9.293990031833048e+17,Fatih,tr,0.0,125.0,False
+941358613, merih erol,4477Meric,90,9.413586137629244e+17,meriç,tr,0.0,79.0,False
 374018843,meryem berra dinc,berrakberra,90,374018843.0,berra,tr,0.0,6.0,False
 765969991,abdullah kaplan,kplnabdullahh,100,7.65969991825064e+17,Abdullah Kaplan,en,49.0,90.0,False
 979365474, fatih altuä,Fatih73079032,90,9.793654745836134e+17,Fatih,en,2.0,26.0,False
 880138172,muhammed emin pilgir,pilgir_muhammed,95,8.801381727258542e+17,Muhammed Emin PİLGİR,tr,8.0,88.0,False
-949669789, tarik akyol,tarik73078078,90,9.496697899449917e+17,tarik,tr,0.0,74.0,False
+949669789, tarik akyol,tarik73078078,90,9.496697899449916e+17,tarik,tr,0.0,74.0,False
 425411580,mahmut ergin,Faniisani,95,425411580.0,"ergin, MAHMUT",tr,289.0,3197.0,False
 976452523, ahmet furkan sarisoy,Furkan57093626,90,9.76452523669246e+17,Furkan,tr,0.0,50.0,False
 940684182,ahmed hossam mahmoud ali mohammed,Mahmoudali1251,90,9.40684182115713e+17,Mahmoud Ali,ar,2.0,114.0,False
@@ -205,9 +205,9 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 948067620,neslihan kokoz,Nesliha91358065,90,9.480676207581798e+17,Neslihan,en,2.0,94.0,False
 81094202, serap saraã§lä±,serapsaracli,96,81094202.0,Serap Saraçlı,tr,214.0,352.0,False
 929193701,eda reyhan demirler,Reyhan22451892,90,9.291937015068017e+17,Reyhan,en,2.0,34.0,False
-949031193, emre ceran,Emre43016581,90,9.490311935252685e+17,Emre,en,9.0,73.0,False
+949031193, emre ceran,Emre43016581,90,9.490311935252684e+17,Emre,en,9.0,73.0,False
 508905512,eda uysal,jbedajb99,100,508905512.0,Eda Uysal,tr,402.0,461.0,False
-941010070, ali bayramoglu,Bayram14988134,90,9.410100708207493e+17,Bayram,tr,6.0,76.0,False
+941010070, ali bayramoglu,Bayram14988134,90,9.410100708207492e+17,Bayram,tr,6.0,76.0,False
 929528574, hamdi irmak,HAMDI22539735,90,9.295285743983452e+17,HAMDI,tr,9.0,106.0,False
 942053474, ! sap,fealeyefiluifal,90,9.420534747155538e+17,Hesap,tr,0.0,34.0,False
 330546870,selami saglam,selamicelikoglu,90,3305468703.0,Selami,tr,588.0,1908.0,False
@@ -220,46 +220,46 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 453923695,merve eksi,MerveeEksi,90,453923695.0,Merve Ekşi,tr,70.0,60.0,False
 293976465, gã¶khan ãetinsaya,cetinsayag,100,293976465.0,Gökhan Çetinsaya,en,29486.0,599.0,False
 819269230, sehir sehir,sehir_alumni,95,8.192692307890872e+17,Sehir Alumni,en,275.0,5.0,True
-944127079, huseyin ulas ozcan,ozcan59520770,90,9.441270798802821e+17,ozcan,en,1.0,77.0,False
+944127079, huseyin ulas ozcan,ozcan59520770,90,9.44127079880282e+17,ozcan,en,1.0,77.0,False
 758581180,semih tekin,semihtekin94,100,7.585811805475963e+17,Semih Tekin,tr,25.0,220.0,False
 332165453, burhan findikli,burhanil,90,332165453.0,Burhan,tr,197.0,1228.0,False
 940336123, muhammed ali aydin,Muhammed5205,89,9.403361234732687e+17,Muhammed Ali Şahin,tr,5.0,63.0,False
 706540374, ozlem altinkaya genel,TomakinOzlem,90,7.065403746140201e+17,özlem,en,106.0,132.0,False
 107141880, kcws2013,kaancomert4,90,107141880.0,KC,tr,240.0,235.0,False
 884536664,nur betã¼l yerli,betulyiilmz,90,884536664.0,Betül,tr,124.0,127.0,False
-948284799, gmail -,mustafatugrulk1,90,9.482847990762619e+17,mustafatugrulkose@gmail.com,en,3.0,102.0,False
+948284799, gmail -,mustafatugrulk1,90,9.48284799076262e+17,mustafatugrulkose@gmail.com,en,3.0,102.0,False
 274793331, berat acil,beratfzlsahin,90,2747933319.0,·Berat·,tr,4805.0,665.0,False
-986680664, gmail -,AVugar73,90,9.866806647361085e+17,abd.vugar73@gmail.com,ru,6.0,119.0,False
+986680664, gmail -,AVugar73,90,9.866806647361084e+17,abd.vugar73@gmail.com,ru,6.0,119.0,False
 813644772,omer oytun oge,OmerOytunn,90,8.136447721455124e+17,Ömer Oytun,tr,45.0,300.0,False
 948540969,abdullah berat demirci,beratde68614116,90,9.485409698797322e+17,berat.demirci,en,1.0,50.0,False
 940946607, mehmet akinci,Mehmet93470054,90,9.409466072390574e+17,Mehmet,tr,1.0,65.0,False
 909525156, rahim acar,M_Acar1,90,9.095251567957484e+17,M.Acar,tr,14.0,596.0,False
-951541945, hood mohammed mansoor qabas,Mohamme41547568,90,9.515419459182797e+17,Mohammed,en,0.0,42.0,False
+951541945, hood mohammed mansoor qabas,Mohamme41547568,90,9.515419459182796e+17,Mohammed,en,0.0,42.0,False
 980793421, ! felsefe,Sehir_felsefe,90,9.807934212238664e+17,Felsefe Kulübü,tr,6.0,6.0,False
 724497439,enes kemal boyraz,ekboyraz_19,100,7.244974394498785e+17,Enes Kemal Boyraz,tr,22.0,35.0,False
-932017210,nilay ozbek,Nilay5365,90,9.320172108806595e+17,Nilay,tr,0.0,35.0,False
+932017210,nilay ozbek,Nilay5365,90,9.320172108806596e+17,Nilay,tr,0.0,35.0,False
 45644419,mustafa duman,Mustafadurmaz07,89,45644419.0,Mustafa Durmaz,tr,3634.0,5001.0,False
 163127805, esra almas,colmasallari,90,163127805.0,esra,tr,73.0,1524.0,False
 933557718,nesrin celik,Nesrin696312,90,9.335577187318866e+17,Nesrin,tr,2.0,95.0,False
-929321705,ferhan yilmaz,Ferhan36686765,90,9.293217056249979e+17,Ferhan,tr,8.0,267.0,False
-941745969,muhammet gul,MuhammetGuldal4,89,9.417459694729093e+17,Muhammet Guldal,tr,7.0,71.0,False
+929321705,ferhan yilmaz,Ferhan36686765,90,9.29321705624998e+17,Ferhan,tr,8.0,267.0,False
+941745969,muhammet gul,MuhammetGuldal4,89,9.417459694729092e+17,Muhammet Guldal,tr,7.0,71.0,False
 768871193, halil yekin guzel,HalilYekin,97,7.68871193470464e+17,Halil Yekin Güzel,tr,53.0,105.0,False
 806554602, ! sosyoloji,sosyolojik_dusu,90,8.06554602594304e+17,sosyolojik dusunme,tr,142.0,224.0,False
 276114292, rukiye ucar,SarisoyRukiye,90,2761142921.0,Rukiye,tr,37.0,213.0,False
 162135761,ahmet selim burak,aSelimburak,100,1621357615.0,Ahmet Selim Burak,tr,135.0,104.0,False
-959905159,nimet sanal,Nimet52365444,90,9.599051590601155e+17,Nimet,en,9.0,177.0,False
+959905159,nimet sanal,Nimet52365444,90,9.599051590601156e+17,Nimet,en,9.0,177.0,False
 941947974, mehmet akman,alan_f4tma,91,9.419479746613658e+17,Mehmet Man,en,0.0,69.0,False
 477575001, bilgilendirme,uykuszpanda,90,4775750014.0,En,tr,251.0,346.0,False
 948212059, muzehher leyla burak,Burak82166550,90,9.482120594387558e+17,Burak,en,5.0,93.0,False
 283799369,resadet imanov,Imanov_Resadet,100,2837993698.0,Resadet Imanov,en,54.0,63.0,False
 108036479, ä°lke bã¼yã¼kduman,ilkebu,89,108036479.0,Ilke Buyukduman,en,247.0,402.0,False
 283934911,zuhal nurbanu sariyasar,CetinkayaBanu,90,2839349110.0,NurBanu,en,36.0,491.0,False
-939422778, halil arslan,AliArsl40237628,91,9.394227783647437e+17,Ali Arslan,tr,1.0,22.0,False
+939422778, halil arslan,AliArsl40237628,91,9.394227783647436e+17,Ali Arslan,tr,1.0,22.0,False
 948107545,mehmet fuat kina,FuatKarayagiz,90,9.481075451928822e+17,fuat,tr,0.0,102.0,False
 939279936,akylai raimbekova,raumaliyev,90,9.39279936916947e+17,Raim,tr,0.0,29.0,False
 909505524, zeynep ozguven,zeyozguven,92,9.095055240094966e+17,Zeynep Özgüven,tr,1.0,1.0,False
 929679031, hakan danis,HakanHakn1h,90,9.296790311041638e+17,Hakan,tr,0.0,79.0,False
-914063026,yunus emre demirhan,yunusemr_01,90,9.140630266214195e+17,Yunus emre,tr,11.0,82.0,False
+914063026,yunus emre demirhan,yunusemr_01,90,9.140630266214196e+17,Yunus emre,tr,11.0,82.0,False
 428756096, merve aydin,merveayyildiiz,90,4287560969.0,merve,tr,20.0,92.0,False
 454888215,samet gungordu,Smtgngrdu,88,454888215.0,Samet GÜNGÖRDÜ,tr,158.0,50.0,False
 745677446, zeynep ceren acarturk,zeyayb,90,7.456774468134871e+17,Zeynep,tr,71.0,85.0,False
@@ -279,7 +279,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 51421753,sedat gul,etoilerouges,94,51421753.0,Sedat Gül,tr,392.0,375.0,False
 411064560, zubeyir nisanci,ZubeyirNisanci,100,411064560.0,Zubeyir Nisanci,en,543.0,366.0,False
 933780540, fatih altuä,Fatih25461259,90,9.33780540171391e+17,Fatih,en,0.0,89.0,False
-929228933, mesut yä±lmaz,mesutylmz16,90,9.292289332828447e+17,mesutylmz,en,5.0,45.0,False
+929228933, mesut yä±lmaz,mesutylmz16,90,9.292289332828448e+17,mesutylmz,en,5.0,45.0,False
 931163984, azize fatma cakir,Fatma18556752,90,9.311639840567992e+17,Fatma,tr,0.0,40.0,False
 941377883,ferhan yilmaz,havva_goncu,92,9.413778830329692e+17,feriha yilmaz,tr,6.0,92.0,False
 376697378,mustafa ozel,Mstfozl,96,376697378.0,mustafaozel,tr,963.0,605.0,False
@@ -304,10 +304,10 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 143400039,alara umdu,alaracharlotte,90,1434000397.0,alara,tr,369.0,200.0,False
 561422476, mustafa alper gumus,alperdokay,90,561422476.0,Alper,tr,668.0,281.0,False
 925324908,selma erol,Selmaeroll,100,9.25324908556628e+17,Selma Erol,tr,20.0,93.0,False
-914225881,necip fazil donmez,nfdonmez27,91,9.142258811781407e+17,Necip Fazıl Dönmez,tr,3.0,41.0,False
+914225881,necip fazil donmez,nfdonmez27,91,9.142258811781408e+17,Necip Fazıl Dönmez,tr,3.0,41.0,False
 412463737, cengiz kallek,cengizkallek,100,4124637371.0,Cengiz Kallek,tr,2248.0,269.0,False
 239496829, candan karlitekin,Candan_Dost,94,239496829.0,Candan Karlıtekin,en,4506.0,192.0,False
-936622097, zeynep ceren acarturk,Zynp_AdAm,90,9.366220974802125e+17,Zeynep,tr,84.0,122.0,False
+936622097, zeynep ceren acarturk,Zynp_AdAm,90,9.366220974802124e+17,Zeynep,tr,84.0,122.0,False
 147431178, merve aydin,omeraydn_,90,1474311786.0,Ömer AYDIN,tr,86.0,236.0,False
 126269680,onur kaya,NurOZKAYA,89,1262696802.0,Nur Özkaya,tr,1658.0,365.0,False
 900367987, ! pols-grads,tamdayaklik1,90,9.003679875674522e+17,ADS,en,47.0,92.0,False
@@ -317,7 +317,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 272128419,eren poyraz,Takule24,90,2721284196.0,Poyraz,tr,144.0,3180.0,False
 775735034,zeynep otgen,zgokcen2005,87,775735034.0,Zeynep Gökçen,tr,1476.0,1056.0,False
 948534048,betul haydar,Haydar79376817,90,9.485340484812145e+17,Haydar,en,0.0,83.0,False
-929049932,evelina memetova,Memet6577,90,9.290499324886917e+17,memet,tr,0.0,88.0,False
+929049932,evelina memetova,Memet6577,90,9.290499324886916e+17,memet,tr,0.0,88.0,False
 935939833, mehmet akinci,incilayincii,90,9.359398334443602e+17,inci,tr,0.0,90.0,False
 909735272,omer faruk kacmen,kacmenomer,94,9.097352725265654e+17,Ömer Faruk Kaçmen,tr,47.0,195.0,False
 782277126, erasmus -,Sumeyra_Ozturk_,90,7.822771264688251e+17,Sü,tr,98.0,145.0,False
@@ -329,11 +329,11 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 429726434, faruk asicioglu,mrfarukturgut,90,429726434.0,faruk,en,186.0,153.0,False
 307781740, zeynep ceren acarturk,zynpptnaa,90,3077817408.0,Zeynep,tr,280.0,539.0,False
 785917694, ches,AegeanIsland,90,7.859176940759532e+17,Ägäisches Meer,de,41667.0,26064.0,False
-938862447,ismail havuz,ismaily01363798,92,9.388624473263227e+17,ismail yavuz,tr,0.0,64.0,False
+938862447,ismail havuz,ismaily01363798,92,9.388624473263228e+17,ismail yavuz,tr,0.0,64.0,False
 821422877,baran gunes,BaranGunes24,100,8.214228772788797e+17,Baran Gunes,tr,30.0,618.0,False
 889914190,zeynep merve bas,dijitalmerve,95,8.899141908147323e+17,Merve Zeynep,tr,13.0,66.0,False
 725755203, global,globalhistorytr,90,7.257552037613732e+17,Global History Istanbul,en,130.0,1166.0,False
-932296180, dilara kilic,dilara52338560,90,9.322961809518633e+17,dilara,tr,1.0,37.0,False
+932296180, dilara kilic,dilara52338560,90,9.322961809518632e+17,dilara,tr,1.0,37.0,False
 910741477,rabia sungar,rabia_sungar,100,9.107414770887434e+17,Rabia Sungar,tr,16.0,23.0,False
 953398156,sã¼meyye yokus,sumeyyeakkayaa6,90,9.53398156129112e+17,Sümeyye.,tr,32.0,72.0,False
 963474087,eslam ibrahim,IbrahimKelam,89,9.634740870866166e+17,Kelam İbrahim,tr,6.0,208.0,False
@@ -347,24 +347,24 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 895454951,servethan dastan,servethandastan,94,8.954549519793111e+17,Servethan Daştan,tr,100.0,87.0,False
 936539205, umut koc,Umut064055,90,9.365392058193592e+17,Umut,tr,4.0,103.0,False
 474857031,fatma turk,fatmaoztrkk,90,474857031.0,Fatma Öztürk,tr,144.0,90.0,False
-930848603,dursun yurtseven,Yurtsev45740885,90,9.308486038364201e+17,Yurtseven,tr,1.0,101.0,False
+930848603,dursun yurtseven,Yurtsev45740885,90,9.3084860383642e+17,Yurtseven,tr,1.0,101.0,False
 299674096,ali emre oz,aemreoz,95,2996740967.0,Ali Emre,tr,0.0,7.0,False
-928678200,neslihan kokoz,nesliihankokoz,96,9.286782004393943e+17,neslihankokoz,tr,16.0,58.0,False
+928678200,neslihan kokoz,nesliihankokoz,96,9.286782004393944e+17,neslihankokoz,tr,16.0,58.0,False
 176656680, istanbul åehir -,kly_879,90,1766566801.0,nb,tr,4.0,158.0,False
 243514070,amna faisal,AnasObaidi,91,2435140705.0,Anas Faisal,en,18.0,77.0,False
-971955285, fatma meliha sen,sekerrmx,90,9.719552859200717e+17,Meliha,en,66.0,47.0,False
+971955285, fatma meliha sen,sekerrmx,90,9.719552859200716e+17,Meliha,en,66.0,47.0,False
 939453116, arzu oyacioglu,Oya40410511,90,9.394531169651057e+17,Oya,tr,49.0,139.0,False
 783385197,raafay ahmad,RaafayAhmad,100,7.833851971862569e+17,Raafay Ahmad,en,21.0,173.0,False
 426732692, serhat dalgalidere,tohumfikir,94,4267326928.0,Serhat Dalgalıdere,tr,74.0,14.0,False
-926853986,md al amin mia,al_amin_mia,95,9.268539868499067e+17,Al Amin Mia,en,2.0,84.0,False
+926853986,md al amin mia,al_amin_mia,95,9.268539868499068e+17,Al Amin Mia,en,2.0,84.0,False
 293768252, mechanics ar-ge,MechanicsArGe,100,2937682529.0,Mechanics Ar-Ge,tr,107.0,67.0,False
-959194382,nur muhammed sahin,seyhurreis,94,9.591943820365373e+17,Nur Muhammed Şahin,tr,34.0,134.0,False
+959194382,nur muhammed sahin,seyhurreis,94,9.591943820365372e+17,Nur Muhammed Şahin,tr,34.0,134.0,False
 227778947, bahar cakir,feyza_6666,90,2277789472.0,Bahar,tr,22.0,168.0,False
 960246596,abukar mohamed abukar,mohamed54173984,90,9.602465965449748e+17,mohamed,en,1.0,89.0,False
 777599584, ozgur kavak,ozguralik,90,7.775995841640161e+17,Özgür KAVAK,tr,1473.0,509.0,False
 572370285,fatmanur puytu,nurpuytu,100,572370285.0,Fatmanur Puytu,tr,354.0,142.0,False
 934007834, ahmet tan,AhmetTu32950654,90,9.340078342740378e+17,Ahmet Turan,tr,14.0,106.0,False
-935898909,ahmet altindis,AhmetAl40000682,90,9.358989098173645e+17,Ahmet Al,tr,0.0,49.0,False
+935898909,ahmet altindis,AhmetAl40000682,90,9.358989098173644e+17,Ahmet Al,tr,0.0,49.0,False
 940130879, suleyman ekici,SULEYMANEKICI11,100,9.401308791454966e+17,SULEYMAN Ekici,tr,2.0,124.0,False
 330601737,melike mahken,hkbrertp,90,3306017375.0,HKE ~,tr,185.0,493.0,False
 74152640,mehmet alpaslan ayan,mehmettalpaslan,90,74152640.0,Alpaslan,tr,558.0,199.0,False
@@ -374,7 +374,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 109240364, sena akkisla,senaakck_,90,109240364.0,Sena,tr,288.0,325.0,False
 371379659,ahmet semih bozkurt,asebozkurtt,100,371379659.0,Ahmet Semih Bozkurt,en,297.0,182.0,False
 543640652,recep ozdemir,krkvyn,92,543640652.0,Ece Ozdemir,tr,315.0,1768.0,False
-936728112,gehad elfeky,Elf43686515,90,9.367281120244449e+17,Elf,tr,0.0,48.0,False
+936728112,gehad elfeky,Elf43686515,90,9.367281120244448e+17,Elf,tr,0.0,48.0,False
 706705446, meryemelif argun,elifdurduu,90,706705446.0,elif,tr,146.0,51.0,False
 154451555,yahya melikoplu,MelikogluYahya,93,1544515554.0,Yahya melikoğlu,tr,36.0,134.0,False
 477621290, ayse kaya goktepe,aysekayag,91,477621290.0,Ayşe Kaya Göktepe,tr,277.0,188.0,False
@@ -386,7 +386,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 888077368,mustafa celiker,mustafaceliker_,97,8.880773683630203e+17,Mustafa Çeliker,tr,76.0,114.0,False
 932332121,selin caliskan,EminCaliskan8,89,9.32332121485652e+17,Emin Caliskan,tr,10.0,116.0,False
 500868894, ozge bozkurt,zgbyhn,90,500868894.0,özge,tr,176.0,860.0,False
-931277441, sami anis abuhamdeh,ssamiokur,90,9.312774413934469e+17,Sami,tr,109.0,843.0,False
+931277441, sami anis abuhamdeh,ssamiokur,90,9.312774413934468e+17,Sami,tr,109.0,843.0,False
 938460221,abdulsamet aydinli,AbdulsametAydi7,94,9.384602215377674e+17,Abdulsamet Aydin,tr,3.0,73.0,False
 579609620,ayse kaya,aysekaya25,89,579609620.0,AYŞE KAYA,tr,67.0,65.0,False
 818121303, erasmus -,ab13m6,90,8.181213037984563e+17,m.,tr,2.0,12.0,False
@@ -395,7 +395,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 936313926,talip yildirim,Talip71537507,90,9.363139264338698e+17,Talip,en,3.0,87.0,False
 895568602,beyzanur mete,BeyzaMtee,96,8.955686029460439e+17,Beyza Nur Mete,tr,14.0,134.0,False
 778977823,huseyin demir,HuseyiinDemir,96,7.78977823834923e+17,Hüseyin Demir,tr,37.0,59.0,False
-931130496, gamze gumus,Aytennn19,90,9.311304966119629e+17,gamze,tr,147.0,255.0,False
+931130496, gamze gumus,Aytennn19,90,9.311304966119628e+17,gamze,tr,147.0,255.0,False
 260125859, efekan benlier,EfekanBenlier,100,2601258594.0,Efekan Benlier,tr,648.0,206.0,False
 420173916,hamza taha baba,BarisErbilgin,90,420173916.0,Hamza,tr,175.0,481.0,False
 321359630, umran sevgin,sevgieksi_,90,321359630.0,sevgi,tr,170.0,98.0,False
@@ -417,17 +417,17 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 943094048, didem ardali,onsrca45,90,9.430940484154737e+17,çidem,tr,0.0,89.0,False
 929294233, adnan dovan,Adnan39839241,90,9.292942333322772e+17,Adnan,tr,0.0,82.0,False
 253616057, ahmet ademoglu,ahmet_ademoglu,100,253616057.0,Ahmet Ademoglu,en,1332.0,83.0,False
-964125915,serhat ermis,ermiserhat,92,9.641259156629463e+17,Serhat Ermiş,tr,18.0,164.0,False
-933401725, firat atmaca,Firat59737303,90,9.334017252387267e+17,Firat,tr,25.0,170.0,False
+964125915,serhat ermis,ermiserhat,92,9.641259156629464e+17,Serhat Ermiş,tr,18.0,164.0,False
+933401725, firat atmaca,Firat59737303,90,9.334017252387268e+17,Firat,tr,25.0,170.0,False
 103046410,ismail mutlu,ismailmutlu4153,96,1030464109.0,İsmail Mutlu,tr,499.0,1672.0,False
 944488840, betul aydogan,Dogan68464848,90,9.444888406344868e+17,Dogan,tr,0.0,68.0,False
 944486590, mehmet akinci,mehmet36280035,90,9.444865909398446e+17,mehmet,en,5.0,57.0,False
 848664111, melike muftu,cymft,90,8.486641119070495e+17,ft,tr,8.0,106.0,False
 929604586,gorkem remzi guner,remzi73067628,90,9.296045860543078e+17,remzi,en,7.0,114.0,False
 963389308,abdullahi abubakar,aa_kaks,100,9.633893087816868e+17,Abdullahi Abubakar,en,24.0,147.0,False
-920744341,mucahit turhan,mucahitturhann,96,9.207443414208553e+17,Mücahit Turhan,tr,2.0,39.0,False
+920744341,mucahit turhan,mucahitturhann,96,9.207443414208552e+17,Mücahit Turhan,tr,2.0,39.0,False
 847558932,suleyman emre aykut,Suleyman_AYKUT,97,847558932.0,Süleyman Emre AYKUT,tr,73.0,55.0,False
-931254409,busra arslan,busra_arsllan,87,9.312544094131323e+17,Büşra Arslan,tr,74.0,326.0,False
+931254409,busra arslan,busra_arsllan,87,9.312544094131324e+17,Büşra Arslan,tr,74.0,326.0,False
 931810945, hale dede,halemek_,90,9.318109451140342e+17,Hale,tr,81.0,479.0,False
 318006413, yunus ali erol,yunusalierol,100,318006413.0,Yunus Ali Erol,tr,66.0,130.0,False
 243099712,yasin koca,sadecetetik,100,2430997123.0,Yasin Koca,tr,281.0,325.0,False
@@ -440,7 +440,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 492408930, hatice erin,dr_haticecetin,91,4924089309.0,Hatice Çetin,tr,379.0,884.0,False
 839498544,binnur ataman,SacredVanilla,90,8.39498544650281e+17,Binnur,tr,128.0,155.0,False
 892021693, ahu burcu aydemir,OzkanBrc,90,892021693.0,Burcu,tr,7.0,48.0,False
-938707864, cansu arisoy,balgozz_,90,9.387078640965673e+17,Cansu,tr,101.0,250.0,False
+938707864, cansu arisoy,balgozz_,90,9.387078640965672e+17,Cansu,tr,101.0,250.0,False
 722873773,furkan aksoy,the_faksoy,100,7.228737739685028e+17,Furkan Aksoy,tr,33.0,12.0,False
 842651605,md al amin mia,mdalaminmia11_,100,8.426516052962058e+17,MD Al Amin Mia,en,37.0,129.0,False
 153885394,ahmet goren,goren_15,95,1538853944.0,Ahmet Gören,tr,389.0,366.0,False
@@ -450,23 +450,23 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 944208722, mehmet akinci,Mehmet54569445,90,9.442087226871276e+17,Mehmet,en,0.0,90.0,False
 904824249,feyzanur bagce,nurlufeyz,90,9.048242495374868e+17,Feyzanur,tr,19.0,166.0,False
 399568890, sena akkisla,uskudar18,90,399568890.0,kk,tr,187.0,774.0,False
-942006784,enes etlik,ENESC7570,95,9.420067845077279e+17,Enes Çelik,tr,0.0,51.0,False
+942006784,enes etlik,ENESC7570,95,9.42006784507728e+17,Enes Çelik,tr,0.0,51.0,False
 152813027,ilayda ulubas,Ulubasilayda,100,1528130275.0,ilayda ulubas,tr,88.0,132.0,False
 97633683,ahmet bahadir bektas,BhdrRg,95,97633683.0,Bahadir Bektas🇹🇷,tr,6334.0,6248.0,False
 308605229,fatma eslem akbiyik,eslemayazzz,90,308605229.0,Eslem,tr,985.0,755.0,False
 350224188,ahmet sefa toprak,AhmetSToprak,100,350224188.0,Ahmet Sefa Toprak,tr,291.0,314.0,False
 231187264, mesut yeäen,mesutyegen,95,231187264.0,Mesut Yeğen,en,39107.0,1506.0,False
 38666681, ensar gul,ensargul,89,38666681.0,ensar  gül,en,233.0,103.0,False
-952632696,koray gulsum,koraygulsum,91,9.526326961441219e+17,Koray Gülsüm,tr,38.0,165.0,False
+952632696,koray gulsum,koraygulsum,91,9.52632696144122e+17,Koray Gülsüm,tr,38.0,165.0,False
 950661698,nuran inal,Nuran42567036,90,9.506616987001692e+17,Nuran,en,0.0,47.0,False
 611652164, sami erdem,konevim,100,611652164.0,Sami Erdem,tr,216.0,305.0,False
 605284382,sã¼meyye yokus,smyyeslmz,90,605284382.0,sümeyye,tr,150.0,121.0,False
 452106609,ismail canpolat,dieskortes,97,452106609.0,İsmail Canpolat,tr,193.0,147.0,False
 222341476,semanur esendemir,semaguclu2,90,2223414767.0,sema,en,21.0,90.0,False
 943025183,marifcan akcin,arifcan56966966,90,9.430251837067674e+17,arifcan,en,2.0,21.0,False
-929069815,hatice sari,hatice_arig,91,9.290698154987233e+17,hatice.arig,tr,0.0,95.0,False
+929069815,hatice sari,hatice_arig,91,9.290698154987232e+17,hatice.arig,tr,0.0,95.0,False
 860931054,sevde zeynep ocak,svdzeynep,100,8.609310541311304e+17,Sevde Zeynep Ocak,tr,66.0,472.0,False
-951199315,emre kaya,EmreOjk98077,100,9.511993155648799e+17,emre kaya,tr,1.0,87.0,False
+951199315,emre kaya,EmreOjk98077,100,9.5119931556488e+17,emre kaya,tr,1.0,87.0,False
 144188910, ahmet furkan sarisoy,ustatnaptin,90,1441889100.0,Furkan,tr,207.0,155.0,False
 940599207, mustafa alper gumus,kucukler03,90,9.405992073622036e+17,alpe,tr,0.0,78.0,False
 853924060, abdulkadir turk,Kadir25065332,90,8.539240602328965e+17,Kadir,tr,101.0,2589.0,False
@@ -474,12 +474,12 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 749020186,muhammet fethullah durna,Fethullah4670,90,7.490201862678446e+17,Fethullah Durna,tr,3.0,230.0,False
 350791386,ceylin yagmur can,ceylinyagmurcan,94,350791386.0,Ceylin Yağmur Can,tr,344.0,89.0,False
 949788957, mehmet serkan apaydin,Serkan79838918,90,9.497889570296832e+17,Serkan,tr,0.0,81.0,False
-939206241,ahmet kusol,AHMETKU48417841,90,9.392062412341821e+17,AHMET KUS,tr,4.0,29.0,False
-938533092, vedat ozden,vedatkykr,90,9.385330926833787e+17,Vedat,tr,4.0,46.0,False
+939206241,ahmet kusol,AHMETKU48417841,90,9.39206241234182e+17,AHMET KUS,tr,4.0,29.0,False
+938533092, vedat ozden,vedatkykr,90,9.385330926833788e+17,Vedat,tr,4.0,46.0,False
 917281450,yasin narman,ysnnarman,100,9.17281450868822e+17,Yasin Narman,tr,1.0,15.0,False
 840814472,omer faruk beser,Omerfb504,90,8.408144723694469e+17,Ömer Faruk Beşer,en,14.0,34.0,False
 522417267,furkan sefer,FurkanSefer,100,522417267.0,furkan sefer,tr,60.0,230.0,False
-976423847, elif dogan,elifdogan411,90,9.764238471289119e+17,Elif Doğan,tr,1.0,43.0,False
+976423847, elif dogan,elifdogan411,90,9.76423847128912e+17,Elif Doğan,tr,1.0,43.0,False
 67318883, muzaffer åenel,msenel,96,67318883.0,Muzaffer Senel,en,2036.0,2327.0,False
 853332654,omer sayin,omeraydin979,90,8.533326543427133e+17,Omer AYDIN,tr,46.0,198.0,False
 246206159,ahmet sefa yildirim,SefaahmetY,90,2462061599.0,Ahmet sefa,tr,453.0,216.0,False
@@ -496,25 +496,25 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 148714162, mehmet akman,mehmeto64,87,148714162.0,MEHMET ÖZKAN,tr,118.0,477.0,False
 315103018, hamdi irmak,hamdi_irmak,100,3151030181.0,Hamdi Irmak,tr,8577.0,450.0,False
 482246564, cansu arisoy,Enverio2,90,482246564.0,Can,tr,744.0,115.0,False
-953529460,busra dirican,busradrcnn,88,9.535294601664553e+17,Büşra Dirican,en,84.0,121.0,False
+953529460,busra dirican,busradrcnn,88,9.535294601664552e+17,Büşra Dirican,en,84.0,121.0,False
 931189815,ahmet karaca,Ahmetkaraaa67,87,9.311898154622444e+17,Ahmetkaraaa,tr,1.0,61.0,False
 159720158,sevban ugurlu,SevbanU,92,1597201580.0,Sevban Uğurlu,tr,245.0,240.0,False
 825982985,zeliha yuksel,zelisyksl6153,92,8.25982985023402e+17,ZELİHA YÜKSEL,tr,195.0,184.0,False
 313826144, gulizar buse aydogan,manyagimnapican,90,3138261449.0,buse🍹,tr,722.0,88.0,False
 405717491,ahmet akyol,akyollahmet,100,405717491.0,Ahmet Akyol,tr,446.0,218.0,False
 434269864, hã¼seyin alptekin,husalptekin,97,434269864.0,Huseyin Alptekin,en,523.0,331.0,False
-942015498, okan mergen,okan41115787,90,9.420154984720507e+17,okan,tr,1.0,41.0,False
+942015498, okan mergen,okan41115787,90,9.420154984720508e+17,okan,tr,1.0,41.0,False
 972967833,ammar yasir tikac,AMMAR29781301,90,9.729678336961126e+17,AMMAR,en,2.0,12.0,False
 944271725, halil arslan,tashan_halil,90,9.442717255540326e+17,halil,tr,2.0,118.0,False
 897840394,omer ali savtekin,OmarAliMrcn,90,8.978403949600727e+17,Omer Ali,en,18.0,211.0,False
 919692006, ali osman uymaz,aliosmanalmaz,87,919692006.0,ali osman çalmaz,tr,60.0,165.0,False
 590333765,muhammed talha uysal,muhammeduysal20,95,590333765.0,Muhammed uysal,tr,155.0,290.0,False
 929433596, recep aygul,Recepyalcin111,90,9.29433596791853e+17,Recep,tr,1.0,121.0,False
-935930917,bayram ozdemir,Bayramz97819440,96,9.359309178053509e+17,Bayram Özdemir,tr,3.0,106.0,False
+935930917,bayram ozdemir,Bayramz97819440,96,9.359309178053508e+17,Bayram Özdemir,tr,3.0,106.0,False
 707241492,omar hassan ali hassan,i_hassan_1,90,7.072414921133998e+17,hassan,en,87.0,852.0,False
 894491384,ismail tan,ismailKotan11,91,8.944913845137367e+17,ismail Kotan,tr,618.0,2802.0,False
-938787555, barbaros ãmeroälu,Barbar3405,90,9.387875552350331e+17,Barbar,tr,12.0,73.0,False
-923055362,sumeyye erenay,sumeyyeerenay,92,9.230553621520343e+17,Sümeyyeerenay,tr,5.0,38.0,False
+938787555, barbaros ãmeroälu,Barbar3405,90,9.387875552350332e+17,Barbar,tr,12.0,73.0,False
+923055362,sumeyye erenay,sumeyyeerenay,92,9.230553621520344e+17,Sümeyyeerenay,tr,5.0,38.0,False
 900003228,merve erol,merveerol14,100,900003228.0,Merve Erol 🐣,en,114.0,469.0,False
 331537003, aykut gulalanlar,agulalanlar,97,331537003.0,Aykut Gülalanlar,tr,945.0,953.0,False
 245552809,erhan algul,barbaros85,91,245552809.0,erhan akgul,en,43.0,140.0,False
@@ -525,10 +525,10 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 217986490,ismail ucak,BudakIsm,87,2179864907.0,ismail budak,tr,356.0,2678.0,False
 29043518, zeynep ceren acarturk,zahsenk,90,29043518.0,Zeynep,en,592.0,424.0,False
 939557695,leonardo scavino,maviLeonardo,90,9.395576953293906e+17,Leonardo,tr,4.0,50.0,False
-909768494, sibel koc,sibellkrc,90,9.097684942077051e+17,Sibel,en-gb,46.0,101.0,False
+909768494, sibel koc,sibellkrc,90,9.097684942077052e+17,Sibel,en-gb,46.0,101.0,False
 630560931, mustafa saymeh,msugurturk,90,630560931.0,Mustafa S.,tr,304.0,217.0,False
 104069545,busra vuslat celik,bvuslatcelik,90,1040695459.0,Vuslat🐢,tr,367.0,364.0,False
-938844720,enes bal,Enesnal03389835,88,9.388447205241569e+17,Enes Ünal,tr,1.0,29.0,False
+938844720,enes bal,Enesnal03389835,88,9.388447205241568e+17,Enes Ünal,tr,1.0,29.0,False
 884426858, bologna -,hopeaworld,90,8.844268583301939e+17,A.,tr,93.0,630.0,False
 910916742,elif sunnetci,sunnetci_elif,96,9.109167426958418e+17,Elif Sünnetci,tr,1.0,8.0,False
 935577990,leonardo scavino,yazilimci34ist,90,9.35577990456578e+17,leon,tr,0.0,79.0,False
@@ -551,7 +551,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 244027868, bologna -,n_gizemyaya,90,244027868.0,N,en,48.0,161.0,False
 599159655,asem okby,3asemshaban,100,599159655.0,Asem okby,en,386.0,195.0,False
 113943101,sahbanu kul,barstugan,90,113943101.0,hb,tr,514.0,449.0,False
-966481672,nur banu gencten,nb_gnctn,90,9.664816727064453e+17,Nur Banu,tr,30.0,177.0,False
+966481672,nur banu gencten,nb_gnctn,90,9.664816727064452e+17,Nur Banu,tr,30.0,177.0,False
 167928447, meltem aydan olgac,mltmde,90,1679284472.0,Meltem•,tr,393.0,213.0,False
 929400181,nurhande akyuz,Nurhan62706500,90,9.294001818707354e+17,Nurhan,tr,0.0,125.0,False
 86333553,tahir kaya,Mahirkaya,90,86333553.0,Mahir Kaya,tr,239.0,996.0,False
@@ -562,25 +562,25 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 841682908, ! sehir kariyer fest,sehircareerfest,94,8.416829082848788e+17,Şehir Kariyer Fest,tr,241.0,220.0,True
 936731771, muhammed ali aydin,muhamme73508967,90,9.3673177143731e+17,muhammed,tr,6.0,47.0,False
 153435964, seyma nur demiray,SeymaNurDEMRAY,94,1534359642.0,Şeyma Nur Demiray,en,52.0,231.0,False
-956177545,muhammed emir eren,memrern,95,9.561775459044925e+17,Muhammed Emir,tr,45.0,140.0,False
+956177545,muhammed emir eren,memrern,95,9.561775459044924e+17,Muhammed Emir,tr,45.0,140.0,False
 893583290,ceylan aslanhan,ceylanaslanhnn,100,8.935832906822902e+17,Ceylan Aslanhan,tr,65.0,103.0,False
-963898159,ahmet seba,ahmetSBA,100,9.638981599980421e+17,Ahmet SebA,en,48.0,432.0,False
+963898159,ahmet seba,ahmetSBA,100,9.63898159998042e+17,Ahmet SebA,en,48.0,432.0,False
 931164629, hasan huseyin ates,Huseyin56425087,90,9.31164629891539e+17,Huseyin,en,11.0,199.0,False
-931913438, abdulkadir turk,Kadir30915103,90,9.319134389343273e+17,Kadir,tr,2.0,112.0,False
+931913438, abdulkadir turk,Kadir30915103,90,9.319134389343272e+17,Kadir,tr,2.0,112.0,False
 918852934,ecenur bavas,ecebvss,92,9.188529345443185e+17,Ecenur Bavaş,tr,15.0,63.0,False
 711526925, erasmus -,adimucharfli,90,7.115269259578e+17,M,en,0.0,193.0,False
 715389341,gokhan uyaroglu,GokhanUyaroglu,90,7.153893413090755e+17,Gökhan Uyaroğlu,tr,18.0,203.0,False
 312582709,muhammed bilal demirel,mbilaldemirel,90,3125827097.0,Bilal Demirel,de,259.0,162.0,False
 943995216,alhabib algoni tidjani anour,algoni_alhabib,90,9.43995216612266e+17,Alhabib Algoni,en,9.0,111.0,False
 153699537, ! sosyoloji,socsehir,90,1536995378.0,ŞEHİR Sosyoloji,en,2992.0,39.0,True
-938833884,mehmet fatih kocalar,Fatihknn34,90,9.388338845187645e+17,Fatih k,tr,4.0,66.0,False
+938833884,mehmet fatih kocalar,Fatihknn34,90,9.388338845187644e+17,Fatih k,tr,4.0,66.0,False
 750860625,bedirhan gultekin,bedirhangltkn16,97,7.508606253461709e+17,Bedirhan Gültekin,en,93.0,157.0,False
 220339610,fatih kabas,FthKbs,100,2203396100.0,Fatih Kabas,tr,306.0,446.0,False
 952347667,ahsen nur bostanci,nazendesultann,94,952347667.0,Ahsen Nur Bostancı,tr,110.0,215.0,False
 949771293, mehmet akinci,mehmet79016489,90,9.497712935781868e+17,mehmet,en,3.0,89.0,False
 14668733, ahmet bulut,kral,100,14668733.0,Ahmet Bulut,en,243.0,62.0,False
 134147274,maral cankaya,meraldegilmaral,96,134147274.0,maral çankaya,tr,322.0,594.0,False
-933318049,muhammed melih erensoy,mmrnsy,90,9.333180490039091e+17,Melih Erensoy,tr,28.0,77.0,False
+933318049,muhammed melih erensoy,mmrnsy,90,9.333180490039092e+17,Melih Erensoy,tr,28.0,77.0,False
 928910988,mehmet uyar,MehmetU30328361,91,9.289109887951094e+17,Mehmet Ucar,tr,1.0,121.0,False
 66272259, ozge kilicoglu,ozgeka,90,66272259.0,Ozge K,en,793.0,1718.0,False
 960623069,suheyl uluturk,SuheylUluturk,92,9.606230698564854e+17,süheyl ulutürk,en,34.0,19.0,False
@@ -588,7 +588,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 726902779,halil ulusoy,haveyoumethalil,100,7.269027791644303e+17,Halil Ulusoy,tr,165.0,161.0,False
 282804171, ferhat ozgur catak,srsaldiray,90,2828041719.0,Ferhat,tr,71.0,1724.0,False
 221355069, enes eryarsoy,eneseryarsoy,100,2213550694.0,Enes Eryarsoy,en,211.0,118.0,False
-938348752, ozge bozkurt,zge32799330,90,9.383487526744801e+17,Özge,tr,0.0,60.0,False
+938348752, ozge bozkurt,zge32799330,90,9.3834875267448e+17,Özge,tr,0.0,60.0,False
 702515275, ertugrul avci,ertugrulcil2,88,7.025152758083052e+17,ertugrul cil,tr,72.0,329.0,False
 888327613,ayse rumeysa mus,rmysakpnrr,90,8.883276135671685e+17,rumeysa,tr,13.0,219.0,False
 390296792, ahmet furkan sarisoy,furkanomr,90,3902967921.0,Furkan,en,31.0,57.0,False
@@ -603,30 +603,30 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 294182546, onder mutlu yilmaz,ondermy,91,294182546.0,Önder Mutlu Yılmaz,tr,134.0,56.0,False
 941330773, tamer akan,tamerakbulut55,90,9.413307732018668e+17,tamer,tr,0.0,52.0,False
 158556088,yaren aktas,yaarendursun,90,1585560883.0,Yaren,tr,248.0,92.0,False
-936761307,senih tuccar,senihtuccar,96,9.367613075875881e+17,senih tüccar,tr,76.0,284.0,False
+936761307,senih tuccar,senihtuccar,96,9.36761307587588e+17,senih tüccar,tr,76.0,284.0,False
 18974605,murat er,erenm,89,18974605.0,Murat Eren,en,682.0,4997.0,False
 139968386,denizhan ece,denizhanecee,90,1399683860.0,Denizhan,tr,80.0,71.0,False
 362653116,merve sena sevindik,senaercaan,90,362653116.0,merve sena,tr,239.0,37.0,False
 930969949, academia,varolasenam,90,9.309699497110774e+17,D,tr,0.0,42.0,False
 482114306, seda ediz,sedaccn,90,482114306.0,Seda,tr,128.0,210.0,False
 764745854,dilanur cetinkaya,dilanctnkaya,90,7.647458541923287e+17,Dilan Çetinkaya,tr,350.0,719.0,False
-931211155,evelina memetova,memet30082819,90,9.312111553890099e+17,memet,tr,0.0,36.0,False
+931211155,evelina memetova,memet30082819,90,9.3121115538901e+17,memet,tr,0.0,36.0,False
 378589207,merve durmus,_MerveDurmus,100,378589207.0,Merve Durmus,tr,234.0,210.0,False
 411742296, ! felsefe,SehirFelsefe,90,4117422969.0,ŞEHİR Felsefe Bölümü,tr,177.0,44.0,True
 885783356,yunus bakir,yunusbakr08,91,8.857833562265354e+17,Yunus Bakır,tr,31.0,70.0,False
 603268093, cengiz benli,ycbenli,100,603268093.0,Cengiz Benli,en,116.0,304.0,False
 135729816, hakan danis,hkngokt,90,1357298162.0,Hakan,tr,99.0,426.0,False
 889167871, erasmus -,muneminati,90,889167871.0,Mü,tr,969.0,104.0,False
-928991554,abdulsamet aydinli,SametAy93763453,90,9.289915545550111e+17,Samet Ay,tr,0.0,94.0,False
+928991554,abdulsamet aydinli,SametAy93763453,90,9.289915545550112e+17,Samet Ay,tr,0.0,94.0,False
 920600836, meryem selva ince,meryem_selva,95,9.20600836903981e+17,Meryem Selva,tr,67.0,342.0,False
 942842743, tugce aydas,tugceozz85,90,9.428427433358991e+17,tugce,tr,3.0,60.0,False
-916911351,ilknur bahadir,ilknurbahadirst,96,9.169113516327117e+17,ilknurbahadir,tr,115.0,388.0,False
+916911351,ilknur bahadir,ilknurbahadirst,96,9.169113516327116e+17,ilknurbahadir,tr,115.0,388.0,False
 858668250,yusuf emre demir,Emredem68643940,90,8.586682501708718e+17,Emre demir,tr,5.0,296.0,False
-907925068, oktay adalier,Ali08932303,90,9.079250683108925e+17,Ali,tr,2.0,54.0,False
+907925068, oktay adalier,Ali08932303,90,9.079250683108924e+17,Ali,tr,2.0,54.0,False
 847741204,sehir cycling club,SehirCycling,94,8.477412042046341e+17,Şehir Cycling Club,tr,123.0,92.0,True
 258309349,muhittin ozkan,mhttnydn,90,2583093490.0,Muhittin,tr,59.0,340.0,False
 950797428,merve elif karacan,ehandek,90,9.507974282566328e+17,elif karaca,tr,1.0,80.0,False
-929399643, tufan buzpinar,Tufan52735090,90,9.293996439177503e+17,Tufan,tr,0.0,123.0,False
+929399643, tufan buzpinar,Tufan52735090,90,9.293996439177504e+17,Tufan,tr,0.0,123.0,False
 723145558,sevval elif karalar,eliffkaralar,90,7.23145558433493e+17,elif karalar,tr,11.0,55.0,False
 785884297, eda akkurt,ceyl_eda,90,7.858842972783944e+17,eda,tr,130.0,850.0,False
 433768507,burak yasar,aliburakyanar,91,433768507.0,burak yanar,tr,53.0,547.0,False
@@ -646,7 +646,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 174415744, sehir sehir,sehiredebiyat,95,174415744.0,sehir edebiyat,en,2070.0,287.0,True
 929287410, emine oztaner,TANER31254955,90,9.292874105628058e+17,TANER,tr,1.0,87.0,False
 950095864, muzehher leyla burak,burak37807042,90,9.500958649445786e+17,burak,en,0.0,83.0,False
-958633164, kasim kopuz,Kasim34693426,90,9.586331646243553e+17,Kasim,en,0.0,55.0,False
+958633164, kasim kopuz,Kasim34693426,90,9.586331646243552e+17,Kasim,en,0.0,55.0,False
 927111653,abdullah seyda aksakal,AbdullahSAksak9,89,9.271116531199386e+17,Abdullah S. Aksakal,tr,16.0,57.0,False
 898608904,mustafa cemre can,iccndgl,90,8.986089044935107e+17,CEMRE ➰,tr,99.0,96.0,False
 959417729,nicole tayseer salawy,AyseeDers,90,9.594177294376346e+17,AYSEE,en,1.0,114.0,False
@@ -657,18 +657,18 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 925109031,dogukan tek,dtkan_tek,91,9.251090319744328e+17,Doğukan Tek,tr,58.0,153.0,False
 319391792, elif ãelebi,_elifcelebi,100,3193917928.0,Elif Çelebi,en,268.0,268.0,False
 962417297, merve aydin,merveliyorum,90,9.624172975907594e+17,Merve,tr,12.0,57.0,False
-931590005, gmail -,hsynozkn1,90,9.315900057006121e+17,Promekmuhendislik@gmail.com Hüseyin,tr,1.0,89.0,False
+931590005, gmail -,hsynozkn1,90,9.31590005700612e+17,Promekmuhendislik@gmail.com Hüseyin,tr,1.0,89.0,False
 132959629, bologna -,nevermiindbro,90,1329596299.0,N,tr,370.0,81.0,False
 806973368,ahmet temizel,46dedee,100,806973368.0,Ahmet Temizel,tr,179.0,239.0,False
 79819842, kagan koc,kaankursad,100,79819842.0,Kagan Koc,en,445.0,484.0,False
 250893025, nuri aktemur,aktemurugur,90,250893025.0,aktemur,tr,87.0,54.0,False
 943397135,abdullah eroglu,AbdullahKroglu2,93,9.43397135919272e+17,Abdullah Köroglu,en,7.0,118.0,False
 164596213, abdulhalik damar,ahdamar,100,164596213.0,abdulhalik damar,en,252.0,210.0,False
-990370738,hamza uysal,hamzauysal_,100,9.903707381704663e+17,Hamza Uysal,tr,7.0,19.0,False
+990370738,hamza uysal,hamzauysal_,100,9.903707381704664e+17,Hamza Uysal,tr,7.0,19.0,False
 308508409, rukiye ucar,Rukiye483577244,90,3085084091.0,Rukiye,tr,46.0,488.0,False
 885516259, zeynep ceren acarturk,zeyneps9813,90,8.855162593072128e+17,zeynep,tr,12.0,447.0,False
 594598174,busra kesekler,YazeLBusra,89,594598174.0,Büşra KesekLer,tr,140.0,199.0,False
-929796263,sevde dogan,sevdedgnn,91,9.297962636583117e+17,Sevde Doğan,en,156.0,268.0,False
+929796263,sevde dogan,sevdedgnn,91,9.297962636583116e+17,Sevde Doğan,en,156.0,268.0,False
 718725939,aghaali huseynov,h_aghaali,100,7.187259391658353e+17,Aghaali Huseynov,en,23.0,53.0,False
 742655190, hakan danis,h6k6n,90,742655190.0,hakan,tr,29.0,1181.0,False
 895992314, asli avci,akorubozuk,94,895992314.0,Ali Avci,tr,409.0,140.0,False
@@ -2690,7 +2690,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 584466362, zafer nalbantoglu,zaferoguz412,90,584466362.0,Zafer,tr,92.0,156.0,False
 475919203,burak arslan,BuraqLeon,100,4759192037.0,Burak Arslan,tr,63.0,409.0,False
 964080039, muharrem bagriyanik,Agr50071162,90,9.640800399051244e+17,Agr,en,0.0,10.0,False
-956970661,elif istif,istifeliff,95,9.569706616452547e+17,Elif İstif,tr,45.0,66.0,False
+956970661,elif istif,istifeliff,95,9.569706616452548e+17,Elif İstif,tr,45.0,66.0,False
 152046676, farabi -,mehmetfarabi870,100,1520466764.0,FARABİ,tr,256.0,2879.0,False
 709746555, deniz haj abrahim,dendeskier,90,7.097465559018865e+17,Deniz,en,7.0,100.0,False
 819172968,adil sava,carmenderjr,100,8.19172968022573e+17,Adil Sava,tr,23.0,68.0,False
@@ -2732,7 +2732,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 800451424,muhammed celik,mhmmtclk95,89,8.004514247735173e+17,muhammet çelik,tr,20.0,503.0,False
 549154555, seda ediz,sedacakiir,90,549154555.0,Seda,tr,354.0,735.0,False
 896383698,semra kaya,seemrot,90,8.963836982743327e+17,Semra.,tr,78.0,172.0,False
-931496029, dspace admin,arslanees,90,9.314960291989299e+17,E A,tr,48.0,176.0,False
+931496029, dspace admin,arslanees,90,9.3149602919893e+17,E A,tr,48.0,176.0,False
 734657242,hatice yeliz aktas,yelizyavuzzgi,90,7.346572425370706e+17,Yeliz,en,9.0,166.0,False
 307865736, erasmus -,ecemaslann,90,307865736.0,E.,tr,171.0,418.0,False
 764873903,fatma tekin,fatma_teken,91,7.648739034790871e+17,Fatma Teken,tr,15.0,85.0,False
@@ -2741,7 +2741,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 18860327,mehmet ali saricaoglu,alisarica,90,18860327.0,Ali SARICA,tr,1183.0,4313.0,False
 334267223,fatma tekin,ftm_ekinc,87,334267223.0,Fatma Ekinci,tr,377.0,481.0,False
 309081576, esra almas,trenyolcusuu,90,3090815764.0,esra,tr,21.0,276.0,False
-922758204,hazem qaderi,yilmazezgi0,90,9.227582041315615e+17,aze,tr,9.0,1093.0,False
+922758204,hazem qaderi,yilmazezgi0,90,9.227582041315616e+17,aze,tr,9.0,1093.0,False
 450840581,esra ozdil,essraozdil,95,450840581.0,esraozdil,en,258.0,403.0,False
 785790783, zafer nalbantoglu,ranttantt,90,7.857907837188465e+17,Ant,tr,10.0,363.0,False
 546145630,furkan aktan,furkan_aktas24,92,546145630.0,Furkan AKTAŞ,tr,84.0,165.0,False
@@ -2831,14 +2831,14 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 159965297,kaan kurt,KveKurt,100,1599652974.0,Kaan Kurt,tr,109.0,400.0,False
 313382865,ravza yeniceri,ravzza,90,313382865.0,Ravza,tr,242.0,317.0,False
 883352404,ammar yasir tikac,AMMAR77891998,90,8.833524048671252e+17,AMMAR,ar,23.0,37.0,False
-915979364,mehmet ali sen,Mehmetcskn43,95,9.159793640634245e+17,Mehmet Ali,tr,66.0,216.0,False
+915979364,mehmet ali sen,Mehmetcskn43,95,9.159793640634244e+17,Mehmet Ali,tr,66.0,216.0,False
 87947148, gizem ilter,gizemakbiyik,90,87947148.0,Gizem,tr,80.0,291.0,False
 150778970, erasmus -,elcinarabaci,90,1507789706.0,e.,en,11569.0,2911.0,False
 243383668,saruhan eser besler,farz_oldu,90,2433836685.0,saruhan,tr,133.0,372.0,False
 970482733,yunus emre demirhan,yuunusemre7,90,9.704827335238328e+17,Yunus Emre,en,0.0,68.0,False
 810268310,fatma nur cakmak,erbasfatmanur,90,8.10268310667305e+17,Fatma Nur,tr,92.0,144.0,False
 194156226,mustafa burak eyuboglu,eyyubyldrm,90,194156226.0,eyub,tr,227.0,1190.0,False
-943102354,eleonora fino,Nora53620725,90,9.431023544754135e+17,Nora,en,4.0,136.0,False
+943102354,eleonora fino,Nora53620725,90,9.431023544754136e+17,Nora,en,4.0,136.0,False
 758694225,nur betã¼l yerli,betulcegniz,90,7.586942255591178e+17,betül,tr,75.0,296.0,False
 594766560,fatih aslan,fatih_alkn,91,594766560.0,Fatih Alkan,de,173.0,656.0,False
 367997832, mehmet aytar,mehmetkhalit,96,367997832.0,mehmet ayar,tr,87.0,449.0,False
@@ -2932,7 +2932,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 936667026, salim cam,alim_cam,88,9.36667026046808e+17,Alim Çam,tr,62.0,357.0,False
 787842271, serife gundogan,_ismifail,90,787842271.0,ârife 🌾,tr,412.0,597.0,False
 851580986,arif cihad altundal,Cihad_al,90,851580986.0,Cihad AL,tr,297.0,329.0,False
-955809079,tayfun dasci,Tayfun23966591,90,9.558090796031877e+17,Tayfun,tr,188.0,562.0,False
+955809079,tayfun dasci,Tayfun23966591,90,9.558090796031876e+17,Tayfun,tr,188.0,562.0,False
 323250188,nur betã¼l yerli,betulbaygeldi,90,323250188.0,Betül,tr,88.0,324.0,False
 279988761,serra dogan,baskamasallar,90,2799887613.0,Serra,tr,21.0,276.0,False
 955494889, ahmet tan,tasanahmet12,90,9.55494889021739e+17,ahmet Taşan,tr,11.0,147.0,False
@@ -2950,7 +2950,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 217096732,mustafa gunel,mustafagelec38,88,217096732.0,Mustafa Geleç,tr,240.0,2144.0,False
 104275460,ahmet faruk eker,ahmetfarukclk,88,1042754604.0,Ahmet Faruk Çelik,tr,327.0,352.0,False
 150070163, ! hr,z_senoguz,90,1500701630.0,Zehra Şenoguz,tr,178.0,674.0,False
-942135928, hikmet yaman,andysezgin,90,9.421359286630113e+17,Yaman,tr,540.0,1637.0,False
+942135928, hikmet yaman,andysezgin,90,9.421359286630112e+17,Yaman,tr,540.0,1637.0,False
 94892972,feyza arberk,tuc_cah,90,94892972.0,rûberû,en,20.0,136.0,False
 287050261, ! arge,SBsargem,90,2870502616.0,SARGEM,tr,405.0,466.0,False
 195842934,sibel evecen,ssewecen,100,195842934.0,Sibel Evecen,en,193.0,425.0,False
@@ -2959,13 +2959,13 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 319021942, ! tarih,tarih_foto,90,3190219421.0,Tarihî İstanbul,tr,22638.0,130.0,False
 760192294,selim sarac,Selimaraci,91,7.601922945323172e+17,Selim Aracı,tr,134.0,167.0,False
 225530992,mehmet yilmaz,MehmetY83921220,92,2255309924.0,Mehmet Yılmaz,tr,132.0,752.0,False
-924341433,omer bahadir,bahca_omer,90,9.243414331920589e+17,Ömer BAHÇA,tr,0.0,14.0,False
+924341433,omer bahadir,bahca_omer,90,9.243414331920588e+17,Ömer BAHÇA,tr,0.0,14.0,False
 315955943, ! tarih,TarihVakfi,90,315955943.0,Tarih Vakfı,tr,2300.0,0.0,False
 152727953, lcv -,yesilgazell,90,1527279534.0,V,tr,276.0,360.0,False
 358736816, yusuf arslan,yusufkuvvet,90,358736816.0,yusuf,tr,188.0,1820.0,False
 704764994, ! sosyoloji,sosyoIoji,100,7.047649948570788e+17,Sosyoloji,tr,18.0,57.0,False
 147275385,fatma demir,fatmatasdmir,88,1472753857.0,Fatma Taşdemir,tr,44.0,550.0,False
-959190495, academia,Dk05330818,90,9.591904950492119e+17,D.,tr,24.0,382.0,False
+959190495, academia,Dk05330818,90,9.59190495049212e+17,D.,tr,24.0,382.0,False
 274754817,kadir kir,kadirkidir,90,2747548179.0,Kadir Kidir,tr,125.0,313.0,False
 261409107,nur betã¼l yerli,babacanbetul,90,2614091070.0,Betül,en,187.0,289.0,False
 977660684,abced club,Abc40175950,90,9.77660684359127e+17,Abc,tr,6.0,113.0,False
@@ -2978,8 +2978,8 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 134368437,koral ozgunay,todrytocry,90,1343684372.0,ozgun,tr,80.0,941.0,False
 771033595,mustafa karaca,KaratasM_25,90,7.710335955237888e+17,Mustafa Karataş,tr,495.0,163.0,False
 167649009, ercan atam,MratErcan,90,1676490096.0,Ercan,tr,21.0,616.0,False
-969281632,hamza taha baba,Hamza70999380,90,9.692816321705779e+17,Hamza,tr,4.0,113.0,False
-901069408, tuba kurtulus,Kurt81459980,90,9.010694084744765e+17,A.KURT,tr,221.0,494.0,False
+969281632,hamza taha baba,Hamza70999380,90,9.69281632170578e+17,Hamza,tr,4.0,113.0,False
+901069408, tuba kurtulus,Kurt81459980,90,9.010694084744764e+17,A.KURT,tr,221.0,494.0,False
 277918073, bologna -,mivano_,90,2779180733.0,b',tr,23.0,357.0,False
 425933822,hasan coskun,hsncskn91,100,4259338222.0,Hasan Coskun,en,148.0,483.0,False
 956095230, ismail kara,ismail63206146,90,9.560952301593108e+17,ismail,en,33.0,550.0,False
@@ -3017,7 +3017,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 316663321,esma nur bayraktarli,esma_nur__,90,316663321.0,esma nur,tr,1215.0,294.0,False
 345445988,mehmed celik,MehmetCelik55,87,345445988.0,Mehmet Çelik,tr,1327.0,4545.0,False
 380457647,ahmet seba,ahmetmisevbanmi,91,380457647.0,Ahmet Sevban,tr,316.0,405.0,False
-914575629,sena tozkoparan,Mhmttzkprn,90,9.145756297602867e+17,tozkoparan,tr,71.0,173.0,False
+914575629,sena tozkoparan,Mhmttzkprn,90,9.145756297602868e+17,tozkoparan,tr,71.0,173.0,False
 803344148, erhan inegol,ERHAN_saglam13,90,8.033441480530616e+17,Erhan,tr,28.0,281.0,False
 307453188, mehmet emin artuk,EminKuruc,90,307453188.0,emin,tr,785.0,2569.0,False
 182337610, salih salih,m_salihyldrm,95,182337610.0,Muhammet Salih,tr,52.0,380.0,False
@@ -3030,7 +3030,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 761857989, lync adm,agacrk,90,7.61857989422805e+17,adm,tr,105.0,1318.0,False
 708271214,abdirizak hassan,Abdiriz79888207,90,7.08271214767317e+17,Abdirizak,en,18.0,95.0,False
 303726167, merve surukli,kucukkbalik,90,3037261677.0,merve s.,tr,67.0,462.0,False
-945046703, ! tarih,MezheplerT,90,9.450467035934515e+17,Mezhepler Tarihcisi,tr,96.0,92.0,False
+945046703, ! tarih,MezheplerT,90,9.450467035934516e+17,Mezhepler Tarihcisi,tr,96.0,92.0,False
 187094004,muhammed enes soyoz,menesaxoy,89,1870940046.0,Muhammed Enes Aksoy,tr,357.0,493.0,False
 768172755, enes eryarsoy,ruyafilmi,90,7.681727558250947e+17,Rüya,tr,122.0,369.0,False
 951772602,abdullah karakas,ehibba,94,951772602.0,abdullah karakaş,tr,110.0,224.0,False
@@ -3043,22 +3043,22 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 218862394, ahmet sahin,ahmedaga70,91,2188623945.0,Ahmet Şahin,tr,6.0,367.0,False
 814462529, gizem ilter,gizem_mek,90,8.144625298208522e+17,Gizem,tr,358.0,2076.0,False
 247001652,zeynep yavuz,seyyahzeynep,100,247001652.0,Zeynep Yavuz,tr,385.0,1052.0,False
-951929589,furkan ucar,Furkancinar25,87,9.519295892861747e+17,Furkan Cinar,tr,13.0,75.0,False
+951929589,furkan ucar,Furkancinar25,87,9.519295892861748e+17,Furkan Cinar,tr,13.0,75.0,False
 348352099, nida aksoy,nidadeniz10,90,3483520996.0,nida,tr,7.0,213.0,False
 146839135,merve sancaktar,sancaktar9,90,1468391353.0,sancaktar,tr,208.0,954.0,False
 742686779,yusuf ozturk,yusufoztr,91,7.426867796361257e+17,Yusuf Öztürk,en,3.0,53.0,False
 407072458, istanbul åehir -,hicbirkul,90,407072458.0,hiç,tr,10.0,65.0,False
-977171850, samet topsever,Samet5432,90,9.771718500642857e+17,Samet,tr,30.0,102.0,False
+977171850, samet topsever,Samet5432,90,9.771718500642856e+17,Samet,tr,30.0,102.0,False
 241117529,szymon kurczewski,Szymon_Zylinski,90,241117529.0,Szymon,en-gb,234.0,94.0,False
 307282821, emre ceran,emre_memis,90,307282821.0,emre,tr,29.0,129.0,False
 947934061,merve kaplan,mervekaplan_,100,947934061.0,Merve Kaplan,tr,93.0,91.0,False
 754931736, eyyã¼p yä±lmaz,eyyup_2016,95,7.549317368999485e+17,Eyyüp Yılmaz,tr,22.0,230.0,False
-921065233,nurdan saka,alaturkakiremit,90,9.210652333382615e+17,nurdan,tr,25.0,162.0,False
-973752436, esra nur turan,esrdmrbsr,90,9.737524365559071e+17,Esra Nur🌾,tr,53.0,195.0,False
+921065233,nurdan saka,alaturkakiremit,90,9.210652333382616e+17,nurdan,tr,25.0,162.0,False
+973752436, esra nur turan,esrdmrbsr,90,9.737524365559072e+17,Esra Nur🌾,tr,53.0,195.0,False
 807205715,hafiz hussaini mahuta,klasik_ima,90,8.072057151232573e+17,İMA,tr,1876.0,3.0,False
 156506029, kerim kar,akar_kerim,95,1565060294.0,Kerim Akar,tr,95.0,185.0,False
 293899915,muhammet aba,AcarMuhacar,88,2938999150.0,Muhammet Acar 🏆,tr,162.0,226.0,False
-925438524, sevde nur duzguner,sevdekararmaz,90,9.254385244925747e+17,sevde,tr,11.0,133.0,False
+925438524, sevde nur duzguner,sevdekararmaz,90,9.254385244925748e+17,sevde,tr,11.0,133.0,False
 863631689,emre kaya,AynaEmre,89,8.636316897923318e+17,Emre Ayna,tr,4.0,68.0,False
 797213691,reyhan reyhan,murettibhane,95,7.972136910202143e+17,Elif Reyhan,tr,0.0,202.0,False
 233837120,emin uzun,mneuzunyol,89,233837120.0,Mine Uzun,tr,468868.0,168.0,False
@@ -3077,7 +3077,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 230837083, ! mali isler,ibrahimberat,90,230837083.0,MALİ,tr,62.0,251.0,False
 193879875,esra nur akbulak,esraakbulak____,95,1938798758.0,Esra Akbulak,tr,104.0,135.0,False
 61418116, ali ilker demir,Ulker,90,61418116.0,Ülker,tr,149497.0,46.0,False
-960318460, ali uzun,_zenubya,90,9.603184604997755e+17,Z.,tr,179.0,184.0,False
+960318460, ali uzun,_zenubya,90,9.603184604997756e+17,Z.,tr,179.0,184.0,False
 337286018, mustafa aksu,aslanparcasi22,90,337286018.0,Mustafa,tr,2261.0,4832.0,False
 813128621, hã¼seyin alptekin,HuseyinS241,90,8.131286212085187e+17,Hüseyin,tr,127.0,704.0,False
 841695871, muharrem bagriyanik,muharremtopuz76,90,8.416958710162924e+17,Muharrem,tr,881.0,3426.0,False
@@ -3155,7 +3155,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 476001573, emre ceran,TheRealEmree,90,476001573.0,Emre,tr,155.0,34.0,False
 760529218, zeynep ceren acarturk,zeynebsahin,90,7.60529218782593e+17,Zeynep,tr,372.0,176.0,False
 720355771,zeynep aysun armagan,aysunkrblk,90,7.2035577123038e+17,Aysun 🐣,tr,161.0,362.0,False
-947451542, ibrahim akar,Hasekili15,90,9.474515427723387e+17,ibrahim,tr,87.0,229.0,False
+947451542, ibrahim akar,Hasekili15,90,9.474515427723388e+17,ibrahim,tr,87.0,229.0,False
 62322658,kadirhan mavis,mavidolunay,90,62322658.0,mavi,en,8.0,30.0,False
 156001546, ! tarih,tarihdergi,100,1560015468.0,#tarih,en-gb,145050.0,100.0,False
 322696218,ahmet hamza cetinkaya,acetinkaya3778,95,3226962183.0,Ahmet Cetinkaya,tr,54.0,203.0,False
@@ -3172,16 +3172,16 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 297210513,muhammed cakir,Muhammed_195,89,2972105135.0,Muhammed Çakır,tr,141.0,529.0,False
 190085670, ! tarih,TarihVakfiAnk,90,1900856707.0,Tarih Vakfı/Ankara,en,1639.0,174.0,False
 857658832,enes acar,Enesakca15,89,8.5765883205043e+17,Enes akca,tr,42.0,332.0,False
-946577240, sena akkisla,senabaran_,90,9.465772403845161e+17,sena,tr,21.0,112.0,False
+946577240, sena akkisla,senabaran_,90,9.46577240384516e+17,sena,tr,21.0,112.0,False
 585449351,tugba firat,TugbaFrat,91,585449351.0,TUĞBA FIRAT,tr,224.0,62.0,False
-980131223, ! hr,tarihtutkunu,90,9.801312233465815e+17,Mihraç Aşkın,tr,34.0,528.0,False
+980131223, ! hr,tarihtutkunu,90,9.801312233465816e+17,Mihraç Aşkın,tr,34.0,528.0,False
 185169192,ahmed ahmed,fahmethilmi,95,1851691922.0,Ahmed Raci,tr,8659.0,394.0,False
 381819158,elif banu arslan,ArslanElif10,95,3818191582.0,elif arslan,tr,66.0,137.0,False
 195004936, cansu arisoy,naservas1,90,1950049362.0,can,de,54.0,811.0,False
 746052625,esma aygun,esmayilmaz264,90,7.460526258046935e+17,Esma,tr,75.0,532.0,False
 55941289,sinan sari,Sinan_Sari_,90,55941289.0,Sinan Sarı 🇹🇷,tr,104.0,114.0,False
 487026834, taha imeci,tahactahac,90,4870268343.0,Taha Ç.,tr,166.0,676.0,False
-944356027,sã¼meyye yokus,Smyynrr,90,9.443560271385641e+17,Sümeyye 🍃,tr,30.0,262.0,False
+944356027,sã¼meyye yokus,Smyynrr,90,9.44356027138564e+17,Sümeyye 🍃,tr,30.0,262.0,False
 850970562,huseyin esad ciftci,ciftciesad,94,850970562.0,Hüseyin Esad Çiftci,tr,8.0,64.0,False
 276632987,erdem er,erdemeren2234,89,2766329874.0,Erdem Eren,tr,33970.0,14802.0,False
 785580540, ! felsefe,imufelsefe2016,90,7.855805409927619e+17,İMÜ Felsefe Kulübü,tr,886.0,173.0,False
@@ -3205,14 +3205,14 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 756224243,alikamal gulfanov,alikemalahiska,100,7.562242433067295e+17,Alikamal Gulfanov,ru,53.0,110.0,False
 867510112,ahmet mursel dogan,AhmetMrselDGN42,91,8.675101129902367e+17,Ahmet Mürsel DOĞAN,tr,5.0,46.0,False
 338231250, bologna -,ahmedmelii,90,3382312503.0,A,en,44.0,60.0,False
-901321232, yusuf bayrak,Bayracelk,90,9.013212324440105e+17,Bayra,tr,419.0,1034.0,False
+901321232, yusuf bayrak,Bayracelk,90,9.013212324440104e+17,Bayra,tr,419.0,1034.0,False
 724338064, elena masnada,ceren_acayy,90,7.243380649491251e+17,Elena🌹,tr,81.0,135.0,False
 313495504, facebook -,karlarvar1,90,3134955043.0,K,tr,1.0,12.0,False
 315740054,mehmet uyar,Mehmet_Uyarmr,100,3157400549.0,Mehmet Uyar,tr,22.0,102.0,False
 235768585,ibrahim hayal,ibrahimhata79,88,2357685854.0,ibrahim Hata,tr,36.0,144.0,False
 194364252,abdulkadir aksu,ayka_kadir,87,1943642528.0,Abdulkadir AYKAÇ,tr,129.0,1022.0,False
 623692094,moamen elmasry,seckinsry,90,623692094.0,sry,tr,232.0,23.0,False
-939093653, umut koc,umutylm23086406,90,9.390936531376251e+17,umut,tr,19.0,179.0,False
+939093653, umut koc,umutylm23086406,90,9.390936531376252e+17,umut,tr,19.0,179.0,False
 291779320, merve aydin,Evremistanbul,90,291779320.0,MERVE,tr,76.0,90.0,False
 817213219,vasileios chountis,hasilkelam,90,817213219.0,vasil,tr,4.0,83.0,False
 108870384,rabia gulsah culhalik,rabia_salur,90,1088703846.0,Rabia,tr,73.0,108.0,False
@@ -3237,7 +3237,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 153505049, sezgin doruk,sdorukk0,90,153505049.0,Doruk,en,74.0,381.0,False
 359964249,atakan ates,AtakanYrlmz,90,359964249.0,Atakan🍃,tr,3317.0,4020.0,False
 355162108,mehmet caner,mcan_agca,91,355162108.0,mehmet can,tr,158.0,846.0,False
-991937065,mirsad mahir azman,Mahir26826712,90,9.919370657083351e+17,Mahir,en,6.0,89.0,False
+991937065,mirsad mahir azman,Mahir26826712,90,9.919370657083352e+17,Mahir,en,6.0,89.0,False
 342047634, salih salih,asimsalih54,95,3420476349.0,Asım Salih,tr,7.0,193.0,False
 486857841, ahmet furkan sarisoy,furkannyiigit,90,4868578415.0,Furkan,tr,2.0,298.0,False
 356813085,zeynep ilgin yilmaz,zimrannnn,90,356813085.0,zeynep i.,tr,121.0,902.0,False
@@ -3257,7 +3257,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 901127816,meryem akdemir,alpagut_36,89,9.011278168797716e+17,Meryem Özdemir,tr,173.0,399.0,False
 431059063, ilknur baran,BaranGl98487301,90,4310590635.0,Baran,tr,81.0,576.0,False
 166607056,nur banu gencten,NrBnKydn,90,1666070563.0,Nur Banu,tr,217.0,463.0,False
-985026623,cansu aktan,ckalkn01,87,9.850266232453079e+17,Cansu Kalkan,tr,13.0,113.0,False
+985026623,cansu aktan,ckalkn01,87,9.85026623245308e+17,Cansu Kalkan,tr,13.0,113.0,False
 2425151, facebook -,facebook,100,2425151.0,Facebook,en,14026314.0,136.0,False
 279570121,mehdi nuruzade,mikhaylo_,100,2795701211.0,Mehdi Nuruzade,en,12.0,30.0,False
 766283153,mehmet yegin,MEHMETS25510855,88,7.662831534053376e+17,MEHMET SEZGIN,tr,128.0,1299.0,False
@@ -3305,7 +3305,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 766937773, muhammet ali demir,mhmmtprlt,90,7.669377738279158e+17,Muhammet,tr,35.0,117.0,False
 331103502,sumeyye koca,smyykc,96,331103502.0,Sümeyye Koca,tr,194.0,293.0,False
 338640397,yusuf kayan,yusufkaya4779,95,3386403971.0,YUSUF KAYA,tr,106.0,1104.0,False
-958760747, ! felsefe,AnkaraFelsefe,90,9.587607476763361e+17,Ankara Üniversitesi DTCF Felsefe Bölümü,en,63.0,26.0,False
+958760747, ! felsefe,AnkaraFelsefe,90,9.58760747676336e+17,Ankara Üniversitesi DTCF Felsefe Bölümü,en,63.0,26.0,False
 997882316,atilla tayyar,AtillaUmutKaya,90,997882316.0,🐵🙊}atilla{🙈🙉,en,0.0,4743.0,False
 256376310,kubra cengiz,CENGZKBRA,92,2563763109.0,KÜBRA CENGİZ,tr,17.0,345.0,False
 715527397, deniz haj abrahim,purplerain113,90,7.155273975342776e+17,Deniz,en,70.0,1989.0,False
@@ -3355,8 +3355,8 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 802485240, onur askin,OnurKoldanci,90,8.024852408622449e+17,Onur,tr,154.0,473.0,False
 158050674,irem nur ozdilek,iremnurozdilek,94,1580506741.0,İrem Nur Özdilek,tr,352.0,117.0,False
 159540186,muhammet tahmazoglu,TahmazBilge,90,1595401862.0,Tahmaz,tr,526.0,85.0,False
-953661594,nurdan saka,Nurdan90797691,90,9.536615947849277e+17,Nurdan,en,1.0,16.0,False
-919115093,samet eser,sameteser__,90,9.191150930817761e+17,Samet Eşer,tr,59.0,102.0,False
+953661594,nurdan saka,Nurdan90797691,90,9.536615947849276e+17,Nurdan,en,1.0,16.0,False
+919115093,samet eser,sameteser__,90,9.19115093081776e+17,Samet Eşer,tr,59.0,102.0,False
 226562280, meryemelif argun,mnyetkin,90,226562280.0,meryem,tr,142.0,125.0,False
 896390817,sumeyye elif pehlivan,ElifPeh58422842,90,8.963908178956534e+17,Elif Pehlivan,tr,2.0,136.0,False
 357098332,ezgi ozdemir,ezgizdemir5,96,357098332.0,ezgi özdemir,tr,7.0,25.0,False
@@ -3379,7 +3379,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 918860308,muhammed ali kaya,muhayyali,95,9.188603082691584e+17,muhammed ali,tr,65.0,248.0,False
 871468697, muzehher leyla burak,Leylakrtll,90,8.714686979610788e+17,Leyl,tr,16.0,250.0,False
 305583962, mustafa aksu,Stulture,90,305583962.0,Mustafa,tr,175.0,5003.0,False
-943745815, ! sosyoloji,sosyolojiarsivi,90,9.437458151678853e+17,Sosyoloji Arşivi,tr,4.0,71.0,False
+943745815, ! sosyoloji,sosyolojiarsivi,90,9.437458151678852e+17,Sosyoloji Arşivi,tr,4.0,71.0,False
 300812013, mariyana akeel,pumpkin12pinky,90,3008120138.0,Riya,en,115.0,693.0,False
 229768775,ahsen akpinar,ahsensurucu,90,2297687756.0,Ahsen,tr,346.0,143.0,False
 116276502, salih salih,salihorses,95,116276502.0,Salih Örses,tr,140.0,349.0,False
@@ -3398,7 +3398,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 790517704, ! sosyoloji,SelcukSosyoloji,90,7.90517704553816e+17,Selçuk Sosyoloji,tr,1028.0,173.0,False
 870619285, ! sosyoloji,IMU_Sosyoloji,90,8.706192854162268e+17,Medeniyet Sosyoloji,tr,880.0,34.0,False
 466461206, ibrahim akar,ib_orucoglu,90,4664612069.0,ibrahim,tr,208.0,731.0,False
-983330274,sã¼meyye yokus,sozder06,90,9.833302742421627e+17,Sümeyye,en,138.0,203.0,False
+983330274,sã¼meyye yokus,sozder06,90,9.833302742421628e+17,Sümeyye,en,138.0,203.0,False
 430881823,nur betã¼l yerli,ikarusbeyin,90,430881823.0,Betül,tr,93.0,120.0,False
 946598348, farabi -,Farabidegisim,90,946598348.0,Farabi Degisim,tr,1179.0,3.0,False
 256547327,neslihan kokoz,neriberis,90,2565473271.0,neslihan,tr,22.0,619.0,False
@@ -3436,7 +3436,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 113786925,mehmet nuri akyol,mhmetnuri,88,1137869251.0,Mehmet Nuri Akı,tr,59.0,149.0,False
 491077082, fikret caliskan,fikrettopal,90,4910770828.0,Fikret,tr,150.0,757.0,False
 888147818, ! tarih,ctctctctr,90,8.881478180027351e+17,kültürtarihsiyaset,tr,9.0,215.0,False
-927443162,ayse kaya,AysaSV,89,9.274431629054157e+17,Ayşe Kaya,tr,2.0,148.0,False
+927443162,ayse kaya,AysaSV,89,9.274431629054156e+17,Ayşe Kaya,tr,2.0,148.0,False
 856142319, gmail -,cuyendee,90,8.561423196235244e+17,cuyendee@gmail.com,en,5.0,285.0,False
 519871438,seyma kaya,SeymKya,90,519871438.0,Şeyma Kaya,tr,345.0,120.0,False
 125907735,elif esra boz,ElifEsraBozz,100,1259077356.0,Elif Esra Boz,tr,89.0,91.0,False
@@ -3450,7 +3450,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 777958030, ! akademik,btlyurt,100,7.779580302185021e+17,Akademik,tr,126.0,204.0,False
 337513689,elif erturkler,94_afra,90,3375136894.0,elif er,en,1.0,39.0,False
 297300944, ! philosophy,philosopherbee,100,2973009443.0,Philosophy,tr,47.0,370.0,False
-938681214, aslihan aras,HalukAkyz2,90,9.386812141768253e+17,Aras,tr,0.0,90.0,False
+938681214, aslihan aras,HalukAkyz2,90,9.386812141768252e+17,Aras,tr,0.0,90.0,False
 472243903,emirkan celik,celiksserkan,88,4722439037.0,Serkan Celik,en,110.0,225.0,False
 297527726, murat dogruel,MuratMuratbtn,90,2975277262.0,murat,tr,87.0,1368.0,False
 168502555, mehmet akinci,memet_hat,90,168502555.0,Mehmet,tr,495.0,1798.0,False
@@ -3466,7 +3466,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 324673815,fatima ali ali,FatimaSomali,95,3246738151.0,Fatima Ali,en,6734.0,2220.0,False
 148095497,s m rafeed afnan,fadizrkly,90,1480954976.0,feed,en,16.0,38.0,False
 283571862,enes etlik,EnesEtlik,100,2835718624.0,Enes Etlik,en,80.0,258.0,False
-964514999, mustafa saymeh,AlgIlknur,90,9.645149998583357e+17,ayme,tr,39.0,105.0,False
+964514999, mustafa saymeh,AlgIlknur,90,9.645149998583356e+17,ayme,tr,39.0,105.0,False
 389739380, yavuz selim atmaca,yavuz_uezuem,90,389739380.0,Yavuz,en,208.0,1499.0,False
 333914287,sinan tekin,SOztekin20,96,3339142871.0,Sinan Öztekin,tr,58.0,335.0,False
 736098205,hasan esenkoylu,HasanEsenkoylu,93,7.360982053062164e+17,Hasan ESENKÖYLÜ,tr,2.0,72.0,False
@@ -3488,7 +3488,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 921723771, ! sosyoloji,okansosyoloji,95,9.21723771748307e+17,O'Sosyoloji,tr,61.0,99.0,False
 275030892, erasmus -,mrvoztrka,90,275030892.0,m ♕,tr,183.0,79.0,False
 327376734,yasemin ergin,ErgnYasin,92,327376734.0,Yasin Ergin,tr,100.0,989.0,False
-948614976,mehmet ortac,Mehmet_Orann,87,9.486149762851717e+17,Mehmet Oran,tr,37.0,91.0,False
+948614976,mehmet ortac,Mehmet_Orann,87,9.486149762851716e+17,Mehmet Oran,tr,37.0,91.0,False
 802269664, ayse asude ozdilek,Asu44477669,90,8.022696640972104e+17,Asu,tr,10.0,116.0,False
 891313956,seyma nur yazar,yasarseymanr,87,8.913139568030228e+17,şeyma nur yaşar,tr,29.0,113.0,False
 708921787,yusuf emre demir,yemredemirr,90,7.089217876907008e+17,Emre Demir,en,74.0,330.0,False
@@ -3504,14 +3504,14 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 783276696, ! psikoloji,pskgercekler,90,7.83276696682238e+17,Psikolojik Gerçekler,tr,0.0,10.0,False
 708233749,ahmed ahmed,anwarahmed1993,95,7.082337491593994e+17,anwar ahmed,ar,2.0,19.0,False
 768521283,serenay akgun,ArunSerenay,88,7.685212833027523e+17,serenay arun,tr,28.0,169.0,False
-945602721, ahmet ademoglu,Ahmet94282846,90,9.456027212179415e+17,Ahmet,en,1.0,100.0,False
+945602721, ahmet ademoglu,Ahmet94282846,90,9.456027212179416e+17,Ahmet,en,1.0,100.0,False
 272055239,mohammed a. a. alsawada,AAlsaw,93,2720552397.0,Mohammed A. A. Alsaw,en,0.0,3.0,False
 790512699, erkan akdemir,erkangurzluk,90,7.905126998514196e+17,erkan,en,129.0,173.0,False
 504515242, onur askin,aonurm,90,504515242.0,onur,en,148.0,1062.0,False
 386018373,abdulrahman alshibli,Abdul_shibli,97,386018373.0,abdulrhman alshibli,en,76.0,156.0,False
 702172817, erol celik,erol_353,90,7.021728172619858e+17,EROL,tr,200.0,3401.0,False
 804203848, vehbi metin demir,MetinDe77476524,90,8.042038488187167e+17,Metin Demir,tr,9.0,50.0,False
-915278292,esra yilmaz,Esraylmz274949,91,9.152782927727043e+17,Esra yılmaz,tr,148.0,158.0,False
+915278292,esra yilmaz,Esraylmz274949,91,9.152782927727044e+17,Esra yılmaz,tr,148.0,158.0,False
 302536009,muhammed hanifi kaya,muhammedhann,90,302536009.0,Muhammed Han,tr,85.0,641.0,False
 217594568, erasmus -,ssumeyra_ozkan,90,2175945689.0,süm,tr,269.0,246.0,False
 282760329, necati ersen siseci,ECA_association,90,2827603293.0,ECA,en,529.0,444.0,False
@@ -3519,7 +3519,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 195930451, meryemelif argun,elif26122009,90,1959304513.0,elif,nl,9.0,20.0,False
 634452325, meryemelif argun,mmeryemcee,90,634452325.0,meryem,tr,140.0,234.0,False
 943540521,nurcan yildirim,nursa61,90,9.43540521313751e+17,nurcan,en,60.0,52.0,False
-936270570, ! sosyoloji,Sosyofer,90,9.362705703663575e+17,Sosyoloji Üzerine,tr,8.0,64.0,False
+936270570, ! sosyoloji,Sosyofer,90,9.362705703663576e+17,Sosyoloji Üzerine,tr,8.0,64.0,False
 308690384, feyza karakullukcu,feyza_sacmali,90,3086903842.0,Feyza,tr,17.0,151.0,False
 247207008,sinan neslihanoglu,sinanon_,90,2472070080.0,Sinan Ön,tr,346.0,494.0,False
 414130501,nurcan yildirim,nurcanbykknt,90,4141305015.0,Nurcan,tr,12.0,78.0,False
@@ -3535,7 +3535,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 218514583, tamer akan,omercfc,90,2185145832.0,ömer,tr,961.0,421.0,False
 903003407, canan balan,cananhul,90,9.030034077992591e+17,Canan,tr,28.0,310.0,False
 313498349, ! hr,utopiksomon,90,3134983491.0,Zehra Karadeniz,tr,30.0,182.0,False
-938029223, ! sosyoloji,sosyolojikitap,90,9.380292231173161e+17,Sosyoloji Kitaplığı,tr,16.0,206.0,False
+938029223, ! sosyoloji,sosyolojikitap,90,9.38029223117316e+17,Sosyoloji Kitaplığı,tr,16.0,206.0,False
 763751226, rukiye ucar,rukiye_anli,90,7.637512263076413e+17,rukiye,tr,91.0,202.0,False
 46060742, arzu oyacioglu,oyatorun,90,46060742.0,Oya,en,134.0,522.0,False
 840847095, ! tarih,Tarih_ve_toplum,90,8.40847095594664e+17,"Tarih, toplum,kültür",tr,45.0,602.0,False
@@ -3550,18 +3550,18 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 842096504, zeynep ceren acarturk,vukivar,90,8.420965044919091e+17,Zeynep,tr,77.0,302.0,False
 631426132,emrah yilmaz,EmrahhYILMAZ,100,631426132.0,Emrah YILMAZ,tr,206.0,822.0,False
 342903393,murat demir,muratdemirbakal,90,342903393.0,murat demir bakal,tr,1473.0,2939.0,False
-918964865,rabia gulsah culhalik,Gulsahc3,90,9.189648651082711e+17,Gulsah.c,tr,62.0,323.0,False
+918964865,rabia gulsah culhalik,Gulsahc3,90,9.189648651082712e+17,Gulsah.c,tr,62.0,323.0,False
 360735109,murat demir,AsMilat,91,3607351095.0,murad demir,tr,256.0,471.0,False
-937652188, ! sosyoloji,kulupsosyoloji,90,9.376521887043707e+17,Üsküdar Üniversitesi Sosyoloji Kulübü,tr,27.0,51.0,False
+937652188, ! sosyoloji,kulupsosyoloji,90,9.376521887043708e+17,Üsküdar Üniversitesi Sosyoloji Kulübü,tr,27.0,51.0,False
 239465474,mohammed seba,med_seba,100,2394654749.0,Mohammed Seba,en,6.0,50.0,False
 764098767, zeynep ceren acarturk,zeynepalcay,90,7.640987677673677e+17,Zeynep,tr,41.0,244.0,False
 197932414, ezgi argun,ezgi_cin,90,1979324143.0,Ezgi,tr,50.0,179.0,False
-907621294,sedat kaya,SevdaKaya228377,90,9.076212943798149e+17,Sevda Kaya,tr,14.0,153.0,False
+907621294,sedat kaya,SevdaKaya228377,90,9.076212943798148e+17,Sevda Kaya,tr,14.0,153.0,False
 302533251,sena kevser kotan,senakevserkotan,90,302533251.0,Sena Kevser,tr,50.0,68.0,False
 311550362,muhammed bilal kaan,mubilal_,95,3115503628.0,Muhammed Bilal,en,79.0,425.0,False
-906842263,furkan aksoy,Erki0421,87,9.068422633844777e+17,Erkan Aksoy,tr,13.0,216.0,False
+906842263,furkan aksoy,Erki0421,87,9.068422633844776e+17,Erkan Aksoy,tr,13.0,216.0,False
 894736261, omer dincer,merdiner8,90,894736261.0,ömer dinçer,tr,64.0,331.0,False
-900817992, halil arslan,halilaslansos,96,9.008179928162263e+17,Halil Aslan,tr,468.0,1099.0,False
+900817992, halil arslan,halilaslansos,96,9.008179928162264e+17,Halil Aslan,tr,468.0,1099.0,False
 911633504,neslihan kokoz,neslihann__andc,90,9.116335047142646e+17,Neslihan,tr,19.0,100.0,False
 850760850, ahmet ademoglu,A_Harun16,90,8.507608500676403e+17,Ahmet,tr,13.0,44.0,False
 386929124, mehmet aytar,mehmeta16163557,87,3869291247.0,mehmet acar,tr,88.0,169.0,False
@@ -3605,12 +3605,12 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 142481205, ! hr,HurriyetKariyer,90,1424812057.0,HürriyetKariyer,tr,3359.0,1.0,False
 890681901,ahmet er,ahmetle0309,90,8.906819017233408e+17,Ahmet Erşahin,tr,9.0,81.0,False
 291092948, ali osman cay,osmanezici,90,2910929489.0,Osman,tr,13.0,169.0,False
-916560523,sena tozkoparan,Tozheryerde,90,9.165605239861125e+17,Toz,tr,9.0,84.0,False
+916560523,sena tozkoparan,Tozheryerde,90,9.165605239861124e+17,Toz,tr,9.0,84.0,False
 800500641, ali ahmad khashan,TheNamesAhmad,90,8.005006412273623e+17,Ahmad.,en,0.0,23.0,False
 524567841,bilal ogut,BiLaL_KnBr,90,524567841.0,BiLaL,tr,12.0,31.0,False
 780315295, mustafa ãzel,bygunahkar,87,7.803152952778056e+17,Mustafa ÖZBEK,tr,52.0,2754.0,False
 314854376, tamer yilmaz,sosyolog64,87,3148543767.0,Omer yilmaz,tr,99.0,508.0,False
-931536509,suheda duzcan,riqnjaq,90,9.315365092405125e+17,Suheda,tr,34.0,301.0,False
+931536509,suheda duzcan,riqnjaq,90,9.315365092405124e+17,Suheda,tr,34.0,301.0,False
 238180133,hasan taylan mavis,hhtaylan,87,238180133.0,Hasan H. Taylan,tr,962.0,767.0,False
 336047381,halenur avci,_nurhale,90,3360473818.0,Halenur,tr,41.0,171.0,False
 142977893,ahmet karaca,a_karatas63,88,1429778930.0,Ahmet Karataş,en,58.0,145.0,False
@@ -3619,7 +3619,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 335819753, meltem aydan olgac,krayondabir,90,3358197537.0,Meltem,tr,308.0,1235.0,False
 295698523,zuhal sener,zhl_s,90,295698523.0,Zuhal  🎈,tr,155.0,316.0,False
 271182381, amir azaron,AronAromyan,90,2711823812.0,Aron,tr,212.0,264.0,False
-933298551,filiz kayan,fafiemkaya,95,9.332985512827167e+17,Filiz Kaya,tr,16.0,348.0,False
+933298551,filiz kayan,fafiemkaya,95,9.332985512827168e+17,Filiz Kaya,tr,16.0,348.0,False
 714460093,fatih enes usta,fatihenesus,100,7.14460093966848e+17,Fatih Enes Usta,tr,1.0,12.0,False
 557717295, kadem,dalecarnegie_tr,90,557717295.0,DaleCarnegie Akademi,tr,5881.0,641.0,False
 359084408,ali can demiral,_alicaneren_,90,3590844089.0,Ali Can,tr,272.0,913.0,False
@@ -3652,7 +3652,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 756930219, deniz haj abrahim,Sosyolooooog,90,7.569302193579049e+17,Deniz,tr,37.0,706.0,False
 754025685, saliha ayåegã¼l demiray,jhansondee,90,7.540256856525619e+17,Mira,tr,57.0,172.0,False
 8382282, gebzedcturkcell,Turkcell,90,8382282.0,TURKCELL,tr,715680.0,15.0,False
-980931444, nuri aktemur,Nuri56256015,90,9.809314449178911e+17,Nuri,en,152.0,1836.0,False
+980931444, nuri aktemur,Nuri56256015,90,9.809314449178912e+17,Nuri,en,152.0,1836.0,False
 885133463,filiz kayan,filizKaya2017,95,8.851334638373888e+17,Filiz Kaya,tr,72.0,189.0,False
 72937636,selvinaz tugba dogan,ElvinaSmilee,90,72937636.0,Elvina,en,209.0,353.0,False
 946797248, ! sosyoloji,SOSociolog,95,9.467972484946862e+17,SSosyoloji,tr,92.0,52.0,False
@@ -3704,7 +3704,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 438506598,mahmut celik,ftr235381968368,87,438506598.0,MahmutÖzçelik,tr,75.0,1527.0,False
 217666169,habibe cokyigit,habibecengel,90,2176661691.0,Habibe,tr,46.0,468.0,False
 487811880,ahmet burak karahan,AhmetBurakKurt1,87,487811880.0,Ahmet Burak Kurtaran,tr,1.0,21.0,False
-912822949, oktay adalier,Ali25256144,90,9.128229490397389e+17,Ali,tr,35.0,169.0,False
+912822949, oktay adalier,Ali25256144,90,9.128229490397388e+17,Ali,tr,35.0,169.0,False
 221207622,sefa yildiz,korkoroglu,90,2212076229.0,sefa,tr,34.0,686.0,False
 314320500, mert celik,mert__celik,95,314320500.0,Mert Çelik,tr,107.0,722.0,False
 276349436,reyhan reyhan,Reyhandemirka,95,2763494363.0,Reyhan Demirkaya,tr,8.0,56.0,False
@@ -3959,8 +3959,8 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 388500593, enes eryarsoy,ruyaer,90,388500593.0,rüya,en,4.0,93.0,False
 205640168,zeynep akan,nisyanaisyan,91,205640168.0,Zeynep ÖZKAN,tr,103.0,466.0,False
 422637683,elif demirel,elifdemir63,91,422637683.0,elif demir,tr,93.0,393.0,False
-915299432,ahmet ugurlu,UygurluAhmet,96,9.152994328323973e+17,AHMET UYGURLU,tr,256.0,596.0,False
-992330093,aylin tuncay,ayliintnc,100,9.923300933798461e+17,Aylin Tuncay,en,5.0,6.0,False
+915299432,ahmet ugurlu,UygurluAhmet,96,9.152994328323972e+17,AHMET UYGURLU,tr,256.0,596.0,False
+992330093,aylin tuncay,ayliintnc,100,9.92330093379846e+17,Aylin Tuncay,en,5.0,6.0,False
 236700726,maryam binti mohd zamrin,NazBrkmk,90,2367007268.0,Arya,tr,235.0,568.0,False
 230235293, mehmet yasin ulukus,yasincvc,90,2302352939.0,yasin,tr,27.0,180.0,False
 297512173, merve aydin,mrvetanrikulu,90,2975121732.0,Merve,tr,139.0,479.0,False
@@ -4137,7 +4137,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 413702486, ercan atam,ercngu,90,4137024863.0,Ercan,tr,37.0,150.0,False
 225088128,kaan bayram,vkaanbayram,100,2250881286.0,Kaan Bayram,tr,94.0,184.0,False
 818083047, zeynep ceren acarturk,cerenyasar09,90,8.180830470903071e+17,Ceren,tr,248.0,332.0,False
-978301914, yavuz selim atmaca,selim0811,90,9.783019147975639e+17,Selim,tr,52.0,526.0,False
+978301914, yavuz selim atmaca,selim0811,90,9.78301914797564e+17,Selim,tr,52.0,526.0,False
 154540800,mustafa erdogan,merdogan030,100,1545408007.0,Mustafa Erdogan,nl,151.0,483.0,False
 294499741, hukuk kulubu,CULawClub,91,2944997410.0,ÇÜ Hukuk Kulübü,tr,1170.0,441.0,False
 464042364,huseyin gocek,HseyinGek,87,464042364.0,Hüseyin Göçek,tr,163.0,288.0,False
@@ -4165,9 +4165,9 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 379516317,zeynep altun,islamicgarden,89,3795163175.0,Zeynep altunbaş,tr,25.0,138.0,False
 236749440,ahmet er,Ahmet_Mert79,89,236749440.0,Ahmet Mert,tr,635.0,2565.0,False
 335135572,betul serdengecti,nurrgullk,90,3351355725.0,serde,tr,4.0,69.0,False
-907489214,fatma demir,FatmaDE35838121,96,9.074892146438185e+17,Fatıma Demir,tr,48.0,293.0,False
+907489214,fatma demir,FatmaDE35838121,96,9.074892146438184e+17,Fatıma Demir,tr,48.0,293.0,False
 560277294, hande baltaci,handeaksoy3,90,560277294.0,hande,tr,83.0,749.0,False
-927586513,neslihan kokoz,NeslhanHikmet,90,9.275865135499551e+17,Neslihan,tr,12.0,246.0,False
+927586513,neslihan kokoz,NeslhanHikmet,90,9.275865135499552e+17,Neslihan,tr,12.0,246.0,False
 161811941,zeynep sena kurtul,Xsena1994Sena,90,1618119414.0,ZEYNEP SENA,tr,90.0,549.0,False
 848615275, halil arslan,halil_15,90,8.486152756416553e+17,Halil,tr,1298.0,4902.0,False
 945335760,rabia gulsah culhalik,hayolsunu,90,9.453357607350886e+17,rabia,en,0.0,54.0,False
@@ -4185,7 +4185,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 195697085,ashkan eshghi,hgtav,90,1956970855.0,HG,tr,0.0,100.0,False
 829767786,ahmed ahmed,AhmetSanATE1,95,829767786.0,Ahmed ATEŞ,tr,274.0,841.0,False
 163692198, ahmet bulter,MULAIMIST,90,1636921987.0,AHMET B.,tr,56.0,64.0,False
-929465072,merve yilmaz,Merrveylmazzz,92,9.294650722289951e+17,Merve Yılmaz,tr,38.0,77.0,False
+929465072,merve yilmaz,Merrveylmazzz,92,9.294650722289952e+17,Merve Yılmaz,tr,38.0,77.0,False
 54290504,ieee kulubu,IEEEorg,90,54290504.0,IEEE,en,236281.0,2588.0,False
 320758368,merve kandemir,1996Erv,88,3207583684.0,merve demir,tr,50.0,300.0,False
 166053100,nur betã¼l yerli,betulbtll,90,1660531004.0,Betül,tr,130.0,942.0,False
@@ -4206,7 +4206,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 702928214, muzehher leyla burak,renoktake,90,7.02928214570754e+17,leyla🎈,tr,196.0,455.0,False
 890777905,rabiye turlak,rabiaturlak,88,890777905.0,Rabia Turlak,tr,563.0,116.0,False
 391547002, kemal karpat,kemalalpaslana,90,391547002.0,kemal,tr,69.0,154.0,False
-919263758,halime demir,demirhalime_,100,9.192637581276897e+17,Halime Demir,tr,1.0,115.0,False
+919263758,halime demir,demirhalime_,100,9.192637581276896e+17,Halime Demir,tr,1.0,115.0,False
 296896614, taha imeci,TahaColakoglu,90,296896614.0,Taha Ç.,tr,215.0,415.0,False
 353550005,ali emre erol,EmreeErol,95,353550005.0,Emre Erol,tr,346.0,326.0,False
 481553530,zeynep sena kurtul,zeynepsna,90,481553530.0,Zeynep Sena,tr,114.0,199.0,False
@@ -4219,7 +4219,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 386458111, mustafa aksu,Mustafadantivit,90,3864581117.0,Mustafa®,tr,124556.0,60547.0,False
 384239719,ahmet zahit ekren,azotkun,88,384239719.0,Ahmet Zahit Ötkün,tr,1860.0,185.0,False
 284043730, ! psikoloji,hukukpsikoloji,90,2840437301.0,hukuk ve psikoloji,tr,57.0,256.0,False
-929716127, ! x test,Megehancoskun,90,9.297161277138985e+17,X,tr,0.0,488.0,False
+929716127, ! x test,Megehancoskun,90,9.297161277138984e+17,X,tr,0.0,488.0,False
 742893192,sumeyye bayraktar,sumeyyebyrktr29,97,7.42893192941609e+17,Sümeyye Bayraktar,en,50.0,53.0,False
 304053651,agon ziberi,agzeyy,91,304053651.0,AGON ZYBERI,en,218.0,112.0,False
 121914206,merve ozcelik,276merve,92,1219142066.0,merve özçelik,tr,20.0,30.0,False
@@ -4364,7 +4364,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 798560554,esra kaya,esraaayy,88,7.98560554461909e+17,esra ay,tr,0.0,47.0,False
 369542523,omer cinal,OmerCinal,89,369542523.0,Ömer Çinal,en,33.0,53.0,False
 231748958, zeynep ceren acarturk,cerenisvarlar,90,2317489586.0,Ceren,tr,326.0,167.0,False
-979769992,ahmet kaya,ahmetkaya1299,100,9.797699923621437e+17,Ahmet KAYA,tr,198.0,1338.0,False
+979769992,ahmet kaya,ahmetkaya1299,100,9.797699923621436e+17,Ahmet KAYA,tr,198.0,1338.0,False
 274889833,kubra fatma kurt,Fatmakurt98,90,2748898336.0,Fatma kurt,tr,122.0,448.0,False
 294990622, yasemin atagul,YSMNSLK,90,294990622.0,yasemin,tr,162.0,605.0,False
 115726452, sertac tez,truckersertac,90,1157264522.0,Sertaç,tr,241.0,1328.0,False
@@ -4423,7 +4423,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 132198493,can yildirim,canerartvin,92,1321984932.0,Caner YILDIRIM,tr,653.0,441.0,False
 479673085,sena donmez,sena_donmez,95,479673085.0,Sena Dönmez,tr,243.0,259.0,False
 786637136, ! hr,KT_IEEE,90,7.866371361664778e+17,Kathryn Rapach,en,173.0,935.0,False
-947409079, emre ceran,Emre58043267,90,9.474090795673723e+17,Emre,en,9.0,281.0,False
+947409079, emre ceran,Emre58043267,90,9.474090795673724e+17,Emre,en,9.0,281.0,False
 844911130,neslihan kokoz,neslik10,90,8.449111300237722e+17,Nesli,en,0.0,405.0,False
 278049949, erasmus -,eceemyz,90,2780499490.0,e,tr,35.0,93.0,False
 708359073,kerem berker,berkerkndemir,90,7.083590738052424e+17,berker...---...,en,213.0,1869.0,False
@@ -4468,7 +4468,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 129587263,yesim keskin,yesimksknn,100,1295872634.0,yesim keskin,tr,102.0,116.0,False
 210474440, ahmet ademoglu,aozturk1,90,210474440.0,Ahmet,tr,405.0,225.0,False
 214583532, onur askin,Strefen,90,214583532.0,ask,en,135.0,410.0,False
-943486680, ! tarih,bilimtarihnet,90,9.434866803251323e+17,Pozitif Bilim & Gerçek Tarih,tr,258.0,1033.0,False
+943486680, ! tarih,bilimtarihnet,90,9.434866803251324e+17,Pozitif Bilim & Gerçek Tarih,tr,258.0,1033.0,False
 261514773, baris arslan,ulurmu,90,2615147737.0,baris,de,218.0,1237.0,False
 852233540,ahmet semih basyigit,BasyigitSemih,90,8.522335400161444e+17,Ahmet Semih Başyiğit,tr,24.0,103.0,False
 131098918,ayfer kirkaya,ayfakaya,87,1310989184.0,ayfer kaya,tr,174.0,534.0,False
@@ -4481,7 +4481,7 @@ id,match_name,screen_name,match_ratio,tw_id,name,lang,followers_count,friends_co
 607599695, oktay adalier,nevrozmaa,90,607599695.0,ada,tr,102.0,341.0,False
 383196742, pinar efe,rumeysa_e,90,383196742.0,r.e.,tr,18.0,64.0,False
 702417141,resul oguz,seymenkar,90,7.024171410191237e+17,resul,en,59.0,490.0,False
-931205272,sã¼meyye yokus,smeyye79875523,90,9.312052723114189e+17,sümeyye,en,1.0,67.0,False
+931205272,sã¼meyye yokus,smeyye79875523,90,9.312052723114188e+17,sümeyye,en,1.0,67.0,False
 194228463,zeynep bala,mzbalkas,92,194228463.0,Zeynep Balkaş,en,141.0,252.0,False
 254960250,simge nur kara,SimgeNurKaraa,100,254960250.0,Simge Nur Kara,tr,350.0,165.0,False
 144605187, yahya michot,yahyasras,90,144605187.0,yahya,en,26.0,54.0,False
