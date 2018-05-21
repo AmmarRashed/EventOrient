@@ -167,6 +167,25 @@ def recalculate_metrics(nxg):
     return json_graph.node_link_data(nxg)
 
 
+
+def present_in_date(changes_dates, queried_date):
+    """
+    checking if a connection is present in a queried date
+    changes_dates: {d1:True, d2:False, d3:True} connection added or removed
+    queried_date: e.g. "2018.05.08"
+    """
+    str2date = lambda strdate: datetime.strptime(strdate, '%Y.%m.%d')  # 2018.05.08
+    changes = sorted(changes_dates,key=lambda d: str2date(d))
+    queried_date = datetime.strptime(queried_date, '%Y.%m.%d')
+    present = False
+    for d in changes:
+        if queried_date < str2date(d):
+            break
+        present = changes_dates[d]
+    return present
+
+
+
 def twitter_connections(request):
 
     global degree_threshold, filtered_twitter_connections, \

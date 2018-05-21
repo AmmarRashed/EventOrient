@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/REST/Twitter/views.py" afterPath="$PROJECT_DIR$/REST/Twitter/views.py" />
+      <change beforePath="$PROJECT_DIR$/datasets/twitter_users.csv" afterPath="$PROJECT_DIR$/datasets/twitter_users.csv" />
+      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" afterPath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,12 +25,12 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+            <state relative-caret-position="308">
+              <caret line="174" column="33" lean-forward="false" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1526544654721" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-                <marker date="1526544654721" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
+                <marker date="1526901577790" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+                <marker date="1526901577790" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
               </folding>
             </state>
           </provider>
@@ -36,7 +39,7 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="5634">
               <caret line="313" column="102" lean-forward="false" selection-start-line="313" selection-start-column="102" selection-end-line="313" selection-end-column="102" />
               <folding>
                 <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -48,7 +51,7 @@
       <file leaf-file-name="twitter_users_graph2.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2270">
+            <state relative-caret-position="93942">
               <caret line="5219" column="9" lean-forward="false" selection-start-line="5219" selection-start-column="9" selection-end-line="5219" selection-end-column="9" />
               <folding />
             </state>
@@ -90,7 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get_weight_threshold</find>
       <find>mysql</find>
       <find>database</find>
       <find>filter</find>
@@ -120,6 +122,7 @@
       <find>c = reca</find>
       <find>filter_by</find>
       <find>node_scale</find>
+      <find>datetime</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -174,10 +177,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="285" />
+    <option name="x" value="258" />
     <option name="y" value="-4" />
-    <option name="width" value="1396" />
-    <option name="height" value="1012" />
+    <option name="width" value="1398" />
+    <option name="height" value="1020" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -195,6 +198,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,7 +239,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,16 +384,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="285" y="-4" width="1865" height="1092" extended-state="6" />
+    <frame x="57" y="-4" width="1863" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5041277" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
+      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183246" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3357182" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31765935" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33957073" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -582,7 +586,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2270">
+        <state relative-caret-position="93942">
           <caret line="5219" column="9" lean-forward="false" selection-start-line="5219" selection-start-column="9" selection-end-line="5219" selection-end-column="9" />
           <folding />
         </state>
@@ -590,7 +594,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="5634">
           <caret line="313" column="102" lean-forward="false" selection-start-line="313" selection-start-column="102" selection-end-line="313" selection-end-column="102" />
           <folding>
             <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -600,12 +604,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        <state relative-caret-position="308">
+          <caret line="174" column="33" lean-forward="false" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
-            <marker date="1526544654721" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-            <marker date="1526544654721" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
+            <marker date="1526901577790" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+            <marker date="1526901577790" expanded="true" signature="1077:1109" ph="SELECT * FRO... twitter_connection" />
           </folding>
         </state>
       </provider>
