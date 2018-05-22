@@ -15,7 +15,7 @@
     <br>
     <form method="POST">
         {% csrf_token %}
-        <p id="textDate">Date: {{dates.0}}</p>
+        <p id="textDate">Date: {{current_date}}</p>
         <input type="range" id="date_scroller" name="date" min="0" max="{{dates|length|add:"-1"}}" step="1" value="{{date_index}}"
                         style="width: 500px"
                 onchange="updateDateText(this.value)">
@@ -396,7 +396,7 @@
 
     function updateDateText(date_index){
         var dates = {{dates_dumped|safe}};
-        document.getElementById("textDate").innerHTML = dates[date_index];
+        document.getElementById("textDate").innerHTML = "Date: "+dates[date_index].toString();
     }
 
 </script>

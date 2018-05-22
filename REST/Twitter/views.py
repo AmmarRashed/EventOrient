@@ -31,8 +31,14 @@ connection = psycopg2.connect('dbname=%s host=localhost user=%s password=%s'%(db
 #                              .where(~twitter_users.name.str.contains("(?i)sehir"))\
 #                              .dropna().set_index("id")
 
-user_connections = pd.read_sql("SELECT * FROM twitter_connection", connection).drop('id', axis=1)
-twitter_users = pd.read_csv(root_dir+ "/static/twitter_users.csv")
+# user_connections = pd.read_sql("SELECT * FROM twitter_connection", connection).drop('id', axis=1)
+user_connections = pd.read_csv(root_dir+ "/static/random_connections.csv")
+import ast
+str2dict = lambda d : ast.literal_eval(d)
+user_connections.formation = user_connections.formation.apply(str2dict)
+
+
+twitter_users = pd.read_csv(root_dir+ "/static/twitter_users.csv", index_col="id")
 
 
 def clean(name):
@@ -60,36 +66,32 @@ def homophily(nw, metric="lang"):
     return cross_edges/float(len(nw.edges())), heterogeneity_fraction_norm
 
 
-def construct_network(connections):
+def construct_network(connections, rec_metrics=True):
     G = nx.DiGraph()
+    truncate = lambda x: int(str(int(x))[:9])
     for _, row in connections.iterrows():
-        from_ = row["from_user_id"]
-        to = row["to_user_id"]
-        if from_ in twitter_users.tw_id and to in twitter_users.tw_id:
+        from_ = truncate(row["from_user_id"])
+        to = truncate(row["to_user_id"])
+        if from_ in twitter_users.index and to in twitter_users.index:
             G.add_edge(from_, to)
 
-    augs = ["name", "screen_name", "match_name", "followers_count", "friends_count"]
+    # augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang"]
+    ## TODO getting precalculated community
+    augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang", "community"]
     for node in G.nodes():
         user = twitter_users.loc[node]
         for aug in augs:
-            if type(user[aug]) == str:
-                m = clean(user[aug])
-            else:
-                m = user[aug]
+            # if aug in "lang":
+            m = user[aug]
+            if aug == "community":
+                m = str(m)
+            # elif type(user[aug]) == str:
+            #     m = clean(user[aug])
+            # else:
+            #     m = user[aug]
             G.nodes[node][aug] = m
+    return recalculate_metrics(G, parse=False, centralities=rec_metrics)
 
-    evc = nx.eigenvector_centrality(G)
-    closeness = nx.closeness_centrality(G)
-    betweenness = nx.betweenness_centrality(G)
-    pagerank = nx.pagerank(G)
-    metrics = {"eigenvector_centrality": evc,
-               "closeness_centrality": closeness,
-               "betweenness": betweenness,
-               "pagerank": pagerank}
-    for metric_name, metric in metrics.items():
-        for ix, v in metric.items():
-            G.nodes[ix][metric_name] = v
-    return G
 
 
 # twitter_connections_json = root_dir + "/static/networks/twitter_users_graph2.json"
@@ -111,16 +113,17 @@ btw_threshold = 0.0
 pagerank_threshold = 0.0
 closeness_threshold = 0.0
 eigenvector_threshold = 0.0
-recalculate_checked = 1
+recalculate_checked = 0
 date_index = 0
 size_metric = "degree"
 size_metrics = ["degree", "in_degree", "out_degree",
                 "betweenness", "closeness_centrality", "eigenvector_centrality","pagerank","followers_count"]
 
 
+@lru_cache()
 def get_connections_by_date(date):
     nw = deepcopy(user_connections)
-    for_col = nw.formation.apply(lambda x: date in x and x[date])
+    for_col = nw.formation.apply(lambda dates: present_in_date(dates,date))
     return user_connections[for_col == True]
 
 def get_dates():
@@ -139,10 +142,13 @@ dates = get_dates()
 def get_avg_metric(graph, metric):
     result = 0.0
     for node in graph["nodes"]:
-        result += node[metric]
+        try:
+            result += node[metric]
+        except KeyError:
+            return 0.
     return result/len(graph["nodes"])
 
-def recalculate_metrics(nxg):
+def recalculate_metrics(nxg, parse=True, centralities=True):
     for ix, deg in nxg.degree(nxg.nodes()):
         nxg.node[ix]['degree'] = deg
 
@@ -151,20 +157,25 @@ def recalculate_metrics(nxg):
 
     for ix, out_deg in nxg.out_degree(nxg.nodes()):
         nxg.node[ix]['out_degree'] = out_deg
+    if centralities:
+        try:
+            evc = nx.eigenvector_centrality(nxg)
+            closeness = nx.closeness_centrality(nxg)
+            betweenness = nx.betweenness_centrality(nxg)
+            pagerank = nx.pagerank(nxg)
+            cntr_metrics = {"eigenvector_centrality": evc,
+                            "closeness_centrality": closeness,
+                            "betweenness": betweenness,
+                            "pagerank": pagerank}
 
-    evc = nx.eigenvector_centrality(nxg)
-    closeness = nx.closeness_centrality(nxg)
-    betweenness = nx.betweenness_centrality(nxg)
-    pagerank = nx.pagerank(nxg)
-    cntr_metrics = {"eigenvector_centrality": evc,
-                    "closeness_centrality": closeness,
-                    "betweenness": betweenness,
-                    "pagerank": pagerank}
-
-    for metric_name, metric in cntr_metrics.items():
-        for ix, v in metric.items():
-            nxg.node[ix][metric_name] = v
-    return json_graph.node_link_data(nxg)
+            for metric_name, metric in cntr_metrics.items():
+                for ix, v in metric.items():
+                    nxg.node[ix][metric_name] = v
+        except:
+            pass
+    if parse:
+        return json_graph.node_link_data(nxg)
+    return nxg
 
 
 
@@ -183,7 +194,6 @@ def present_in_date(changes_dates, queried_date):
             break
         present = changes_dates[d]
     return present
-
 
 
 def twitter_connections(request):
@@ -207,17 +217,15 @@ def twitter_connections(request):
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
 
-        if date_index >= 0:
-            for i in [degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
-                if i*1 != 0:
-                    do_filter = True
-                    break
-
+        for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
+            if i*1 != 0:
+                do_filter = True
+                break
         size_metric = request.POST["size_metric"]
         if do_filter:
             if date_index > 0:
-                connections = get_connections_by_date(dates[date_index])
-                nw = construct_network(connections)
+                cons = get_connections_by_date(dates[date_index])
+                nw = construct_network(cons, recalculate_checked)
                 data = nx.node_link_data(nw)
             else:
                 data = deepcopy(twitter_connections_json)
@@ -258,7 +266,8 @@ def twitter_connections(request):
                "is_filtering":int(filtering),
                "dates":dates,
                "dates_dumped":json.dumps(list(dates)),
-               "date_index":date_index}
+               "date_index":date_index,
+               "current_date":dates[date_index]}
     if avgs:
         context.update(avgs)
 
@@ -274,9 +283,12 @@ def filter_by(g, degree, btw, pagerank, closeness, eigenv, recalculate_node_metr
         invalid = False
         for metric in metrics:
             threshold = metrics[metric]
-            if g.nodes[node][metric] < threshold:
-                invalid = True
-                break
+            try:
+                if g.nodes[node][metric] < threshold:
+                    invalid = True
+                    break
+            except KeyError:
+                continue
         if invalid:
             c.remove_node(node)
     if recalculate_node_metrics and len(c.nodes) != len(twitter_connections_json["nodes"]):
