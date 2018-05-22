@@ -76,7 +76,7 @@ def construct_network(connections, rec_metrics=True):
             G.add_edge(from_, to)
 
     # augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang"]
-    ## TODO getting precalculated community
+    # getting pre-calculated communities >> THIS IS JUST OPTIONAL
     augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang", "community"]
     for node in G.nodes():
         user = twitter_users.loc[node]
@@ -147,6 +147,11 @@ def get_avg_metric(graph, metric):
         except KeyError:
             return 0.
     return result/len(graph["nodes"])
+
+
+def calculate_new_edges(d1="2018.05.01", d2="2018.05.02"):
+    return get_connections_by_date(get_connections_by_date(rc, d2), d1, False)
+
 
 def recalculate_metrics(nxg, parse=True, centralities=True):
     for ix, deg in nxg.degree(nxg.nodes()):
