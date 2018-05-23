@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/REST/Twitter/views.py" afterPath="$PROJECT_DIR$/REST/Twitter/views.py" />
-      <change beforePath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" />
-      <change beforePath="$PROJECT_DIR$/REST/static/random_connections.csv" afterPath="$PROJECT_DIR$/REST/static/random_connections.csv" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/REST/static/twitter_users.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_closures-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_closures-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Untitled.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" afterPath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" />
+      <change beforePath="$PROJECT_DIR$/notebooks/calculating_closures.ipynb" afterPath="$PROJECT_DIR$/notebooks/calculating_closures.ipynb" />
       <change beforePath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" afterPath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,12 +28,12 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="151" column="23" lean-forward="false" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
+            <state relative-caret-position="238">
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1527005805603" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-                <marker date="1527005805603" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
+                <marker date="1527069716997" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+                <marker date="1527069716997" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
               </folding>
             </state>
           </provider>
@@ -46,7 +42,7 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="306">
               <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -58,7 +54,7 @@
       <file leaf-file-name="twitter_users_graph2.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285732">
+            <state relative-caret-position="300114">
               <caret line="16673" column="1" lean-forward="false" selection-start-line="16673" selection-start-column="1" selection-end-line="16673" selection-end-column="1" />
               <folding />
             </state>
@@ -116,7 +112,6 @@
       <find>user_connections</find>
       <find>construct_network</find>
       <find>construc</find>
-      <find>twitter_users</find>
       <find>constru</find>
       <find>recalculate_check</find>
       <find>get_avg</find>
@@ -130,6 +125,7 @@
       <find>preca</find>
       <find>get</find>
       <find>get_connections_by_date</find>
+      <find>twitter_users</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -393,16 +389,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="258" y="-4" width="1865" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5041277" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
+      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31518325" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35112822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31452456" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35993394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -594,7 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285732">
+        <state relative-caret-position="300114">
           <caret line="16673" column="1" lean-forward="false" selection-start-line="16673" selection-start-column="1" selection-end-line="16673" selection-end-column="1" />
           <folding />
         </state>
@@ -602,7 +597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="306">
           <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#input#3;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -612,12 +607,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="151" column="23" lean-forward="false" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
+        <state relative-caret-position="238">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
-            <marker date="1527005805603" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-            <marker date="1527005805603" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
+            <marker date="1527069716997" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+            <marker date="1527069716997" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
           </folding>
         </state>
       </provider>

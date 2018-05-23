@@ -38,7 +38,7 @@ str2dict = lambda d : ast.literal_eval(d)
 user_connections.formation = user_connections.formation.apply(str2dict)
 
 
-twitter_users = pd.read_csv(root_dir+ "/static/twitter_users.csv", index_col="id")
+twitter_users = pd.read_csv(root_dir+ "/static/filtered_twitter_users.csv", index_col="id")
 
 
 def clean(name):
