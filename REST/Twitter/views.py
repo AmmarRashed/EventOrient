@@ -32,7 +32,7 @@ connection = psycopg2.connect('dbname=%s host=localhost user=%s password=%s'%(db
 #                              .dropna().set_index("id")
 
 # user_connections = pd.read_sql("SELECT * FROM twitter_connection", connection).drop('id', axis=1)
-user_connections = pd.read_csv(root_dir+ "/static/random_connections.csv")
+user_connections = pd.read_csv(root_dir+ "/static/filtered_twitter_connections.csv")
 import ast
 str2dict = lambda d : ast.literal_eval(d)
 user_connections.formation = user_connections.formation.apply(str2dict)
@@ -72,7 +72,7 @@ def construct_network(connections, rec_metrics=True):
     for _, row in connections.iterrows():
         from_ = truncate(row["from_user_id"])
         to = truncate(row["to_user_id"])
-        if from_ in twitter_users.index and to in twitter_users.index:
+        if from_ in twitter_users.truncated_id and to in twitter_users.truncated_id:
             G.add_edge(from_, to)
 
     # augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang"]
@@ -82,9 +82,19 @@ def construct_network(connections, rec_metrics=True):
         user = twitter_users.loc[node]
         for aug in augs:
             # if aug in "lang":
+            # if aug == "community":
+            #     m = str(user[aug])
+            # else:
+
+            # try:
             m = user[aug]
             if aug == "community":
                 m = str(m)
+                if m == "0":
+                    m = "org"
+            # except KeyError:
+            #     if aug == "community":
+            #         m = 0
             # elif type(user[aug]) == str:
             #     m = clean(user[aug])
             # else:
@@ -221,7 +231,6 @@ def twitter_connections(request):
         eigenvector_threshold = float(request.POST["eigenvector_scroller"])
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
-
         for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
             if i*1 != 0:
                 do_filter = True
