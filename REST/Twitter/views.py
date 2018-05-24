@@ -45,17 +45,6 @@ orgs = set(twitter_users[twitter_users.is_org].truncated_id)
 def clean(name):
     return unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').lower().decode("ascii")
 
-@lru_cache(maxsize=None)
-def calculate_metrics(G):
-    evc = nx.eigenvector_centrality(G)
-    closeness = nx.closeness_centrality(G)
-    betweenness = nx.betweenness_centrality(G)
-    metrics = {"eigenvector_centrality": evc,
-               "closeness_centrality": closeness,
-               "betweenness": betweenness}
-    return metrics
-
-
 def homophily(nw, metric="lang"):
     langs_probs = dict()
     for n in nw.nodes():
@@ -129,13 +118,15 @@ btw_threshold = 0.0
 pagerank_threshold = 0.0
 closeness_threshold = 0.0
 eigenvector_threshold = 0.0
+clust_threshold = 0.0
 recalculate_checked = 0
 DEFAULT_FOCI_CHECKED = 1
 foci_checked = DEFAULT_FOCI_CHECKED
 date_index = 0
 size_metric = "degree"
 size_metrics = ["degree", "in_degree", "out_degree",
-                "betweenness", "closeness_centrality", "eigenvector_centrality","pagerank","followers_count"]
+                "betweenness", "closeness_centrality", "eigenvector_centrality",
+                "pagerank","clustering_coefficient", "followers_count"]
 
 
 @lru_cache()
@@ -171,10 +162,11 @@ def calculate_new_edges(d1="2018.05.01", d2="2018.05.02"):
     return get_connections_by_date(get_connections_by_date(rc, d2), d1, False)
 
 
+@lru_cache(maxsize=None)
 def recalculate_metrics(nxg, parse=True, centralities=True):
+    nxg = nxg.to_directed()
     for ix, deg in nxg.degree(nxg.nodes()):
         nxg.node[ix]['degree'] = deg
-
     for ix, in_deg in nxg.in_degree(nxg.nodes()):
         nxg.node[ix]['in_degree'] = in_deg
 
@@ -186,10 +178,13 @@ def recalculate_metrics(nxg, parse=True, centralities=True):
             closeness = nx.closeness_centrality(nxg)
             betweenness = nx.betweenness_centrality(nxg)
             pagerank = nx.pagerank(nxg)
+            un_nxg = nxg.to_undirected()
+            clustering = nx.clustering(un_nxg)
             cntr_metrics = {"eigenvector_centrality": evc,
                             "closeness_centrality": closeness,
                             "betweenness": betweenness,
-                            "pagerank": pagerank}
+                            "pagerank": pagerank,
+                            "clustering_coefficient":clustering}
 
             for metric_name, metric in cntr_metrics.items():
                 for ix, v in metric.items():
@@ -224,7 +219,7 @@ def twitter_connections(request):
     global degree_threshold, filtered_twitter_connections, \
         btw_threshold, pagerank_threshold, closeness_threshold, \
         eigenvector_threshold, size_metric,size_metrics, recalculate_checked, foci_checked,\
-        dates, date_index
+        dates, date_index, clust_threshold
 
     do_filter = False
     check = {"on":True, False:False}
@@ -237,19 +232,21 @@ def twitter_connections(request):
         pagerank_threshold = float(request.POST["pagerank_scroller"])
         closeness_threshold = float(request.POST["closeness_scroller"])
         eigenvector_threshold = float(request.POST["eigenvector_scroller"])
+        clust_threshold = float(request.POST["clust_scroller"])
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
         foci_checked = check[request.POST.get("include_foci", False)]
         if foci_checked != DEFAULT_FOCI_CHECKED:
             do_filter = True
         else:
-            for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
+            for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold,
+                      closeness_threshold, eigenvector_threshold, clust_threshold]:
                 if i != 0:
                     do_filter = True
                     break
         size_metric = request.POST["size_metric"]
         if do_filter:
-            if date_index == 0 and foci_checked==DEFAULT_FOCI_CHECKED:
+            if date_index == 0 and foci_checked==DEFAULT_FOCI_CHECKED:  # same network
                 data = deepcopy(twitter_connections_json)
             else:
                 cons = get_connections_by_date(dates[date_index])
@@ -264,6 +261,7 @@ def twitter_connections(request):
                                                      pagerank_threshold,
                                                      closeness_threshold,
                                                      eigenvector_threshold,
+                                                     clust_threshold,
                                                      recalculate_checked,
                                                      directed=True)
         else:
@@ -294,7 +292,8 @@ def twitter_connections(request):
                "dates_dumped":json.dumps(list(dates)),
                "date_index":date_index,
                "current_date":dates[date_index],
-               "foci_checked":int(foci_checked)}
+               "foci_checked":int(foci_checked),
+               "clust_threshold":clust_threshold}
     if avgs:
         context.update(avgs)
 
@@ -302,9 +301,10 @@ def twitter_connections(request):
 
 
 @lru_cache(maxsize=None)
-def filter_by(g, degree, btw, pagerank, closeness, eigenv, recalculate_node_metrics, directed=True):
+def filter_by(g, degree, btw, pagerank, closeness, eigenv, clust_threshold,recalculate_node_metrics, directed=True):
     metrics = {"degree":degree, "betweenness":btw, "pagerank":pagerank,
-               "closeness_centrality":closeness, "eigenvector_centrality":eigenv}
+               "closeness_centrality":closeness, "eigenvector_centrality":eigenv,
+               "clustering_coefficient":clust_threshold}
     c = g.copy()
     for node in g.nodes():
         invalid = False
