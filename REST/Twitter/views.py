@@ -39,6 +39,7 @@ user_connections.formation = user_connections.formation.apply(str2dict)
 
 
 twitter_users = pd.read_csv(root_dir+ "/static/filtered_twitter_users.csv", index_col="id")
+orgs = set(twitter_users[twitter_users.is_org].truncated_id)
 
 
 def clean(name):
@@ -66,12 +67,16 @@ def homophily(nw, metric="lang"):
     return cross_edges/float(len(nw.edges())), heterogeneity_fraction_norm
 
 
-def construct_network(connections, rec_metrics=True):
+def construct_network(connections, rec_metrics=True, include_foci=True):
     G = nx.DiGraph()
     truncate = lambda x: int(str(int(x))[:9])
     for _, row in connections.iterrows():
-        from_ = truncate(row["from_user_id"])
-        to = truncate(row["to_user_id"])
+        f = row["from_user_id"]
+        t = row["to_user_id"]
+        from_ = truncate(f)
+        to = truncate(t)
+        if not include_foci and (from_ in orgs or to in orgs):
+            continue
         if from_ in twitter_users.truncated_id and to in twitter_users.truncated_id:
             G.add_edge(from_, to)
 
@@ -90,8 +95,9 @@ def construct_network(connections, rec_metrics=True):
             m = user[aug]
             if aug == "community":
                 m = str(m)
-                if m == "0":
-                    m = "org"
+                # if not include_foci and m == "foci":
+                #     G.remove_node(node)
+
             # except KeyError:
             #     if aug == "community":
             #         m = 0
@@ -124,6 +130,8 @@ pagerank_threshold = 0.0
 closeness_threshold = 0.0
 eigenvector_threshold = 0.0
 recalculate_checked = 0
+DEFAULT_FOCI_CHECKED = 1
+foci_checked = DEFAULT_FOCI_CHECKED
 date_index = 0
 size_metric = "degree"
 size_metrics = ["degree", "in_degree", "out_degree",
@@ -215,7 +223,7 @@ def twitter_connections(request):
 
     global degree_threshold, filtered_twitter_connections, \
         btw_threshold, pagerank_threshold, closeness_threshold, \
-        eigenvector_threshold, size_metric,size_metrics, recalculate_checked, \
+        eigenvector_threshold, size_metric,size_metrics, recalculate_checked, foci_checked,\
         dates, date_index
 
     do_filter = False
@@ -231,18 +239,22 @@ def twitter_connections(request):
         eigenvector_threshold = float(request.POST["eigenvector_scroller"])
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
-        for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
-            if i*1 != 0:
-                do_filter = True
-                break
+        foci_checked = check[request.POST.get("include_foci", False)]
+        if foci_checked != DEFAULT_FOCI_CHECKED:
+            do_filter = True
+        else:
+            for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold, closeness_threshold, eigenvector_threshold]:
+                if i != 0:
+                    do_filter = True
+                    break
         size_metric = request.POST["size_metric"]
         if do_filter:
-            if date_index > 0:
-                cons = get_connections_by_date(dates[date_index])
-                nw = construct_network(cons, recalculate_checked)
-                data = nx.node_link_data(nw)
-            else:
+            if date_index == 0 and foci_checked==DEFAULT_FOCI_CHECKED:
                 data = deepcopy(twitter_connections_json)
+            else:
+                cons = get_connections_by_date(dates[date_index])
+                nw = construct_network(cons, recalculate_checked, foci_checked)
+                data = nx.node_link_data(nw)
 
             g = json_graph.node_link_graph(data, directed=True)
 
@@ -281,7 +293,8 @@ def twitter_connections(request):
                "dates":dates,
                "dates_dumped":json.dumps(list(dates)),
                "date_index":date_index,
-               "current_date":dates[date_index]}
+               "current_date":dates[date_index],
+               "foci_checked":int(foci_checked)}
     if avgs:
         context.update(avgs)
 

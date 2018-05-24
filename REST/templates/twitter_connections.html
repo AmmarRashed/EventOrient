@@ -22,6 +22,8 @@
         <br>
         Recalculate node metrics:
         <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
+        Include organizations:
+        <input type="checkbox" id="include_foci" name="include_foci">
         <br>
         degree: <input type="text" id="textInputDegree" value="{{degree_threshold}}" style="width: 50px"
                        name="degree_scroller"
@@ -96,6 +98,7 @@
         alert("Found {{nodes_number}} nodes");
     }
     document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
+    document.getElementById("include_foci").checked = {{foci_checked}};
 
     d3.select("svg").attr("width", window.screen.width)
         .attr("height", window.screen.height-150);
