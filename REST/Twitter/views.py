@@ -174,7 +174,7 @@ def recalculate_metrics(nxg, parse=True, centralities=True):
         nxg.node[ix]['out_degree'] = out_deg
     if centralities:
         try:
-            evc = nx.eigenvector_centrality(nxg)
+            evc = nx.eigenvector_centrality(nxg, max_iter=200)
             closeness = nx.closeness_centrality(nxg)
             betweenness = nx.betweenness_centrality(nxg)
             pagerank = nx.pagerank(nxg)

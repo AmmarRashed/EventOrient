@@ -4,12 +4,17 @@
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/REST/Twitter/views.py" afterPath="$PROJECT_DIR$/REST/Twitter/views.py" />
+      <change beforePath="$PROJECT_DIR$/REST/static/filtered_twitter_connections.csv" afterPath="$PROJECT_DIR$/REST/static/filtered_twitter_connections.csv" />
+      <change beforePath="$PROJECT_DIR$/REST/static/filtered_twitter_users.csv" afterPath="$PROJECT_DIR$/REST/static/filtered_twitter_users.csv" />
       <change beforePath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" />
-      <change beforePath="$PROJECT_DIR$/REST/templates/twitter_connections.html" afterPath="$PROJECT_DIR$/REST/templates/twitter_connections.html" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_closures-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_closures-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/datasets/filtered_twitter_connections.csv" afterPath="$PROJECT_DIR$/datasets/filtered_twitter_connections.csv" />
+      <change beforePath="$PROJECT_DIR$/datasets/filtered_twitter_users.csv" afterPath="$PROJECT_DIR$/datasets/filtered_twitter_users.csv" />
+      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" afterPath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" />
       <change beforePath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" afterPath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" />
       <change beforePath="$PROJECT_DIR$/socialcrawler" afterPath="$PROJECT_DIR$/socialcrawler" />
+      <change beforePath="$PROJECT_DIR$/visualization/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/visualization/twitter_users_graph2.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,21 +45,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="186" column="51" lean-forward="false" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="51" />
+            <state relative-caret-position="237">
+              <caret line="176" column="61" lean-forward="false" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="61" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1527191401593" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-                <marker date="1527191401593" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
+                <marker date="1527523603150" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+                <marker date="1527523603150" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
@@ -101,7 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>present</find>
       <find>constrcut</find>
       <find>foci_checked</find>
       <find>constr</find>
@@ -131,6 +135,7 @@
       <find>coeffi</find>
       <find>cofficient</find>
       <find>organizations</find>
+      <find>constrc</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -176,8 +181,8 @@
         <option value="$PROJECT_DIR$/REST/REST/settings.py" />
         <option value="$PROJECT_DIR$/misc/SehirParser.py" />
         <option value="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" />
-        <option value="$PROJECT_DIR$/REST/Twitter/views.py" />
         <option value="$PROJECT_DIR$/REST/templates/twitter_connections.html" />
+        <option value="$PROJECT_DIR$/REST/Twitter/views.py" />
       </list>
     </option>
   </component>
@@ -248,8 +253,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,8 +408,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31413612" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36433682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.313089" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3687397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -594,23 +599,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="186" column="51" lean-forward="false" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="51" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-            <marker date="1527191401593" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-            <marker date="1527191401593" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -620,6 +612,18 @@
           <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="176" column="61" lean-forward="false" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="61" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1527523603150" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+            <marker date="1527523603150" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
           </folding>
         </state>
       </provider>
