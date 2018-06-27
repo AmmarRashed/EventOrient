@@ -252,8 +252,10 @@ def twitter_connections(request):
                 cons = get_connections_by_date(dates[date_index])
                 nw = construct_network(cons, recalculate_checked, foci_checked)
                 data = nx.node_link_data(nw)
-
-            g = json_graph.node_link_graph(data, directed=True)
+                with open('temp2.json', 'w') as f:
+                    print(len(data["nodes"]), "SIZE")
+                    json.dump(data, f, indent=4)
+                g = json_graph.node_link_graph(data, directed=True)
 
             filtered_twitter_connections = filter_by(g,
                                                      degree_threshold,

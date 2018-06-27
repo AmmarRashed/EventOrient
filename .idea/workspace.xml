@@ -4,11 +4,7 @@
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/REST/Twitter/views.py" afterPath="$PROJECT_DIR$/REST/Twitter/views.py" />
-      <change beforePath="$PROJECT_DIR$/REST/static/filtered_twitter_connections.csv" afterPath="$PROJECT_DIR$/REST/static/filtered_twitter_connections.csv" />
-      <change beforePath="$PROJECT_DIR$/REST/static/filtered_twitter_users.csv" afterPath="$PROJECT_DIR$/REST/static/filtered_twitter_users.csv" />
       <change beforePath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" />
-      <change beforePath="$PROJECT_DIR$/datasets/filtered_twitter_connections.csv" afterPath="$PROJECT_DIR$/datasets/filtered_twitter_connections.csv" />
-      <change beforePath="$PROJECT_DIR$/datasets/filtered_twitter_users.csv" afterPath="$PROJECT_DIR$/datasets/filtered_twitter_users.csv" />
       <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" afterPath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" />
@@ -48,12 +44,12 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="176" column="61" lean-forward="false" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="61" />
+            <state relative-caret-position="277">
+              <caret line="255" column="43" lean-forward="false" selection-start-line="255" selection-start-column="43" selection-end-line="255" selection-end-column="43" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
-                <marker date="1527523603150" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-                <marker date="1527523603150" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
+                <marker date="1527719432323" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+                <marker date="1527719432323" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
               </folding>
             </state>
           </provider>
@@ -62,8 +58,8 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state relative-caret-position="115">
+              <caret line="365" column="14" lean-forward="false" selection-start-line="365" selection-start-column="14" selection-end-line="365" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -106,11 +102,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>constrcut</find>
-      <find>foci_checked</find>
-      <find>constr</find>
       <find>get+</find>
-      <find>construc</find>
       <find>DEFAULT_FOCI_CHECKED</find>
       <find>metrics</find>
       <find>&quot;degree&quot;</find>
@@ -127,8 +119,6 @@
       <find>size_metric</find>
       <find>avg</find>
       <find>recalculate_metrc</find>
-      <find>filter_by</find>
-      <find>const</find>
       <find>construct</find>
       <find>rec_metrics</find>
       <find>construct_network</find>
@@ -136,6 +126,12 @@
       <find>cofficient</find>
       <find>organizations</find>
       <find>constrc</find>
+      <find>found</find>
+      <find>construc</find>
+      <find>filter_by</find>
+      <find>include_foci</find>
+      <find>print</find>
+      <find>const</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -213,6 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,8 +251,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,8 +404,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.313089" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3687397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31204188" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37314254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -608,8 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        <state relative-caret-position="115">
+          <caret line="365" column="14" lean-forward="false" selection-start-line="365" selection-start-column="14" selection-end-line="365" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -618,12 +614,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/Twitter/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="176" column="61" lean-forward="false" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="61" />
+        <state relative-caret-position="277">
+          <caret line="255" column="43" lean-forward="false" selection-start-line="255" selection-start-column="43" selection-end-line="255" selection-end-column="43" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
-            <marker date="1527523603150" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
-            <marker date="1527523603150" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
+            <marker date="1527719432323" expanded="true" signature="715:741" ph="SELECT * FRO... twitter_user" />
+            <marker date="1527719432323" expanded="true" signature="1079:1111" ph="SELECT * FRO... twitter_connection" />
           </folding>
         </state>
       </provider>
