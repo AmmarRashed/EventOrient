@@ -5,13 +5,13 @@
 
 <img src="https://www.sehir.edu.tr/tr/Documents/kurumsal-kimlik/PNG_Formatinda_SEHIR_logo_1.png" width=200>
 </a>
-<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" width=500>
 <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/medialab.jpg?raw=true" width=200>
 
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/IEEE_formatted_paper.pdf">Paper</a>
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/final_report.pdf">Report</a>
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/final_presentation.pdf">Slides</a>
 
+<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" width=700>
 
 ## Abstract
 
