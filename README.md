@@ -1,13 +1,13 @@
 # EventOrient:
 ## A System for Community-Scale Tempo-Contextual Network Analysis of Social Data Streams
 
-#### Developed in <a href="http://sehir.edu.tr/">Istanbul Sehir University: Media Lab</a>
+#### Developed in <a href="http://sehir.edu.tr/">Istanbul Sehir University: Media Lab
 
-<div id="imgs">
-    <img src="https://www.sehir.edu.tr/tr/Documents/kurumsal-kimlik/PNG_Formatinda_SEHIR_logo_1.png" style="float: left" width=200>
-    <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" style="float: left" width=500>
-  </div>
-  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/medialab.jpg?raw=true" width=200>
+<img src="https://www.sehir.edu.tr/tr/Documents/kurumsal-kimlik/PNG_Formatinda_SEHIR_logo_1.png" width=200>
+</a>
+<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/medialab.jpg?raw=true" width=200>
+
+<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" width=500>
 
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/IEEE_formatted_paper.pdf">Paper</a>
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/final_report.pdf">Report</a>
