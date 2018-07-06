@@ -3,8 +3,13 @@
 
 #### Developed in <a href="http://sehir.edu.tr/">Istanbul Sehir University: Media Lab
 <div>
-<img src="https://www.sehir.edu.tr/tr/Documents/kurumsal-kimlik/PNG_Formatinda_SEHIR_logo_1.png" width=200></a>
-<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" width=400>
+  
+               |  
+:-------------------------:|:-------------------------:
+![](https://www.sehir.edu.tr/tr/Documents/kurumsal-kimlik/PNG_Formatinda_SEHIR_logo_1.png)  |  ![](https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true)
+
+
+
 </div>
 <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/medialab.jpg?raw=true" width=200>
 
