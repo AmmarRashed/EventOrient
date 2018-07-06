@@ -25,10 +25,10 @@ We study the evolution of the social network of Istanbul Şehir University overt
 
 ## Web Crawling
 
-<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/crawler.jpg?raw=true" width=200>
+<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/crawler.jpg?raw=true" width=500>
 - The crawler repository can be found in: <a href="https://github.com/ihsansecer/socialcrawler">socialcrawler</a>
 - Twitter accounts are validated against Gmail contacts obtained from sehir.edu.tr domain
-<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/accountValidating.jpg?raw=true" width=200>
+<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/accountValidating.jpg?raw=true" width=400>
 
 ## Network Analysis
 
@@ -37,9 +37,8 @@ We study the evolution of the social network of Istanbul Şehir University overt
   - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/calculating_closures.ipynb"> Affiliation Network Analysis</a>
   <p> Institutional accounts are labled *foci* with which we build an affiliation network. Closures are detected and categorized accross different states of the network in different timestamps
     </br>
-    <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/focal.png?raw=true" width=400>
-    </br>
-  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/member.png?raw=true" width=400>
+    <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/focal.png?raw=true" width=300>
+  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/member.png?raw=true" width=300>
 
 </p>
   
