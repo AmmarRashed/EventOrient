@@ -35,8 +35,8 @@ We study the evolution of the social network of Istanbul Şehir University overt
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/calculating_communities.ipynb">Calculating Communities</a><pr>Each node is labeled by the community detected by <a href="https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm"> Girvan-Newman algorithm</a>.
   - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/calculating_closures.ipynb"> Affiliation Network Analysis</a>
   <p> Institutional accounts are labled *foci* with which we build an affiliation network. Closures are detected and categorized accross different states of the network in different timestamps</pr>
-  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/focal.png?raw=true" width=100>
-  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/member.png?raw=true" width=100>
+  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/focal.png?raw=true" width=400>
+  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/member.png?raw=true" width=400>
   
 ## Application
 
