@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8cc7e9b-618b-42a5-8334-f7f2dac6eecd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/REST/Twitter/views.py" afterPath="$PROJECT_DIR$/REST/Twitter/views.py" />
-      <change beforePath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/REST/static/networks/twitter_users_graph2.json" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/calculating_communities-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/tracking_link_formation-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" afterPath="$PROJECT_DIR$/notebooks/calculating_communities.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" afterPath="$PROJECT_DIR$/notebooks/tracking_link_formation.ipynb" />
       <change beforePath="$PROJECT_DIR$/socialcrawler" afterPath="$PROJECT_DIR$/socialcrawler" />
-      <change beforePath="$PROJECT_DIR$/visualization/twitter_users_graph2.json" afterPath="$PROJECT_DIR$/visualization/twitter_users_graph2.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,7 +51,7 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="6570">
               <caret line="365" column="14" lean-forward="false" selection-start-line="365" selection-start-column="14" selection-end-line="365" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -209,7 +202,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -251,6 +243,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,12 +393,12 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670158" sideWeight="0.5041277" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
+      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15183246" sideWeight="0.49807376" order="12" side_tool="false" content_ui="tabs" x="0" y="0" width="415" height="884" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31204188" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37314254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31138977" sideWeight="0.49587232" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38194826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -604,7 +597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/REST/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="6570">
           <caret line="365" column="14" lean-forward="false" selection-start-line="365" selection-start-column="14" selection-end-line="365" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#input#4;n#form#0;n#div#0;n#!!top" expanded="true" />
