@@ -2,10 +2,10 @@
 ## A System for Community-Scale Tempo-Contextual Network Analysis of Social Data Streams
 
 #### Developed in <a href="http://sehir.edu.tr/">Istanbul Sehir University: Media Lab
-<p>
+<div>
 <img src="https://www.sehir.edu.tr/tr/Documents/kurumsal-kimlik/PNG_Formatinda_SEHIR_logo_1.png" width=200></a>
 <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" width=500>
-</p>
+</div>
 <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/medialab.jpg?raw=true" width=200>
 
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/IEEE_formatted_paper.pdf">Paper</a>
