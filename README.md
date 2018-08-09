@@ -1,12 +1,17 @@
 # EventOrient:
 ## A System for Community-Scale Tempo-Contextual Network Analysis of Social Data Streams
 
-- Developed in <a href="http://sehir.edu.tr/">Istanbul Sehir University: Media Lab
+#### Developed in <a href="http://sehir.edu.tr/">Istanbul Sehir University: Media Lab
+
 <img src="https://www.sehir.edu.tr/tr/Documents/kurumsal-kimlik/PNG_Formatinda_SEHIR_logo_1.png" width=200>
-  </br>
+</a>
 <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/medialab.jpg?raw=true" width=200>
-  </a>
-<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true">
+
+- <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/IEEE_formatted_paper.pdf">Paper</a>
+- <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/final_report.pdf">Report</a>
+- <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/final_presentation.pdf">Slides</a>
+
+<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" >
 
 ## Abstract
 
@@ -37,8 +42,8 @@ We study the evolution of the social network of Istanbul Şehir University overt
   - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/calculating_closures.ipynb"> Affiliation Network Analysis</a>
   <p> Institutional accounts are labled *foci* with which we build an affiliation network. Closures are detected and categorized accross different states of the network in different timestamps
     </br>
-    <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/focal.png?raw=true" width=300>
-  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/member.png?raw=true" width=300>
+    <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/focal.png?raw=true" width=400>
+  <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/member.png?raw=true" width=400>
 
 </p>
   
