@@ -17,4 +17,3 @@ class Home(APIView):
 
 def home(request):
     return HttpResponse("Home page")
-
