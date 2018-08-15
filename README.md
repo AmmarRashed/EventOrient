@@ -49,7 +49,7 @@ We study the evolution of the social network of Istanbul Şehir University overt
   
 ## Application
 
-- The source code for the Django application of the project can be found in <a href="https://github.com/AmmarRashed/EventOrient/tree/master/REST"> REST</a>
+- The source code for the Django application of the project can be found in <a href="https://github.com/AmmarRashed/EventOrient/tree/master/Rest"> Rest</a>
 
 ### Backend-Frontend communication
 
