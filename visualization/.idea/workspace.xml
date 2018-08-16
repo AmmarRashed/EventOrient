@@ -35,8 +35,8 @@
       <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+            <state relative-caret-position="594">
+              <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -44,8 +44,8 @@
       <file leaf-file-name="SCC_graph.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SCC_graph.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58086">
-              <caret line="3227" column="9" selection-start-line="3227" selection-start-column="9" selection-end-line="3227" selection-end-column="9" />
+            <state relative-caret-position="81774">
+              <caret line="6861" column="9" selection-start-line="6861" selection-start-column="9" selection-end-line="6861" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -171,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.twitter.html (1)">
+  <component name="RunManager" selected="JavaScript Debug.twitter.html">
     <configuration name="twitter_clusters.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/twitter_clusters.html" />
     <configuration name="twitter_clusters.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/twitter_clusters.html" />
     <configuration name="twitter_fb.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/twitter_fb.html" />
@@ -186,8 +186,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.twitter.html (1)" />
         <item itemvalue="JavaScript Debug.twitter.html" />
+        <item itemvalue="JavaScript Debug.twitter.html (1)" />
         <item itemvalue="JavaScript Debug.twitter_clusters.html (1)" />
         <item itemvalue="JavaScript Debug.twitter_clusters.html" />
         <item itemvalue="JavaScript Debug.twitter_fb.html (1)" />
@@ -223,12 +223,13 @@
       <workItem from="1533807700233" duration="524000" />
       <workItem from="1533808359303" duration="229000" />
       <workItem from="1534344193616" duration="662000" />
-      <workItem from="1534423648132" duration="892000" />
+      <workItem from="1534423648132" duration="1682000" />
+      <workItem from="1534432589762" duration="897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40674000" />
+    <option name="totallyTimeSpent" value="42361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
@@ -598,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SCC_graph.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58086">
-          <caret line="3227" column="9" selection-start-line="3227" selection-start-column="9" selection-end-line="3227" selection-end-column="9" />
+        <state relative-caret-position="81774">
+          <caret line="6861" column="9" selection-start-line="6861" selection-start-column="9" selection-end-line="6861" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -612,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+        <state relative-caret-position="594">
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
         </state>
       </provider>
     </entry>
