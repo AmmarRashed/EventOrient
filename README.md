@@ -38,9 +38,9 @@ We study the evolution of the social network of Istanbul Şehir University overt
 ## Network Analysis
 
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/tracking_link_formation.ipynb">Tracking link-formation.</a> <p>Constructing a network from twitter connections. This notebook also has the script for filtering twitter accounts to obtain only the ones pertaining to <a href="http://sehir.edu.tr/">Sehir</a> community.</p>
-- <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/calculating_communities.ipynb">Calculating Communities</a><pr>Each node is labeled by the community detected by <a href="https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm"> Girvan-Newman algorithm</a>.
+- <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/calculating_communities.ipynb">Calculating Communities</a></br>Each node is labeled by the community detected by <a href="https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm"> Girvan-Newman algorithm</a>.
   - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/notebooks/calculating_closures.ipynb"> Affiliation Network Analysis</a>
-  <p> Institutional accounts are labled *foci* with which we build an affiliation network. Closures are detected and categorized accross different states of the network in different timestamps
+  <p> Institutional accounts are labled `foci` with which we build an affiliation network. Closures are detected and categorized accross different states of the network in different timestamps
     </br>
     <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/focal.png?raw=true" width=400>
   <img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/member.png?raw=true" width=400>
@@ -49,7 +49,7 @@ We study the evolution of the social network of Istanbul Şehir University overt
   
 ## Application
 
-- The source code for the Django application of the project can be found in <a href="https://github.com/AmmarRashed/EventOrient/tree/master/REST"> REST</a>
+- The source code for the Django application of the project can be found in <a href="https://github.com/AmmarRashed/EventOrient/tree/master/Rest"> Rest</a>
 
 ### Backend-Frontend communication
 
