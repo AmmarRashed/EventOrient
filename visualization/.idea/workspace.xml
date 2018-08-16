@@ -35,8 +35,8 @@
       <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+            <state relative-caret-position="664">
+              <caret line="234" column="37" lean-forward="true" selection-start-line="234" selection-start-column="37" selection-end-line="234" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -45,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/SCC_graph.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81774">
-              <caret line="6861" column="9" selection-start-line="6861" selection-start-column="9" selection-end-line="6861" selection-end-column="9" />
+              <caret line="7242" column="9" selection-start-line="7242" selection-start-column="9" selection-end-line="7242" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -70,11 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mouseout</find>
-      <find>var link</find>
-      <find>arrow</find>
-      <find>&quot;r&quot;</find>
-      <find>stroke-width</find>
       <find>.name</find>
       <find>mini</find>
       <find>scale</find>
@@ -87,19 +82,24 @@
       <find>.transf</find>
       <find>opacity</find>
       <find>opacit</find>
-      <find>link</find>
       <find>link_over</find>
       <find>line</find>
       <find>label</find>
       <find>text</find>
       <find>node_over</find>
-      <find>node_scale</find>
       <find>var node</find>
       <find>node</find>
       <find>selectAll</find>
       <find>filterByDegree</find>
       <find>simulation</find>
       <find>communi</find>
+      <find>link =</find>
+      <find>degree</find>
+      <find>stroke-</find>
+      <find>node_scale</find>
+      <find>link</find>
+      <find>link_scale</find>
+      <find>-10</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -224,16 +224,15 @@
       <workItem from="1533808359303" duration="229000" />
       <workItem from="1534344193616" duration="662000" />
       <workItem from="1534423648132" duration="1682000" />
-      <workItem from="1534432589762" duration="897000" />
+      <workItem from="1534432589762" duration="2275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42361000" />
+    <option name="totallyTimeSpent" value="43739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959743" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -600,7 +599,7 @@
     <entry file="file://$PROJECT_DIR$/SCC_graph.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81774">
-          <caret line="6861" column="9" selection-start-line="6861" selection-start-column="9" selection-end-line="6861" selection-end-column="9" />
+          <caret line="7242" column="9" selection-start-line="7242" selection-start-column="9" selection-end-line="7242" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -613,8 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        <state relative-caret-position="664">
+          <caret line="234" column="37" lean-forward="true" selection-start-line="234" selection-start-column="37" selection-end-line="234" selection-end-column="37" />
         </state>
       </provider>
     </entry>

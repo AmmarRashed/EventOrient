@@ -5,170 +5,170 @@
         {
             "biggest_community": "6", 
             "degree": 179, 
-            "names": [
-                "Abdurrahman Zengin", 
-                "Mustafa Zengin", 
-                "Sedat Ulusoy", 
-                "Yunus Ugur", 
-                "Amer Noureddin", 
-                "ayse karabat", 
-                "Abdul Basit Adeel", 
-                "esraozdil", 
-                "Fatma Alada\u011f", 
-                "Mehmet K\u00f6se", 
-                "gulsennisli", 
-                "Burcu Sa\u011flam", 
-                "reyyan bilge", 
-                "Ayse Guveli", 
-                "gazi giray g\u00fcnayd\u0131n", 
-                "MESUT YILMAZ", 
-                "Serap Sara\u00e7l\u0131", 
-                "Melik Ahmet Daye", 
-                "Yavuz Demir", 
-                "Sami Erdem", 
-                "Mustafa Cevik", 
-                "Mehmet Sahin", 
-                "Mustafa G\u00f6ksu", 
-                "Banu Saat\u00e7i", 
-                "Eyyup YILMAZ", 
-                "Ezgi Canbaz", 
-                "GulsahMert", 
-                "Ahmed Yusuf", 
-                "Muzaffer Senel", 
-                "Hasan Kocat\u00fcrk", 
-                "ahmet demirhan", 
-                "Orhan G\u00dcLER", 
-                "\u0130brahim DURU", 
-                "Omer Celebi", 
-                "selma \u015firin", 
-                "Onur \u00d6NER", 
-                "Behram Koca", 
-                "Harun \u00d6zt\u00fcrk", 
-                "Ibrahim Kalin", 
-                "ahmetkahveciler", 
-                "Ayhan Kaygusuz", 
-                "reyhan sarikaya", 
-                "Ceren Dilmen", 
-                "Reyhan \u00dcnver Fidan", 
-                "Candan Karl\u0131tekin", 
-                "Fatih \u00dcnal", 
-                "M Rami Tawakol", 
-                "Sinem Pala", 
-                "abdurrahmandemirel", 
-                "Yunus Ali Erol", 
-                "Merve VURAL", 
-                "\u00d6nder Mutlu Y\u0131lmaz", 
-                "bayram tas", 
-                "Serdar B\u00fcy\u00fcksimitci", 
-                "Murat Acar", 
-                "Ebru Kayaalp", 
-                "Salih \u00c7olak", 
-                "\u0130lker Ucun", 
-                "Huseyin Alptekin", 
-                "Ebra Usta", 
-                "Elyesa Turgut", 
-                "\u0130smail Erkam \u00d6zt\u00fcrk", 
-                "eyupgokce", 
-                "Zeynep Sena Kurtul", 
-                "Tuna Kocaman", 
-                "Nisanur Hekimo\u011flu", 
-                "Nihan Yapar", 
-                "Goktug Taner", 
-                "Musa Anda\u00e7", 
-                "Murat G\u00f6kdemir", 
-                "mehmet sercan ercan", 
-                "Taha AYHAN", 
-                "Murat Y\u0131lmaz", 
-                "Murat Karata\u015f", 
-                "Havva Nur Ozdemir", 
-                "mustafaozel", 
-                "mehmet \u00f6zdin\u00e7", 
-                "Muhammet Tahmazo\u011flu\u261d", 
-                "Sinan Yavuz", 
-                "Zubeyir Nisanci", 
-                "HAMD\u0130 IRMAK", 
-                "Emre Kayaci", 
-                "burak altun", 
-                "BEDIRHANTUZ", 
-                "Mustafa \u00d6zkaya", 
-                "Burak Kayhan", 
+            "screen_names": [
+                "alimarli_", 
+                "Talha_Kose1", 
+                "hakanbayrakk", 
+                "msenel", 
+                "ahdamar", 
+                "mhmtaytkn", 
+                "Cengizbeyza", 
+                "konevim", 
+                "ReyyanBilge", 
+                "kkopuz", 
+                "akalikoc", 
+                "onuroner_1907", 
+                "ebrukayaalp", 
+                "smyykc", 
+                "gaziigiray", 
+                "fatmaaladag", 
+                "0mar_hamzeh", 
                 "peyamicelikcan", 
-                "S\u00fcmeyye Koca", 
-                "Mehmet Kara", 
-                "Belma Bekta\u015f", 
-                "Celal Tellio\u011flu", 
-                "Ayse Turhan", 
-                "Sude Beyaz", 
-                "Yusuf Yi\u011fit", 
-                "Oguz Yasin Cihan", 
-                "Talha \u00c7elik", 
-                "Hakan Yilmaz", 
-                "Nihat Erdogmus", 
-                "seyma karame\u015fe", 
-                "Dilem Hizlan", 
-                "mehmet aytekin", 
-                "Mesut Ye\u011fen", 
-                "Sebahattin AYDIN", 
-                "Enes Malik G\u00fcrg\u00f6ze", 
-                "Melih Talu", 
-                "senanur avc\u0131", 
-                "Furkan YILMAZ", 
-                "Hamza Albayrak", 
-                "Taha Enes Kurtulmus", 
-                "Merve Armagan", 
-                "Metin \u00d6mer Biseli", 
-                "Zeynep Kurt", 
-                "kasim kopuz", 
-                "Fatmanur Puytu", 
-                "Caner Ozdemir", 
-                "Mehmet Ali", 
-                "Mustafa Demiray", 
-                "S\u00fcmeyra Yerinde", 
-                "Sibel Evecen", 
-                "Mehmet Ozkan", 
-                "Ay\u015fe Sena Okuyan", 
-                "Furkan Ya\u015far", 
-                "Vedat Demirbilek", 
-                "Nida Aksoy", 
-                "Omar Hamzeh", 
-                "Salim YAVUZ", 
-                "G\u00f6khan \u00c7etinsaya", 
-                "Alican Ka\u00e7ar", 
-                "Bahadir Bektas\ud83c\uddf9\ud83c\uddf7", 
-                "emrah kaya", 
-                "Burak Y\u0131lmaz", 
-                "\u00d6mer - Faruk Kafali", 
-                "h\u00fcseyin dikmen", 
-                "Kemal Karaca", 
-                "Sacit Cesitcioglu", 
-                "fatma mizan", 
-                "Feyyaz Derino\u011flu", 
-                "Beyza Cengiz", 
-                "Mehmet Akif Okur", 
-                "Mehmet Demir", 
-                "Fatih er", 
-                "Fatih Altug", 
-                "Ahmet Bulut", 
-                "ahmet corduk", 
-                "Ahmet Akyol", 
-                "Elif Develi", 
-                "hilal ebru yakar", 
-                "Alim Arl\u0131", 
-                "Deniz Cenk Demir", 
-                "Selim Demirkaynak", 
-                "Hakan Bayrak", 
-                "Reyhan Y\u00fcksel", 
-                "Ali KO\u00c7", 
-                "Burak Cimrenli", 
-                "Mehmet Babacan", 
-                "Salih S\u00fcheyl", 
-                "abdulhalik damar", 
-                "Burak Balkaya", 
-                "Salih D\u00f6\u011fenci", 
-                "Talha K\u00f6se", 
-                "Melda Ademo\u011flu", 
-                "Zeynep Karl\u0131tekin", 
-                "Bilal Ayan"
+                "smlerkam", 
+                "essraozdil", 
+                "KaygusuzA", 
+                "psikologhanem", 
+                "mesutyilmaz61", 
+                "1VARNALI", 
+                "EyupGokcee", 
+                "unlfatih", 
+                "34DRU94", 
+                "mesutyegen", 
+                "ozdincmehmet", 
+                "tlhclk", 
+                "ahmetcorduk", 
+                "mrtgokdemir", 
+                "tarcinlielmali", 
+                "ZubeyirNisanci", 
+                "andacmusa", 
+                "turhanays", 
+                "Mustafa_Dmry", 
+                "uguryunus", 
+                "_sedatulusoy", 
+                "egurgoze", 
+                "abadeeel", 
+                "serapsaracli", 
+                "fatialtug", 
+                "ikalin1", 
+                "yunusalierol", 
+                "cetinsayag", 
+                "ahmetkahveciler", 
+                "Nidaaksoy", 
+                "GulsahMrt", 
+                "nihanyapar", 
+                "behramkoca", 
+                "Furkan_YILMAZZ", 
+                "hasannkocaturk", 
+                "ebrausta", 
+                "DemirlerinYavuz", 
+                "Mstfozl", 
+                "selimdemirkynk", 
+                "meldademoglu", 
+                "michealbonus", 
+                "nisanurhekim", 
+                "salimyavuz", 
+                "kral", 
+                "MelihTalu", 
+                "banusaatci", 
+                "nihaterdogmus", 
+                "burcu_saglam", 
+                "fragileworldamn", 
+                "ezgcnbz", 
+                "Candan_Dost", 
+                "ilkerucun", 
+                "tunakocaman", 
+                "elyesaturgut", 
+                "TUZBEDIRHAN", 
+                "dilmencern", 
+                "mrvarmagan", 
+                "OmerFarukKafali", 
+                "serdarbs", 
+                "SudeBeyaz_", 
+                "gulsennisli", 
+                "abdemirel", 
+                "zynpkrltkn", 
+                "ondermy", 
+                "zskurtul", 
+                "AYDINSEBAHATTIN", 
+                "DenizCenkDemir", 
+                "Sinemmpala", 
+                "ssewecen", 
+                "_yyigit_", 
+                "balikgoz", 
+                "ssuheyl", 
+                "azenginn", 
+                "mustafazengins", 
+                "AmerNoureddin", 
+                "aysekarabat", 
+                "mhtkose", 
+                "ayseguveli", 
+                "melikdaye", 
+                "drmcevik", 
+                "teopolitik", 
+                "mustafaagoksu", 
+                "EyyupYILMAZ66", 
+                "AhmedYusufm", 
+                "ahmet_demirhan", 
+                "orhanguler1", 
+                "omerclb", 
+                "ayylakogrenci", 
+                "reyhan_sarikaya", 
+                "MRTawakol", 
+                "ofmoriste", 
+                "tasbayram", 
+                "acarendi", 
+                "salihcolak96", 
+                "husalptekin", 
+                "GoktugTaner", 
+                "msercanercan", 
+                "tahaayhan", 
+                "gocukkk", 
+                "murat_karatass", 
+                "MT_Tahmazoglu", 
+                "Sinan53Yavuz", 
+                "emrekayaci2", 
+                "burak_altun_", 
+                "ozkaya_mustafa", 
+                "burakkayhan11", 
+                "darulselam", 
+                "ofelya1994", 
+                "ctellioglu", 
+                "oyc01", 
+                "yilmaz_hakan", 
+                "karameseseyma", 
+                "dihizlan", 
+                "sen_a_nur", 
+                "hamzalbayrak", 
+                "TEKurtulmus", 
+                "MetinmerBiseli", 
+                "arslantaszeynep", 
+                "nurpuytu", 
+                "canerozdemir", 
+                "Yesilcollu", 
+                "sumeyrayerinde", 
+                "_MehmetOzkan", 
+                "AyseSenaOkuyan", 
+                "furkanysr", 
+                "DemirbilekVedat", 
+                "AlicanKacr", 
+                "BhdrRg", 
+                "emrahkayad", 
+                "travissbickle", 
+                "eksi_zeytin", 
+                "kkaraca53", 
+                "sacitces", 
+                "ftmzn", 
+                "FeyyazDerinoglu", 
+                "MehmetAkifOkur", 
+                "MehmetGurcuoglu", 
+                "fatiher99", 
+                "Ahmet_AKYOL82", 
+                "elifdevelii", 
+                "hilalebruuuu", 
+                "yukselreyhan", 
+                "be__ce", 
+                "babacanmehmet", 
+                "salihdogenci"
             ], 
             "nodes": [
                 712307286, 
@@ -379,13 +379,13 @@
         {
             "biggest_community": "11", 
             "degree": 4, 
-            "names": [
-                "Emrah Akkurt", 
-                "Mehmet Ozdemir\uf8ff", 
-                "Ahmet \u00c7EL\u0130K", 
-                "Mehmet AKINCI", 
-                "Ayten Koldemir", 
-                "asli abak"
+            "screen_names": [
+                "AkinciMehmet", 
+                "Emrah_Akkurt", 
+                "mehmet7573", 
+                "ahmcelk", 
+                "aytenkoldemir", 
+                "asliabak"
             ], 
             "nodes": [
                 497860167, 
@@ -407,12 +407,12 @@
         {
             "biggest_community": "12", 
             "degree": 2, 
-            "names": [
-                "Furkan Onur Eken", 
-                "Dilara Boyraz", 
-                "Sena D\u00f6nmez", 
-                "beyza albayrak", 
-                "Cansu Yaman"
+            "screen_names": [
+                "dilaraboyraz", 
+                "sena_donmez", 
+                "SCansuYaman", 
+                "furkanonureken", 
+                "albabeyza"
             ], 
             "nodes": [
                 437765733, 
@@ -433,10 +433,10 @@
         {
             "biggest_community": "2", 
             "degree": 126, 
-            "names": [
-                "Ali \u00dclker", 
-                "Cem Karakas", 
-                "Mehmet Karaca"
+            "screen_names": [
+                "Ali_Ulker", 
+                "cemkarakas", 
+                "mehmetkaracaitu"
             ], 
             "nodes": [
                 995806488, 
@@ -455,8 +455,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "G\u00f6khan Kaya"
+            "screen_names": [
+                "0x90kh4n"
             ], 
             "nodes": [
                 982366771
@@ -473,8 +473,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Rumeysa Bet\u00fcl Ceylan"
+            "screen_names": [
+                "RbCeylan"
             ], 
             "nodes": [
                 972451742
@@ -491,8 +491,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Ahmet Kaya"
+            "screen_names": [
+                "HocazadeAhmed"
             ], 
             "nodes": [
                 967897650
@@ -509,8 +509,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Esra Demir"
+            "screen_names": [
+                "esra_demir7"
             ], 
             "nodes": [
                 966522690
@@ -527,8 +527,8 @@
         {
             "biggest_community": "5", 
             "degree": 2, 
-            "names": [
-                "Ahmet \u015eahin"
+            "screen_names": [
+                "ahmetsahin23"
             ], 
             "nodes": [
                 965098470
@@ -545,8 +545,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Abdullah Enes"
+            "screen_names": [
+                "abdullahbedir70"
             ], 
             "nodes": [
                 953664194
@@ -563,8 +563,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa \u00d6zel"
+            "screen_names": [
+                "MustafaOzelden"
             ], 
             "nodes": [
                 946886773
@@ -581,8 +581,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Bilal \u00f6zt\u00fcrk"
+            "screen_names": [
+                "bilalozt"
             ], 
             "nodes": [
                 945462330
@@ -599,8 +599,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Safiye Nur G\u00fcltekin"
+            "screen_names": [
+                "1safiye"
             ], 
             "nodes": [
                 944285684
@@ -617,8 +617,8 @@
         {
             "biggest_community": "10", 
             "degree": 1, 
-            "names": [
-                "HAL\u0130L YILDIZ"
+            "screen_names": [
+                "HALILYILDIZ63"
             ], 
             "nodes": [
                 943572432
@@ -635,8 +635,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Aysenur Cevahiroglu"
+            "screen_names": [
+                "aysenurcev"
             ], 
             "nodes": [
                 939433993
@@ -653,8 +653,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Muhammet Maz\u0131"
+            "screen_names": [
+                "mhmmtmz"
             ], 
             "nodes": [
                 939057318
@@ -671,8 +671,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa Emre"
+            "screen_names": [
+                "mustafaemre__"
             ], 
             "nodes": [
                 928991347
@@ -689,8 +689,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Burak Cakir"
+            "screen_names": [
+                "burakcakir01"
             ], 
             "nodes": [
                 928454131
@@ -707,8 +707,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "muhammed fatih"
+            "screen_names": [
+                "muhammetfatih_"
             ], 
             "nodes": [
                 927466333
@@ -725,8 +725,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "cengiz t\u00fcrkan"
+            "screen_names": [
+                "cengiztrkan1"
             ], 
             "nodes": [
                 918815419
@@ -743,8 +743,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "merve akku\u015f"
+            "screen_names": [
+                "merakks"
             ], 
             "nodes": [
                 915539516
@@ -761,8 +761,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Elif \u00d6zcan \ud83c\uddf9\ud83c\uddf7\ud83d\udca1"
+            "screen_names": [
+                "elf_ozcann"
             ], 
             "nodes": [
                 914136576
@@ -779,8 +779,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Merve Nur Bayraktar"
+            "screen_names": [
+                "MerveNurBayrak3"
             ], 
             "nodes": [
                 904465758
@@ -797,8 +797,8 @@
         {
             "biggest_community": "8", 
             "degree": 1, 
-            "names": [
-                "Reyhan K\u00fc\u00e7\u00fck Fidan"
+            "screen_names": [
+                "reyhankk6"
             ], 
             "nodes": [
                 903302773
@@ -815,8 +815,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mahmut Sait Arslan"
+            "screen_names": [
+                "SaitMahmut"
             ], 
             "nodes": [
                 900508574
@@ -833,8 +833,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Merve Erol \ud83d\udc23"
+            "screen_names": [
+                "merveerol14"
             ], 
             "nodes": [
                 900003228
@@ -851,8 +851,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mehmet vural"
+            "screen_names": [
+                "smmehmetvural"
             ], 
             "nodes": [
                 891024134
@@ -869,8 +869,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Salih Akpinar"
+            "screen_names": [
+                "AkpinarSalih"
             ], 
             "nodes": [
                 889187688
@@ -887,8 +887,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "zeynepfevzioglu"
+            "screen_names": [
+                "zeeepzep"
             ], 
             "nodes": [
                 886856594
@@ -905,8 +905,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mehmet Ali."
+            "screen_names": [
+                "MehmetAliOdabas"
             ], 
             "nodes": [
                 869852834
@@ -923,8 +923,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mesut \u00d6zcan"
+            "screen_names": [
+                "mesudozcan"
             ], 
             "nodes": [
                 859509014
@@ -941,8 +941,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Burak KAYA"
+            "screen_names": [
+                "burakayax"
             ], 
             "nodes": [
                 853472868
@@ -959,8 +959,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Elif Nursa\u00e7an"
+            "screen_names": [
+                "ENursacan"
             ], 
             "nodes": [
                 850130101
@@ -977,8 +977,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa \u00c7akan"
+            "screen_names": [
+                "mustafacakann"
             ], 
             "nodes": [
                 848094679
@@ -995,8 +995,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Ahmed Altayar"
+            "screen_names": [
+                "AhmedAltayar4"
             ], 
             "nodes": [
                 838077084
@@ -1013,8 +1013,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet ARDA"
+            "screen_names": [
+                "memisarda"
             ], 
             "nodes": [
                 825818708
@@ -1031,8 +1031,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Hatice \u00d6zkan"
+            "screen_names": [
+                "hozkan12"
             ], 
             "nodes": [
                 811374260
@@ -1049,8 +1049,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "cemaleddin \u00e7oka"
+            "screen_names": [
+                "sfsckesc"
             ], 
             "nodes": [
                 804561234
@@ -1067,8 +1067,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Zehra Nur D\u00dcZ"
+            "screen_names": [
+                "zehranurdz"
             ], 
             "nodes": [
                 802893386
@@ -1085,8 +1085,8 @@
         {
             "biggest_community": "8", 
             "degree": 1, 
-            "names": [
-                "Osman & Reyhan"
+            "screen_names": [
+                "osmanfidan7"
             ], 
             "nodes": [
                 799977030
@@ -1103,8 +1103,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Salim Selvi"
+            "screen_names": [
+                "SelviSalim"
             ], 
             "nodes": [
                 798758016
@@ -1121,8 +1121,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Salih Sahin"
+            "screen_names": [
+                "nihashilas"
             ], 
             "nodes": [
                 786513674
@@ -1139,8 +1139,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mahmut YILDIRIM"
+            "screen_names": [
+                "yildirim_mahmud"
             ], 
             "nodes": [
                 778109382
@@ -1157,8 +1157,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Furkan Demiray"
+            "screen_names": [
+                "FurkanDmry"
             ], 
             "nodes": [
                 773231442
@@ -1175,8 +1175,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "esra balanli"
+            "screen_names": [
+                "balanli_esra"
             ], 
             "nodes": [
                 766348868
@@ -1193,8 +1193,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "rahime aksa boyraz"
+            "screen_names": [
+                "aksaboyraz"
             ], 
             "nodes": [
                 765369582
@@ -1211,8 +1211,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "MEHMET YILMAZ"
+            "screen_names": [
+                "MEHMETY341900"
             ], 
             "nodes": [
                 763402614
@@ -1229,8 +1229,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet Ozgen"
+            "screen_names": [
+                "mozgen59"
             ], 
             "nodes": [
                 759973424
@@ -1247,8 +1247,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Halil \u0130brahim ERGUN"
+            "screen_names": [
+                "halil_iergun"
             ], 
             "nodes": [
                 756048858
@@ -1265,8 +1265,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "rabia_yilmaz"
+            "screen_names": [
+                "rabiaylmz95"
             ], 
             "nodes": [
                 755276202
@@ -1283,8 +1283,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Fatih \u00f6ner"
+            "screen_names": [
+                "Fatihoner8"
             ], 
             "nodes": [
                 754775306
@@ -1301,8 +1301,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "AHMET ASLAN"
+            "screen_names": [
+                "ahmetaslantr"
             ], 
             "nodes": [
                 746961858
@@ -1319,8 +1319,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "yunus \u00e7eltik"
+            "screen_names": [
+                "yunusceltik"
             ], 
             "nodes": [
                 743227844
@@ -1337,8 +1337,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet TEZER"
+            "screen_names": [
+                "mtezer34"
             ], 
             "nodes": [
                 742645290
@@ -1355,8 +1355,8 @@
         {
             "biggest_community": "15", 
             "degree": 1, 
-            "names": [
-                "Ebru Ademoglu"
+            "screen_names": [
+                "EbruAdemoglu"
             ], 
             "nodes": [
                 740721020
@@ -1373,8 +1373,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "ahmet gunaydin"
+            "screen_names": [
+                "ahmetgunaydin2"
             ], 
             "nodes": [
                 733590338
@@ -1391,8 +1391,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Burak Demir"
+            "screen_names": [
+                "burakiron"
             ], 
             "nodes": [
                 729427152
@@ -1409,8 +1409,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Fatih \u00c7etin"
+            "screen_names": [
+                "mfcetin"
             ], 
             "nodes": [
                 722521657
@@ -1427,8 +1427,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "serkan kaya"
+            "screen_names": [
+                "srkn45"
             ], 
             "nodes": [
                 717060518
@@ -1445,8 +1445,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Abdulkarim Auwal"
+            "screen_names": [
+                "akarim711"
             ], 
             "nodes": [
                 715580484
@@ -1463,8 +1463,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Mehmet ARAZ"
+            "screen_names": [
+                "memet_araz"
             ], 
             "nodes": [
                 708827666
@@ -1481,8 +1481,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa Erdo\u011fan"
+            "screen_names": [
+                "erdogan3874"
             ], 
             "nodes": [
                 636286508
@@ -1499,8 +1499,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Muhammet Akku\u015f"
+            "screen_names": [
+                "muhammetakkus"
             ], 
             "nodes": [
                 633302673
@@ -1517,8 +1517,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Safa Can Demir"
+            "screen_names": [
+                "safacandemir"
             ], 
             "nodes": [
                 633057056
@@ -1535,8 +1535,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Leyla Zeynep Ver\u00e7in"
+            "screen_names": [
+                "leylavercin"
             ], 
             "nodes": [
                 624787113
@@ -1553,8 +1553,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Ahmet Er"
+            "screen_names": [
+                "aahmeter"
             ], 
             "nodes": [
                 619082349
@@ -1571,8 +1571,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Merve Sancaktar"
+            "screen_names": [
+                "mervesancaktr"
             ], 
             "nodes": [
                 615555441
@@ -1589,8 +1589,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "salih kaya"
+            "screen_names": [
+                "salihka49056074"
             ], 
             "nodes": [
                 614648680
@@ -1607,8 +1607,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa ER"
+            "screen_names": [
+                "__mustafaer"
             ], 
             "nodes": [
                 611495719
@@ -1625,8 +1625,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Enes Acar"
+            "screen_names": [
+                "Enes_Acarr"
             ], 
             "nodes": [
                 609944399
@@ -1643,8 +1643,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Sedanur EKER"
+            "screen_names": [
+                "sedanurekr"
             ], 
             "nodes": [
                 606948763
@@ -1661,8 +1661,8 @@
         {
             "biggest_community": "14", 
             "degree": 1, 
-            "names": [
-                "Ayse Ozdemir"
+            "screen_names": [
+                "AyseOzdemirayse"
             ], 
             "nodes": [
                 606482438
@@ -1679,8 +1679,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Abdurrahman Genc"
+            "screen_names": [
+                "GencAbdurrahman"
             ], 
             "nodes": [
                 606426453
@@ -1697,8 +1697,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Merve Sar\u0131kaya"
+            "screen_names": [
+                "mervevesarikaya"
             ], 
             "nodes": [
                 599257209
@@ -1715,8 +1715,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Naveed Tahir"
+            "screen_names": [
+                "nedtahir"
             ], 
             "nodes": [
                 595592832
@@ -1733,8 +1733,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Yusuf Kaya"
+            "screen_names": [
+                "ysufkya"
             ], 
             "nodes": [
                 593980771
@@ -1751,8 +1751,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "orhan ulker"
+            "screen_names": [
+                "ulkerorhan"
             ], 
             "nodes": [
                 592015438
@@ -1769,8 +1769,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "H\u00fcseyin \u00d6zkan"
+            "screen_names": [
+                "Hseyinz10011972"
             ], 
             "nodes": [
                 591599255
@@ -1787,8 +1787,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Kadir \u00c7elik"
+            "screen_names": [
+                "celik_kadir04"
             ], 
             "nodes": [
                 591258159
@@ -1805,8 +1805,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mustafa \u00fcz\u00e7elik"
+            "screen_names": [
+                "mustafa21006446"
             ], 
             "nodes": [
                 583011029
@@ -1823,8 +1823,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mehmet KAYA"
+            "screen_names": [
+                "m_kaya01"
             ], 
             "nodes": [
                 577063420
@@ -1841,8 +1841,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "MURAT KARADA\u011e"
+            "screen_names": [
+                "MuratKaradag_T"
             ], 
             "nodes": [
                 577063332
@@ -1859,8 +1859,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "ozan ozturk"
+            "screen_names": [
+                "ozandubai"
             ], 
             "nodes": [
                 574782021
@@ -1877,8 +1877,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa Ko\u00e7"
+            "screen_names": [
+                "Mustafa33100"
             ], 
             "nodes": [
                 572763889
@@ -1895,8 +1895,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa Kara"
+            "screen_names": [
+                "MusstafaKara"
             ], 
             "nodes": [
                 568512503
@@ -1913,8 +1913,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "huseyin Kara"
+            "screen_names": [
+                "huseyinKara11"
             ], 
             "nodes": [
                 566067329
@@ -1931,8 +1931,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Sinan Tekin"
+            "screen_names": [
+                "sinantekin34"
             ], 
             "nodes": [
                 561229157
@@ -1949,8 +1949,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Tamer Yilmaz"
+            "screen_names": [
+                "Lonestar657"
             ], 
             "nodes": [
                 557654297
@@ -1967,8 +1967,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "ahmed fatih"
+            "screen_names": [
+                "ahmd_fth"
             ], 
             "nodes": [
                 556381215
@@ -1985,8 +1985,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Dilek Merve"
+            "screen_names": [
+                "dile_merve"
             ], 
             "nodes": [
                 553444867
@@ -2003,8 +2003,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Burhan Kaya"
+            "screen_names": [
+                "69BuRHanKaya"
             ], 
             "nodes": [
                 551235868
@@ -2021,8 +2021,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "\u0130smail Kahraman"
+            "screen_names": [
+                "ikahramanbv"
             ], 
             "nodes": [
                 541024754
@@ -2039,8 +2039,8 @@
         {
             "biggest_community": "6", 
             "degree": 1, 
-            "names": [
-                "Zeynep Ayan"
+            "screen_names": [
+                "ZeyAyan"
             ], 
             "nodes": [
                 539055869
@@ -2057,8 +2057,8 @@
         {
             "biggest_community": "12", 
             "degree": 1, 
-            "names": [
-                "MURAT ERCAN"
+            "screen_names": [
+                "ErcanMuraat"
             ], 
             "nodes": [
                 538874783
@@ -2075,8 +2075,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mustafa akta\u015f"
+            "screen_names": [
+                "mustafa_aktas_"
             ], 
             "nodes": [
                 535239715
@@ -2093,8 +2093,8 @@
         {
             "biggest_community": "6", 
             "degree": 1, 
-            "names": [
-                "Enes Oru\u00e7"
+            "screen_names": [
+                "OrucEness"
             ], 
             "nodes": [
                 534601323
@@ -2111,8 +2111,8 @@
         {
             "biggest_community": "8", 
             "degree": 1, 
-            "names": [
-                "Hakan Bayrak\u00e7\u0131"
+            "screen_names": [
+                "ahakanbayrakci"
             ], 
             "nodes": [
                 531079884
@@ -2129,8 +2129,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Hande Baltac\u0131"
+            "screen_names": [
+                "HandeBaltaci"
             ], 
             "nodes": [
                 529401410
@@ -2147,8 +2147,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "salih mert"
+            "screen_names": [
+                "salihmert19861"
             ], 
             "nodes": [
                 522595967
@@ -2165,8 +2165,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "muhammed  demir"
+            "screen_names": [
+                "muhamme22178389"
             ], 
             "nodes": [
                 514220222
@@ -2183,8 +2183,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "yunus \u00e7elik"
+            "screen_names": [
+                "dostlar123"
             ], 
             "nodes": [
                 512309670
@@ -2201,8 +2201,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "elif y\u0131lmaz"
+            "screen_names": [
+                "daphnelfe"
             ], 
             "nodes": [
                 507737255
@@ -2219,8 +2219,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "\u00d6mercan KA\u00c7AR"
+            "screen_names": [
+                "omercan94"
             ], 
             "nodes": [
                 505464968
@@ -2237,8 +2237,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet KORKMAZ"
+            "screen_names": [
+                "mehmet7448226"
             ], 
             "nodes": [
                 501589589
@@ -2255,8 +2255,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mehmet u\u00e7ar"
+            "screen_names": [
+                "esraguzel63"
             ], 
             "nodes": [
                 498656061
@@ -2273,8 +2273,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Emin Topkarao\u011flu"
+            "screen_names": [
+                "emintopkaraoglu"
             ], 
             "nodes": [
                 495928885
@@ -2291,8 +2291,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Quratulaain"
+            "screen_names": [
+                "q_anniee"
             ], 
             "nodes": [
                 493130488
@@ -2309,8 +2309,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "salih oran"
+            "screen_names": [
+                "oransalih"
             ], 
             "nodes": [
                 487861840
@@ -2327,8 +2327,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "zeynep korkmaz"
+            "screen_names": [
+                "krkmzzy"
             ], 
             "nodes": [
                 485742022
@@ -2345,8 +2345,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "hande sezgin"
+            "screen_names": [
+                "handeesezgin"
             ], 
             "nodes": [
                 485735472
@@ -2363,8 +2363,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Ebru YILDIRIM"
+            "screen_names": [
+                "EYebru"
             ], 
             "nodes": [
                 481423604
@@ -2381,8 +2381,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Taha Abdullah"
+            "screen_names": [
+                "altunluZade"
             ], 
             "nodes": [
                 479901964
@@ -2399,8 +2399,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Muhammed Said Bakt\u0131r"
+            "screen_names": [
+                "MuhammedBaktir"
             ], 
             "nodes": [
                 477970480
@@ -2417,8 +2417,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Ahmet Cem \u0130man"
+            "screen_names": [
+                "ahmetcemiman"
             ], 
             "nodes": [
                 476201697
@@ -2435,8 +2435,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Beyza \u00d6zen"
+            "screen_names": [
+                "byzzn"
             ], 
             "nodes": [
                 473392794
@@ -2453,8 +2453,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "\u0130brahim Bayraktar"
+            "screen_names": [
+                "IbrhmBayraktar"
             ], 
             "nodes": [
                 471153734
@@ -2471,8 +2471,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "MUSTAFA AY"
+            "screen_names": [
+                "9903_ay_Gksu"
             ], 
             "nodes": [
                 467503701
@@ -2489,8 +2489,8 @@
         {
             "biggest_community": "6", 
             "degree": 1, 
-            "names": [
-                "merve evrem"
+            "screen_names": [
+                "yorguun38"
             ], 
             "nodes": [
                 465022392
@@ -2507,8 +2507,8 @@
         {
             "biggest_community": "6", 
             "degree": 1, 
-            "names": [
-                "yunus y\u0131lmaz"
+            "screen_names": [
+                "yunuylmaz"
             ], 
             "nodes": [
                 464803112
@@ -2525,8 +2525,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "muhammet \u00f6zdemir"
+            "screen_names": [
+                "poemist2121"
             ], 
             "nodes": [
                 462741096
@@ -2543,8 +2543,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mustafa ilhan"
+            "screen_names": [
+                "milhan1303"
             ], 
             "nodes": [
                 460049810
@@ -2561,8 +2561,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Halil AYYILDIZ"
+            "screen_names": [
+                "halil_ayyildiz"
             ], 
             "nodes": [
                 452056032
@@ -2579,8 +2579,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Zeynep Acarturk"
+            "screen_names": [
+                "zariman74"
             ], 
             "nodes": [
                 450064320
@@ -2597,8 +2597,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "MUSTAFA DO\u011eAN"
+            "screen_names": [
+                "mstfdgan"
             ], 
             "nodes": [
                 449856858
@@ -2615,8 +2615,8 @@
         {
             "biggest_community": "9", 
             "degree": 2, 
-            "names": [
-                "AHMET ALTAN"
+            "screen_names": [
+                "_ahmetaltan"
             ], 
             "nodes": [
                 447455430
@@ -2633,8 +2633,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Mehmet Burak Dikmen"
+            "screen_names": [
+                "MehmetBurakDikm"
             ], 
             "nodes": [
                 447440907
@@ -2651,8 +2651,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Halil \u00d6ZDEM\u0130R"
+            "screen_names": [
+                "HalilOZDEMIR10"
             ], 
             "nodes": [
                 446303177
@@ -2669,8 +2669,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Zehra Korkmaz"
+            "screen_names": [
+                "zhrkorkmaz"
             ], 
             "nodes": [
                 444987253
@@ -2687,8 +2687,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "bayram kaya"
+            "screen_names": [
+                "byrm1222"
             ], 
             "nodes": [
                 442712505
@@ -2705,8 +2705,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Salih Be\u015fta\u015f"
+            "screen_names": [
+                "SalihBeta"
             ], 
             "nodes": [
                 442653736
@@ -2723,8 +2723,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Erdal Y\u0131lmaz"
+            "screen_names": [
+                "ErdalYilmaz18"
             ], 
             "nodes": [
                 439203857
@@ -2741,8 +2741,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Murat  A. ERKAN"
+            "screen_names": [
+                "maedanci"
             ], 
             "nodes": [
                 439156133
@@ -2759,8 +2759,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "fatih mehmet akdan"
+            "screen_names": [
+                "FmAkdan"
             ], 
             "nodes": [
                 438540004
@@ -2777,8 +2777,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Yusuf Kerim \u00d6zal"
+            "screen_names": [
+                "yusufkerimozal"
             ], 
             "nodes": [
                 437858563
@@ -2795,7 +2795,7 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
+            "screen_names": [
                 "hamitokur"
             ], 
             "nodes": [
@@ -2813,8 +2813,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa Pe\u00e7e"
+            "screen_names": [
+                "MustiPece53"
             ], 
             "nodes": [
                 427576690
@@ -2831,8 +2831,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "ergin, MAHMUT"
+            "screen_names": [
+                "Faniisani"
             ], 
             "nodes": [
                 425411580
@@ -2849,8 +2849,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Veda CAN"
+            "screen_names": [
+                "Vdacn"
             ], 
             "nodes": [
                 419545826
@@ -2867,8 +2867,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "\u0130smail KARA"
+            "screen_names": [
+                "ismailkara77"
             ], 
             "nodes": [
                 419092391
@@ -2885,8 +2885,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa Akta\u015f"
+            "screen_names": [
+                "mustafaaktas111"
             ], 
             "nodes": [
                 416178898
@@ -2903,8 +2903,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Mustafa \u00c7ELEN"
+            "screen_names": [
+                "mustafacelen70"
             ], 
             "nodes": [
                 413849104
@@ -2921,8 +2921,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "nur zehra"
+            "screen_names": [
+                "fnzehra"
             ], 
             "nodes": [
                 409554221
@@ -2939,8 +2939,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Ayhan Demiriz"
+            "screen_names": [
+                "ayhandemiriz"
             ], 
             "nodes": [
                 404173433
@@ -2957,8 +2957,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "B\u00fcnyamin G\u00fcrler"
+            "screen_names": [
+                "bunyamingurler"
             ], 
             "nodes": [
                 400579145
@@ -2975,8 +2975,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Abdullah Kara"
+            "screen_names": [
+                "abdkarra"
             ], 
             "nodes": [
                 397429102
@@ -2993,8 +2993,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "kemal \u015fahin"
+            "screen_names": [
+                "kemalim83"
             ], 
             "nodes": [
                 395971942
@@ -3011,8 +3011,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Jesse Waterschoot"
+            "screen_names": [
+                "JsseWaterschoot"
             ], 
             "nodes": [
                 385567588
@@ -3029,8 +3029,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Ozlem BAY"
+            "screen_names": [
+                "bay_ozlem"
             ], 
             "nodes": [
                 380937967
@@ -3047,8 +3047,8 @@
         {
             "biggest_community": "6", 
             "degree": 1, 
-            "names": [
-                "MEHMET DOGAN"
+            "screen_names": [
+                "memetdogan27"
             ], 
             "nodes": [
                 380825940
@@ -3065,8 +3065,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "Muhittin \u00d6zkan"
+            "screen_names": [
+                "muhittinEozkan"
             ], 
             "nodes": [
                 378536512
@@ -3083,8 +3083,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "salih.aslan."
+            "screen_names": [
+                "aslanbakkal"
             ], 
             "nodes": [
                 376196641
@@ -3101,8 +3101,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Tahir kaya"
+            "screen_names": [
+                "TKaya_1"
             ], 
             "nodes": [
                 371964113
@@ -3119,8 +3119,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Fatih Do\u011fan"
+            "screen_names": [
+                "FatihDogan00"
             ], 
             "nodes": [
                 370287757
@@ -3137,8 +3137,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "merve bayam"
+            "screen_names": [
+                "MerveBayam1907"
             ], 
             "nodes": [
                 367753207
@@ -3155,8 +3155,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "mustafa \u00fcnal"
+            "screen_names": [
+                "mustafaunal83"
             ], 
             "nodes": [
                 367078062
@@ -3173,8 +3173,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Ahmt Kaya"
+            "screen_names": [
+                "kaya_ahmt"
             ], 
             "nodes": [
                 365925387
@@ -3191,8 +3191,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Ali Yasin Serdar"
+            "screen_names": [
+                "aliserdarali"
             ], 
             "nodes": [
                 365154925
@@ -3209,8 +3209,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "H\u00fcseyin \u00d6ZKAN"
+            "screen_names": [
+                "hseyin_52"
             ], 
             "nodes": [
                 362783413
@@ -3227,8 +3227,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Huseyin SAHIN"
+            "screen_names": [
+                "huseyinyet"
             ], 
             "nodes": [
                 359872305
@@ -3245,8 +3245,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Salih Sar\u0131yar"
+            "screen_names": [
+                "SalihSariyar"
             ], 
             "nodes": [
                 358143971
@@ -3263,8 +3263,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Emre Meral"
+            "screen_names": [
+                "Emre_meraal"
             ], 
             "nodes": [
                 355058617
@@ -3281,8 +3281,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Ekrem Yasir \u0130kizo\u011flu"
+            "screen_names": [
+                "ekremikizoglu"
             ], 
             "nodes": [
                 351220156
@@ -3299,8 +3299,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet Salih KAYA"
+            "screen_names": [
+                "exelans29"
             ], 
             "nodes": [
                 349791252
@@ -3317,8 +3317,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Selin \u00d6zt\u00fcrk"
+            "screen_names": [
+                "s__eLin"
             ], 
             "nodes": [
                 349249329
@@ -3335,8 +3335,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "MEHMET UNAL"
+            "screen_names": [
+                "MUnal038"
             ], 
             "nodes": [
                 349229868
@@ -3353,8 +3353,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Selman B\u00fcy\u00fckkara"
+            "screen_names": [
+                "SelmanBKara"
             ], 
             "nodes": [
                 349103508
@@ -3371,8 +3371,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet Ali"
+            "screen_names": [
+                "charnomor"
             ], 
             "nodes": [
                 348415792
@@ -3389,8 +3389,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa KARA"
+            "screen_names": [
+                "karamustafa90"
             ], 
             "nodes": [
                 344826965
@@ -3407,8 +3407,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "Aysenur Altuntas"
+            "screen_names": [
+                "AysenurAll"
             ], 
             "nodes": [
                 342302461
@@ -3425,8 +3425,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Sezanur Sezgin"
+            "screen_names": [
+                "SezanurSezgin"
             ], 
             "nodes": [
                 342264107
@@ -3443,8 +3443,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "zeynep babali"
+            "screen_names": [
+                "zchouroro"
             ], 
             "nodes": [
                 342114048
@@ -3461,8 +3461,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "hatipoglu"
+            "screen_names": [
+                "hatipoglu_61"
             ], 
             "nodes": [
                 340515012
@@ -3479,8 +3479,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Erhan REYHAN"
+            "screen_names": [
+                "ErhanREYHAN"
             ], 
             "nodes": [
                 337061839
@@ -3497,8 +3497,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Salih Y\u00fczgen\u00e7"
+            "screen_names": [
+                "salihyuzgenc"
             ], 
             "nodes": [
                 336105588
@@ -3515,8 +3515,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "osmankuru\u00e7ay"
+            "screen_names": [
+                "osmankurucay"
             ], 
             "nodes": [
                 335134002
@@ -3533,8 +3533,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Ahmet Karaca"
+            "screen_names": [
+                "Karaca4hmet"
             ], 
             "nodes": [
                 334651678
@@ -3551,8 +3551,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "yunus demir"
+            "screen_names": [
+                "yyuunnuuss03"
             ], 
             "nodes": [
                 334509225
@@ -3569,8 +3569,8 @@
         {
             "biggest_community": "14", 
             "degree": 1, 
-            "names": [
-                "Bet\u00fcl HURMA"
+            "screen_names": [
+                "betulhurma"
             ], 
             "nodes": [
                 333528691
@@ -3587,8 +3587,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Ali UYSAL"
+            "screen_names": [
+                "aliuysal42"
             ], 
             "nodes": [
                 331175494
@@ -3605,8 +3605,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "elif kara\u00e7\u00f6l"
+            "screen_names": [
+                "cakkannim"
             ], 
             "nodes": [
                 331002312
@@ -3623,8 +3623,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet Demir"
+            "screen_names": [
+                "AvMehmetDemir"
             ], 
             "nodes": [
                 328899293
@@ -3641,8 +3641,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "hasan aydin"
+            "screen_names": [
+                "sporizm0104"
             ], 
             "nodes": [
                 328485693
@@ -3659,8 +3659,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Meryem Yetkin"
+            "screen_names": [
+                "meryemyetkin"
             ], 
             "nodes": [
                 327649487
@@ -3677,8 +3677,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa K\u00fcpeli"
+            "screen_names": [
+                "mustafakupeli_"
             ], 
             "nodes": [
                 326967793
@@ -3695,8 +3695,8 @@
         {
             "biggest_community": "10", 
             "degree": 1, 
-            "names": [
-                "cemil yavuz"
+            "screen_names": [
+                "cemyav"
             ], 
             "nodes": [
                 326909005
@@ -3713,8 +3713,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa Ak"
+            "screen_names": [
+                "MustafaAk4"
             ], 
             "nodes": [
                 326711720
@@ -3731,8 +3731,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Merve Keskin"
+            "screen_names": [
+                "parya_"
             ], 
             "nodes": [
                 326288590
@@ -3749,8 +3749,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "zeynep sevde"
+            "screen_names": [
+                "zeynepsevde"
             ], 
             "nodes": [
                 323516844
@@ -3767,8 +3767,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Tu\u011fba Gayretli"
+            "screen_names": [
+                "tugbagayretli"
             ], 
             "nodes": [
                 320244557
@@ -3785,8 +3785,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Muhammed Yunus Akta\u015f"
+            "screen_names": [
+                "surdangecti"
             ], 
             "nodes": [
                 319629696
@@ -3803,8 +3803,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "berkan ayd\u0131n"
+            "screen_names": [
+                "berkan_aydn"
             ], 
             "nodes": [
                 316369262
@@ -3821,8 +3821,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "OZAN KAYA"
+            "screen_names": [
+                "ozankaya81"
             ], 
             "nodes": [
                 316015497
@@ -3839,8 +3839,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Gizem Akel"
+            "screen_names": [
+                "GizemAkell"
             ], 
             "nodes": [
                 315899534
@@ -3857,8 +3857,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Salih Akkanat"
+            "screen_names": [
+                "hicrhodushicsal"
             ], 
             "nodes": [
                 315824179
@@ -3875,8 +3875,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Furkan U\u00e7ar"
+            "screen_names": [
+                "furkanucr"
             ], 
             "nodes": [
                 314777891
@@ -3893,8 +3893,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa CAN"
+            "screen_names": [
+                "mustiican"
             ], 
             "nodes": [
                 314595732
@@ -3911,8 +3911,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Furkan Balta"
+            "screen_names": [
+                "furkanbalta_"
             ], 
             "nodes": [
                 314535919
@@ -3929,8 +3929,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "elif kalkavan"
+            "screen_names": [
+                "elifkalkavanz"
             ], 
             "nodes": [
                 314054889
@@ -3947,8 +3947,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Esra Akdil"
+            "screen_names": [
+                "esraakdil"
             ], 
             "nodes": [
                 313467951
@@ -3965,8 +3965,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Burak \u00d6zdemir"
+            "screen_names": [
+                "burakozdemir32"
             ], 
             "nodes": [
                 302222495
@@ -3983,8 +3983,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mert H\u00fcseyin Erg\u00fcl"
+            "screen_names": [
+                "ergulmhuseyin"
             ], 
             "nodes": [
                 301674726
@@ -4001,8 +4001,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Yusuf Akbulut"
+            "screen_names": [
+                "yusuf_akbulut"
             ], 
             "nodes": [
                 300251281
@@ -4019,8 +4019,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "betul \u00f6zakta\u00e7"
+            "screen_names": [
+                "BZakta"
             ], 
             "nodes": [
                 293910628
@@ -4037,8 +4037,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "hakan uzun"
+            "screen_names": [
+                "hakanuzun3"
             ], 
             "nodes": [
                 293464262
@@ -4055,8 +4055,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Abdullah KARA \ud83c\uddf9\ud83c\uddf7"
+            "screen_names": [
+                "Akara1907"
             ], 
             "nodes": [
                 292878286
@@ -4073,8 +4073,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Salih Karao\u011flu"
+            "screen_names": [
+                "salihkaraolu"
             ], 
             "nodes": [
                 292138819
@@ -4091,8 +4091,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "reyhan yelli"
+            "screen_names": [
+                "reyhanyelli"
             ], 
             "nodes": [
                 288988846
@@ -4109,8 +4109,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Omer CIFTCI"
+            "screen_names": [
+                "omerugurciftci"
             ], 
             "nodes": [
                 286783351
@@ -4127,8 +4127,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Ahmed Taner"
+            "screen_names": [
+                "ahmedtaner1_"
             ], 
             "nodes": [
                 284419963
@@ -4145,8 +4145,8 @@
         {
             "biggest_community": "2", 
             "degree": 2, 
-            "names": [
-                "Salih \u00c7AKTI"
+            "screen_names": [
+                "scakti"
             ], 
             "nodes": [
                 283868273
@@ -4163,8 +4163,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "Ahmed Faz\u0131l"
+            "screen_names": [
+                "acizcelebi"
             ], 
             "nodes": [
                 281456045
@@ -4181,8 +4181,8 @@
         {
             "biggest_community": "9", 
             "degree": 14, 
-            "names": [
-                "Mustafa YEL"
+            "screen_names": [
+                "myel34"
             ], 
             "nodes": [
                 281127185
@@ -4199,8 +4199,8 @@
         {
             "biggest_community": "6", 
             "degree": 1, 
-            "names": [
-                "Burak Y\u0131lmaz"
+            "screen_names": [
+                "seskeks"
             ], 
             "nodes": [
                 276090463
@@ -4217,8 +4217,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa Kaya"
+            "screen_names": [
+                "AzmiMustafaKaya"
             ], 
             "nodes": [
                 275094798
@@ -4235,8 +4235,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mustafa melih"
+            "screen_names": [
+                "musmel1998"
             ], 
             "nodes": [
                 274019211
@@ -4253,8 +4253,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Aysenur Eser"
+            "screen_names": [
+                "aysnresr"
             ], 
             "nodes": [
                 271062336
@@ -4271,8 +4271,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Halil \u0130brahim \u0130lter"
+            "screen_names": [
+                "halilibrahimltr"
             ], 
             "nodes": [
                 267838228
@@ -4289,8 +4289,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "canan eroz"
+            "screen_names": [
+                "cananeroz"
             ], 
             "nodes": [
                 267598434
@@ -4307,8 +4307,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mehmet Akar"
+            "screen_names": [
+                "dortokka"
             ], 
             "nodes": [
                 263330786
@@ -4325,8 +4325,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Ibrahim G\u00fcler"
+            "screen_names": [
+                "ibrahimgulermi"
             ], 
             "nodes": [
                 263167320
@@ -4343,8 +4343,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "\u0130brahim \u015eakar"
+            "screen_names": [
+                "ibrahimsakarr"
             ], 
             "nodes": [
                 262198524
@@ -4361,8 +4361,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Recep Acar"
+            "screen_names": [
+                "recepacar75"
             ], 
             "nodes": [
                 260354514
@@ -4379,8 +4379,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Can Can"
+            "screen_names": [
+                "canadil71"
             ], 
             "nodes": [
                 258835545
@@ -4397,8 +4397,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "Salih KOCA"
+            "screen_names": [
+                "eskoca26"
             ], 
             "nodes": [
                 258097015
@@ -4415,8 +4415,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "ismail aydemir"
+            "screen_names": [
+                "is_aydemir"
             ], 
             "nodes": [
                 257963571
@@ -4433,8 +4433,8 @@
         {
             "biggest_community": "15", 
             "degree": 3, 
-            "names": [
-                "Ahmet Ademoglu"
+            "screen_names": [
+                "ahmet_ademoglu"
             ], 
             "nodes": [
                 253616057
@@ -4451,8 +4451,8 @@
         {
             "biggest_community": "16", 
             "degree": 1, 
-            "names": [
-                "ahmet u\u011furlu"
+            "screen_names": [
+                "siyadari"
             ], 
             "nodes": [
                 253259284
@@ -4469,8 +4469,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Havvanur Korkut"
+            "screen_names": [
+                "nurrkorkut"
             ], 
             "nodes": [
                 253229470
@@ -4487,8 +4487,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Muhammet Ali"
+            "screen_names": [
+                "muhammetgumus"
             ], 
             "nodes": [
                 249755850
@@ -4505,8 +4505,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Yusuf Ayhan"
+            "screen_names": [
+                "usoayhan"
             ], 
             "nodes": [
                 249090858
@@ -4523,8 +4523,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Erkan KAYA"
+            "screen_names": [
+                "erkankaya28"
             ], 
             "nodes": [
                 247186119
@@ -4541,8 +4541,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Halil Avci"
+            "screen_names": [
+                "haliilavci"
             ], 
             "nodes": [
                 245400432
@@ -4559,8 +4559,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Erdem \u00d6zcan"
+            "screen_names": [
+                "erdemmozcan"
             ], 
             "nodes": [
                 242772912
@@ -4577,8 +4577,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Ahmet K\u00fc\u00e7\u00fckkaraca"
+            "screen_names": [
+                "ahmetkkaraca"
             ], 
             "nodes": [
                 242477797
@@ -4595,8 +4595,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "dilara gerger"
+            "screen_names": [
+                "DiLaraGr"
             ], 
             "nodes": [
                 239145054
@@ -4613,8 +4613,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa Korkmaz"
+            "screen_names": [
+                "mkorkmaz99"
             ], 
             "nodes": [
                 238165726
@@ -4631,8 +4631,8 @@
         {
             "biggest_community": "10", 
             "degree": 2, 
-            "names": [
-                "Ali Bayramo\u011flu"
+            "screen_names": [
+                "bayramogluali"
             ], 
             "nodes": [
                 231908931
@@ -4649,8 +4649,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa Ayd\u0131n"
+            "screen_names": [
+                "ProfDrMaydin"
             ], 
             "nodes": [
                 227938071
@@ -4667,8 +4667,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "salih karabulut"
+            "screen_names": [
+                "salih_karabulut"
             ], 
             "nodes": [
                 226497085
@@ -4685,8 +4685,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "ibrahim turan"
+            "screen_names": [
+                "ituran56"
             ], 
             "nodes": [
                 225925670
@@ -4703,8 +4703,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Serife ULKER"
+            "screen_names": [
+                "ulkersi"
             ], 
             "nodes": [
                 225548294
@@ -4721,8 +4721,8 @@
         {
             "biggest_community": "13", 
             "degree": 1, 
-            "names": [
-                "betul cilasun"
+            "screen_names": [
+                "beyjey"
             ], 
             "nodes": [
                 224727919
@@ -4739,8 +4739,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "MURAT DEM\u0130R"
+            "screen_names": [
+                "MURATDEMIR06"
             ], 
             "nodes": [
                 224265589
@@ -4757,8 +4757,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Yavuz Selim"
+            "screen_names": [
+                "yassimsek"
             ], 
             "nodes": [
                 224170610
@@ -4775,8 +4775,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Can Ipekli"
+            "screen_names": [
+                "ipeklican"
             ], 
             "nodes": [
                 223989726
@@ -4793,8 +4793,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Abdullah Ayd\u0131n"
+            "screen_names": [
+                "yollaal"
             ], 
             "nodes": [
                 219547337
@@ -4811,8 +4811,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mehmet Ali KARAN"
+            "screen_names": [
+                "malikaran"
             ], 
             "nodes": [
                 215077402
@@ -4829,8 +4829,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "N\u00e2y\u00ee Ahmed \u015eahin"
+            "screen_names": [
+                "BesteSevkefza"
             ], 
             "nodes": [
                 214628614
@@ -4847,8 +4847,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet \u00dcnal"
+            "screen_names": [
+                "mehmetunal43"
             ], 
             "nodes": [
                 212853481
@@ -4865,8 +4865,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "ibrahim duran"
+            "screen_names": [
+                "ibrahimduran_"
             ], 
             "nodes": [
                 210618996
@@ -4883,8 +4883,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Esra Y\u0131lmaz"
+            "screen_names": [
+                "katmunya"
             ], 
             "nodes": [
                 210043256
@@ -4901,8 +4901,8 @@
         {
             "biggest_community": "4", 
             "degree": 2, 
-            "names": [
-                "Zafer Demir"
+            "screen_names": [
+                "ZaferDemir_fr"
             ], 
             "nodes": [
                 209749537
@@ -4919,8 +4919,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Merve \u00c7OLAK"
+            "screen_names": [
+                "m_colak_"
             ], 
             "nodes": [
                 209491402
@@ -4937,8 +4937,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "\u00d6mer Faruk SARI"
+            "screen_names": [
+                "omerfaruk111"
             ], 
             "nodes": [
                 205898019
@@ -4955,8 +4955,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Zeynep \u00d6ZKAN"
+            "screen_names": [
+                "nisyanaisyan"
             ], 
             "nodes": [
                 205640168
@@ -4973,8 +4973,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Yusuf Alper"
+            "screen_names": [
+                "yusufalpersari"
             ], 
             "nodes": [
                 203458925
@@ -4991,8 +4991,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "ahmed mesud"
+            "screen_names": [
+                "ahmesud"
             ], 
             "nodes": [
                 202960799
@@ -5009,8 +5009,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "mehmet y\u0131lmaz"
+            "screen_names": [
+                "mhtyz"
             ], 
             "nodes": [
                 201264943
@@ -5027,8 +5027,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Abdullah Do\u011fan"
+            "screen_names": [
+                "abdullahgdogan"
             ], 
             "nodes": [
                 199411640
@@ -5045,8 +5045,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Cuneyd uzun"
+            "screen_names": [
+                "cuneyduzun"
             ], 
             "nodes": [
                 193020479
@@ -5063,8 +5063,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Yusuf Demir"
+            "screen_names": [
+                "yusufdemir1"
             ], 
             "nodes": [
                 190175889
@@ -5081,8 +5081,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Merve Sancaktar"
+            "screen_names": [
+                "sancaktarmerve"
             ], 
             "nodes": [
                 189881254
@@ -5099,8 +5099,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa Mert Can"
+            "screen_names": [
+                "mustafamertcan"
             ], 
             "nodes": [
                 189138605
@@ -5117,8 +5117,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa \u015eahin"
+            "screen_names": [
+                "sawyer_108"
             ], 
             "nodes": [
                 188474287
@@ -5135,8 +5135,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Burak Akkaya"
+            "screen_names": [
+                "burkakkaya"
             ], 
             "nodes": [
                 186791036
@@ -5153,8 +5153,8 @@
         {
             "biggest_community": "12", 
             "degree": 2, 
-            "names": [
-                "Mehmet DINC"
+            "screen_names": [
+                "mehmetdnc"
             ], 
             "nodes": [
                 186434161
@@ -5171,8 +5171,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "MUHAMMET YILMAZ"
+            "screen_names": [
+                "VATANLI89"
             ], 
             "nodes": [
                 185153719
@@ -5189,8 +5189,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet S\u00fcmer \u231a\ufe0f"
+            "screen_names": [
+                "sincedoksaniki"
             ], 
             "nodes": [
                 182798429
@@ -5207,8 +5207,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Seher"
+            "screen_names": [
+                "SeherBoydas"
             ], 
             "nodes": [
                 180698952
@@ -5225,8 +5225,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "Ali Abbas Fidan"
+            "screen_names": [
+                "FdnAli"
             ], 
             "nodes": [
                 179985645
@@ -5243,8 +5243,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "\u0130smail DEM\u0130R"
+            "screen_names": [
+                "By_Demir36"
             ], 
             "nodes": [
                 179632598
@@ -5261,8 +5261,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Elif Arslan"
+            "screen_names": [
+                "elifaarsln"
             ], 
             "nodes": [
                 177500163
@@ -5279,8 +5279,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa Ak\u00e7a"
+            "screen_names": [
+                "mustafa_akca"
             ], 
             "nodes": [
                 175288383
@@ -5297,8 +5297,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Yasin Yilmaz"
+            "screen_names": [
+                "yasin6084yasin"
             ], 
             "nodes": [
                 174239586
@@ -5315,8 +5315,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Salih \u00d6ZT\u00dcRK"
+            "screen_names": [
+                "kizilelma1247"
             ], 
             "nodes": [
                 171127878
@@ -5333,8 +5333,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "ersin ersin"
+            "screen_names": [
+                "ersn343434"
             ], 
             "nodes": [
                 171035700
@@ -5351,8 +5351,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Ozan Ahmet \u00c7etin"
+            "screen_names": [
+                "ozanahmetcetin"
             ], 
             "nodes": [
                 170827894
@@ -5369,8 +5369,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Ahmet Demir"
+            "screen_names": [
+                "dbademir_"
             ], 
             "nodes": [
                 169590053
@@ -5387,8 +5387,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "P\u0131nar Batova"
+            "screen_names": [
+                "batovapinar"
             ], 
             "nodes": [
                 169021655
@@ -5405,8 +5405,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "serkan akdemir"
+            "screen_names": [
+                "srkn_akdemir"
             ], 
             "nodes": [
                 168580477
@@ -5423,8 +5423,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Yavuz Selim"
+            "screen_names": [
+                "Mirza41"
             ], 
             "nodes": [
                 167588737
@@ -5441,8 +5441,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "R\u00fcmeysa \u00d6zer"
+            "screen_names": [
+                "ozerrumeysa"
             ], 
             "nodes": [
                 166909100
@@ -5459,8 +5459,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Muhammad Haykal"
+            "screen_names": [
+                "haykallmuhammad"
             ], 
             "nodes": [
                 166501878
@@ -5477,8 +5477,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "neslihan \u00f6zhan"
+            "screen_names": [
+                "ozhanneslihan"
             ], 
             "nodes": [
                 165159065
@@ -5495,8 +5495,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Talha K\u00f6se"
+            "screen_names": [
+                "kosetalha"
             ], 
             "nodes": [
                 164570071
@@ -5513,8 +5513,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa Celikel"
+            "screen_names": [
+                "Celikel_muu"
             ], 
             "nodes": [
                 162417303
@@ -5531,8 +5531,8 @@
         {
             "biggest_community": "5", 
             "degree": 68, 
-            "names": [
-                "Sadi Evren SEKER"
+            "screen_names": [
+                "sadievrenseker"
             ], 
             "nodes": [
                 162310009
@@ -5549,8 +5549,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Murat Y\u0131lmaz"
+            "screen_names": [
+                "murat3338"
             ], 
             "nodes": [
                 162000619
@@ -5567,8 +5567,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Engin Arik"
+            "screen_names": [
+                "enginarik"
             ], 
             "nodes": [
                 160629698
@@ -5585,8 +5585,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "Hasan Pehlivan"
+            "screen_names": [
+                "hasanpehlivan87"
             ], 
             "nodes": [
                 160188040
@@ -5603,8 +5603,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "\u0130smail Mutlu"
+            "screen_names": [
+                "ismlmutlu"
             ], 
             "nodes": [
                 159637252
@@ -5621,8 +5621,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Altun Altun"
+            "screen_names": [
+                "altunaltunaltun"
             ], 
             "nodes": [
                 159584851
@@ -5639,8 +5639,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "M\u00fcleyke Beyza Yavuz"
+            "screen_names": [
+                "Muleyke_B"
             ], 
             "nodes": [
                 159075428
@@ -5657,8 +5657,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Isil Bilican"
+            "screen_names": [
+                "isilbilican"
             ], 
             "nodes": [
                 155516378
@@ -5675,8 +5675,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "samet bulut"
+            "screen_names": [
+                "sametblt"
             ], 
             "nodes": [
                 148740936
@@ -5693,8 +5693,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "\u00d6zg\u00fcr Tomakin"
+            "screen_names": [
+                "ozgurtomakin"
             ], 
             "nodes": [
                 147180161
@@ -5711,8 +5711,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "S\u00fcmeyye Zengin"
+            "screen_names": [
+                "summeye"
             ], 
             "nodes": [
                 145723363
@@ -5729,8 +5729,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Fatih \u00dcNAL"
+            "screen_names": [
+                "fatihunal34"
             ], 
             "nodes": [
                 145593371
@@ -5747,8 +5747,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Hakan Kurt"
+            "screen_names": [
+                "hakankurt39"
             ], 
             "nodes": [
                 144312972
@@ -5765,8 +5765,8 @@
         {
             "biggest_community": "3", 
             "degree": 2, 
-            "names": [
-                "Abdurrahman yildirim"
+            "screen_names": [
+                "Ayyildirim"
             ], 
             "nodes": [
                 144299966
@@ -5783,8 +5783,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mehmet Karak\u00f6se"
+            "screen_names": [
+                "mhtkarakose"
             ], 
             "nodes": [
                 144098036
@@ -5801,8 +5801,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "salih ad\u0131yaman"
+            "screen_names": [
+                "salihadiyaman"
             ], 
             "nodes": [
                 143240944
@@ -5819,8 +5819,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Tufan Akol"
+            "screen_names": [
+                "tufi34"
             ], 
             "nodes": [
                 142638478
@@ -5837,8 +5837,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Levent YILMAZ"
+            "screen_names": [
+                "leventelz"
             ], 
             "nodes": [
                 142253498
@@ -5855,8 +5855,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Aysegul Kop"
+            "screen_names": [
+                "Aysglkp"
             ], 
             "nodes": [
                 142105410
@@ -5873,8 +5873,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Cihan KABRAN"
+            "screen_names": [
+                "cihankabran"
             ], 
             "nodes": [
                 142080258
@@ -5891,8 +5891,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "harun ertekin"
+            "screen_names": [
+                "harunertekin"
             ], 
             "nodes": [
                 133680108
@@ -5909,8 +5909,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "AL\u0130 ARSLAN"
+            "screen_names": [
+                "Ali_____Arslan"
             ], 
             "nodes": [
                 127227279
@@ -5927,8 +5927,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Hakan DO\u011eAN"
+            "screen_names": [
+                "habmes"
             ], 
             "nodes": [
                 124118525
@@ -5945,8 +5945,8 @@
         {
             "biggest_community": "2", 
             "degree": 2, 
-            "names": [
-                "Ozlem Kaya"
+            "screen_names": [
+                "ozlemkya"
             ], 
             "nodes": [
                 122762092
@@ -5963,8 +5963,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "Mustafa Demir"
+            "screen_names": [
+                "mustafademir"
             ], 
             "nodes": [
                 122684595
@@ -5981,8 +5981,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "# yunus cicek #"
+            "screen_names": [
+                "rzgri"
             ], 
             "nodes": [
                 122663527
@@ -5999,8 +5999,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "can can"
+            "screen_names": [
+                "can_bigman"
             ], 
             "nodes": [
                 122483508
@@ -6017,8 +6017,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Mustafa \u015eahin"
+            "screen_names": [
+                "mstfashn"
             ], 
             "nodes": [
                 120289786
@@ -6035,8 +6035,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Sema YILDIZ"
+            "screen_names": [
+                "semaYILDIZ_"
             ], 
             "nodes": [
                 119125729
@@ -6053,8 +6053,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Ayse Selin Zorlu"
+            "screen_names": [
+                "slnzrl"
             ], 
             "nodes": [
                 118382186
@@ -6071,8 +6071,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "se\u00e7il akca"
+            "screen_names": [
+                "secilakca"
             ], 
             "nodes": [
                 116874386
@@ -6089,8 +6089,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "ali sarikaya"
+            "screen_names": [
+                "sarikaya_li"
             ], 
             "nodes": [
                 114893351
@@ -6107,8 +6107,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Ahmet Alan"
+            "screen_names": [
+                "ahmetalaan"
             ], 
             "nodes": [
                 111705489
@@ -6125,8 +6125,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "MEHMET \u00dcNAL"
+            "screen_names": [
+                "marufuaramak"
             ], 
             "nodes": [
                 110797114
@@ -6143,8 +6143,8 @@
         {
             "biggest_community": "9", 
             "degree": 2, 
-            "names": [
-                "Ahmet Altan"
+            "screen_names": [
+                "altanahmet"
             ], 
             "nodes": [
                 108986782
@@ -6161,8 +6161,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Svd Zeynep Ocak"
+            "screen_names": [
+                "Twltter15939297"
             ], 
             "nodes": [
                 107515144
@@ -6179,8 +6179,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Harun Tekin"
+            "screen_names": [
+                "haruntekin"
             ], 
             "nodes": [
                 105962645
@@ -6197,8 +6197,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "mehmet ali kiraz"
+            "screen_names": [
+                "m_ali_kiraz"
             ], 
             "nodes": [
                 105170233
@@ -6215,8 +6215,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Salih Duman"
+            "screen_names": [
+                "duman25"
             ], 
             "nodes": [
                 101449077
@@ -6233,8 +6233,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa Yaylal\u0131"
+            "screen_names": [
+                "MstafaYaylali"
             ], 
             "nodes": [
                 101091897
@@ -6251,8 +6251,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet Kaman"
+            "screen_names": [
+                "mehmetkaman"
             ], 
             "nodes": [
                 99947241
@@ -6269,8 +6269,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Hasan Kopuz"
+            "screen_names": [
+                "karides53"
             ], 
             "nodes": [
                 99529992
@@ -6287,8 +6287,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "\u0130smail Hatip"
+            "screen_names": [
+                "hatip_ismail"
             ], 
             "nodes": [
                 99515495
@@ -6305,8 +6305,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "Beyza Hakan"
+            "screen_names": [
+                "beyzahakan"
             ], 
             "nodes": [
                 99225698
@@ -6323,8 +6323,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Salih EROL"
+            "screen_names": [
+                "erolsalih"
             ], 
             "nodes": [
                 99132901
@@ -6341,8 +6341,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "kevser demir"
+            "screen_names": [
+                "KevserDemirD"
             ], 
             "nodes": [
                 98861105
@@ -6359,8 +6359,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "\u015feyma arslan"
+            "screen_names": [
+                "eseyman"
             ], 
             "nodes": [
                 97239341
@@ -6377,8 +6377,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "Ahmed Hul\u00fbsi"
+            "screen_names": [
+                "AhmedHulusi"
             ], 
             "nodes": [
                 96452145
@@ -6395,8 +6395,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "ayse g\u00fcler"
+            "screen_names": [
+                "ayseguler"
             ], 
             "nodes": [
                 96313649
@@ -6413,8 +6413,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Dreamer"
+            "screen_names": [
+                "Dreamer66835579"
             ], 
             "nodes": [
                 95427945
@@ -6431,8 +6431,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa KARABAS"
+            "screen_names": [
+                "mustafakarabas"
             ], 
             "nodes": [
                 94434738
@@ -6449,8 +6449,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "Nezih Erdogan"
+            "screen_names": [
+                "neziherdogan"
             ], 
             "nodes": [
                 93385894
@@ -6467,8 +6467,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Salih BEKTAS"
+            "screen_names": [
+                "sbektas"
             ], 
             "nodes": [
                 93257032
@@ -6485,8 +6485,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mehmet K\u00fcsmez"
+            "screen_names": [
+                "kusmez_mehmet"
             ], 
             "nodes": [
                 92124041
@@ -6503,8 +6503,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Serkan Karaku\u015f"
+            "screen_names": [
+                "serkankarakus83"
             ], 
             "nodes": [
                 91697633
@@ -6521,8 +6521,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Abdullah Dursun"
+            "screen_names": [
+                "sismanadam"
             ], 
             "nodes": [
                 90976741
@@ -6539,8 +6539,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Cengiz G\u00f6khan \u00c7iftci"
+            "screen_names": [
+                "cengizgokhan"
             ], 
             "nodes": [
                 90942568
@@ -6557,8 +6557,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Meryem Solmaz"
+            "screen_names": [
+                "SolmazMeryem"
             ], 
             "nodes": [
                 89195407
@@ -6575,8 +6575,8 @@
         {
             "biggest_community": "9", 
             "degree": 1, 
-            "names": [
-                "Reyhan Karaca"
+            "screen_names": [
+                "Reyhan_Karaca"
             ], 
             "nodes": [
                 86797964
@@ -6593,8 +6593,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mehmet fatih"
+            "screen_names": [
+                "mehmetfatihadam"
             ], 
             "nodes": [
                 86759560
@@ -6611,8 +6611,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "ismail kahraman"
+            "screen_names": [
+                "ismailk2005"
             ], 
             "nodes": [
                 85659155
@@ -6629,8 +6629,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "melike akkus"
+            "screen_names": [
+                "melikeakkus"
             ], 
             "nodes": [
                 85105655
@@ -6647,8 +6647,8 @@
         {
             "biggest_community": "11", 
             "degree": 1, 
-            "names": [
-                "Ibrahim Er"
+            "screen_names": [
+                "Er_Ibrahim"
             ], 
             "nodes": [
                 81829378
@@ -6665,8 +6665,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "salih zeki"
+            "screen_names": [
+                "szhakli"
             ], 
             "nodes": [
                 81448875
@@ -6683,8 +6683,8 @@
         {
             "biggest_community": "11", 
             "degree": 1, 
-            "names": [
-                "Salih ERTU\u011eRUL"
+            "screen_names": [
+                "salihertugrul"
             ], 
             "nodes": [
                 80393750
@@ -6701,8 +6701,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "ahmet akay"
+            "screen_names": [
+                "ahmetakay11"
             ], 
             "nodes": [
                 79991662
@@ -6719,8 +6719,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mehmet G\u00f6rgen"
+            "screen_names": [
+                "mgorgen"
             ], 
             "nodes": [
                 78625770
@@ -6737,8 +6737,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Mustafa Sahin"
+            "screen_names": [
+                "MstfShn"
             ], 
             "nodes": [
                 78342853
@@ -6755,8 +6755,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "Abdurrahman Uyan"
+            "screen_names": [
+                "ApoUyan"
             ], 
             "nodes": [
                 76757587
@@ -6773,8 +6773,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Abdullah Alan"
+            "screen_names": [
+                "alanabd"
             ], 
             "nodes": [
                 72787036
@@ -6791,8 +6791,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "yunus celik"
+            "screen_names": [
+                "yunuscelik83"
             ], 
             "nodes": [
                 71758894
@@ -6809,8 +6809,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "HASAN YILDIZ"
+            "screen_names": [
+                "hsnyildiz"
             ], 
             "nodes": [
                 71555386
@@ -6827,8 +6827,8 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
-                "Fatih Do\u011fan"
+            "screen_names": [
+                "f_dogan_"
             ], 
             "nodes": [
                 68714550
@@ -6845,8 +6845,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Huzeyfe \u00d6NAL"
+            "screen_names": [
+                "huzeyfeonal"
             ], 
             "nodes": [
                 67543826
@@ -6863,8 +6863,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Ahmet Yavuz"
+            "screen_names": [
+                "ahmetlyavuz"
             ], 
             "nodes": [
                 67326856
@@ -6881,8 +6881,8 @@
         {
             "biggest_community": "16", 
             "degree": 3, 
-            "names": [
-                "ahmet hakan"
+            "screen_names": [
+                "ahmethc"
             ], 
             "nodes": [
                 63796949
@@ -6899,8 +6899,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Mustafa I. Arslan"
+            "screen_names": [
+                "marslan5"
             ], 
             "nodes": [
                 59087918
@@ -6917,8 +6917,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "mehmet aktas"
+            "screen_names": [
+                "silack"
             ], 
             "nodes": [
                 58895857
@@ -6935,8 +6935,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Ahmet \u00c7EL\u0130K \u00ae"
+            "screen_names": [
+                "protemha"
             ], 
             "nodes": [
                 58197692
@@ -6953,8 +6953,8 @@
         {
             "biggest_community": "5", 
             "degree": 2, 
-            "names": [
-                "Sevgi Bilgi\u00e7"
+            "screen_names": [
+                "sevgiblgc"
             ], 
             "nodes": [
                 55220437
@@ -6971,8 +6971,8 @@
         {
             "biggest_community": "2", 
             "degree": 2, 
-            "names": [
-                "adem baba"
+            "screen_names": [
+                "babadem"
             ], 
             "nodes": [
                 54890014
@@ -6989,8 +6989,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Yunus Ozturk"
+            "screen_names": [
+                "yunusoz41"
             ], 
             "nodes": [
                 51723397
@@ -7007,8 +7007,8 @@
         {
             "biggest_community": "7", 
             "degree": 1, 
-            "names": [
-                "Emre TONBA"
+            "screen_names": [
+                "emrtnb"
             ], 
             "nodes": [
                 45125220
@@ -7025,8 +7025,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Sedat Kaplan"
+            "screen_names": [
+                "sedatkaplan_"
             ], 
             "nodes": [
                 41118718
@@ -7043,8 +7043,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Audry Maulana"
+            "screen_names": [
+                "oddry"
             ], 
             "nodes": [
                 39740301
@@ -7061,8 +7061,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Barham Salih"
+            "screen_names": [
+                "BarhamSalih"
             ], 
             "nodes": [
                 34364681
@@ -7079,8 +7079,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Federico Donelli"
+            "screen_names": [
+                "fededonelli"
             ], 
             "nodes": [
                 31462811
@@ -7097,8 +7097,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Bulent Keskin"
+            "screen_names": [
+                "bulentkeskin"
             ], 
             "nodes": [
                 31348078
@@ -7115,8 +7115,8 @@
         {
             "biggest_community": "4", 
             "degree": 1, 
-            "names": [
-                "Academia"
+            "screen_names": [
+                "academia"
             ], 
             "nodes": [
                 22809165
@@ -7133,8 +7133,8 @@
         {
             "biggest_community": "2", 
             "degree": 1, 
-            "names": [
-                "Burak Sahin"
+            "screen_names": [
+                "bsahin"
             ], 
             "nodes": [
                 22726182
@@ -7151,8 +7151,8 @@
         {
             "biggest_community": "9", 
             "degree": 2, 
-            "names": [
-                "S\u00fcleyman Soylu"
+            "screen_names": [
+                "suleymansoylu"
             ], 
             "nodes": [
                 18971997
@@ -7169,8 +7169,8 @@
         {
             "biggest_community": "10", 
             "degree": 1, 
-            "names": [
-                "Serdar Kaya"
+            "screen_names": [
+                "derinsular"
             ], 
             "nodes": [
                 18913663
@@ -7187,8 +7187,8 @@
         {
             "biggest_community": "10", 
             "degree": 1, 
-            "names": [
-                "Mustafa \u00c7elik"
+            "screen_names": [
+                "celikmusta"
             ], 
             "nodes": [
                 18864998
@@ -7205,8 +7205,8 @@
         {
             "biggest_community": "5", 
             "degree": 1, 
-            "names": [
-                "Ali Ko\u00e7"
+            "screen_names": [
+                "underoath"
             ], 
             "nodes": [
                 11711812
@@ -7223,7 +7223,7 @@
         {
             "biggest_community": "3", 
             "degree": 1, 
-            "names": [
+            "screen_names": [
                 "yucezerey"
             ], 
             "nodes": [
