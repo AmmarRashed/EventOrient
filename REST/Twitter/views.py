@@ -195,7 +195,10 @@ def recalculate_metrics(nxg, parse=True, centralities=True):
         except:
             pass
     if parse:
-        return json_graph.node_link_data(nxg)
+        data = json_graph.node_link_data(nxg)
+        # with open(root_dir + "/static/latest_tw_ntw.json", 'w') as f:
+        #     json.dump(data, f, indent=4)
+        return data
     return nxg
 
 
