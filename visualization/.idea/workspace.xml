@@ -35,8 +35,8 @@
       <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="234" column="37" lean-forward="true" selection-start-line="234" selection-start-column="37" selection-end-line="234" selection-end-column="37" />
+            <state relative-caret-position="124">
+              <caret line="204" column="50" selection-start-line="204" selection-start-column="50" selection-end-line="204" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -44,7 +44,7 @@
       <file leaf-file-name="SCC_graph.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SCC_graph.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81774">
+            <state relative-caret-position="130356">
               <caret line="7242" column="9" selection-start-line="7242" selection-start-column="9" selection-end-line="7242" selection-end-column="9" />
             </state>
           </provider>
@@ -132,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,6 +143,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,11 +225,12 @@
       <workItem from="1534344193616" duration="662000" />
       <workItem from="1534423648132" duration="1682000" />
       <workItem from="1534432589762" duration="2275000" />
+      <workItem from="1534480559212" duration="49000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43739000" />
+    <option name="totallyTimeSpent" value="43788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
@@ -598,7 +599,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SCC_graph.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81774">
+        <state relative-caret-position="130356">
           <caret line="7242" column="9" selection-start-line="7242" selection-start-column="9" selection-end-line="7242" selection-end-column="9" />
         </state>
       </provider>
@@ -612,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="234" column="37" lean-forward="true" selection-start-line="234" selection-start-column="37" selection-end-line="234" selection-end-column="37" />
+        <state relative-caret-position="124">
+          <caret line="204" column="50" selection-start-line="204" selection-start-column="50" selection-end-line="204" selection-end-column="50" />
         </state>
       </provider>
     </entry>

@@ -23,8 +23,14 @@
         Recalculate node metrics:
         <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
         <br>
+        Recalculate communities:
+        <input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked">
+        <br>
         Include community accounts (e.g. clubs):
         <input type="checkbox" id="include_foci" name="include_foci">
+        <br>
+        Friendship network (bidirectional edges only):
+        <input type="checkbox" id="bidir" name="bidir"> There are {{ bidir_edges }} ({{ bidir_ratio }} %) bidirectional connections out of {{ edges_number }}
         <br>
         <br>
         degree: <input type="text" id="textInputDegree" value="{{degree_threshold}}" style="width: 50px"
@@ -85,6 +91,10 @@
                 onchange="updateText(this.value, 'textInputClustCoeff')">1.0
 
         <br>
+        Homophily: {{ homophily_value }} ( Heterogeneity: {{ heterogeneity }}, Threshold: {{ heterogeneity_threshold }})
+        <br>
+        Transitivity: {{ transitivity_value }}
+        <br>
         Nodes size by:
         {% for metric in size_metrics %}
             <label for="size_metric">
@@ -107,10 +117,12 @@
 
 <script>
     if ({{is_filtering}}){
-        alert("Found {{nodes_number}} nodes");
+        alert("Found {{nodes_number}} nodes\n\t{{edges_number}} edges");
     }
     document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
+    document.getElementById("recalculate_coms_checked").checked = {{recalculate_coms_checked}};
     document.getElementById("include_foci").checked = {{foci_checked}};
+    document.getElementById("bidir").checked = {{bidir}};
 
     d3.select("svg").attr("width", window.screen.width)
         .attr("height", window.screen.height-150);

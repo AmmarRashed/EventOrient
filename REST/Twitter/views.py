@@ -19,6 +19,7 @@ from copy import deepcopy
 import os, json
 
 import networkx as nx
+import snap
 from networkx.readwrite import json_graph
 
 _dir = os.path.dirname(os.path.realpath(__file__))
@@ -48,18 +49,49 @@ orgs = set(twitter_users[twitter_users.is_org].truncated_id)
 def clean(name):
     return unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').lower().decode("ascii")
 
-def homophily(nw, metric="lang"):
+
+def networkx_to_snappy(nxg, directed=False):
+    if directed:
+        g = snap.PNGraph.New()
+    else:
+        g = snap.PUNGraph.New()
+
+    for n in nxg.nodes():
+        g.AddNode(n)
+    for f, t in nxg.edges():
+        g.AddEdge(f, t)
+
+    return g
+
+
+def get_homophily(nw, metric="lang"):
     langs_probs = dict()
     for n in nw.nodes():
         user = nw.nodes[n]
         langs_probs.setdefault(user[metric], 0)
         langs_probs[user[metric]] += 1
-    heterogeneity_fraction_norm = 1 - sum([(float(i)/len(nw.nodes()))**2 for i in langs_probs.values()])
-    cross_edges = sum([int(nw.nodes[f][metric] != nw.nodes[t][metric] ) for f,t in nw.edges()])
-    return cross_edges/float(len(nw.edges())), heterogeneity_fraction_norm
+    heterogeneity_fraction_norm = 1 - sum(
+        [(float(i)/len(nw.nodes()))**2 for i in langs_probs.values()])
+    cross_edges = sum(
+        [int(nw.nodes[f][metric] != nw.nodes[t][metric] ) for f,t in nw.edges()])
+    cross_metric_ratio = cross_edges/float(len(nw.edges()))
+    print("cross-metric edges ratio: ", cross_metric_ratio)
+    print("Heterogeneity Fraction Norm", heterogeneity_fraction_norm)
+    return cross_metric_ratio < heterogeneity_fraction_norm, cross_metric_ratio, heterogeneity_fraction_norm
 
 
-def construct_network(connections, rec_metrics=True, include_foci=True):
+def get_bidir_edges(G):
+    bidir_edges = 0
+    for f,t in deepcopy(G.edges):
+        if G.has_edge(t, f):
+            bidir_edges += 1
+
+        elif bidir:
+            G.remove_edge(f, t)
+    return G, bidir_edges
+
+
+def construct_network(connections, rec_metrics=True, include_foci=True, bidir=False, recalculate_coms=False):
     G = nx.DiGraph()
     truncate = lambda x: int(str(int(x))[:9])
     for _, row in connections.iterrows():
@@ -71,10 +103,23 @@ def construct_network(connections, rec_metrics=True, include_foci=True):
             continue
         if from_ in twitter_users.truncated_id and to in twitter_users.truncated_id:
             G.add_edge(from_, to)
+    new_G, bidir_edges = get_bidir_edges(G)
+
 
     # augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang"]
     # getting pre-calculated communities >> THIS IS JUST OPTIONAL
     augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang", "community"]
+
+    if recalculate_coms:
+        g = networkx_to_snappy(G)
+        CmtyV = snap.TCnComV()
+        modularity = snap.CommunityGirvanNewman(g, CmtyV)
+        nodes_communities = {}  # {node: [community]}
+        for i, Cmty in enumerate(CmtyV):
+            for NI in Cmty:
+                nodes_communities.setdefault(NI, [])
+                nodes_communities[NI].append(i + 2)
+
     for node in G.nodes():
         user = twitter_users.loc[node]
         for aug in augs:
@@ -87,6 +132,8 @@ def construct_network(connections, rec_metrics=True, include_foci=True):
             m = user[aug]
             if aug == "community":
                 m = str(m)
+                if recalculate_coms and 'foci' not in m:
+                    m = str(nodes_communities[node][0])
                 # if not include_foci and m == "foci":
                 #     G.remove_node(node)
 
@@ -98,7 +145,8 @@ def construct_network(connections, rec_metrics=True, include_foci=True):
             # else:
             #     m = user[aug]
             G.nodes[node][aug] = m
-    return recalculate_metrics(G, parse=False, centralities=rec_metrics)
+
+    return recalculate_metrics(G, parse=False, centralities=rec_metrics), bidir_edges
 
 
 
@@ -123,8 +171,15 @@ closeness_threshold = 0.0
 eigenvector_threshold = 0.0
 clust_threshold = 0.0
 recalculate_checked = 0
+
+DEFAULT_RECALCULATE_COMMUNITIES = False
 DEFAULT_FOCI_CHECKED = 1
+DEFAULT_BIDIR = 0
+
 foci_checked = DEFAULT_FOCI_CHECKED
+bidir = DEFAULT_BIDIR
+recalculate_coms_checked = DEFAULT_RECALCULATE_COMMUNITIES
+
 date_index = 0
 size_metric = "degree"
 size_metrics = ["degree", "in_degree", "out_degree",
@@ -225,7 +280,7 @@ def twitter_connections(request):
     global degree_threshold, filtered_twitter_connections, \
         btw_threshold, pagerank_threshold, closeness_threshold, \
         eigenvector_threshold, size_metric,size_metrics, recalculate_checked, foci_checked,\
-        dates, date_index, clust_threshold
+        dates, date_index, clust_threshold, bidir, recalculate_coms_checked
 
     do_filter = False
     check = {"on":True, False:False}
@@ -241,8 +296,13 @@ def twitter_connections(request):
         clust_threshold = float(request.POST["clust_scroller"])
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
+        recalculate_coms_checked = check[request.POST.get("recalculate_coms_checked", False)]
+        print("HERE", recalculate_coms_checked )
         foci_checked = check[request.POST.get("include_foci", False)]
-        if foci_checked != DEFAULT_FOCI_CHECKED:
+        bidir = check[request.POST.get("bidir", False)]
+
+        if foci_checked != DEFAULT_FOCI_CHECKED or bidir != DEFAULT_BIDIR or \
+                recalculate_coms_checked != DEFAULT_RECALCULATE_COMMUNITIES:
             do_filter = True
         else:
             for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold,
@@ -252,16 +312,16 @@ def twitter_connections(request):
                     break
         size_metric = request.POST["size_metric"]
         if do_filter:
-            if date_index == 0 and foci_checked==DEFAULT_FOCI_CHECKED:  # same network
-                data = deepcopy(twitter_connections_json)
-            else:
-                cons = get_connections_by_date(dates[date_index])
-                nw = construct_network(cons, recalculate_checked, foci_checked)
-                data = nx.node_link_data(nw)
-                with open('temp2.json', 'w') as f:
-                    print(len(data["nodes"]), "SIZE")
-                    json.dump(data, f, indent=4)
-                g = json_graph.node_link_graph(data, directed=True)
+            # if date_index == 0 and foci_checked==DEFAULT_FOCI_CHECKED and bidir==DEFAULT_BIDIR:  # same network
+            #     data = deepcopy(twitter_connections_json)
+            # else:
+            cons = get_connections_by_date(dates[date_index])
+            nw, bidir_edges = construct_network(cons, recalculate_checked, foci_checked, bidir, recalculate_coms_checked)
+            data = nx.node_link_data(nw)
+            with open('temp2.json', 'w') as f:
+                print(len(data["nodes"]), "SIZE")
+                json.dump(data, f, indent=4)
+            g = json_graph.node_link_graph(data, directed=True)
 
             filtered_twitter_connections = filter_by(g,
                                                      degree_threshold,
@@ -274,6 +334,12 @@ def twitter_connections(request):
                                                      directed=True)
         else:
             filtered_twitter_connections = deepcopy(twitter_connections_json)
+
+    ung = nx.node_link_graph(filtered_twitter_connections)
+    _, bidir_edges = get_bidir_edges(ung.to_directed())
+    del _
+    homophily, heterogeneity, heterogeneity_threshold = get_homophily(ung)
+    transitivity = nx.transitivity(ung)
 
     avgs = None
     if len(filtered_twitter_connections["nodes"])<1:
@@ -294,14 +360,23 @@ def twitter_connections(request):
                "size_metric": size_metric,
                "size_metrics": size_metrics,
                "recalculate_checked":int(recalculate_checked),
+               "recalculate_coms_checked": int(recalculate_coms_checked),
                "nodes_number": len(filtered_twitter_connections["nodes"]),
+               "edges_number": len(filtered_twitter_connections["links"]),
                "is_filtering":int(filtering),
                "dates":dates,
                "dates_dumped":json.dumps(list(dates)),
                "date_index":date_index,
                "current_date":dates[date_index],
                "foci_checked":int(foci_checked),
-               "clust_threshold":clust_threshold}
+               "clust_threshold":clust_threshold,
+               "bidir":int(bidir),
+               "transitivity_value":transitivity,
+               "homophily_value": homophily,
+               "heterogeneity":heterogeneity,
+               "heterogeneity_threshold":heterogeneity_threshold,
+               "bidir_edges":bidir_edges,
+               "bidir_ratio":bidir_edges*100/len(filtered_twitter_connections["links"])}
     if avgs:
         context.update(avgs)
 
