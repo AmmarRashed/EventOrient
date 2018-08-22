@@ -17,7 +17,7 @@
     <button type="button" onclick="resetNodes()">Reset</button>
     <br>
 
-    <form method="POST">
+    <form name="myForm" method="POST">
         {% csrf_token %}
         <p id="textDate">Date: {{current_date}}</p>
         <input type="range" id="date_scroller" name="date" min="0" max="{{dates|length|add:"-1"}}" step="1" value="{{date_index}}"
@@ -103,22 +103,19 @@
         Transitivity: {{ transitivity_value }}
         <br>
         Nodes size by:
+        <select id="sizeBy" onchange="updateSize()">
+
         {% for metric in size_metrics %}
-            <label for="size_metric">
-                {% if metric == size_metric %}
-                    <input type="radio" id="size_metric" name="size_metric" value="{{metric}}" checked>{{metric}}
-                {% else %}
-                    <input type="radio" id="size_metric" name="size_metric" value="{{metric}}">{{metric}}
-                {% endif %}
-            </label>
+            <option value="{{ metric }}">{{ metric }}</option>
         {% endfor %}
+        </select>
         <br>
         <input type="submit" value="filter">
     </form>
 </div>
 
 <div id="groupSettings">
-    <p>Grouping by: <span id='groupLabel'>None</span></p>
+    <p>Group by: <span id='groupLabel'>None</span></p>
 </div>
 
 {#<div id="curveSettings">#}
@@ -191,6 +188,7 @@
         .attr('fill', '#999')
         .style('stroke','none');
 
+
     var node,
         selectedDegree,
         is_directed,
@@ -205,7 +203,9 @@
         gravityForce = -600,
         polygon,
         centroid,
-        curveTypes = ['curveBasisClosed', 'curveCardinalClosed', 'curveCatmullRomClosed', 'curveLinearClosed'],
+        graph,
+        color,
+        size_metric, avgSize, maxSize, minSize,
         groupTypes = ["None","SCC", "community"],
         groupType = "None",
         simulation = d3.forceSimulation()
@@ -216,29 +216,21 @@
 
     is_directed = true;  // TODO set checkbox for that
 
-    selectedDegree = document.getElementById('degree').value;
-    drawNetwork(selectedDegree, is_directed);
+    {#var curveTypes = ['curveBasisClosed', 'curveCardinalClosed', 'curveCatmullRomClosed', 'curveLinearClosed'],#}
+
+    {#selectedDegree = document.getElementById('degree').value;#}
+
+    {#drawNetwork(selectedDegree, is_directed);#}
+    drawNetwork();
 
 
 
-    function drawNetwork(degree, directed){
-        d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, graph) {
+    function drawNetwork(){
+        d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, g) {
             if (error) throw error;
 
-            {#var select = d3.select('#curveSettings')#}
-            {#.append('select')#}
-            {#.attr('class','select')#}
-            {#.on('change', function() {#}
-            {#    var val = d3.select('select').property('value');#}
-            {#    d3.select('#curveLabel').text(val);#}
-            {#    valueline.curve(d3[val]);#}
-            {#    updateGroups();#}
-            {#});#}
-            {#var options = select#}
-            {#    .selectAll('option')#}
-            {#    .data(curveTypes).enter()#}
-            {#    .append('option')#}
-            {#    .text(function (d) { return d; });#}
+            graph = g;
+
 
             var select_group = d3.select('#groupSettings')
             .append('select')
@@ -267,7 +259,7 @@
             for (i = 0; i < graph.nodes.length; i++) {
                 colors.push(getRandomColor());
             }
-            var color = d3.scaleOrdinal(colors);
+            color = d3.scaleOrdinal(colors);
 
             graph.links.forEach(function (d) {
                 d.source = d.source;
@@ -303,6 +295,7 @@
                 .attr("class", "label");
             // .text(function(d){return d.id;});
 
+            updateSize();
 
             svg.selectAll("circle")
                 .on("mouseover", function (d) {
@@ -349,7 +342,7 @@
                         });
                 })
                 .on("mouseout", function (d) {
-                    d3.select(this).style("r", node_scale).style("fill-opacity", 0.8);
+                    d3.select(this).style("r", node_scale).style("fill-opacity", 0.7);
                     d3.selectAll(".focus").remove();
                 });
 
@@ -361,89 +354,30 @@
             simulation.force("link")
                 .links(graph.links);
 
-
-
-            function updateGroupIds(){
-            // count members of each group. Groups with less
-            // than 3 member will not be considered (creating
-            // a convex hull need 3 points at least)
-
-            groups.selectAll('.path_placeholder').remove();
-
-            groupIds = d3.set(graph.nodes.map(function(n) { return +n[groupType]; }))
-                .values()
-                .map( function(groupId) {
-                    return {
-                        groupId : groupId,
-                        count : graph.nodes.filter(function(n) { return +n[groupType]  == groupId; }).length
-
-                    };
-                })
-                .filter( function(group) { return group.count > 2;})
-                .map( function(group) { return group.groupId; });
-
-            paths = groups.selectAll('.path_placeholder')
-                .data(groupIds, function(d) { return +d; })
-                .enter()
-                .append('g')
-                .attr('class', 'path_placeholder')
-                .append('path')
-                .attr('stroke', function(d) { return color(d); })
-                .attr('fill', function(d) { return color(d); })
-                .attr('opacity', 0);
-
-            paths
-                .transition()
-                .duration(1000)
-                .attr('opacity', 1);
-
-            // add interaction to the groups
-            groups.selectAll('.path_placeholder')
-                .call(d3.drag()
-                    .on('start', group_dragstarted)
-                    .on('drag', group_dragged)
-                    .on('end', group_dragended)
-                );
-            }
-
             function ticked() {
                 link
-                    .attr('x1', d => d.source.x
-            )
-            .
-                attr('y1', d => d.source.y
-            )
-            .
-                attr('x2', d => d.target.x
-            )
-            .
-                attr('y2', d => d.target.y
-            )
-                ;
+                    .attr('x1', d => d.source.x )
+                    .attr('y1', d => d.source.y )
+                    .attr('x2', d => d.target.x )
+                    .attr('y2', d => d.target.y );
 
                 node
                     .attr("r", node_scale)
-                    .style("fill-opacity", 0.8)
-                    .style("fill", function (d) {
-                        return color(d.community);
-                    })
-                    .style("stroke", "none")
-                    .attr('cx', d => d.x).attr('cy', d => d.y);
+                    .attr('cx', d => d.x )
+                    .attr('cy', d => d.y )
+                    .style('fill-opacity', 0.7)
+                    .style('fill', d => color(d.community))
+                    .style('stroke', "none");
 
                 label
-                    .attr("x", function (d) {
-                        return d.x;
-                    })
-                    .attr("y", function (d) {
-                        return d.y;
-                    })
+                    .attr("x", d => d.x)
+                    .attr("y", d => d.y)
                     .style("font-size", "10px")
                     .style("fill", "#4393c3")
-                    .text(function (d) {
-                        return d.screen_name;
-                    });
+                    .text(d => d.screen_name);
 
-                updateGroups();
+
+                {#updateGroups();#}
 
             }
 
@@ -453,12 +387,11 @@
         // .domain([{{minSize}},{{maxSize}}])
         // .range([1, 50]);
     function node_scale(d){
-        // selectedDegree = ((parseInt(document.getElementById('{{size_metric}}').value)))+10;
-        return Math.max((Math.abs(d.{{size_metric}} - {{avgSize}}))/({{maxSize}}-{{minSize}})*100, 5);
+                return Math.max((Math.abs(d[size_metric]- avgSize))/(maxSize-minSize)*100, 5);
             }
     function node_over(d){
-        // selectedDegree = ((parseInt(document.getElementById('{{size_metric}}').value)))+10;
-        return Math.max((Math.abs(d.{{size_metric}} - {{avgSize}}))/({{maxSize}}-{{minSize}})* 180, 200);
+
+        return Math.max((Math.abs(d[size_metric] - avgSize))/(maxSize-minSize)* 180, 200);
 
     }
 
@@ -538,13 +471,14 @@
                 .duration(3000)
                 .style("opacity", '1');
         }
+
     }
     function resetNodes(){
         var all_nodes = node.filter(function (d, i){
             return true;
         });
         all_nodes.style("r", node_scale)
-            .style("opacity",0.8);
+            .style("opacity",0.7);
     }
     function updateText(selectedDegree, widget){
         document.getElementById(widget).value=selectedDegree;
@@ -572,7 +506,6 @@
     var polygonGenerator = function(groupId) {
         var node_coords = node
             .filter(function(d) { return d[groupType] == groupId; })
-            {#.filter(function(d) { return d['SCC'] == groupId; })#}
             .data()
             .map(function(d) { return [d.x, d.y]; });
 
@@ -584,6 +517,22 @@
         simulation.force("charge", d3.forceManyBody().strength(gravityForce));
         simulation.restart();
     }
+
+    function updateSize(){
+                size_metric = document.getElementById("sizeBy").value;
+                avgSize = 0;
+                maxSize = 0;
+                minSize = Infinity;
+
+                graph.nodes.forEach(function (d) {
+                    avgSize += d[size_metric];
+                    maxSize = Math.max(maxSize, d[size_metric]);
+                    minSize = Math.min(maxSize, d[size_metric]);
+                });
+                avgSize /= graph.nodes.length;
+
+                resetNodes();
+            }
 
     function updateGroups() {
         groupIds.forEach(function(groupId) {
@@ -608,7 +557,52 @@
         });
     }
 
-    {#function updateGroupIds(graph, groups){#}
+
+    function updateGroupIds(){
+            // count members of each group. Groups with less
+            // than 3 member will not be considered (creating
+            // a convex hull need 3 points at least)
+
+            groups.selectAll('.path_placeholder').remove();
+
+            groupIds = d3.set(graph.nodes.map(function(n) { return +n[groupType]; }))
+                .values()
+                .map( function(groupId) {
+                    return {
+                        groupId : groupId,
+                        count : graph.nodes.filter(function(n) { return +n[groupType]  == groupId; }).length
+
+                    };
+                })
+                .filter( function(group) { return group.count > 2;})
+                .map( function(group) { return group.groupId; });
+
+            paths = groups.selectAll('.path_placeholder')
+                .data(groupIds, function(d) { return +d; })
+                .enter()
+                .append('g')
+                .attr('class', 'path_placeholder')
+                .append('path')
+                .attr('stroke', function(d) { return color(d); })
+                .attr('fill', function(d) { return color(d); })
+                .attr('opacity', 0);
+
+            paths
+                .transition()
+                .duration(1000)
+                .attr('opacity', 1);
+
+            // add interaction to the groups
+            groups.selectAll('.path_placeholder')
+                .call(d3.drag()
+                    .on('start', group_dragstarted)
+                    .on('drag', group_dragged)
+                    .on('end', group_dragended)
+                )
+                .on("click", function(){console.log(d3.select(this).data());})
+
+            }
+
 
 </script>
 

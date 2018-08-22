@@ -268,7 +268,7 @@ def recalculate_metrics(nxg, parse=True, centralities=True):
         data = json_graph.node_link_data(nxg)
         # with open(root_dir + "/static/networks/latest_tw_ntw.json", 'w') as f:
         #     json.dump(data, f, indent=4)
-        # return data
+        return data
     return nxg
 
 
@@ -323,7 +323,6 @@ def twitter_connections(request):
                 if i != 0:
                     do_filter = True
                     break
-        size_metric = request.POST["size_metric"]
 
         if do_filter:
             # if date_index == 0 and foci_checked==DEFAULT_FOCI_CHECKED and bidir==DEFAULT_BIDIR:  # same network
@@ -365,14 +364,10 @@ def twitter_connections(request):
         sizes = [n[size_metric] for n in filtered_twitter_connections["nodes"]]
 
     context = {"degree_threshold": degree_threshold,
-               "minSize": min(sizes),
-               "maxSize": max(sizes),
-               "avgSize": (sum(sizes) / float(len(sizes))),
                "btw_threshold": btw_threshold,
                "pagerank_threshold": pagerank_threshold,
                "closeness_threshold": closeness_threshold,
                "eigenvector_threshold": eigenvector_threshold,
-               "size_metric": size_metric,
                "size_metrics": size_metrics,
                "recalculate_checked":int(recalculate_checked),
                "recalculate_coms_checked": int(recalculate_coms_checked),
