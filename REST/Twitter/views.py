@@ -264,10 +264,12 @@ def recalculate_metrics(nxg, parse=True, centralities=True):
                     nxg.node[ix][metric_name] = v
         except:
             pass
+
+
     if parse:
         data = json_graph.node_link_data(nxg)
-        # with open(root_dir + "/static/networks/latest_tw_ntw.json", 'w') as f:
-        #     json.dump(data, f, indent=4)
+        with open(root_dir + "/static/networks/latest_tw_ntw.json", 'w') as f:
+            json.dump(data, f, indent=4)
         return data
     return nxg
 
@@ -302,18 +304,18 @@ def twitter_connections(request):
 
     if request.method == "POST":
         filtering = True
-        degree_threshold = int(request.POST["degree_scroller"])
-        btw_threshold = float(request.POST["btw_scroller"])
-        pagerank_threshold = float(request.POST["pagerank_scroller"])
-        closeness_threshold = float(request.POST["closeness_scroller"])
-        eigenvector_threshold = float(request.POST["eigenvector_scroller"])
-        clust_threshold = float(request.POST["clust_scroller"])
+        degree_threshold = int(request.POST["text_degree"])
+        btw_threshold = float(request.POST["text_betweenness"])
+        pagerank_threshold = float(request.POST["text_pagerank"])
+        closeness_threshold = float(request.POST["text_closeness_centrality"])
+        eigenvector_threshold = float(request.POST["text_eigenvector_centrality"])
+        clust_threshold = float(request.POST["text_clustering_coefficient"])
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
         recalculate_coms_checked = check[request.POST.get("recalculate_coms_checked", False)]
         recalculate_SCCs_checked = check[request.POST.get("recalculate_SCCs_checked", "on")]
 
-        foci_checked = check[request.POST.get("include_foci", False)]
+        foci_checked = check[request.POST.get("toggleFociCB", False)]
         bidir = check[request.POST.get("bidir", False)]
 
         do_filter = foci_checked != DEFAULT_FOCI_CHECKED or bidir != DEFAULT_BIDIR

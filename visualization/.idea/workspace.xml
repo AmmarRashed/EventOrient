@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="twitter.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/twitter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+            <state relative-caret-position="298">
+              <caret line="321" column="17" selection-start-line="321" selection-start-column="17" selection-end-line="321" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miserables2.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="miserables2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/miserables2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1098">
-              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            <state relative-caret-position="534">
+              <caret line="157" column="57" lean-forward="true" selection-start-line="150" selection-start-column="12" selection-end-line="157" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -88,7 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print(</find>
       <find>node =</find>
       <find>fill</find>
       <find>group</find>
@@ -118,6 +117,7 @@
       <find>+</find>
       <find>+n.</find>
       <find>twitte</find>
+      <find>tick</find>
     </findStrings>
     <replaceStrings>
       <replace>.community</replace>
@@ -258,16 +258,15 @@
       <workItem from="1534927983210" duration="3730000" />
       <workItem from="1534944535257" duration="138000" />
       <workItem from="1534946591519" duration="141000" />
-      <workItem from="1534948174788" duration="40000" />
+      <workItem from="1534948174788" duration="701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50643000" />
+    <option name="totallyTimeSpent" value="51304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959743" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -638,17 +637,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miserables2.html">
+    <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1098">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        <state relative-caret-position="298">
+          <caret line="321" column="17" selection-start-line="321" selection-start-column="17" selection-end-line="321" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/twitter.html">
+    <entry file="file://$PROJECT_DIR$/miserables2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+        <state relative-caret-position="534">
+          <caret line="157" column="57" lean-forward="true" selection-start-line="150" selection-start-column="12" selection-end-line="157" selection-end-column="57" />
         </state>
       </provider>
     </entry>

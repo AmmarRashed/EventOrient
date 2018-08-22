@@ -19,10 +19,18 @@
 
     <form name="myForm" method="POST">
         {% csrf_token %}
+
         <p id="textDate">Date: {{current_date}}</p>
         <input type="range" id="date_scroller" name="date" min="0" max="{{dates|length|add:"-1"}}" step="1" value="{{date_index}}"
                         style="width: 400px"
                 onchange="updateDateText(this.value)">
+
+        </br>
+        Nodes: <span id="num_nodes">{{ nodes_number }}</span> </br> Edges: <span id="num_edges">{{ edges_number }}</span>
+        <br>
+        Homophily: {{ homophily_value }} ( Heterogeneity: {{ heterogeneity }}, Threshold: {{ heterogeneity_threshold }})
+        <br>
+        Transitivity: {{ transitivity_value }}
         <br>
         Recalculate node metrics:
         <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
@@ -33,74 +41,71 @@
         Recalculate SCCs:
         <input type="checkbox" id="recalculate_SCCs_checked" name="recalculate_SCCs_checked">
         <br>
+        <input type="submit" value="Construct Network"></br>
         Include community accounts (e.g. clubs):
-        <input type="checkbox" id="include_foci" name="include_foci">
+        <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="filterNodes()">
         <br>
         Friendship network (bidirectional edges only):
         <input type="checkbox" id="bidir" name="bidir"> There are {{ bidir_edges }} ({{ bidir_ratio }} %) bidirectional connections out of {{ edges_number }}
         <br>
         <br>
-        degree: <input type="text" id="textInputDegree" value="{{degree_threshold}}" style="width: 50px"
-                       name="degree_scroller"
+        degree: <input type="text" id="text_degree" value="{{degree_threshold}}" style="width: 50px"
+                       name="text_degree"
                         onchange="updateScroll(this.value, 'degree')">{{avg_degree}}<br>
 
         0<input id="degree"
                 type="range" value="{{degree_threshold}}" min="0" max="100" step="1"
                 style="width: 400px"
-                onchange="updateText(this.value, 'textInputDegree')">100
+                onchange="updateText(this.value, 'text_degree')">100
         <br>
 
-        betweenness: <input type="text" id="textInputBtw" value="{{btw_threshold}}" style="width: 50px"
-                            name="btw_scroller"
+        betweenness: <input type="text" id="text_betweenness" value="{{btw_threshold}}" style="width: 50px"
+                            name="text_betweenness"
                         onchange="updateScroll(this.value, 'betweenness')">{{avg_betweenness}}<br>
 
         0.0<input id="betweenness"
                 type="range" value="{{btw_threshold}}" min="0.0" max="1.0" step="0.01"
                 style="width: 400px"
-                onchange="updateText(this.value, 'textInputBtw')">1.0
+                onchange="updateText(this.value, 'text_betweenness')">1.0
         <br>
-        pagerank: <input type="text" id="textInputPagerank" value="{{pagerank_threshold}}" style="width: 50px"
-                         name="pagerank_scroller"
+        pagerank: <input type="text" id="text_pagerank" value="{{pagerank_threshold}}" style="width: 50px"
+                         name="text_pagerank"
                         onchange="updateScroll(this.value, 'pagerank')">{{avg_pagerank}}<br>
 
         0.0<input id="pagerank"
                 type="range" value="{{pagerank_threshold}}" min="0.0" max="1.0" step="0.01"
                 style="width: 400px"
-                onchange="updateText(this.value, 'textInputPagerank')">1.0
+                onchange="updateText(this.value, 'text_pagerank')">1.0
         <br>
-        closeness: <input type="text" id="textInputCloseness" value="{{closeness_threshold}}" style="width: 50px"
-                          name="closeness_scroller"
-                        onchange="updateScroll(this.value, 'closeness')">{{avg_closeness_centrality}}<br>
+        closeness: <input type="text" id="text_closeness_centrality" value="{{closeness_threshold}}" style="width: 50px"
+                          name="text_closeness_centrality"
+                        onchange="updateScroll(this.value, 'closeness_centrality')">{{avg_closeness_centrality}}<br>
 
-        0.0<input id="closeness"
+        0.0<input id="closeness_centrality"
                 type="range" value="{{closeness_threshold}}" min="0.0" max="1.0" step="0.01"
                 style="width: 400px"
-                onchange="updateText(this.value, 'textInputCloseness')">1.0
+                onchange="updateText(this.value, 'text_closeness_centrality')">1.0
         <br>
 
-        eigenvector: <input type="text" id="textInputEigenvector" value="{{eigenvector_threshold}}" style="width: 50px"
-                            name="eigenvector_scroller"
-                        onchange="updateScroll(this.value, 'eigenvector')">{{avg_eigenvector_centrality}}<br>
+        eigenvector: <input type="text" id="text_eigenvector_centrality" value="{{eigenvector_threshold}}" style="width: 50px"
+                            name="text_eigenvector_centrality"
+                        onchange="updateScroll(this.value, 'eigenvector_centrality')">{{avg_eigenvector_centrality}}<br>
 
-        0.0<input id="eigenvector"
+        0.0<input id="eigenvector_centrality"
                 type="range" value="{{eigenvector_threshold}}" min="0.0" max="1.0" step="0.01"
                 style="width: 400px"
-                onchange="updateText(this.value, 'textInputEigenvector')">1.0
+                onchange="updateText(this.value, 'text_eigenvector_centrality')">1.0
 
         <br>
-        Clustering Coefficient: <input type="text" id="textInputClustCoeff" value="{{clust_threshold}}" style="width: 50px"
-                            name="clust_scroller"
-                        onchange="updateScroll(this.value, 'clust')">{{avg_clustering_coefficient}}<br>
+        Clustering Coefficient: <input type="text" id="text_clustering_coefficient" value="{{clust_threshold}}" style="width: 50px"
+                            name="text_clustering_coefficient"
+                        onchange="updateScroll(this.value, 'clustering_coefficient')">{{avg_clustering_coefficient}}<br>
 
-        0.0<input id="clust"
+        0.0<input id="clustering_coefficient"
                 type="range" value="{{clust_threshold}}" min="0.0" max="1.0" step="0.01"
                 style="width: 400px"
-                onchange="updateText(this.value, 'textInputClustCoeff')">1.0
+                onchange="updateText(this.value, 'text_clustering_coefficient')">1.0
 
-        <br>
-        Homophily: {{ homophily_value }} ( Heterogeneity: {{ heterogeneity }}, Threshold: {{ heterogeneity_threshold }})
-        <br>
-        Transitivity: {{ transitivity_value }}
         <br>
         Nodes size by:
         <select id="sizeBy" onchange="updateSize()">
@@ -110,8 +115,8 @@
         {% endfor %}
         </select>
         <br>
-        <input type="submit" value="filter">
     </form>
+    <input id="filter" type="submit" value="filter" onclick="drawNetwork()">
 </div>
 
 <div id="groupSettings">
@@ -128,8 +133,12 @@
            oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroups()">
 
     <p>Network's gravity: <span id='gravityForce'>-600</span></p>
-    <input type="range" min="-1200" max="200" value="-600" step="10" style="width: 400px"
+    <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 400px"
            oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
+
+    <p>Nodes' sizes: <span id='nodeScaler'>100</span></p>
+    <input type="range" min="1" max="500" value="100" step="10" style="width: 400px"
+           oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()">
 
 </div>
 
@@ -140,13 +149,12 @@
 <body>
 
 <script>
-    if ({{is_filtering}}){
-        alert("Found {{nodes_number}} nodes\n\t{{edges_number}} edges");
-    }
+
     document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
     document.getElementById("recalculate_coms_checked").checked = {{recalculate_coms_checked}};
     document.getElementById("recalculate_SCCs_checked").checked = {{recalculate_SCCs_checked}};
-    document.getElementById("include_foci").checked = {{foci_checked}};
+    document.getElementById("toggleFociCB").checked = {{foci_checked}};
+
     document.getElementById("bidir").checked = {{bidir}};
 
     d3.select("svg").attr("width", window.screen.width)
@@ -190,17 +198,20 @@
 
 
     var node,
-        selectedDegree,
         is_directed,
         valueline = d3.line()
             .x(function(d) { return d[0]; })
             .y(function(d) { return d[1]; })
             .curve(d3.curveCatmullRomClosed),
+        toggleFociChecked,
+        selectedNodes,
+        selectedLinks,
         paths,
         groups,
         groupIds,
         scaleFactor = 1.2,
         gravityForce = -600,
+        sizeScaler=100,
         polygon,
         centroid,
         graph,
@@ -208,10 +219,10 @@
         size_metric, avgSize, maxSize, minSize,
         groupTypes = ["None","SCC", "community"],
         groupType = "None",
-        simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(function (d) {return d.id;}))
-        .force("charge", d3.forceManyBody().strength(gravityForce))
-        .force("center", d3.forceCenter(width/2, height/2));
+        simulation= d3.forceSimulation()
+                            .force("link", d3.forceLink().id(function (d) {return d.id;}))
+                            .force("charge", d3.forceManyBody().strength(gravityForce))
+                            .force("center", d3.forceCenter(width/2, height/2));
 
 
     is_directed = true;  // TODO set checkbox for that
@@ -223,16 +234,21 @@
     {#drawNetwork(selectedDegree, is_directed);#}
     drawNetwork();
 
-
-
     function drawNetwork(){
         d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, g) {
             if (error) throw error;
 
             graph = g;
 
+            d3.selectAll('.select_group').remove();
+            svg.selectAll('*').remove();
 
-            var select_group = d3.select('#groupSettings')
+            if (typeof selectedNodes == 'undefined') {  // first run
+                selectedNodes = graph.nodes;
+                filterNodes();
+            }
+
+            d3.select('#groupSettings')
             .append('select')
             .attr('class','select_group')
             .on('change', function() {
@@ -242,10 +258,8 @@
                 {#valueline.curve(d3[val]);#}
                 updateGroupIds();
                 updateGroups();
-            });
-
-            var options_group = select_group
-                .selectAll('option')
+            })
+            .selectAll('option')
                 .data(groupTypes).enter()
                 .append('option')
                 .text(function (d) { return d; });
@@ -256,21 +270,16 @@
 
             var colors = [];
             var i;
-            for (i = 0; i < graph.nodes.length; i++) {
+            for (i = 0; i < selectedNodes.length; i++) {
                 colors.push(getRandomColor());
             }
             color = d3.scaleOrdinal(colors);
-
-            graph.links.forEach(function (d) {
-                d.source = d.source;
-                d.target = d.target;
-            });
 
             var link = svg.append("g")
                 .style("stroke", "#aaa")
                 .style("stroke-opacity", "0.8")
                 .selectAll("line")
-                .data(graph.links)
+                .data(selectedLinks)
                 .enter().append("line")
                 .attr('marker-end', 'url(#arrowhead)');
 
@@ -278,19 +287,18 @@
             node = svg.append("g")
                 .attr("class", "nodes")
                 .selectAll("circle")
-                .data(graph.nodes)
+                .data(selectedNodes)
                 .enter().append("circle")
-                // ;
                 .call(d3.drag()
                     .on("start", dragstarted)
                     .on("drag", dragged)
                     .on("end", dragended));
 
-            //
+
             var label = svg.append("g")
                 .attr("class", "labels")
                 .selectAll("text")
-                .data(graph.nodes)
+                .data(selectedNodes)
                 .enter().append("text")
                 .attr("class", "label");
             // .text(function(d){return d.id;});
@@ -348,11 +356,11 @@
 
 
             simulation
-                .nodes(graph.nodes)
+                .nodes(selectedNodes)
                 .on("tick", ticked);
 
             simulation.force("link")
-                .links(graph.links);
+                .links(selectedLinks);
 
             function ticked() {
                 link
@@ -377,7 +385,7 @@
                     .text(d => d.screen_name);
 
 
-                {#updateGroups();#}
+                updateGroups();
 
             }
 
@@ -386,12 +394,14 @@
     }
         // .domain([{{minSize}},{{maxSize}}])
         // .range([1, 50]);
-    function node_scale(d){
-                return Math.max((Math.abs(d[size_metric]- avgSize))/(maxSize-minSize)*100, 5);
+
+        function node_scale(d){
+
+                return Math.max((Math.abs(d[size_metric]- avgSize))/(maxSize-minSize)*sizeScaler, sizeScaler/20);
             }
     function node_over(d){
 
-        return Math.max((Math.abs(d[size_metric] - avgSize))/(maxSize-minSize)* 180, 200);
+        return Math.max((Math.abs(d[size_metric] - avgSize))/(maxSize-minSize)* (sizeScaler*1.8), sizeScaler*2);
 
     }
 
@@ -480,11 +490,16 @@
         all_nodes.style("r", node_scale)
             .style("opacity",0.7);
     }
-    function updateText(selectedDegree, widget){
-        document.getElementById(widget).value=selectedDegree;
+    function updateText(threshold, widget){
+        {#var metric = widget.slice(5);  // text_degree => degree  (removing 'text_')#}
+
+        document.getElementById(widget).value=threshold;
+        filterNodes();
     }
-    function updateScroll(selectedDegree, widget){
-        document.getElementById(widget).value=selectedDegree;
+    function updateScroll(threshold, widget){
+
+        document.getElementById(widget).value=threshold;
+        filterNodes();
     }
 
     function centerNode(xx, yy){
@@ -515,7 +530,8 @@
 
     function updateForce(){
         simulation.force("charge", d3.forceManyBody().strength(gravityForce));
-        simulation.restart();
+        ticked();
+
     }
 
     function updateSize(){
@@ -524,37 +540,98 @@
                 maxSize = 0;
                 minSize = Infinity;
 
-                graph.nodes.forEach(function (d) {
+                selectedNodes.forEach(function (d) {
                     avgSize += d[size_metric];
                     maxSize = Math.max(maxSize, d[size_metric]);
                     minSize = Math.min(maxSize, d[size_metric]);
                 });
-                avgSize /= graph.nodes.length;
+                avgSize /= selectedNodes.length;
 
                 resetNodes();
             }
 
     function updateGroups() {
-        groupIds.forEach(function(groupId) {
-            var path = paths.filter(function(d) { return d == groupId;})
-                .attr('transform', 'scale(1) translate(0,0)')
-                .attr('d', function(d) {
-                    polygon = polygonGenerator(d);
-                    centroid = d3.polygonCentroid(polygon);
+        if (typeof groupIds != 'undefined') {
 
-                    // to scale the shape properly around its points:
-                    // move the 'g' element to the centroid point, translate
-                    // all the path around the center of the 'g' and then
-                    // we can scale the 'g' element properly
-                    return valueline(
-                        polygon.map(function(point) {
-                            return [  point[0] - centroid[0], point[1] - centroid[1] ];
-                        })
-                    );
-                });
+            groupIds.forEach(function (groupId) {
+                var path = paths.filter(function (d) {
+                    return d == groupId;
+                })
+                    .attr('transform', 'scale(1) translate(0,0)')
+                    .attr('d', function (d) {
+                        polygon = polygonGenerator(d);
+                        centroid = d3.polygonCentroid(polygon);
 
-            d3.select(path.node().parentNode).attr('transform', 'translate('  + centroid[0] + ',' + (centroid[1]) + ') scale(' + scaleFactor + ')');
+                        // to scale the shape properly around its points:
+                        // move the 'g' element to the centroid point, translate
+                        // all the path around the center of the 'g' and then
+                        // we can scale the 'g' element properly
+                        return valueline(
+                            polygon.map(function (point) {
+                                return [point[0] - centroid[0], point[1] - centroid[1]];
+                            })
+                        );
+                    });
+
+                d3.select(path.node().parentNode).attr('transform', 'translate(' + centroid[0] + ',' + (centroid[1]) + ') scale(' + scaleFactor + ')');
+            });
+        }
+    }
+
+    function updateLinks(){
+        graph.links.forEach(function (d) {
+            d.source = d.source;
+            d.target = d.target;
         });
+        selectedLinks = graph.links.filter(function(l){
+            var valid=0;
+            for (var n in selectedNodes){
+                node_id = parseInt(selectedNodes[n].id);
+                source_id = parseInt(l.source);
+                target_id = parseInt(l.target);
+
+                {#console.log(node_id, source_id, l.source);#}
+
+                if (node_id === source_id)
+                    valid += 1;
+                if (node_id === target_id)
+                    valid += 1;
+                if (valid>1)
+                    return true;
+            }
+            return false;
+            {#return selectedNodes.includes(link.source) && selectedNodes.includes(link.target);#}
+        });
+        d3.select("#num_nodes").text(selectedNodes.length.toString());
+        d3.select("#num_edges").text(selectedLinks.length.toString());
+
+        drawNetwork();
+    }
+
+    function filterNodes() {
+        var metrics = ["degree", "betweenness", "pagerank", "community",
+                "closeness_centrality", "eigenvector_centrality", 'clustering_coefficient'];
+
+        toggleFociChecked = document.getElementById("toggleFociCB").checked;
+
+        selectedNodes =
+            graph.nodes.filter(function(node){
+                for (var metric in node) {
+                    if (metrics.includes(metric)) {
+                        if (metric.includes("community")) {
+                            if (!(toggleFociChecked || !(node['community'].toString().includes("foci"))))
+                                return false;
+                        }
+                        else {
+                            var metricThreshold = parseFloat(document.getElementById(metric).value);
+                            if (node[metric] < metricThreshold)
+                                return false;
+                        }
+                    }
+                }
+                return true;
+            });
+        updateLinks();
     }
 
 
@@ -565,12 +642,12 @@
 
             groups.selectAll('.path_placeholder').remove();
 
-            groupIds = d3.set(graph.nodes.map(function(n) { return +n[groupType]; }))
+            groupIds = d3.set(selectedNodes.map(function(n) { return +n[groupType]; }))
                 .values()
                 .map( function(groupId) {
                     return {
                         groupId : groupId,
-                        count : graph.nodes.filter(function(n) { return +n[groupType]  == groupId; }).length
+                        count : selectedNodes.filter(function(n) { return +n[groupType]  == groupId; }).length
 
                     };
                 })
