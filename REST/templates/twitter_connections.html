@@ -5,7 +5,10 @@
 
     <style>
     body {font-family: 'Times', cursive;}
-
+    path {
+        fill-opacity: .1;
+        stroke-opacity: 1;
+    }
 
 </style>
 <div class="ui-widget">
@@ -13,11 +16,12 @@
     <button type="button" onclick="searchNode()">Find Node</button>
     <button type="button" onclick="resetNodes()">Reset</button>
     <br>
+
     <form method="POST">
         {% csrf_token %}
         <p id="textDate">Date: {{current_date}}</p>
         <input type="range" id="date_scroller" name="date" min="0" max="{{dates|length|add:"-1"}}" step="1" value="{{date_index}}"
-                        style="width: 500px"
+                        style="width: 400px"
                 onchange="updateDateText(this.value)">
         <br>
         Recalculate node metrics:
@@ -25,6 +29,9 @@
         <br>
         Recalculate communities:
         <input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked">
+        <br>
+        Recalculate SCCs:
+        <input type="checkbox" id="recalculate_SCCs_checked" name="recalculate_SCCs_checked">
         <br>
         Include community accounts (e.g. clubs):
         <input type="checkbox" id="include_foci" name="include_foci">
@@ -39,7 +46,7 @@
 
         0<input id="degree"
                 type="range" value="{{degree_threshold}}" min="0" max="100" step="1"
-                style="width: 500px"
+                style="width: 400px"
                 onchange="updateText(this.value, 'textInputDegree')">100
         <br>
 
@@ -49,7 +56,7 @@
 
         0.0<input id="betweenness"
                 type="range" value="{{btw_threshold}}" min="0.0" max="1.0" step="0.01"
-                style="width: 500px"
+                style="width: 400px"
                 onchange="updateText(this.value, 'textInputBtw')">1.0
         <br>
         pagerank: <input type="text" id="textInputPagerank" value="{{pagerank_threshold}}" style="width: 50px"
@@ -58,7 +65,7 @@
 
         0.0<input id="pagerank"
                 type="range" value="{{pagerank_threshold}}" min="0.0" max="1.0" step="0.01"
-                style="width: 500px"
+                style="width: 400px"
                 onchange="updateText(this.value, 'textInputPagerank')">1.0
         <br>
         closeness: <input type="text" id="textInputCloseness" value="{{closeness_threshold}}" style="width: 50px"
@@ -67,7 +74,7 @@
 
         0.0<input id="closeness"
                 type="range" value="{{closeness_threshold}}" min="0.0" max="1.0" step="0.01"
-                style="width: 500px"
+                style="width: 400px"
                 onchange="updateText(this.value, 'textInputCloseness')">1.0
         <br>
 
@@ -77,7 +84,7 @@
 
         0.0<input id="eigenvector"
                 type="range" value="{{eigenvector_threshold}}" min="0.0" max="1.0" step="0.01"
-                style="width: 500px"
+                style="width: 400px"
                 onchange="updateText(this.value, 'textInputEigenvector')">1.0
 
         <br>
@@ -87,7 +94,7 @@
 
         0.0<input id="clust"
                 type="range" value="{{clust_threshold}}" min="0.0" max="1.0" step="0.01"
-                style="width: 500px"
+                style="width: 400px"
                 onchange="updateText(this.value, 'textInputClustCoeff')">1.0
 
         <br>
@@ -110,6 +117,26 @@
     </form>
 </div>
 
+<div id="groupSettings">
+    <p>Grouping by: <span id='groupLabel'>None</span></p>
+</div>
+
+{#<div id="curveSettings">#}
+{#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
+{#</div>#}
+
+<div id="scaleFactorSettings">
+    <p>Scale of the groups: <span id='scaleFactorLabel'>1.2</span></p>
+    <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 400px"
+           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroups()">
+
+    <p>Network's gravity: <span id='gravityForce'>-600</span></p>
+    <input type="range" min="-1200" max="200" value="-600" step="10" style="width: 400px"
+           oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
+
+</div>
+
+
 <svg width="960" height="600"></svg>
 <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
 
@@ -121,6 +148,7 @@
     }
     document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
     document.getElementById("recalculate_coms_checked").checked = {{recalculate_coms_checked}};
+    document.getElementById("recalculate_SCCs_checked").checked = {{recalculate_SCCs_checked}};
     document.getElementById("include_foci").checked = {{foci_checked}};
     document.getElementById("bidir").checked = {{bidir}};
 
@@ -163,26 +191,77 @@
         .attr('fill', '#999')
         .style('stroke','none');
 
-    var simulation = d3.forceSimulation()
+    var node,
+        selectedDegree,
+        is_directed,
+        valueline = d3.line()
+            .x(function(d) { return d[0]; })
+            .y(function(d) { return d[1]; })
+            .curve(d3.curveCatmullRomClosed),
+        paths,
+        groups,
+        groupIds,
+        scaleFactor = 1.2,
+        gravityForce = -600,
+        polygon,
+        centroid,
+        curveTypes = ['curveBasisClosed', 'curveCardinalClosed', 'curveCatmullRomClosed', 'curveLinearClosed'],
+        groupTypes = ["None","SCC", "community"],
+        groupType = "None",
+        simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function (d) {return d.id;}))
-        .force("charge", d3.forceManyBody().strength(-600))
+        .force("charge", d3.forceManyBody().strength(gravityForce))
         .force("center", d3.forceCenter(width/2, height/2));
 
-
-    var node;
-    var selectedDegree;
-    var is_directed;
 
     is_directed = true;  // TODO set checkbox for that
 
     selectedDegree = document.getElementById('degree').value;
     drawNetwork(selectedDegree, is_directed);
 
+
+
     function drawNetwork(degree, directed){
         d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, graph) {
             if (error) throw error;
-            // // var graph = d3.json({{graph_}});
-            // var graph = {{graph_}};
+
+            {#var select = d3.select('#curveSettings')#}
+            {#.append('select')#}
+            {#.attr('class','select')#}
+            {#.on('change', function() {#}
+            {#    var val = d3.select('select').property('value');#}
+            {#    d3.select('#curveLabel').text(val);#}
+            {#    valueline.curve(d3[val]);#}
+            {#    updateGroups();#}
+            {#});#}
+            {#var options = select#}
+            {#    .selectAll('option')#}
+            {#    .data(curveTypes).enter()#}
+            {#    .append('option')#}
+            {#    .text(function (d) { return d; });#}
+
+            var select_group = d3.select('#groupSettings')
+            .append('select')
+            .attr('class','select_group')
+            .on('change', function() {
+                var val = d3.select('.select_group').property('value');
+                d3.select('#groupLabel').text(val);
+                groupType = val;
+                {#valueline.curve(d3[val]);#}
+                updateGroupIds();
+                updateGroups();
+            });
+
+            var options_group = select_group
+                .selectAll('option')
+                .data(groupTypes).enter()
+                .append('option')
+                .text(function (d) { return d; });
+
+
+            // create groups, links and nodes
+            groups = svg.append('g').attr('class', 'groups');
+
             var colors = [];
             var i;
             for (i = 0; i < graph.nodes.length; i++) {
@@ -234,13 +313,7 @@
                         .attr('class', 'focus');
                     const cx = d3.select(this).attr("cx");
                     const cy = d3.select(this).attr("cy");
-                    // const nodeData = ["Name: "+d.name,
-                    //     "Degree: "+d.degree,
-                    //     "parity: "+d.parity,
-                    //     "betweenness: "+d.betweenness,
-                    //     "closeness_centrality: "+d.closeness_centrality,
-                    //     "eigenvector_centrality: "+d.eigenvector_centrality];
-                    // const nodeData =    [d.name, d.id];
+
                     focus.append('rect')
                         .attr('height', 300 * 4)
                         .attr('width', 300 * 4)
@@ -288,6 +361,51 @@
             simulation.force("link")
                 .links(graph.links);
 
+
+
+            function updateGroupIds(){
+            // count members of each group. Groups with less
+            // than 3 member will not be considered (creating
+            // a convex hull need 3 points at least)
+
+            groups.selectAll('.path_placeholder').remove();
+
+            groupIds = d3.set(graph.nodes.map(function(n) { return +n[groupType]; }))
+                .values()
+                .map( function(groupId) {
+                    return {
+                        groupId : groupId,
+                        count : graph.nodes.filter(function(n) { return +n[groupType]  == groupId; }).length
+
+                    };
+                })
+                .filter( function(group) { return group.count > 2;})
+                .map( function(group) { return group.groupId; });
+
+            paths = groups.selectAll('.path_placeholder')
+                .data(groupIds, function(d) { return +d; })
+                .enter()
+                .append('g')
+                .attr('class', 'path_placeholder')
+                .append('path')
+                .attr('stroke', function(d) { return color(d); })
+                .attr('fill', function(d) { return color(d); })
+                .attr('opacity', 0);
+
+            paths
+                .transition()
+                .duration(1000)
+                .attr('opacity', 1);
+
+            // add interaction to the groups
+            groups.selectAll('.path_placeholder')
+                .call(d3.drag()
+                    .on('start', group_dragstarted)
+                    .on('drag', group_dragged)
+                    .on('end', group_dragended)
+                );
+            }
+
             function ticked() {
                 link
                     .attr('x1', d => d.source.x
@@ -310,12 +428,7 @@
                         return color(d.community);
                     })
                     .style("stroke", "none")
-                    .attr('cx', d => d.x
-            )
-            .
-                attr('cy', d => d.y
-            )
-                ;
+                    .attr('cx', d => d.x).attr('cy', d => d.y);
 
                 label
                     .attr("x", function (d) {
@@ -328,7 +441,10 @@
                     .style("fill", "#4393c3")
                     .text(function (d) {
                         return d.screen_name;
-                    })
+                    });
+
+                updateGroups();
+
             }
 
         });
@@ -362,6 +478,29 @@
         d.fx = null;
         d.fy = null;
     }
+
+
+    // drag groups
+    function group_dragstarted(groupId) {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        d3.select(this).select('path').style('stroke-width', 3);
+    }
+
+    function group_dragged(groupId) {
+        node
+            .filter(function(d) { return d[groupType] == groupId; })
+            {#.filter(function(d) { return d['SCC'] == groupId; })#}
+            .each(function(d) {
+                d.x += d3.event.dx;
+                d.y += d3.event.dy;
+            })
+    }
+
+    function group_dragended(groupId) {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        d3.select(this).select('path').style('stroke-width', 1);
+    }
+
 
     function getRandomColor() {
         var letters = '0123456789ABCDEF';
@@ -425,6 +564,51 @@
         var dates = {{dates_dumped|safe}};
         document.getElementById("textDate").innerHTML = "Date: "+dates[date_index].toString();
     }
+
+
+    // select nodes of the group, retrieve its positions
+    // and return the convex hull of the specified points
+    // (3 points as minimum, otherwise returns null)
+    var polygonGenerator = function(groupId) {
+        var node_coords = node
+            .filter(function(d) { return d[groupType] == groupId; })
+            {#.filter(function(d) { return d['SCC'] == groupId; })#}
+            .data()
+            .map(function(d) { return [d.x, d.y]; });
+
+        return d3.polygonHull(node_coords);
+    };
+
+
+    function updateForce(){
+        simulation.force("charge", d3.forceManyBody().strength(gravityForce));
+        simulation.restart();
+    }
+
+    function updateGroups() {
+        groupIds.forEach(function(groupId) {
+            var path = paths.filter(function(d) { return d == groupId;})
+                .attr('transform', 'scale(1) translate(0,0)')
+                .attr('d', function(d) {
+                    polygon = polygonGenerator(d);
+                    centroid = d3.polygonCentroid(polygon);
+
+                    // to scale the shape properly around its points:
+                    // move the 'g' element to the centroid point, translate
+                    // all the path around the center of the 'g' and then
+                    // we can scale the 'g' element properly
+                    return valueline(
+                        polygon.map(function(point) {
+                            return [  point[0] - centroid[0], point[1] - centroid[1] ];
+                        })
+                    );
+                });
+
+            d3.select(path.node().parentNode).attr('transform', 'translate('  + centroid[0] + ',' + (centroid[1]) + ') scale(' + scaleFactor + ')');
+        });
+    }
+
+    {#function updateGroupIds(graph, groups){#}
 
 </script>
 

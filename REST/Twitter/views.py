@@ -91,7 +91,48 @@ def get_bidir_edges(G):
     return G, bidir_edges
 
 
-def construct_network(connections, rec_metrics=True, include_foci=True, bidir=False, recalculate_coms=False):
+def label_nodes_SCCs(G):
+    nodes_sccs = {}  # {node: scc_id}
+    snappy_directed = networkx_to_snappy(G, True)
+    components = snap.TCnComV()
+    sccs = snap.GetSccs(snappy_directed, components)
+
+    for CnCom in components:
+        for n in CnCom:
+            nodes_sccs[n] = CnCom
+
+
+    for node in G.nodes():
+        m = str(nodes_sccs[node][0])
+        G.nodes[node]["SCC"] = m
+
+    return G
+
+
+def label_nodes_communities(G, recalculate=False):
+    if recalculate:
+
+        g = networkx_to_snappy(G)
+        CmtyV = snap.TCnComV()
+        modularity = snap.CommunityGirvanNewman(g, CmtyV)
+        nodes_communities = {}  # {node: [community]}
+        for i, Cmty in enumerate(CmtyV):
+            for NI in Cmty:
+                nodes_communities.setdefault(NI, [])
+                nodes_communities[NI].append(i + 2)
+
+    for node in G.nodes():
+        try:
+            user = twitter_users.loc[node]
+            m = str(user['community'])
+        except KeyError:
+            m = "0"
+        if recalculate and 'foci' not in m:
+            m = str(nodes_communities[node][0])
+        G.nodes[node]["community"] = m
+    return G
+
+def construct_network(connections, rec_metrics=True, include_foci=True, recalculate_coms=False, recalculate_SCCs=True):
     G = nx.DiGraph()
     truncate = lambda x: int(str(int(x))[:9])
     for _, row in connections.iterrows():
@@ -108,43 +149,19 @@ def construct_network(connections, rec_metrics=True, include_foci=True, bidir=Fa
 
     # augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang"]
     # getting pre-calculated communities >> THIS IS JUST OPTIONAL
-    augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang", "community"]
+    augs = ["name", "screen_name", "match_name", "followers_count", "friends_count", "lang"]
 
-    if recalculate_coms:
-        g = networkx_to_snappy(G)
-        CmtyV = snap.TCnComV()
-        modularity = snap.CommunityGirvanNewman(g, CmtyV)
-        nodes_communities = {}  # {node: [community]}
-        for i, Cmty in enumerate(CmtyV):
-            for NI in Cmty:
-                nodes_communities.setdefault(NI, [])
-                nodes_communities[NI].append(i + 2)
+    G = label_nodes_communities(G, recalculate = recalculate_coms)
+
+    if recalculate_SCCs:
+        G = label_nodes_SCCs(G)
+
+
 
     for node in G.nodes():
         user = twitter_users.loc[node]
         for aug in augs:
-            # if aug in "lang":
-            # if aug == "community":
-            #     m = str(user[aug])
-            # else:
-
-            # try:
-            m = user[aug]
-            if aug == "community":
-                m = str(m)
-                if recalculate_coms and 'foci' not in m:
-                    m = str(nodes_communities[node][0])
-                # if not include_foci and m == "foci":
-                #     G.remove_node(node)
-
-            # except KeyError:
-            #     if aug == "community":
-            #         m = 0
-            # elif type(user[aug]) == str:
-            #     m = clean(user[aug])
-            # else:
-            #     m = user[aug]
-            G.nodes[node][aug] = m
+            G.nodes[node][aug] = user[aug]
 
     return recalculate_metrics(G, parse=False, centralities=rec_metrics), bidir_edges
 
@@ -179,6 +196,8 @@ DEFAULT_BIDIR = 0
 foci_checked = DEFAULT_FOCI_CHECKED
 bidir = DEFAULT_BIDIR
 recalculate_coms_checked = DEFAULT_RECALCULATE_COMMUNITIES
+
+recalculate_SCCs_checked = True
 
 date_index = 0
 size_metric = "degree"
@@ -216,10 +235,6 @@ def get_avg_metric(graph, metric):
     return result/len(graph["nodes"])
 
 
-def calculate_new_edges(d1="2018.05.01", d2="2018.05.02"):
-    return get_connections_by_date(get_connections_by_date(rc, d2), d1, False)
-
-
 @lru_cache(maxsize=None)
 def recalculate_metrics(nxg, parse=True, centralities=True):
     nxg = nxg.to_directed()
@@ -251,9 +266,9 @@ def recalculate_metrics(nxg, parse=True, centralities=True):
             pass
     if parse:
         data = json_graph.node_link_data(nxg)
-        # with open(root_dir + "/static/latest_tw_ntw.json", 'w') as f:
+        # with open(root_dir + "/static/networks/latest_tw_ntw.json", 'w') as f:
         #     json.dump(data, f, indent=4)
-        return data
+        # return data
     return nxg
 
 
@@ -280,9 +295,8 @@ def twitter_connections(request):
     global degree_threshold, filtered_twitter_connections, \
         btw_threshold, pagerank_threshold, closeness_threshold, \
         eigenvector_threshold, size_metric,size_metrics, recalculate_checked, foci_checked,\
-        dates, date_index, clust_threshold, bidir, recalculate_coms_checked
+        dates, date_index, clust_threshold, bidir, recalculate_coms_checked, recalculate_SCCs_checked
 
-    do_filter = False
     check = {"on":True, False:False}
     filtering = False
 
@@ -297,26 +311,27 @@ def twitter_connections(request):
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
         recalculate_coms_checked = check[request.POST.get("recalculate_coms_checked", False)]
-        print("HERE", recalculate_coms_checked )
+        recalculate_SCCs_checked = check[request.POST.get("recalculate_SCCs_checked", "on")]
+
         foci_checked = check[request.POST.get("include_foci", False)]
         bidir = check[request.POST.get("bidir", False)]
 
-        if foci_checked != DEFAULT_FOCI_CHECKED or bidir != DEFAULT_BIDIR or \
-                recalculate_coms_checked != DEFAULT_RECALCULATE_COMMUNITIES:
-            do_filter = True
-        else:
+        do_filter = foci_checked != DEFAULT_FOCI_CHECKED or bidir != DEFAULT_BIDIR
+        if not do_filter:
             for i in [date_index, degree_threshold, btw_threshold, pagerank_threshold,
                       closeness_threshold, eigenvector_threshold, clust_threshold]:
                 if i != 0:
                     do_filter = True
                     break
         size_metric = request.POST["size_metric"]
+
         if do_filter:
             # if date_index == 0 and foci_checked==DEFAULT_FOCI_CHECKED and bidir==DEFAULT_BIDIR:  # same network
             #     data = deepcopy(twitter_connections_json)
             # else:
             cons = get_connections_by_date(dates[date_index])
-            nw, bidir_edges = construct_network(cons, recalculate_checked, foci_checked, bidir, recalculate_coms_checked)
+            nw, bidir_edges = construct_network(cons, recalculate_checked, foci_checked,
+                                                recalculate_coms_checked, recalculate_SCCs_checked)
             data = nx.node_link_data(nw)
             with open('temp2.json', 'w') as f:
                 print(len(data["nodes"]), "SIZE")
@@ -376,7 +391,8 @@ def twitter_connections(request):
                "heterogeneity":heterogeneity,
                "heterogeneity_threshold":heterogeneity_threshold,
                "bidir_edges":bidir_edges,
-               "bidir_ratio":bidir_edges*100/len(filtered_twitter_connections["links"])}
+               "bidir_ratio":bidir_edges*100/len(filtered_twitter_connections["links"]),
+               "recalculate_SCCs_checked":int(recalculate_SCCs_checked)}
     if avgs:
         context.update(avgs)
 
