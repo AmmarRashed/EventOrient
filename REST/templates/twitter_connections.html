@@ -123,7 +123,8 @@
 <div id="groupSettings">
     <p>Group by: <span id='groupLabel'>None</span></p>
 </div>
-
+</br>
+<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">
 {#<div id="curveSettings">#}
 {#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
 {#</div>#}
@@ -495,6 +496,13 @@
         }
 
     }
+
+    function resetBundling(){
+            filterNodes();
+            updateGraphLinks();
+            updateLinks();
+    }
+
     function resetNodes(){
         var all_nodes = node.filter(function (d, i){
             return true;
@@ -546,15 +554,14 @@
 
     function updateForce(){
         simulation.force("charge", d3.forceManyBody().strength(gravityForce));
-        ticked();
 
     }
 
     function updateSize(){
                 size_metric = document.getElementById("sizeBy").value;
                 avgSize = 0;
-                maxSize = 0;
-                minSize = Infinity;
+                maxSize = Number.NEGATIVE_INFINITY;
+                minSize = Number.POSITIVE_INFINITY;
 
                 selectedNodes.forEach(function (d) {
                     avgSize += d[size_metric];
@@ -603,14 +610,24 @@
 
     }
 
+    function getLinkEnd(n){
+        if (typeof n == 'number')
+            return n;
+        else
+            return parseInt(n.id);
+    }
+
+
     function updateLinks(){
 
         selectedLinks = selectedLinks.filter(function(l){
             var valid=0;
+
             for (var n in selectedNodes){
-                node_id = parseInt(selectedNodes[n].id);
-                source_id = parseInt(l.source);
-                target_id = parseInt(l.target);
+                node_id   = getLinkEnd(selectedNodes[n]);
+                source_id = getLinkEnd(l.source);
+                target_id = getLinkEnd(l.target);
+
 
                 {#console.log(node_id, source_id, l.source);#}
 
@@ -724,49 +741,120 @@
 
 
     function updateGroupIds(){
-            // count members of each group. Groups with less
-            // than 3 member will not be considered (creating
-            // a convex hull need 3 points at least)
+        // count members of each group. Groups with less
+        // than 3 member will not be considered (creating
+        // a convex hull need 3 points at least)
 
-            groups.selectAll('.path_placeholder').remove();
+        groups.selectAll('.path_placeholder').remove();
 
-            groupIds = d3.set(selectedNodes.map(function(n) { return +n[groupType]; }))
-                .values()
-                .map( function(groupId) {
-                    return {
-                        groupId : groupId,
-                        count : selectedNodes.filter(function(n) { return +n[groupType]  == groupId; }).length
+        groupIds = d3.set(selectedNodes.map(function(n) { return +n[groupType]; }))
+            .values()
+            .map( function(groupId) {
+                return {
+                    groupId : groupId,
+                    count : selectedNodes.filter(function(n) { return +n[groupType]  == groupId; }).length
 
-                    };
-                })
-                .filter( function(group) { return group.count > 2;})
-                .map( function(group) { return group.groupId; });
+                };
+            })
+            .filter( function(group) { return group.count > 2;})
+            .map( function(group) { return group.groupId; });
 
-            paths = groups.selectAll('.path_placeholder')
-                .data(groupIds, function(d) { return +d; })
-                .enter()
-                .append('g')
-                .attr('class', 'path_placeholder')
-                .append('path')
-                .attr('stroke', function(d) { return color(d); })
-                .attr('fill', function(d) { return color(d); })
-                .attr('opacity', 0);
+        paths = groups.selectAll('.path_placeholder')
+            .data(groupIds, function(d) { return +d; })
+            .enter()
+            .append('g')
+            .attr('class', 'path_placeholder')
+            .append('path')
+            .attr('stroke', function(d) { return color(d); })
+            .attr('fill', function(d) { return color(d); })
+            .attr('opacity', 0);
 
-            paths
-                .transition()
-                .duration(1000)
-                .attr('opacity', 1);
+        paths
+            .transition()
+            .duration(1000)
+            .attr('opacity', 1);
 
-            // add interaction to the groups
-            groups.selectAll('.path_placeholder')
-                .call(d3.drag()
-                    .on('start', group_dragstarted)
-                    .on('drag', group_dragged)
-                    .on('end', group_dragended)
-                )
-                .on("click", function(){console.log(d3.select(this).data());})
+        // add interaction to the groups
+        groups.selectAll('.path_placeholder')
+            .call(d3.drag()
+                .on('start', group_dragstarted)
+                .on('drag', group_dragged)
+                .on('end', group_dragended)
+            )
+            .on("click", bundleNodes)
+
+        }
+
+        function bundleNodes() {
+        // Creating the superNode
+            var clickedGroupId = d3.select(this).data()[0];
+            var groupNodes = selectedNodes.filter(function(n){
+                return n[groupType] == clickedGroupId;
+            });
+
+            var superNode = {'i':0};
+            var counter = {'i':0};
+            console.log("From: ", selectedNodes.length);
+            groupNodes.forEach(function (node){
+                // remove those nodes from selectedNodes
+                var index = selectedNodes.indexOf(node);
+                if (index > -1) {
+                    selectedNodes.splice(index, 1);
+                }
+                for (var metric in node){
+                    if (!(superNode.hasOwnProperty(metric))) {
+                        if (typeof metric == 'number')
+                            superNode[metric] = 0;
+                        else {
+                            var metricVal = node[metric].toString();
+                            counter[metric] = {'i':0};
+                            counter[metric][metricVal] = 0;
+                        }
+                    }
+
+                    if (typeof metric == 'number')
+                        superNode[metric] += node[metric].val;
+                    else
+                        counter[metric][node[metric]] += 1;
+                }
+            });
+            for (var m in superNode){
+                superNode[m] /= groupNodes.length;
+            }
+            for (var metric in counter){
+                var maxFreq = Number.NEGATIVE_INFINITY;
+                var maxVal;
+                for (var counterVal in counter[metric]){
+                    var freq = counter[metric][counterVal];
+
+                    if (freq>maxFreq){
+                        maxFreq = freq;
+                        maxVal = counterVal;
+                    }
+                }
+
+                superNode[metric] = maxVal;
 
             }
+            delete superNode.i;
+            superNode.id = parseInt(superNode[groupType]);
+            superNode.screen_name = groupType+"_"+superNode[groupType];
+            superNode.size = groupNodes.length;
+
+            console.log("to: ", selectedNodes.length);
+            console.log("groupNode size: ", superNode.size);
+
+
+            updateLinks();
+            /* Adding the superNode to the network nodes
+            for (var prop in selectedNodes){
+                console.log(prop, selectedNodes[prop]);
+            }
+            selectedNodes.add(superNode);*/
+
+            
+
+        }
 
 
 </script>

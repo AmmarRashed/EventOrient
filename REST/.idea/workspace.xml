@@ -24,8 +24,8 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+            <state relative-caret-position="42">
+              <caret line="836" column="0" lean-forward="true" selection-start-line="836" selection-start-column="0" selection-end-line="836" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -42,28 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>size_metrics</find>
-      <find>recalculate_metrics</find>
-      <find>construct</find>
-      <find>do_filter</find>
-      <find>filter_by</find>
-      <find>recalculate_SCCs_checked</find>
-      <find>toggleFoci</find>
-      <find>bidir</find>
-      <find>&quot;bidir</find>
-      <find>'bidir</find>
-      <find>toggleBidir</find>
-      <find>firs</find>
-      <find>filterNode</find>
-      <find>filterEdge</find>
-      <find>updateGraph</find>
-      <find>first run</find>
-      <find>updateGraphLinks</find>
-      <find>firs run</find>
-      <find>LOL</find>
-      <find>filterNodes</find>
-      <find>updateLinks</find>
-      <find>toggleFociCB</find>
       <find>updateStatus();</find>
       <find>draw</find>
       <find>&quot;filter&quot;</find>
@@ -72,6 +50,28 @@
       <find>filterEdges</find>
       <find>&quot;clean net</find>
       <find>submit</find>
+      <find>onclick</find>
+      <find>on(&quot;click</find>
+      <find>toggleBundle</find>
+      <find>ticked()</find>
+      <find>clicked</find>
+      <find>Infini</find>
+      <find>groupedMetrics</find>
+      <find>=&gt;</find>
+      <find>groupMetrics</find>
+      <find>supernode</find>
+      <find>split</find>
+      <find>console.log</find>
+      <find>centroid</find>
+      <find>updateLinks</find>
+      <find>toggle</find>
+      <find>bundleNodes</find>
+      <find>Clean</find>
+      <find>reset</find>
+      <find>filterNodes</find>
+      <find>&quot;Clear</find>
+      <find>bundle</find>
+      <find>getLink</find>
     </findStrings>
     <replaceStrings>
       <replace>.{{ group }}</replace>
@@ -91,6 +91,9 @@
       <replace>-600</replace>
       <replace>selectedNodes</replace>
       <replace>0</replace>
+      <replace>groupMetrics</replace>
+      <replace>bundleNodes</replace>
+      <replace>superNode</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -221,13 +224,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="611" y="17" width="1865" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43887147" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3155695" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12713264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -556,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+        <state relative-caret-position="42">
+          <caret line="836" column="0" lean-forward="true" selection-start-line="836" selection-start-column="0" selection-end-line="836" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
