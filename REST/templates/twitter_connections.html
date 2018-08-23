@@ -124,7 +124,7 @@
     <p>Group by: <span id='groupLabel'>None</span></p>
 </div>
 </br>
-<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">
+{#<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">#}
 {#<div id="curveSettings">#}
 {#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
 {#</div>#}
@@ -207,6 +207,7 @@
             .y(function(d) { return d[1]; })
             .curve(d3.curveCatmullRomClosed),
         toggleFociChecked,
+        groupMap,
         nodesIndices,
         toggleBidir,
         selectedNodes,
@@ -471,7 +472,8 @@
 
     function searchNode() {
         var selectedVal = document.getElementById('search').value;
-        if (selectedVal == 'none') {}
+        if (selectedVal == 'none') {
+        }
         else {
             var selected = node.filter(function (d, i) {
                 return (d.screen_name.includes(selectedVal) ||
@@ -486,8 +488,8 @@
             });
             nonselected.style("opacity", "0.1");
             selected.style("opacity", 1.0);
-            selected.style("r",node_over);
-            alert("Found: "+selected.size().toString());
+            selected.style("r", node_over);
+            alert("Found: " + selected.size().toString());
             centerNode(selected.attr("cx"), selected.attr("cy"));
 
             // var link = svg.selectAll(".link");
@@ -499,12 +501,14 @@
 
     }
 
-    function resetBundling(){
-            filterNodes();
-            updateGraphLinks();
-            updateLinks();
-            drawNetwork();
-    }
+
+    /*
+    function resetBundling() {
+        filterNodes();
+        updateGraphLinks();
+        filterEdges();
+        drawNetwork();
+    }*/
 
     function resetNodes(){
         var all_nodes = node.filter(function (d, i){
@@ -513,18 +517,18 @@
         all_nodes.style("r", node_scale)
             .style("opacity",0.7);
     }
-    function updateText(threshold, widget){
+    function updateText(threshold, widget) {
         {#var metric = widget.slice(5);  // text_degree => degree  (removing 'text_')#}
 
-        document.getElementById(widget).value=threshold;
+        document.getElementById(widget).value = threshold;
         filterNodes();
         updateGraphLinks();
         updateLinks();
         drawNetwork();
     }
-    function updateScroll(threshold, widget){
+    function updateScroll(threshold, widget) {
 
-        document.getElementById(widget).value=threshold;
+        document.getElementById(widget).value = threshold;
         filterNodes();
         updateGraphLinks();
         updateLinks();
@@ -549,34 +553,38 @@
     // (3 points as minimum, otherwise returns null)
     var polygonGenerator = function(groupId) {
         var node_coords = node
-            .filter(function(d) { return d[groupType] == groupId; })
+            .filter(function (d) {
+                return d[groupType] == groupId;
+            })
             .data()
-            .map(function(d) { return [d.x, d.y]; });
+            .map(function (d) {
+                return [d.x, d.y];
+            });
 
         return d3.polygonHull(node_coords);
     };
 
 
-    function updateForce(){
+    function updateForce() {
         simulation.force("charge", d3.forceManyBody().strength(gravityForce));
 
     }
 
-    function updateSize(){
-                size_metric = document.getElementById("sizeBy").value;
-                avgSize = 0;
-                maxSize = Number.NEGATIVE_INFINITY;
-                minSize = Number.POSITIVE_INFINITY;
+    function updateSize() {
+        size_metric = document.getElementById("sizeBy").value;
+        avgSize = 0;
+        maxSize = Number.NEGATIVE_INFINITY;
+        minSize = Number.POSITIVE_INFINITY;
 
-                selectedNodes.forEach(function (d) {
-                    avgSize += d[size_metric];
-                    maxSize = Math.max(maxSize, d[size_metric]);
-                    minSize = Math.min(maxSize, d[size_metric]);
-                });
-                avgSize /= selectedNodes.length;
+        selectedNodes.forEach(function (d) {
+            avgSize += d[size_metric];
+            maxSize = Math.max(maxSize, d[size_metric]);
+            minSize = Math.min(maxSize, d[size_metric]);
+        });
+        avgSize /= selectedNodes.length;
 
-                resetNodes();
-            }
+        resetNodes();
+    }
 
     function updateGroups() {
         if (!((typeof groupIds == 'undefined') || (groupIds == null))) {
@@ -749,6 +757,89 @@
 
     }
 
+    function fillGroups() {
+        console.log("FILLING GROUPS");
+        groupMap = {};
+        groupIds.forEach(function (clickedGroupId) {
+            var groupNodes = selectedNodes.filter(function (n) {
+                return n[groupType] == clickedGroupId;
+            });
+
+            var superNode = {};
+            var counter = {};
+
+            groupNodes.sort(function(a,b){b.betweenness-a.betweenness}).forEach(function (node) {
+
+                for (var metric in node) {
+                    var distributable = (
+                        isNaN(node[metric]) || metric.includes('SCC') || metric.includes('community'));
+
+                    if (metric.includes('name')) {
+                        superNode[metric] = (typeof superNode[metric] == 'undefined')? "" : superNode[metric];
+                        superNode[metric] += node[metric]+", ";
+                    }
+                    else if(distributable){
+                        var v = node[metric].toString();
+                        counter[metric] = (typeof counter[metric] == 'undefined') ? {}: counter[metric];
+                        counter[metric][v] = (typeof counter[metric][v] == 'undefined') ? 0.0: counter[metric][v];
+                        counter[metric][v] += 1
+                    }
+                    else{ // numeric metric
+                        superNode[metric] = (typeof superNode[metric] == 'undefined')? 0.0 : superNode[metric];
+                        superNode[metric] += node[metric];
+                    }
+                }
+            });
+
+
+            var len = parseFloat(groupNodes.length);
+            // Taking averages
+            for (var metric in superNode){
+                if (!(metric.includes('name'))){ // numeric metric
+                    superNode[metric] = parseFloat(superNode[metric])/len ;
+                }
+            }
+            superNode[groupType] = clickedGroupId;
+            // Reporting the distribution of the values of the nominal metrics
+            for (var metric in counter) {
+                var report = "";
+                var reportVals = [];
+                for (var metricVal in counter[metric]){
+                    var ratio = (parseFloat(counter[metric][metricVal])*100.0/len).toFixed(2);
+                    reportVals.push(ratio);
+                }
+                for (var r in reportVals.sort(function(a, b){return b-a})){  // sort in descending order
+                    report += metricVal+": "+reportVals[r]+"%, ";
+                }
+
+                superNode[metric] = report;
+            }
+            /* Reporting the most dominant value of nominal metrics
+                for (var metric in counter) {
+                    var maxFreq = Number.NEGATIVE_INFINITY;
+                    var maxVal;
+                    for (var counterVal in counter[metric]) {
+                        var freq = counter[metric][counterVal];
+
+                        if (freq > maxFreq) {
+                            maxFreq = freq;
+                            maxVal = counterVal;
+                        }
+                    }
+
+                    superNode[metric] = maxVal;
+
+                }*/
+            delete superNode.i;
+            superNode.id = clickedGroupId;
+            superNode.screen_name = groupType + "_" + clickedGroupId;
+            superNode.size = groupNodes.length;
+
+            groupMap[superNode.id] = superNode;
+        });
+        console.log("SUPER map", groupMap);
+        }
+
 
     function updateGroupIds(){
         // count members of each group. Groups with less
@@ -768,6 +859,8 @@
             })
             .filter( function(group) { return group.count > 2;})
             .map( function(group) { return group.groupId; });
+
+        fillGroups();
 
         paths = groups.selectAll('.path_placeholder')
             .data(groupIds, function(d) { return +d; })
@@ -790,68 +883,18 @@
                 .on('start', group_dragstarted)
                 .on('drag', group_dragged)
                 .on('end', group_dragended)
-            )
-            .on("click", bundleNodes)
+            );
+
 
         }
+
 
         function bundleNodes() {
         // Creating the superNode
             var clickedGroupId = d3.select(this).data()[0];
-            var groupNodes = selectedNodes.filter(function(n){
-                return n[groupType] == clickedGroupId;
-            });
-
-            var superNode = {'i':0};
-            var counter = {'i':0};
-            console.log("From: ", selectedNodes.length);
-            groupNodes.forEach(function (node){
-                // remove those nodes from selectedNodes
-                var index = selectedNodes.indexOf(node);
-                if (index > -1) {
-                    selectedNodes.splice(index, 1);
-                }
-                for (var metric in node){
-                    if (!(superNode.hasOwnProperty(metric))) {
-                        if (typeof metric == 'number')
-                            superNode[metric] = 0;
-                        else {
-                            var metricVal = node[metric].toString();
-                            counter[metric] = {'i':0};
-                            counter[metric][metricVal] = 0;
-                        }
-                    }
-
-                    if (typeof metric == 'number')
-                        superNode[metric] += node[metric].val;
-                    else
-                        counter[metric][node[metric]] += 1;
-                }
-            });
-            for (var m in superNode){
-                superNode[m] /= groupNodes.length;
-            }
-            for (var metric in counter){
-                var maxFreq = Number.NEGATIVE_INFINITY;
-                var maxVal;
-                for (var counterVal in counter[metric]){
-                    var freq = counter[metric][counterVal];
-
-                    if (freq>maxFreq){
-                        maxFreq = freq;
-                        maxVal = counterVal;
-                    }
-                }
-
-                superNode[metric] = maxVal;
-
-            }
-            delete superNode.i;
-            superNode.id = parseInt(superNode[groupType]);
-            superNode.screen_name = groupType+"_"+superNode[groupType];
-            superNode.size = groupNodes.length;
-
+            console.log(clickedGroupId);
             // Remove the group from groups and groupsIds
+            /*
             var index = groupIds.indexOf(clickedGroupId);
             if (index>-1){
                 groupIds.splice(index, 1);
@@ -860,11 +903,9 @@
             updateGroupIds();
             updateGroups();
 
+
             // Adding the superNode to the network nodes
             selectedNodes[selectedNodes.length] = superNode;
-
-            console.log("to: ", selectedNodes.length);
-            console.log("groupNode size: ", superNode.size);
 
             selectedLinks.forEach(function (l) {
                 var source = selectedNodes[nodesIndices[getLinkEnd(l.source)]];
@@ -881,6 +922,7 @@
 
             updateLinks();
             drawNetwork();
+            */
 
             
 

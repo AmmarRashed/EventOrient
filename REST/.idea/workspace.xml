@@ -14,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="128" column="77" lean-forward="false" selection-start-line="128" selection-start-column="57" selection-end-line="128" selection-end-column="77" />
+            <state relative-caret-position="-87">
+              <caret line="95" column="35" lean-forward="false" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3924">
-              <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="17" />
+            <state relative-caret-position="189">
+              <caret line="811" column="58" lean-forward="false" selection-start-line="811" selection-start-column="58" selection-end-line="811" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -48,19 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>console.log(selec</find>
-      <find>splice</find>
-      <find>updateLinks</find>
-      <find>updateGroup</find>
-      <find>updateGroups</find>
-      <find>updat</find>
-      <find>updateGroupIds</find>
-      <find>CALCULATING</find>
-      <find>updategroups</find>
-      <find>polygoncen</find>
-      <find>bundle</find>
-      <find>draw</find>
-      <find>bundleNodes</find>
       <find>var node</find>
       <find>force</find>
       <find>d3.</find>
@@ -72,12 +59,25 @@
       <find>updateForce</find>
       <find>gener</find>
       <find>CALCULA</find>
-      <find>CALCULATING</find>
       <find>'community</find>
       <find>&quot;community</find>
       <find>import</find>
       <find>READ</find>
       <find>pickle</find>
+      <find>mouseover</find>
+      <find>bundleNodes</find>
+      <find>fillGroups</find>
+      <find>clear</find>
+      <find>resetBundling</find>
+      <find>updateGroup</find>
+      <find>updateGroups</find>
+      <find>updateGroupIds</find>
+      <find>console.log(clickedGroupId);</find>
+      <find>console.log</find>
+      <find>SCC</find>
+      <find>includes('scc</find>
+      <find>?</find>
+      <find>clickedGroupId</find>
     </findStrings>
     <replaceStrings>
       <replace>.{{ group }}</replace>
@@ -109,9 +109,9 @@
         <option value="$PROJECT_DIR$/Twitter/urls.py" />
         <option value="$PROJECT_DIR$/Rest/settings.py" />
         <option value="$PROJECT_DIR$/Rest/urls.py" />
-        <option value="$PROJECT_DIR$/templates/twitter_connections.html" />
         <option value="$PROJECT_DIR$/templates/twitter_connections_backup.html" />
         <option value="$PROJECT_DIR$/Twitter/views.py" />
+        <option value="$PROJECT_DIR$/templates/twitter_connections.html" />
       </list>
     </option>
   </component>
@@ -532,18 +532,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
+    <entry file="file://$PROJECT_DIR$/static/networks/SCC_graph.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3924">
-          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="17" />
+        <state relative-caret-position="-2790">
+          <caret line="190" column="27" lean-forward="true" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Twitter/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="128" column="77" lean-forward="false" selection-start-line="128" selection-start-column="57" selection-end-line="128" selection-end-column="77" />
+        <state relative-caret-position="-87">
+          <caret line="95" column="35" lean-forward="false" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="811" column="58" lean-forward="false" selection-start-line="811" selection-start-column="58" selection-end-line="811" selection-end-column="58" />
           <folding />
         </state>
       </provider>

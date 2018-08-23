@@ -97,13 +97,13 @@ def label_nodes_SCCs(G):
     components = snap.TCnComV()
     sccs = snap.GetSccs(snappy_directed, components)
 
-    for CnCom in components:
+    for i, CnCom in enumerate(components):
         for n in CnCom:
-            nodes_sccs[n] = CnCom
+            nodes_sccs[n] = i
 
 
     for node in G.nodes():
-        m = str(nodes_sccs[node][0])
+        m = str(nodes_sccs[node])
         G.nodes[node]["SCC"] = m
 
     return G
