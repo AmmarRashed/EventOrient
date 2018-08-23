@@ -422,7 +422,7 @@
     }
 
     function dragstarted(d){
-        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        if (!d3.event.active) simulation.alphaTarget(0.2).restart();
         d.fx = d.x;
         d.fy = d.y;
     }
@@ -433,7 +433,7 @@
     }
 
     function dragended(d){
-        if (!d3.event.active) simulation.alphaTarget(0);
+        if (!d3.event.active) simulation.alphaTarget(0.3);
         d.fx = null;
         d.fy = null;
     }
@@ -441,7 +441,7 @@
 
     // drag groups
     function group_dragstarted(groupId) {
-        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        if (!d3.event.active) simulation.alphaTarget(0.2).restart();
         d3.select(this).select('path').style('stroke-width', 3);
     }
 
@@ -567,6 +567,7 @@
 
     function updateForce() {
         simulation.force("charge", d3.forceManyBody().strength(gravityForce));
+        simulation.alphaTarget(1.0).restart();
 
     }
 
@@ -731,7 +732,7 @@
             }
         });
 
-        nodesIndices = {'__':0};
+        nodesIndices = {};
 
         selectedNodes =
             graph.nodes.filter(function(node){
@@ -753,12 +754,10 @@
         for (var n in selectedNodes){
             nodesIndices[selectedNodes[n].id] = n;
         }
-        delete nodesIndices.__
 
     }
 
     function fillGroups() {
-        console.log("FILLING GROUPS");
         groupMap = {};
         groupIds.forEach(function (clickedGroupId) {
             var groupNodes = selectedNodes.filter(function (n) {
@@ -768,24 +767,26 @@
             var superNode = {};
             var counter = {};
 
-            groupNodes.sort(function(a,b){b.betweenness-a.betweenness}).forEach(function (node) {
+            groupNodes.sort(function (a, b) {
+                b.betweenness - a.betweenness
+            }).forEach(function (node) {
 
                 for (var metric in node) {
                     var distributable = (
                         isNaN(node[metric]) || metric.includes('SCC') || metric.includes('community'));
 
                     if (metric.includes('name')) {
-                        superNode[metric] = (typeof superNode[metric] == 'undefined')? "" : superNode[metric];
-                        superNode[metric] += node[metric]+", ";
+                        superNode[metric] = (typeof superNode[metric] == 'undefined') ? "" : superNode[metric];
+                        superNode[metric] += node[metric] + ", ";
                     }
-                    else if(distributable){
+                    else if (distributable) {
                         var v = node[metric].toString();
-                        counter[metric] = (typeof counter[metric] == 'undefined') ? {}: counter[metric];
-                        counter[metric][v] = (typeof counter[metric][v] == 'undefined') ? 0.0: counter[metric][v];
+                        counter[metric] = (typeof counter[metric] == 'undefined') ? {} : counter[metric];
+                        counter[metric][v] = (typeof counter[metric][v] == 'undefined') ? 0.0 : counter[metric][v];
                         counter[metric][v] += 1
                     }
-                    else{ // numeric metric
-                        superNode[metric] = (typeof superNode[metric] == 'undefined')? 0.0 : superNode[metric];
+                    else { // numeric metric
+                        superNode[metric] = (typeof superNode[metric] == 'undefined') ? 0.0 : superNode[metric];
                         superNode[metric] += node[metric];
                     }
                 }
@@ -794,9 +795,9 @@
 
             var len = parseFloat(groupNodes.length);
             // Taking averages
-            for (var metric in superNode){
-                if (!(metric.includes('name'))){ // numeric metric
-                    superNode[metric] = parseFloat(superNode[metric])/len ;
+            for (var metric in superNode) {
+                if (!(metric.includes('name'))) { // numeric metric
+                    superNode[metric] = parseFloat(superNode[metric]) / len;
                 }
             }
             superNode[groupType] = clickedGroupId;
@@ -804,14 +805,13 @@
             for (var metric in counter) {
                 var report = "";
                 var reportVals = [];
-                for (var metricVal in counter[metric]){
-                    var ratio = (parseFloat(counter[metric][metricVal])*100.0/len).toFixed(2);
-                    reportVals.push(ratio);
+                for (var metricVal in counter[metric]) {
+                    var ratio = (parseFloat(counter[metric][metricVal]) * 100.0 / len).toFixed(2);
+                    reportVals.push({'ratio':ratio, 'val':metricVal});
                 }
-                for (var r in reportVals.sort(function(a, b){return b-a})){  // sort in descending order
-                    report += metricVal+": "+reportVals[r]+"%, ";
+                for (var r in reportVals.sort(function (a, b) {return b.ratio - a.ratio})) {  // sort in descending order
+                    report += reportVals[r].val+ ": " + reportVals[r].ratio + "%, ";
                 }
-
                 superNode[metric] = report;
             }
             /* Reporting the most dominant value of nominal metrics
@@ -837,39 +837,52 @@
 
             groupMap[superNode.id] = superNode;
         });
-        console.log("SUPER map", groupMap);
-        }
+    }
 
 
-    function updateGroupIds(){
+    function updateGroupIds() {
         // count members of each group. Groups with less
         // than 3 member will not be considered (creating
         // a convex hull need 3 points at least)
 
         groups.selectAll('.path_placeholder').remove();
 
-        groupIds = d3.set(selectedNodes.map(function(n) { return +n[groupType]; }))
+        groupIds = d3.set(selectedNodes.map(function (n) {
+            return +n[groupType];
+        }))
             .values()
-            .map( function(groupId) {
+            .map(function (groupId) {
                 return {
-                    groupId : groupId,
-                    count : selectedNodes.filter(function(n) { return +n[groupType]  == groupId; }).length
+                    groupId: groupId,
+                    count: selectedNodes.filter(function (n) {
+                        return +n[groupType] == groupId;
+                    }).length
 
                 };
             })
-            .filter( function(group) { return group.count > 2;})
-            .map( function(group) { return group.groupId; });
+            .filter(function (group) {
+                return group.count > 2;
+            })
+            .map(function (group) {
+                return group.groupId;
+            });
 
         fillGroups();
 
         paths = groups.selectAll('.path_placeholder')
-            .data(groupIds, function(d) { return +d; })
+            .data(groupIds, function (d) {
+                return +d;
+            })
             .enter()
             .append('g')
             .attr('class', 'path_placeholder')
             .append('path')
-            .attr('stroke', function(d) { return color(d); })
-            .attr('fill', function(d) { return color(d); })
+            .attr('stroke', function (d) {
+                return color(d);
+            })
+            .attr('fill', function (d) {
+                return color(d);
+            })
             .attr('opacity', 0);
 
         paths
@@ -883,10 +896,59 @@
                 .on('start', group_dragstarted)
                 .on('drag', group_dragged)
                 .on('end', group_dragended)
-            );
+            )
+            .on("mouseover", function (_) {
+                var d = groupMap[_];
+                console.log(d);
+                d3.select(this).style("fill-opacity", 0.7);
+                var coordinates = d3.mouse(this);
+                const cx = coordinates[0];
+                const cy = coordinates[1];
+
+                const focus = svg.append('g')
+                    .attr('class', 'focus');
+
+                focus.append('rect')
+                    .attr('height', 300 * 4)
+                    .attr('width', 300 * 4)
+                    .attr("x", cx)
+                    .attr("y", cy);
+                var x = 0.0;
+                for (var metric in d) {
+                    x += 1.2;
+                    if (overhead.indexOf(metric) < 0) {
+                        focus.append('text')
+                            .attr('x', cx + 10)
+                            .attr('y', cy + 10)
+                            .attr('dy', x + 'em')
+                            .attr('dx', '.5em')
+                            .style("font-size", 50)
+                            .text(metric + ": " + d[metric]);
+                    }
+                }
+
+                d3.select('.overlay')
+                    .styles({
+                        fill: 'none',
+                        'pointer-events': 'all'
+                    });
+
+                d3.selectAll('.focus')
+                    .style('opacity', 0.9);
+
+                d3.selectAll('.focus rect')
+                    .styles({
+                        fill: '#CFEEF1',
+                        stroke: 'black'
+                    });
+            })
+            .on("mouseout", function (d) {
+                d3.select(this).style("fill-opacity", 0.2);
+                d3.selectAll(".focus").remove();
+            });
 
 
-        }
+    }
 
 
         function bundleNodes() {

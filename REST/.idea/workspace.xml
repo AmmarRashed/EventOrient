@@ -27,8 +27,8 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="811" column="58" lean-forward="false" selection-start-line="811" selection-start-column="58" selection-end-line="811" selection-end-column="58" />
+            <state relative-caret-position="273">
+              <caret line="427" column="0" lean-forward="false" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,23 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>var node</find>
-      <find>force</find>
-      <find>d3.</find>
-      <find>simulations</find>
-      <find>simulation.force(&quot;link&quot;, d3.forceLink()</find>
-      <find>simulation.force(&quot;link&quot;, d3.</find>
-      <find>simulaton</find>
-      <find>simulation</find>
-      <find>updateForce</find>
-      <find>gener</find>
-      <find>CALCULA</find>
-      <find>'community</find>
-      <find>&quot;community</find>
-      <find>import</find>
-      <find>READ</find>
-      <find>pickle</find>
-      <find>mouseover</find>
       <find>bundleNodes</find>
       <find>fillGroups</find>
       <find>clear</find>
@@ -78,6 +61,23 @@
       <find>includes('scc</find>
       <find>?</find>
       <find>clickedGroupId</find>
+      <find>nodesIndices</find>
+      <find>path</find>
+      <find>groupMap</find>
+      <find>fillGro</find>
+      <find>mouse</find>
+      <find>.metriCak</find>
+      <find>Filli</find>
+      <find>mouseover</find>
+      <find>force</find>
+      <find>simulation</find>
+      <find>simulation.alphaTarget(0.3).restart();</find>
+      <find>updateFo</find>
+      <find>alphaTarget</find>
+      <find>circle</find>
+      <find>class&quot;,</find>
+      <find>drags</find>
+      <find>node_over</find>
     </findStrings>
     <replaceStrings>
       <replace>.{{ group }}</replace>
@@ -550,8 +550,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="811" column="58" lean-forward="false" selection-start-line="811" selection-start-column="58" selection-end-line="811" selection-end-column="58" />
+        <state relative-caret-position="273">
+          <caret line="427" column="0" lean-forward="false" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
           <folding />
         </state>
       </provider>
