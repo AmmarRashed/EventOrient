@@ -9,31 +9,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="339" column="51" lean-forward="false" selection-start-line="339" selection-start-column="51" selection-end-line="339" selection-end-column="51" />
+            <state relative-caret-position="312">
+              <caret line="128" column="77" lean-forward="false" selection-start-line="128" selection-start-column="57" selection-end-line="128" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="836" column="0" lean-forward="true" selection-start-line="836" selection-start-column="0" selection-end-line="836" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-3924">
+              <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="twitter_connections_backup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/twitter_connections_backup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9882">
+              <caret line="549" column="8" lean-forward="false" selection-start-line="549" selection-start-column="8" selection-end-line="549" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,36 +48,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updateStatus();</find>
-      <find>draw</find>
-      <find>&quot;filter&quot;</find>
-      <find>0.1</find>
-      <find>opacity</find>
-      <find>filterEdges</find>
-      <find>&quot;clean net</find>
-      <find>submit</find>
-      <find>onclick</find>
-      <find>on(&quot;click</find>
-      <find>toggleBundle</find>
-      <find>ticked()</find>
-      <find>clicked</find>
-      <find>Infini</find>
-      <find>groupedMetrics</find>
-      <find>=&gt;</find>
-      <find>groupMetrics</find>
-      <find>supernode</find>
-      <find>split</find>
-      <find>console.log</find>
-      <find>centroid</find>
+      <find>console.log(selec</find>
+      <find>splice</find>
       <find>updateLinks</find>
-      <find>toggle</find>
-      <find>bundleNodes</find>
-      <find>Clean</find>
-      <find>reset</find>
-      <find>filterNodes</find>
-      <find>&quot;Clear</find>
+      <find>updateGroup</find>
+      <find>updateGroups</find>
+      <find>updat</find>
+      <find>updateGroupIds</find>
+      <find>CALCULATING</find>
+      <find>updategroups</find>
+      <find>polygoncen</find>
       <find>bundle</find>
-      <find>getLink</find>
+      <find>draw</find>
+      <find>bundleNodes</find>
+      <find>var node</find>
+      <find>force</find>
+      <find>d3.</find>
+      <find>simulations</find>
+      <find>simulation.force(&quot;link&quot;, d3.forceLink()</find>
+      <find>simulation.force(&quot;link&quot;, d3.</find>
+      <find>simulaton</find>
+      <find>simulation</find>
+      <find>updateForce</find>
+      <find>gener</find>
+      <find>CALCULA</find>
+      <find>CALCULATING</find>
+      <find>'community</find>
+      <find>&quot;community</find>
+      <find>import</find>
+      <find>READ</find>
+      <find>pickle</find>
     </findStrings>
     <replaceStrings>
       <replace>.{{ group }}</replace>
@@ -103,8 +109,9 @@
         <option value="$PROJECT_DIR$/Twitter/urls.py" />
         <option value="$PROJECT_DIR$/Rest/settings.py" />
         <option value="$PROJECT_DIR$/Rest/urls.py" />
-        <option value="$PROJECT_DIR$/Twitter/views.py" />
         <option value="$PROJECT_DIR$/templates/twitter_connections.html" />
+        <option value="$PROJECT_DIR$/templates/twitter_connections_backup.html" />
+        <option value="$PROJECT_DIR$/Twitter/views.py" />
       </list>
     </option>
   </component>
@@ -170,6 +177,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -224,15 +236,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="611" y="17" width="1865" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3155695" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12713264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3155695" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12823336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -275,23 +286,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4536">
-          <caret line="252" column="29" lean-forward="true" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="630">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections_backup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93150">
-          <caret line="5175" column="9" lean-forward="false" selection-start-line="5175" selection-start-column="9" selection-end-line="5175" selection-end-column="9" />
+        <state relative-caret-position="9882">
+          <caret line="549" column="8" lean-forward="false" selection-start-line="549" selection-start-column="8" selection-end-line="549" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6102">
+          <caret line="339" column="51" lean-forward="false" selection-start-line="339" selection-start-column="51" selection-end-line="339" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15048">
+          <caret line="836" column="0" lean-forward="true" selection-start-line="836" selection-start-column="0" selection-end-line="836" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -306,27 +326,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6624">
-          <caret line="368" column="22" lean-forward="false" selection-start-line="368" selection-start-column="22" selection-end-line="368" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93150">
-          <caret line="5175" column="9" lean-forward="false" selection-start-line="5175" selection-start-column="9" selection-end-line="5175" selection-end-column="9" />
+        <state relative-caret-position="4536">
+          <caret line="252" column="29" lean-forward="true" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json" />
+    <entry file="file://$PROJECT_DIR$/Twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6624">
+          <caret line="368" column="22" lean-forward="false" selection-start-line="368" selection-start-column="22" selection-end-line="368" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json" />
     <entry file="file://$PROJECT_DIR$/Twitter/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6678">
@@ -335,26 +358,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167976">
-          <caret line="9332" column="9" lean-forward="false" selection-start-line="9332" selection-start-column="9" selection-end-line="9332" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json" />
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -370,14 +379,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9684">
           <caret line="538" column="44" lean-forward="false" selection-start-line="538" selection-start-column="44" selection-end-line="538" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -393,14 +395,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8028">
           <caret line="446" column="0" lean-forward="true" selection-start-line="446" selection-start-column="0" selection-end-line="446" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -416,14 +411,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -439,14 +427,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -542,34 +523,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
+    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json" />
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections_backup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1872">
-          <caret line="104" column="9" lean-forward="false" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Twitter/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="339" column="51" lean-forward="false" selection-start-line="339" selection-start-column="51" selection-end-line="339" selection-end-column="51" />
+        <state relative-caret-position="9882">
+          <caret line="549" column="8" lean-forward="false" selection-start-line="549" selection-start-column="8" selection-end-line="549" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="836" column="0" lean-forward="true" selection-start-line="836" selection-start-column="0" selection-end-line="836" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-3924">
+          <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="128" column="77" lean-forward="false" selection-start-line="128" selection-start-column="57" selection-end-line="128" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>

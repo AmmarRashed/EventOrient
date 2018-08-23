@@ -225,7 +225,7 @@
         groupTypes = ["None","SCC", "community"],
         groupType = "None",
         simulation= d3.forceSimulation()
-                            .force("link", d3.forceLink().id(function (d) {return d.id;}))
+                            .force("link", d3.forceLink().id(function (d) {return d.id;})).strength(gravityForce)
                             .force("charge", d3.forceManyBody().strength(gravityForce))
                             .force("center", d3.forceCenter(width/2, height/2));
 
@@ -558,7 +558,7 @@
 
 
     function updateForce(){
-        simulation.force("charge", d3.forceManyBody().strength(gravityForce));
+        simulation.force("link", d3.forceLink().id(function (d) {return d.id;})).distance(-1*gravityForce);
 
     }
 

@@ -41,20 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miserables.html" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/miserables.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="miserables2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/miserables2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="157" column="57" lean-forward="true" selection-start-line="150" selection-start-column="12" selection-end-line="157" selection-end-column="57" />
+            <state relative-caret-position="36">
+              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -62,8 +53,8 @@
       <file leaf-file-name="miserables.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miserables.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6066">
-              <caret line="337" selection-start-line="337" selection-end-line="337" />
+            <state relative-caret-position="270">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -88,11 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>node =</find>
-      <find>fill</find>
-      <find>group</find>
-      <find>.group</find>
-      <find>&quot;foci&quot;</find>
       <find>force</find>
       <find>simul</find>
       <find>updateGroups</find>
@@ -118,10 +104,17 @@
       <find>+n.</find>
       <find>twitte</find>
       <find>tick</find>
+      <find>.json</find>
+      <find>.community</find>
+      <find>community</find>
+      <find>var</find>
+      <find>network(</find>
     </findStrings>
     <replaceStrings>
       <replace>.community</replace>
       <replace>0</replace>
+      <replace>.group</replace>
+      <replace>group</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -131,11 +124,12 @@
         <option value="$PROJECT_DIR$/vega1.html" />
         <option value="$PROJECT_DIR$/twitter_clusters.html" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/miserables.html" />
         <option value="$PROJECT_DIR$/miserables.json" />
         <option value="$PROJECT_DIR$/twitter_users_graph2_focinum.json" />
-        <option value="$PROJECT_DIR$/miserables2.html" />
         <option value="$PROJECT_DIR$/twitter.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/miserables.html" />
+        <option value="$PROJECT_DIR$/miserables.html" />
+        <option value="$PROJECT_DIR$/miserables2.html" />
       </list>
     </option>
   </component>
@@ -199,26 +193,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.twitter.html">
+  <component name="RunManager" selected="JavaScript Debug.miserables2.html (1)">
+    <configuration name="miserables2.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/miserables2.html" />
     <configuration name="miserables2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/miserables2.html" />
-    <configuration name="twitter_clusters.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/twitter_clusters.html" />
+    <configuration name="miserables.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/miserables.html" />
     <configuration name="twitter_clusters.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/twitter_clusters.html" />
-    <configuration name="twitter.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/twitter.html" />
     <configuration name="twitter.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/twitter.html" />
     <list>
       <item itemvalue="JavaScript Debug.twitter.html" />
-      <item itemvalue="JavaScript Debug.twitter.html (1)" />
       <item itemvalue="JavaScript Debug.twitter_clusters.html" />
-      <item itemvalue="JavaScript Debug.twitter_clusters.html (1)" />
       <item itemvalue="JavaScript Debug.miserables2.html" />
+      <item itemvalue="JavaScript Debug.miserables2.html (1)" />
+      <item itemvalue="JavaScript Debug.miserables.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.miserables2.html (1)" />
+        <item itemvalue="JavaScript Debug.miserables.html" />
         <item itemvalue="JavaScript Debug.twitter.html" />
         <item itemvalue="JavaScript Debug.miserables2.html" />
         <item itemvalue="JavaScript Debug.twitter_clusters.html" />
-        <item itemvalue="JavaScript Debug.twitter.html (1)" />
-        <item itemvalue="JavaScript Debug.twitter_clusters.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -259,14 +253,16 @@
       <workItem from="1534944535257" duration="138000" />
       <workItem from="1534946591519" duration="141000" />
       <workItem from="1534948174788" duration="701000" />
+      <workItem from="1535036044112" duration="1402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51304000" />
+    <option name="totallyTimeSpent" value="52706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959743" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -294,13 +290,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SCC_graph.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71946">
-          <caret line="3997" column="9" lean-forward="true" selection-start-line="3997" selection-start-column="9" selection-end-line="3997" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/twitter_users_graph2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339300">
@@ -609,20 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miserables.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6066">
-          <caret line="337" selection-start-line="337" selection-end-line="337" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/miserables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1854">
@@ -637,6 +612,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miserables.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/miserables.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miserables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="219" column="20" lean-forward="true" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -646,8 +638,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/miserables2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="157" column="57" lean-forward="true" selection-start-line="150" selection-start-column="12" selection-end-line="157" selection-end-column="57" />
+        <state relative-caret-position="36">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
         </state>
       </provider>
     </entry>

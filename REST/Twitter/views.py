@@ -16,7 +16,7 @@ from django.template import RequestContext
 
 from copy import deepcopy
 
-import os, json
+import os, json, pickle
 
 import networkx as nx
 import snap
@@ -123,31 +123,24 @@ def calculate_communities(G):
 
 def label_nodes_communities(G, save=False):
     nodes_communities = None
+    filename = "{0}_{1}_{2}.pkl".format(dates[date_index], bidir, foci_checked)
+    print("FILENAME: ",filename)
     try:
-        nodes_communities = json.load(open(root_dir + "/static/{0}_{1}_{2}.json".format(
-            dates[date_index], bidir, foci_checked),
-                                           'r'))
+        nodes_communities = pickle.load(open(root_dir + "/static/communities/"+filename,'rb'))
+        print("Reading", filename)
     except IOError:
         save = not sum([degree_threshold, btw_threshold, pagerank_threshold,
                         closeness_threshold, eigenvector_threshold, clust_threshold])  # The entire network at that date
-
 
     if recalculate_coms_checked:
         print("CALCULATING COMMUNITIES", len(G.nodes()))
         nodes_communities = calculate_communities(G)
         if save:
-            json.dump(nodes_communities, open(root_dir + "/static/{0}_{1}_{2}.json".format(
-                dates[date_index], bidir, foci_checked), 'w'))
+            print("SAVING", filename)
+            pickle.dump(nodes_communities, open(root_dir + "/static/communities/"+filename, 'wb'))
 
     for node in G.nodes():
-        try:
-            user = twitter_users.loc[node]
-            m = str(user['community'])
-        except KeyError:
-            m = "0"
-        if recalculate_coms_checked and 'foci' not in m:
-            m = str(nodes_communities[node][0])
-        G.nodes[node]["community"] = m
+        G.nodes[node]["community"] = nodes_communities[node][0]
     return G
 
 def construct_network(connections):
