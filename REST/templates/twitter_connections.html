@@ -8,6 +8,7 @@
     path {
         fill-opacity: .2;
         stroke-opacity: 1;
+        stroke: 'red';
         stroke-width: 2;
     }
 
@@ -245,7 +246,7 @@
             if (error) throw error;
 
             graph = g;
-
+            simulation.alphaTarget(0.0).restart();
             d3.selectAll('.select_group').remove();
             svg.selectAll('*').remove();
 
@@ -325,6 +326,7 @@
                 .on("mouseover", function (d) {
 
                     d3.select(this).style("r", node_over);
+                    d3.select(this).style("fill-opacity", 0.9).style('stroke-width',3);
 
                     const focus = svg.append('g')
                         .attr('class', 'focus');
@@ -366,7 +368,7 @@
                         });
                 })
                 .on("mouseout", function (d) {
-                    d3.select(this).style("r", node_scale).style("fill-opacity", 0.7);
+                    d3.select(this).style("r", node_scale).style("fill-opacity", 0.7).style('stroke-width',2);
                     d3.selectAll(".focus").remove();
                 });
 
@@ -379,6 +381,7 @@
                 .links(selectedLinks);
 
             function ticked() {
+
                 link
                     .attr('x1', d => d.source.x )
                     .attr('y1', d => d.source.y )
@@ -422,7 +425,7 @@
     }
 
     function dragstarted(d){
-        if (!d3.event.active) simulation.alphaTarget(0.2).restart();
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
         d.fx = d.x;
         d.fy = d.y;
     }
@@ -433,7 +436,7 @@
     }
 
     function dragended(d){
-        if (!d3.event.active) simulation.alphaTarget(0.3);
+        if (!d3.event.active) simulation.alphaTarget(0);
         d.fx = null;
         d.fy = null;
     }
@@ -441,7 +444,7 @@
 
     // drag groups
     function group_dragstarted(groupId) {
-        if (!d3.event.active) simulation.alphaTarget(0.2).restart();
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
         d3.select(this).select('path').style('stroke-width', 3);
     }
 
@@ -567,7 +570,6 @@
 
     function updateForce() {
         simulation.force("charge", d3.forceManyBody().strength(gravityForce));
-        simulation.alphaTarget(1.0).restart();
 
     }
 
@@ -900,10 +902,10 @@
             .on("mouseover", function (_) {
                 var d = groupMap[_];
                 console.log(d);
-                d3.select(this).style("fill-opacity", 0.7);
-                var coordinates = d3.mouse(this);
-                const cx = coordinates[0];
-                const cy = coordinates[1];
+                d3.select(this).select('path').style("fill-opacity", 0.5).style('stroke-width', 3);
+
+                const cx = d3.select(this).attr("cx");
+                    const cy = d3.select(this).attr("cy");
 
                 const focus = svg.append('g')
                     .attr('class', 'focus');
@@ -943,7 +945,7 @@
                     });
             })
             .on("mouseout", function (d) {
-                d3.select(this).style("fill-opacity", 0.2);
+                d3.select(this).select('path').style("fill-opacity", 0.2).style('stroke-width', 1);
                 d3.selectAll(".focus").remove();
             });
 

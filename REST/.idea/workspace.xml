@@ -27,8 +27,8 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="427" column="0" lean-forward="false" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="571" column="78" lean-forward="false" selection-start-line="571" selection-start-column="78" selection-end-line="571" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -37,8 +37,8 @@
       <file leaf-file-name="twitter_connections_backup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections_backup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9882">
-              <caret line="549" column="8" lean-forward="false" selection-start-line="549" selection-start-column="8" selection-end-line="549" selection-end-column="8" />
+            <state relative-caret-position="-174">
+              <caret line="437" column="5" lean-forward="true" selection-start-line="422" selection-start-column="4" selection-end-line="437" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -48,17 +48,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bundleNodes</find>
-      <find>fillGroups</find>
-      <find>clear</find>
-      <find>resetBundling</find>
-      <find>updateGroup</find>
-      <find>updateGroups</find>
-      <find>updateGroupIds</find>
-      <find>console.log(clickedGroupId);</find>
-      <find>console.log</find>
-      <find>SCC</find>
-      <find>includes('scc</find>
       <find>?</find>
       <find>clickedGroupId</find>
       <find>nodesIndices</find>
@@ -68,16 +57,27 @@
       <find>mouse</find>
       <find>.metriCak</find>
       <find>Filli</find>
-      <find>mouseover</find>
       <find>force</find>
       <find>simulation</find>
       <find>simulation.alphaTarget(0.3).restart();</find>
       <find>updateFo</find>
-      <find>alphaTarget</find>
       <find>circle</find>
       <find>class&quot;,</find>
       <find>drags</find>
       <find>node_over</find>
+      <find>mouseover</find>
+      <find>dragstar</find>
+      <find>select('path</find>
+      <find>opacity</find>
+      <find>mouseout</find>
+      <find>alp</find>
+      <find>ticked</find>
+      <find>drag</find>
+      <find>alphatarge</find>
+      <find>alphaTarget</find>
+      <find>ticked(</find>
+      <find>drawNetwork</find>
+      <find>updateForce</find>
     </findStrings>
     <replaceStrings>
       <replace>.{{ group }}</replace>
@@ -524,14 +524,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json" />
-    <entry file="file://$PROJECT_DIR$/templates/twitter_connections_backup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9882">
-          <caret line="549" column="8" lean-forward="false" selection-start-line="549" selection-start-column="8" selection-end-line="549" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/networks/SCC_graph.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2790">
@@ -548,10 +540,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections_backup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-174">
+          <caret line="437" column="5" lean-forward="true" selection-start-line="422" selection-start-column="4" selection-end-line="437" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="427" column="0" lean-forward="false" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="571" column="78" lean-forward="false" selection-start-line="571" selection-start-column="78" selection-end-line="571" selection-end-column="78" />
           <folding />
         </state>
       </provider>

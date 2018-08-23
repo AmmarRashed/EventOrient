@@ -41,11 +41,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miserables2.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="miserables2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miserables2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+            <state relative-caret-position="354">
+              <caret line="241" column="36" lean-forward="true" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="miserables.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/miserables.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="214" column="5" lean-forward="true" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -79,8 +88,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>force</find>
-      <find>simul</find>
       <find>updateGroups</find>
       <find>polygon</find>
       <find>drag</find>
@@ -109,6 +116,8 @@
       <find>community</find>
       <find>var</find>
       <find>network(</find>
+      <find>stroke</find>
+      <find>color(d</find>
     </findStrings>
     <replaceStrings>
       <replace>.community</replace>
@@ -153,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,7 +174,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,7 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.miserables2.html (1)">
+  <component name="RunManager" selected="JavaScript Debug.miserables.html">
     <configuration name="miserables2.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/miserables2.html" />
     <configuration name="miserables2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/visualization/miserables2.html" />
     <configuration name="miserables.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/visualization/miserables.html" />
@@ -208,8 +217,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.miserables2.html (1)" />
         <item itemvalue="JavaScript Debug.miserables.html" />
+        <item itemvalue="JavaScript Debug.miserables2.html (1)" />
         <item itemvalue="JavaScript Debug.twitter.html" />
         <item itemvalue="JavaScript Debug.miserables2.html" />
         <item itemvalue="JavaScript Debug.twitter_clusters.html" />
@@ -255,14 +264,16 @@
       <workItem from="1534948174788" duration="701000" />
       <workItem from="1535036044112" duration="1402000" />
       <workItem from="1535043835211" duration="5000" />
+      <workItem from="1535061125517" duration="728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52711000" />
+    <option name="totallyTimeSpent" value="53439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959743" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -620,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/miserables.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="219" column="20" lean-forward="true" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/twitter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5778">
@@ -636,8 +640,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/miserables2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        <state relative-caret-position="354">
+          <caret line="241" column="36" lean-forward="true" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miserables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="214" column="5" lean-forward="true" selection-start-line="214" selection-start-column="5" selection-end-line="214" selection-end-column="5" />
         </state>
       </provider>
     </entry>
