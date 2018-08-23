@@ -14,8 +14,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Twitter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6678">
-              <caret line="371" column="62" lean-forward="false" selection-start-line="367" selection-start-column="15" selection-end-line="371" selection-end-column="62" />
+            <state relative-caret-position="183">
+              <caret line="339" column="51" lean-forward="false" selection-start-line="339" selection-start-column="51" selection-end-line="339" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -24,22 +24,15 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="368" column="22" lean-forward="false" selection-start-line="368" selection-start-column="22" selection-end-line="368" selection-end-column="22" />
+            <state relative-caret-position="183">
+              <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#input#10;n#form#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="latest_tw_ntw.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84258">
-              <caret line="4681" column="9" lean-forward="false" selection-start-line="4681" selection-start-column="9" selection-end-line="4681" selection-end-column="9" />
-              <folding>
-                <marker date="1534978163153" expanded="true" signature="66:89" ph="{&quot;name&quot;: &quot;Elif Arslan&quot;...}" />
+                <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,36 +42,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>links.forEac</find>
-      <find>.links.for</find>
-      <find>updateLink</find>
-      <find>undefined</find>
-      <find>firstRUN</find>
-      <find>first run</find>
-      <find>simulation</find>
-      <find>s</find>
-      <find>tog</find>
-      <find>filterNode</find>
-      <find>updateLinks</find>
-      <find>first</find>
-      <find>toggleFoci</find>
-      <find>\</find>
-      <find>toggle</find>
-      <find>toggleFoci(</find>
-      <find>change_date</find>
-      <find>{{</find>
+      <find>size_metrics</find>
+      <find>recalculate_metrics</find>
+      <find>construct</find>
+      <find>do_filter</find>
       <find>filter_by</find>
-      <find>filter</find>
-      <find>select</find>
-      <find>selectAll('.selec</find>
-      <find>filterNodes(1</find>
+      <find>recalculate_SCCs_checked</find>
+      <find>toggleFoci</find>
+      <find>bidir</find>
+      <find>&quot;bidir</find>
+      <find>'bidir</find>
+      <find>toggleBidir</find>
+      <find>firs</find>
+      <find>filterNode</find>
+      <find>filterEdge</find>
+      <find>updateGraph</find>
+      <find>first run</find>
+      <find>updateGraphLinks</find>
+      <find>firs run</find>
+      <find>LOL</find>
       <find>filterNodes</find>
-      <find>filterNodes(1)</find>
-      <find>filterNodes()</find>
-      <find>&quot;MODE</find>
+      <find>updateLinks</find>
+      <find>toggleFociCB</find>
+      <find>updateStatus();</find>
       <find>draw</find>
-      <find>ticked</find>
-      <find>updateForce</find>
+      <find>&quot;filter&quot;</find>
+      <find>0.1</find>
+      <find>opacity</find>
+      <find>filterEdges</find>
+      <find>&quot;clean net</find>
+      <find>submit</find>
     </findStrings>
     <replaceStrings>
       <replace>.{{ group }}</replace>
@@ -97,6 +90,7 @@
       <replace>toggleFociCB</replace>
       <replace>-600</replace>
       <replace>selectedNodes</replace>
+      <replace>0</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -233,7 +227,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2910995" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.373822" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15360501" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43887147" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12713264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296643" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -269,6 +263,68 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Twitter/views.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4536">
+          <caret line="252" column="29" lean-forward="true" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93150">
+          <caret line="5175" column="9" lean-forward="false" selection-start-line="5175" selection-start-column="9" selection-end-line="5175" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6624">
+          <caret line="368" column="22" lean-forward="false" selection-start-line="368" selection-start-column="22" selection-end-line="368" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93150">
+          <caret line="5175" column="9" lean-forward="false" selection-start-line="5175" selection-start-column="9" selection-end-line="5175" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Twitter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6678">
           <caret line="371" column="62" lean-forward="false" selection-start-line="367" selection-start-column="15" selection-end-line="371" selection-end-column="62" />
           <folding />
@@ -279,9 +335,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167976">
           <caret line="9332" column="9" lean-forward="false" selection-start-line="9332" selection-start-column="9" selection-end-line="9332" selection-end-column="9" />
-          <folding>
-            <marker date="1534978163153" expanded="true" signature="66:89" ph="{&quot;name&quot;: &quot;Elif Arslan&quot;...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -290,7 +344,12 @@
         <state relative-caret-position="486">
           <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding>
-            <element signature="n#style#0;n#input#10;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -308,7 +367,12 @@
         <state relative-caret-position="9684">
           <caret line="538" column="44" lean-forward="false" selection-start-line="538" selection-start-column="44" selection-end-line="538" selection-end-column="44" />
           <folding>
-            <element signature="n#style#0;n#input#10;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -326,7 +390,12 @@
         <state relative-caret-position="8028">
           <caret line="446" column="0" lean-forward="true" selection-start-line="446" selection-start-column="0" selection-end-line="446" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#input#10;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -344,7 +413,12 @@
         <state relative-caret-position="450">
           <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#input#10;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -362,7 +436,12 @@
         <state relative-caret-position="450">
           <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#input#10;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -461,28 +540,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/networks/latest_tw_ntw.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84258">
-          <caret line="4681" column="9" lean-forward="false" selection-start-line="4681" selection-start-column="9" selection-end-line="4681" selection-end-column="9" />
-          <folding>
-            <marker date="1534978163153" expanded="true" signature="66:89" ph="{&quot;name&quot;: &quot;Elif Arslan&quot;...}" />
-          </folding>
+        <state relative-caret-position="1872">
+          <caret line="104" column="9" lean-forward="false" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Twitter/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6678">
-          <caret line="371" column="62" lean-forward="false" selection-start-line="367" selection-start-column="15" selection-end-line="371" selection-end-column="62" />
+        <state relative-caret-position="183">
+          <caret line="339" column="51" lean-forward="false" selection-start-line="339" selection-start-column="51" selection-end-line="339" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="368" column="22" lean-forward="false" selection-start-line="368" selection-start-column="22" selection-end-line="368" selection-end-column="22" />
+        <state relative-caret-position="183">
+          <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#input#10;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#9;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#11;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#13;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#15;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#17;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
