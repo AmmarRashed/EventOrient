@@ -27,8 +27,8 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="1127" column="0" lean-forward="true" selection-start-line="1127" selection-start-column="0" selection-end-line="1127" selection-end-column="0" />
+            <state relative-caret-position="172">
+              <caret line="267" column="25" lean-forward="true" selection-start-line="267" selection-start-column="25" selection-end-line="267" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#8;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -64,11 +64,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>From</find>
       <find>selectedNodes.leng</find>
       <find>remove the</find>
       <find>!</find>
-      <find>updateGroupIds</find>
       <find>updateGroups</find>
       <find>removeEdgeLessNodes</find>
       <find>filterEdges</find>
@@ -86,7 +84,6 @@
       <find>groupIds</find>
       <find>init</find>
       <find>updat</find>
-      <find>bundleNode</find>
       <find>bundleNodes</find>
       <find>filterNodes</find>
       <find>updateLinks</find>
@@ -94,6 +91,9 @@
       <find>addSuper</find>
       <find>delete</find>
       <find>bundle</find>
+      <find>bundleNode</find>
+      <find>bundleN</find>
+      <find>updateGroupIds</find>
     </findStrings>
     <replaceStrings>
       <replace>.{{ group }}</replace>
@@ -755,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="1127" column="0" lean-forward="true" selection-start-line="1127" selection-start-column="0" selection-end-line="1127" selection-end-column="0" />
+        <state relative-caret-position="172">
+          <caret line="267" column="25" lean-forward="true" selection-start-line="267" selection-start-column="25" selection-end-line="267" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#input#7;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#8;n#form#0;n#div#0;n#!!top" expanded="true" />

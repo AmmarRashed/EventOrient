@@ -219,6 +219,7 @@
         paths,
         groups,
         groupIds,
+        groupIdsMaps,
         scaleFactor = 1.2,
         gravityForce = -600,
         sizeScaler=100,
@@ -1119,7 +1120,7 @@
 
 
         } else { // currently bundled, collapse it
-            updateGroupIds();
+            updateGroups();
             updateLinks();  // filterNodes is called from inside updateLinks
         }
 
