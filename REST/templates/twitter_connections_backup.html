@@ -8,6 +8,7 @@
     path {
         fill-opacity: .2;
         stroke-opacity: 1;
+        stroke: 'red';
         stroke-width: 2;
     }
 
@@ -124,7 +125,7 @@
     <p>Group by: <span id='groupLabel'>None</span></p>
 </div>
 </br>
-<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">
+{#<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">#}
 {#<div id="curveSettings">#}
 {#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
 {#</div>#}
@@ -207,6 +208,7 @@
             .y(function(d) { return d[1]; })
             .curve(d3.curveCatmullRomClosed),
         toggleFociChecked,
+        groupMap,
         nodesIndices,
         toggleBidir,
         selectedNodes,
@@ -225,7 +227,7 @@
         groupTypes = ["None","SCC", "community"],
         groupType = "None",
         simulation= d3.forceSimulation()
-                            .force("link", d3.forceLink().id(function (d) {return d.id;})).strength(gravityForce)
+                            .force("link", d3.forceLink().id(function (d) {return d.id;}))
                             .force("charge", d3.forceManyBody().strength(gravityForce))
                             .force("center", d3.forceCenter(width/2, height/2));
 
@@ -244,7 +246,7 @@
             if (error) throw error;
 
             graph = g;
-
+            simulation.alphaTarget(0.0).restart();
             d3.selectAll('.select_group').remove();
             svg.selectAll('*').remove();
 
@@ -324,6 +326,7 @@
                 .on("mouseover", function (d) {
 
                     d3.select(this).style("r", node_over);
+                    d3.select(this).style("fill-opacity", 0.9).style('stroke-width',3);
 
                     const focus = svg.append('g')
                         .attr('class', 'focus');
@@ -365,7 +368,7 @@
                         });
                 })
                 .on("mouseout", function (d) {
-                    d3.select(this).style("r", node_scale).style("fill-opacity", 0.7);
+                    d3.select(this).style("r", node_scale).style("fill-opacity", 0.7).style('stroke-width',2);
                     d3.selectAll(".focus").remove();
                 });
 
@@ -378,6 +381,7 @@
                 .links(selectedLinks);
 
             function ticked() {
+
                 link
                     .attr('x1', d => d.source.x )
                     .attr('y1', d => d.source.y )
@@ -471,7 +475,8 @@
 
     function searchNode() {
         var selectedVal = document.getElementById('search').value;
-        if (selectedVal == 'none') {}
+        if (selectedVal == 'none') {
+        }
         else {
             var selected = node.filter(function (d, i) {
                 return (d.screen_name.includes(selectedVal) ||
@@ -486,8 +491,8 @@
             });
             nonselected.style("opacity", "0.1");
             selected.style("opacity", 1.0);
-            selected.style("r",node_over);
-            alert("Found: "+selected.size().toString());
+            selected.style("r", node_over);
+            alert("Found: " + selected.size().toString());
             centerNode(selected.attr("cx"), selected.attr("cy"));
 
             // var link = svg.selectAll(".link");
@@ -499,12 +504,14 @@
 
     }
 
-    function resetBundling(){
-            filterNodes();
-            updateGraphLinks();
-            updateLinks();
-            drawNetwork();
-    }
+
+    /*
+    function resetBundling() {
+        filterNodes();
+        updateGraphLinks();
+        filterEdges();
+        drawNetwork();
+    }*/
 
     function resetNodes(){
         var all_nodes = node.filter(function (d, i){
@@ -513,18 +520,18 @@
         all_nodes.style("r", node_scale)
             .style("opacity",0.7);
     }
-    function updateText(threshold, widget){
+    function updateText(threshold, widget) {
         {#var metric = widget.slice(5);  // text_degree => degree  (removing 'text_')#}
 
-        document.getElementById(widget).value=threshold;
+        document.getElementById(widget).value = threshold;
         filterNodes();
         updateGraphLinks();
         updateLinks();
         drawNetwork();
     }
-    function updateScroll(threshold, widget){
+    function updateScroll(threshold, widget) {
 
-        document.getElementById(widget).value=threshold;
+        document.getElementById(widget).value = threshold;
         filterNodes();
         updateGraphLinks();
         updateLinks();
@@ -549,34 +556,38 @@
     // (3 points as minimum, otherwise returns null)
     var polygonGenerator = function(groupId) {
         var node_coords = node
-            .filter(function(d) { return d[groupType] == groupId; })
+            .filter(function (d) {
+                return d[groupType] == groupId;
+            })
             .data()
-            .map(function(d) { return [d.x, d.y]; });
+            .map(function (d) {
+                return [d.x, d.y];
+            });
 
         return d3.polygonHull(node_coords);
     };
 
 
-    function updateForce(){
-        simulation.force("link", d3.forceLink().id(function (d) {return d.id;})).distance(-1*gravityForce);
+    function updateForce() {
+        simulation.force("charge", d3.forceManyBody().strength(gravityForce));
 
     }
 
-    function updateSize(){
-                size_metric = document.getElementById("sizeBy").value;
-                avgSize = 0;
-                maxSize = Number.NEGATIVE_INFINITY;
-                minSize = Number.POSITIVE_INFINITY;
+    function updateSize() {
+        size_metric = document.getElementById("sizeBy").value;
+        avgSize = 0;
+        maxSize = Number.NEGATIVE_INFINITY;
+        minSize = Number.POSITIVE_INFINITY;
 
-                selectedNodes.forEach(function (d) {
-                    avgSize += d[size_metric];
-                    maxSize = Math.max(maxSize, d[size_metric]);
-                    minSize = Math.min(maxSize, d[size_metric]);
-                });
-                avgSize /= selectedNodes.length;
+        selectedNodes.forEach(function (d) {
+            avgSize += d[size_metric];
+            maxSize = Math.max(maxSize, d[size_metric]);
+            minSize = Math.min(maxSize, d[size_metric]);
+        });
+        avgSize /= selectedNodes.length;
 
-                resetNodes();
-            }
+        resetNodes();
+    }
 
     function updateGroups() {
         if (!((typeof groupIds == 'undefined') || (groupIds == null))) {
@@ -723,7 +734,7 @@
             }
         });
 
-        nodesIndices = {'__':0};
+        nodesIndices = {};
 
         selectedNodes =
             graph.nodes.filter(function(node){
@@ -745,38 +756,135 @@
         for (var n in selectedNodes){
             nodesIndices[selectedNodes[n].id] = n;
         }
-        delete nodesIndices.__
 
     }
 
+    function fillGroups() {
+        groupMap = {};
+        groupIds.forEach(function (clickedGroupId) {
+            var groupNodes = selectedNodes.filter(function (n) {
+                return n[groupType] == clickedGroupId;
+            });
 
-    function updateGroupIds(){
+            var superNode = {};
+            var counter = {};
+
+            groupNodes.sort(function (a, b) {
+                b.betweenness - a.betweenness
+            }).forEach(function (node) {
+
+                for (var metric in node) {
+                    var distributable = (
+                        isNaN(node[metric]) || metric.includes('SCC') || metric.includes('community'));
+
+                    if (metric.includes('name')) {
+                        superNode[metric] = (typeof superNode[metric] == 'undefined') ? "" : superNode[metric];
+                        superNode[metric] += node[metric] + ", ";
+                    }
+                    else if (distributable) {
+                        var v = node[metric].toString();
+                        counter[metric] = (typeof counter[metric] == 'undefined') ? {} : counter[metric];
+                        counter[metric][v] = (typeof counter[metric][v] == 'undefined') ? 0.0 : counter[metric][v];
+                        counter[metric][v] += 1
+                    }
+                    else { // numeric metric
+                        superNode[metric] = (typeof superNode[metric] == 'undefined') ? 0.0 : superNode[metric];
+                        superNode[metric] += node[metric];
+                    }
+                }
+            });
+
+
+            var len = parseFloat(groupNodes.length);
+            // Taking averages
+            for (var metric in superNode) {
+                if (!(metric.includes('name'))) { // numeric metric
+                    superNode[metric] = parseFloat(superNode[metric]) / len;
+                }
+            }
+            superNode[groupType] = clickedGroupId;
+            // Reporting the distribution of the values of the nominal metrics
+            for (var metric in counter) {
+                var report = "";
+                var reportVals = [];
+                for (var metricVal in counter[metric]) {
+                    var ratio = (parseFloat(counter[metric][metricVal]) * 100.0 / len).toFixed(2);
+                    reportVals.push({'ratio':ratio, 'val':metricVal});
+                }
+                for (var r in reportVals.sort(function (a, b) {return b.ratio - a.ratio})) {  // sort in descending order
+                    report += reportVals[r].val+ ": " + reportVals[r].ratio + "%, ";
+                }
+                superNode[metric] = report;
+            }
+            /* Reporting the most dominant value of nominal metrics
+                for (var metric in counter) {
+                    var maxFreq = Number.NEGATIVE_INFINITY;
+                    var maxVal;
+                    for (var counterVal in counter[metric]) {
+                        var freq = counter[metric][counterVal];
+
+                        if (freq > maxFreq) {
+                            maxFreq = freq;
+                            maxVal = counterVal;
+                        }
+                    }
+
+                    superNode[metric] = maxVal;
+
+                }*/
+            delete superNode.i;
+            superNode.id = clickedGroupId;
+            superNode.screen_name = groupType + "_" + clickedGroupId;
+            superNode.size = groupNodes.length;
+
+            groupMap[superNode.id] = superNode;
+        });
+    }
+
+
+    function updateGroupIds() {
         // count members of each group. Groups with less
         // than 3 member will not be considered (creating
         // a convex hull need 3 points at least)
 
         groups.selectAll('.path_placeholder').remove();
 
-        groupIds = d3.set(selectedNodes.map(function(n) { return +n[groupType]; }))
+        groupIds = d3.set(selectedNodes.map(function (n) {
+            return +n[groupType];
+        }))
             .values()
-            .map( function(groupId) {
+            .map(function (groupId) {
                 return {
-                    groupId : groupId,
-                    count : selectedNodes.filter(function(n) { return +n[groupType]  == groupId; }).length
+                    groupId: groupId,
+                    count: selectedNodes.filter(function (n) {
+                        return +n[groupType] == groupId;
+                    }).length
 
                 };
             })
-            .filter( function(group) { return group.count > 2;})
-            .map( function(group) { return group.groupId; });
+            .filter(function (group) {
+                return group.count > 2;
+            })
+            .map(function (group) {
+                return group.groupId;
+            });
+
+        fillGroups();
 
         paths = groups.selectAll('.path_placeholder')
-            .data(groupIds, function(d) { return +d; })
+            .data(groupIds, function (d) {
+                return +d;
+            })
             .enter()
             .append('g')
             .attr('class', 'path_placeholder')
             .append('path')
-            .attr('stroke', function(d) { return color(d); })
-            .attr('fill', function(d) { return color(d); })
+            .attr('stroke', function (d) {
+                return color(d);
+            })
+            .attr('fill', function (d) {
+                return color(d);
+            })
             .attr('opacity', 0);
 
         paths
@@ -791,67 +899,66 @@
                 .on('drag', group_dragged)
                 .on('end', group_dragended)
             )
-            .on("click", bundleNodes)
+            .on("mouseover", function (_) {
+                var d = groupMap[_];
+                console.log(d);
+                d3.select(this).select('path').style("fill-opacity", 0.5).style('stroke-width', 3);
 
-        }
+                const cx = d3.select(this).attr("cx");
+                    const cy = d3.select(this).attr("cy");
+
+                const focus = svg.append('g')
+                    .attr('class', 'focus');
+
+                focus.append('rect')
+                    .attr('height', 300 * 4)
+                    .attr('width', 300 * 4)
+                    .attr("x", cx)
+                    .attr("y", cy);
+                var x = 0.0;
+                for (var metric in d) {
+                    x += 1.2;
+                    if (overhead.indexOf(metric) < 0) {
+                        focus.append('text')
+                            .attr('x', cx + 10)
+                            .attr('y', cy + 10)
+                            .attr('dy', x + 'em')
+                            .attr('dx', '.5em')
+                            .style("font-size", 50)
+                            .text(metric + ": " + d[metric]);
+                    }
+                }
+
+                d3.select('.overlay')
+                    .styles({
+                        fill: 'none',
+                        'pointer-events': 'all'
+                    });
+
+                d3.selectAll('.focus')
+                    .style('opacity', 0.9);
+
+                d3.selectAll('.focus rect')
+                    .styles({
+                        fill: '#CFEEF1',
+                        stroke: 'black'
+                    });
+            })
+            .on("mouseout", function (d) {
+                d3.select(this).select('path').style("fill-opacity", 0.2).style('stroke-width', 1);
+                d3.selectAll(".focus").remove();
+            });
+
+
+    }
+
 
         function bundleNodes() {
         // Creating the superNode
             var clickedGroupId = d3.select(this).data()[0];
-            var groupNodes = selectedNodes.filter(function(n){
-                return n[groupType] == clickedGroupId;
-            });
-
-            var superNode = {'i':0};
-            var counter = {'i':0};
-            console.log("From: ", selectedNodes.length);
-            groupNodes.forEach(function (node){
-                // remove those nodes from selectedNodes
-                var index = selectedNodes.indexOf(node);
-                if (index > -1) {
-                    selectedNodes.splice(index, 1);
-                }
-                for (var metric in node){
-                    if (!(superNode.hasOwnProperty(metric))) {
-                        if (typeof metric == 'number')
-                            superNode[metric] = 0;
-                        else {
-                            var metricVal = node[metric].toString();
-                            counter[metric] = {'i':0};
-                            counter[metric][metricVal] = 0;
-                        }
-                    }
-
-                    if (typeof metric == 'number')
-                        superNode[metric] += node[metric].val;
-                    else
-                        counter[metric][node[metric]] += 1;
-                }
-            });
-            for (var m in superNode){
-                superNode[m] /= groupNodes.length;
-            }
-            for (var metric in counter){
-                var maxFreq = Number.NEGATIVE_INFINITY;
-                var maxVal;
-                for (var counterVal in counter[metric]){
-                    var freq = counter[metric][counterVal];
-
-                    if (freq>maxFreq){
-                        maxFreq = freq;
-                        maxVal = counterVal;
-                    }
-                }
-
-                superNode[metric] = maxVal;
-
-            }
-            delete superNode.i;
-            superNode.id = parseInt(superNode[groupType]);
-            superNode.screen_name = groupType+"_"+superNode[groupType];
-            superNode.size = groupNodes.length;
-
+            console.log(clickedGroupId);
             // Remove the group from groups and groupsIds
+            /*
             var index = groupIds.indexOf(clickedGroupId);
             if (index>-1){
                 groupIds.splice(index, 1);
@@ -860,11 +967,9 @@
             updateGroupIds();
             updateGroups();
 
+
             // Adding the superNode to the network nodes
             selectedNodes[selectedNodes.length] = superNode;
-
-            console.log("to: ", selectedNodes.length);
-            console.log("groupNode size: ", superNode.size);
 
             selectedLinks.forEach(function (l) {
                 var source = selectedNodes[nodesIndices[getLinkEnd(l.source)]];
@@ -881,6 +986,7 @@
 
             updateLinks();
             drawNetwork();
+            */
 
             
 

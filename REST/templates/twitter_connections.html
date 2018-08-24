@@ -8,7 +8,6 @@
     path {
         fill-opacity: .2;
         stroke-opacity: 1;
-        stroke: 'red';
         stroke-width: 2;
     }
 
@@ -45,10 +44,10 @@
         <br>
         <input type="submit" value="Construct Network"></br>
         Include community accounts (e.g. clubs):
-        <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="filterNodes(); filterEdges();">
+        <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="updateLinks(); drawNetwork();">
         <br>
         Friendship network (bidirectional edges only):
-        <input type="checkbox" id="toggleBidir" name="toggleBidir" oninput="filterEdges()"> There are {{ bidir_edges }} ({{ bidir_ratio }} %) bidirectional connections out of {{ edges_number }}
+        <input type="checkbox" id="toggleBidir" name="toggleBidir" oninput="updateLinks(); drawNetwork();"> There are {{ bidir_edges }} ({{ bidir_ratio }} %) bidirectional connections out of {{ edges_number }}
         <br>
         <br>
         degree: <input type="text" id="text_degree" value="0" style="width: 50px"
@@ -118,7 +117,9 @@
         </select>
         <br>
     </form>
-    <input id="filter" type="submit" title="remove nodes with no connections" value="Clean Network" onclick="removeEdgeLessNodes();">
+    <p>Include connection-less nodes
+        <input id="edgeLess" type="checkbox" title="include nodes with no connections" onchange="updateLinks(); drawNetwork();" checked></p>
+{#<input id="filter" type="submit" title="remove nodes with no connections" value="Clean Network" onclick="filterEdgelessNodes();">#}
 </div>
 
 <div id="groupSettings">
@@ -201,18 +202,21 @@
 
 
     var node,
+        link,
+        label,
         is_directed,
         communitiesSet,
         valueline = d3.line()
             .x(function(d) { return d[0]; })
             .y(function(d) { return d[1]; })
             .curve(d3.curveCatmullRomClosed),
+        collapseMap,
         toggleFociChecked,
         groupMap,
         nodesIndices,
-        toggleBidir,
         selectedNodes,
         selectedLinks,
+        groupedLinks,
         paths,
         groups,
         groupIds,
@@ -222,7 +226,7 @@
         polygon,
         centroid,
         graph,
-        color,
+        color = d3.scaleOrdinal(d3.schemeCategory20),
         size_metric, avgSize, maxSize, minSize,
         groupTypes = ["None","SCC", "community"],
         groupType = "None",
@@ -231,7 +235,6 @@
                             .force("charge", d3.forceManyBody().strength(gravityForce))
                             .force("center", d3.forceCenter(width/2, height/2));
 
-
     is_directed = true;  // TODO set checkbox for that
 
     {#var curveTypes = ['curveBasisClosed', 'curveCardinalClosed', 'curveCatmullRomClosed', 'curveLinearClosed'],#}
@@ -239,26 +242,21 @@
     {#selectedDegree = document.getElementById('degree').value;#}
 
     {#drawNetwork(selectedDegree, is_directed);#}
-    drawNetwork();
+    initNetwork();
 
-    function drawNetwork(){
+    function initNetwork(){
         d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, g) {
             if (error) throw error;
 
             graph = g;
             simulation.alphaTarget(0.0).restart();
             d3.selectAll('.select_group').remove();
-            svg.selectAll('*').remove();
 
-            if (typeof selectedNodes == 'undefined') {  // first run
-                selectedNodes = graph.nodes;
-                filterNodes();
+            if (selectedNodes === undefined) {  // first run
+                selectedNodes = JSON.parse(JSON.stringify(graph.nodes));
                 updateGraphLinks();
                 updateLinks();
-                drawNetwork();
             }
-
-            updateStatus();
 
             d3.select('#groupSettings')
             .append('select')
@@ -288,140 +286,185 @@
 
             color = d3.scaleOrdinal(colors);
             */
-
-            color = d3.scaleOrdinal(d3.schemeCategory20);
-
-
-            var link = svg.append("g")
-                .style("stroke", "#aaa")
-                .style("stroke-opacity", "0.8")
-                .selectAll("line")
-                .data(selectedLinks)
-                .enter().append("line")
-                .attr('marker-end', 'url(#arrowhead)');
-
-
-            node = svg.append("g")
-                .attr("class", "nodes")
-                .selectAll("circle")
-                .data(selectedNodes)
-                .enter().append("circle")
-                .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended));
-
-
-            var label = svg.append("g")
-                .attr("class", "labels")
-                .selectAll("text")
-                .data(selectedNodes)
-                .enter().append("text")
-                .attr("class", "label");
-            // .text(function(d){return d.id;});
-
-            updateSize();
-
-            svg.selectAll("circle")
-                .on("mouseover", function (d) {
-
-                    d3.select(this).style("r", node_over);
-                    d3.select(this).style("fill-opacity", 0.9).style('stroke-width',3);
-
-                    const focus = svg.append('g')
-                        .attr('class', 'focus');
-                    const cx = d3.select(this).attr("cx");
-                    const cy = d3.select(this).attr("cy");
-
-                    focus.append('rect')
-                        .attr('height', 300 * 4)
-                        .attr('width', 300 * 4)
-                        .attr("x", cx)
-                        .attr("y", cy);
-                    var x = 0.0;
-                    for (var metric in d) {
-                        x += 1.2;
-                        if (overhead.indexOf(metric) < 0) {
-                            focus.append('text')
-                                .attr('x', cx + 10)
-                                .attr('y', cy + 10)
-                                .attr('dy', x + 'em')
-                                .attr('dx', '.5em')
-                                .style("font-size", 50)
-                                .text(metric + ": " + d[metric]);
-                        }
-                    }
-
-                    d3.select('.overlay')
-                        .styles({
-                            fill: 'none',
-                            'pointer-events': 'all'
-                        });
-
-                    d3.selectAll('.focus')
-                        .style('opacity', 0.9);
-
-                    d3.selectAll('.focus rect')
-                        .styles({
-                            fill: '#CFEEF1',
-                            stroke: 'black'
-                        });
-                })
-                .on("mouseout", function (d) {
-                    d3.select(this).style("r", node_scale).style("fill-opacity", 0.7).style('stroke-width',2);
-                    d3.selectAll(".focus").remove();
-                });
-
-
-            simulation
-                .nodes(selectedNodes)
-                .on("tick", ticked);
-
-            simulation.force("link")
-                .links(selectedLinks);
-
-            function ticked() {
-
-                link
-                    .attr('x1', d => d.source.x )
-                    .attr('y1', d => d.source.y )
-                    .attr('x2', d => d.target.x )
-                    .attr('y2', d => d.target.y );
-
-                node
-                    .attr("r", node_scale)
-                    .attr('cx', d => d.x )
-                    .attr('cy', d => d.y )
-                    .style('fill-opacity', 0.7)
-                    .style('fill', d => color(d.community))
-                    .style('stroke', "none");
-
-                label
-                    .attr("x", d => d.x)
-                    .attr("y", d => d.y)
-                    .style("font-size", "10px")
-                    .style("fill", "#4393c3")
-                    .text(d => d.screen_name);
-
-
-                updateGroups();
-
-            }
-
+            drawNetwork();
         });
 
     }
+
+    function drawNetwork() {
+        svg.selectAll("*").remove();
+
+        node = svg.append("g")
+            .attr("class", "nodes")
+            .selectAll("circle")
+            .data(selectedNodes)
+            .enter().append("circle")
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+
+
+        link = svg.append("g")
+            .style("stroke", "#aaa")
+            .style("stroke-opacity", "0.8")
+            .attr("class", "links")
+            .selectAll("line")
+            .data(selectedLinks)
+            .enter().append("line")
+            .attr('marker-end', 'url(#arrowhead)');
+
+
+        label = svg.append("g")
+            .attr("class", "labels")
+            .selectAll("text")
+            .data(selectedNodes)
+            .enter().append("text")
+            .attr("class", "label");
+        // .text(function(d){return d.id;});
+
+
+        updateStatus();
+        updateSize();
+
+        svg.selectAll("circle")
+            .on("mouseover", function (d) {
+
+                d3.select(this).style("r", node_over);
+                d3.select(this).style("fill-opacity", 0.9).style('stroke-width', 3);
+
+                const focus = svg.append('g')
+                    .attr('class', 'focus');
+                const cx = d3.select(this).attr("cx");
+                const cy = d3.select(this).attr("cy");
+
+                focus.append('rect')
+                    .attr('height', 300 * 4)
+                    .attr('width', 300 * 4)
+                    .attr("x", cx)
+                    .attr("y", cy);
+                var x = 0.0;
+                for (var metric in d) {
+                    x += 1.2;
+                    if (overhead.indexOf(metric) < 0) {
+                        focus.append('text')
+                            .attr('x', cx + 10)
+                            .attr('y', cy + 10)
+                            .attr('dy', x + 'em')
+                            .attr('dx', '.5em')
+                            .style("font-size", 50)
+                            .text(metric + ": " + d[metric]);
+                    }
+                }
+
+                d3.select('.overlay')
+                    .styles({
+                        fill: 'none',
+                        'pointer-events': 'all'
+                    });
+
+                d3.selectAll('.focus')
+                    .style('opacity', 0.9);
+
+                d3.selectAll('.focus rect')
+                    .styles({
+                        fill: '#CFEEF1',
+                        stroke: 'black'
+                    });
+            })
+            .on("mouseout", function (d) {
+                d3.select(this).style("r", node_scale).style("fill-opacity", 0.7).style('stroke-width', 2);
+                d3.selectAll(".focus").remove();
+            });
+
+
+        simulation
+            .nodes(selectedNodes)
+            .on("tick", ticked);
+
+        simulation.force("link")
+            .links(selectedLinks);
+
+        function ticked() {
+
+            link
+                .attr('x1', d => d.source.x
+        )
+        .
+            attr('y1', d => d.source.y
+        )
+        .
+            attr('x2', d => d.target.x
+        )
+        .
+            attr('y2', d => d.target.y
+        )
+            ;
+
+            node
+                .attr("r", node_scale)
+                .attr('cx', d => d.x
+        )
+        .
+            attr('cy', d => d.y
+        )
+        .
+            style('fill-opacity', 0.7)
+                .style('fill', d => color(d.community)
+        )
+        .
+            style('stroke', "none");
+
+            label
+                .attr("x", d => d.x
+        )
+        .
+            attr("y", d => d.y
+        )
+        .
+            style("font-size", "10px")
+                .style("fill", "#4393c3")
+                .text(d => d.screen_name
+        )
+            ;
+
+
+            updateGroups();
+
+        }
+    }
+
+    /*function restartNetwork(_nodes, _links){
+
+        if (_nodes === undefined)
+            _nodes = JSON.parse(JSON.stringify(selectedNodes));
+
+        if (_links === undefined)
+            _links = JSON.parse(JSON.stringify(selectedLinks));
+
+        node = node.data(_nodes);
+        node.exit().remove();
+
+        link = link.data(_links);
+        link.exit().remove();
+
+        label = label.data(_nodes);
+        label.exit().remove();
+
+        simulation.nodes(_nodes);
+        simulation.force("link")
+            .links(_links);
+
+    }*/
+
+
         // .domain([{{minSize}},{{maxSize}}])
         // .range([1, 50]);
-
-        function node_scale(d){
-
-                return Math.max((Math.abs(d[size_metric]- avgSize))/(maxSize-minSize)*sizeScaler, sizeScaler/20);
-            }
-    function node_over(d){
-
-        return Math.max((Math.abs(d[size_metric] - avgSize))/(maxSize-minSize)* (sizeScaler*1.8), sizeScaler*2);
-
+    function node_scale(d) {
+        return Math.max((Math.abs(d[size_metric] - avgSize)) / (maxSize - minSize) * sizeScaler, sizeScaler / 20);
+    }
+    function node_over(d) {
+        return Math.max((Math.abs(d[size_metric] - avgSize)) / (maxSize - minSize) * (sizeScaler * 1.8), sizeScaler * 2);
     }
 
     function dragstarted(d){
@@ -509,7 +552,7 @@
     function resetBundling() {
         filterNodes();
         updateGraphLinks();
-        filterEdges();
+        filterBidirEdges();
         drawNetwork();
     }*/
 
@@ -517,6 +560,7 @@
         var all_nodes = node.filter(function (d, i){
             return true;
         });
+
         all_nodes.style("r", node_scale)
             .style("opacity",0.7);
     }
@@ -524,7 +568,6 @@
         {#var metric = widget.slice(5);  // text_degree => degree  (removing 'text_')#}
 
         document.getElementById(widget).value = threshold;
-        filterNodes();
         updateGraphLinks();
         updateLinks();
         drawNetwork();
@@ -532,7 +575,6 @@
     function updateScroll(threshold, widget) {
 
         document.getElementById(widget).value = threshold;
-        filterNodes();
         updateGraphLinks();
         updateLinks();
         drawNetwork();
@@ -590,7 +632,7 @@
     }
 
     function updateGroups() {
-        if (!((typeof groupIds == 'undefined') || (groupIds == null))) {
+        if (!((groupIds === undefined) || (groupIds == null))) {
             try {
                 groupIds.forEach(function (groupId) {
                     var path = paths.filter(function (d) {
@@ -637,11 +679,10 @@
             return parseInt(n.id);
     }
 
-
     function updateLinks(){
-
-        selectedLinks = selectedLinks.filter(function(l){
-            var valid=0;
+        filterNodes();
+        selectedLinks = graph.links.filter(function(l){
+            var valid=0;  // check if both ends of the connection are in selectedNodes
 
             for (var n in selectedNodes){
                 node_id   = getLinkEnd(selectedNodes[n]);
@@ -662,6 +703,9 @@
             {#return selectedNodes.includes(link.source) && selectedNodes.includes(link.target);#}
         });
 
+        filterBidirEdges();
+        filterEdgelessNodes();
+
         updateStatus();
     }
 
@@ -672,28 +716,21 @@
             d.target = d.target;
         });
 
-        selectedLinks = graph.links;
+        selectedLinks = JSON.parse(JSON.stringify(graph.links));
     }
 
-    function filterEdges(){
-        toggleBidir = document.getElementById("toggleBidir").checked;
-        if (toggleBidir) {
-            selectedLinks = graph.links.filter(function (l1) {
-                for (var l2_ in selectedLinks){
+    function filterBidirEdges(){
+        if (document.getElementById("toggleBidir").checked) {
+            selectedLinks = selectedLinks.filter(function (l1) {
+                for (var l2_ in selectedLinks) {
                     var l2 = selectedLinks[l2_];
                     {#console.log(l1.source, l2.source);#}
-                    if ((l1.source == l2.target.id) && (l2.source.id == l1.target))
+                    if ((getLinkEnd(l1.source) == getLinkEnd(l2.target)) && (getLinkEnd(l2.source) == getLinkEnd(l1.target)))
                         return true;
                 }
                 return false;
             });
         }
-        else {
-            selectedLinks = graph.links;
-            filterNodes();
-        }
-        updateLinks();
-        drawNetwork();
     }
 
 
@@ -705,19 +742,41 @@
         d3.select("#num_communities").text(comCount.toString());
     }
 
-    function removeEdgeLessNodes(){
-        selectedNodes = selectedNodes.filter(function (n){
-            for (var l_ in selectedLinks){
-                var l = selectedLinks[l_];
-                if ((l.source == n) || (l.target==n))
-                    return true;
-            }
-            return false;
-        });
 
-
-        drawNetwork();
+    function filterEdgelessNodes(){
+        if (!document.getElementById("edgeLess").checked) {
+            selectedNodes = selectedNodes.filter(function (n) {
+                for (var l_ in selectedLinks) {
+                    var l = selectedLinks[l_];
+                    if ((getLinkEnd(l.source) == n.id) || (getLinkEnd(l.target) == n.id))
+                        return true;
+                }
+                return false;
+            });
+        }
     }
+
+
+    /*function toggleEdgeLessNodes(){
+        var edgeLessCB = document.getElementById("edgeLess").checked;
+        var edgedNodes;
+        if (!edgeLessCB) {
+            edgedNodes = selectedNodes.filter(function (n) {
+                for (var l_ in selectedLinks) {
+                    var l = selectedLinks[l_];
+                    if ((getLinkEnd(l.source) == n.id) || (getLinkEnd(l.target) == n.id)) {
+                        return true;
+                    }
+                }
+                return false;
+            });
+        }else{
+            edgedNodes = JSON.parse(JSON.stringify(selectedNodes));
+
+        }
+        updateStatus(edgedNodes);
+        drawNetwork(edgedNodes);
+    }*/
 
 
     function filterNodes() {
@@ -725,6 +784,8 @@
                 "closeness_centrality", "eigenvector_centrality", 'clustering_coefficient'];
 
         toggleFociChecked = document.getElementById("toggleFociCB").checked;
+
+        console.log("FROM",selectedNodes.length);
         // replace community label 'foci' by '0'
         graph.nodes.forEach(function(node){
             if (node.community.toString().toLowerCase().includes('foci'))
@@ -751,11 +812,12 @@
                         }
                     }
                 }
-                return true;
+                return (groupType.includes('None'))?true:collapseMap[node[groupType]] === undefined || collapseMap[node[groupType]];
             });
         for (var n in selectedNodes){
             nodesIndices[selectedNodes[n].id] = n;
         }
+        console.log("To",selectedNodes.length);
 
     }
 
@@ -778,17 +840,17 @@
                         isNaN(node[metric]) || metric.includes('SCC') || metric.includes('community'));
 
                     if (metric.includes('name')) {
-                        superNode[metric] = (typeof superNode[metric] == 'undefined') ? "" : superNode[metric];
+                        superNode[metric] = (superNode[metric] === undefined) ? "" : superNode[metric];
                         superNode[metric] += node[metric] + ", ";
                     }
                     else if (distributable) {
                         var v = node[metric].toString();
-                        counter[metric] = (typeof counter[metric] == 'undefined') ? {} : counter[metric];
-                        counter[metric][v] = (typeof counter[metric][v] == 'undefined') ? 0.0 : counter[metric][v];
+                        counter[metric] = (counter[metric] === undefined) ? {} : counter[metric];
+                        counter[metric][v] = (counter[metric][v] === undefined) ? 0.0 : counter[metric][v];
                         counter[metric][v] += 1
                     }
                     else { // numeric metric
-                        superNode[metric] = (typeof superNode[metric] == 'undefined') ? 0.0 : superNode[metric];
+                        superNode[metric] = (superNode[metric] === undefined) ? 0.0 : superNode[metric];
                         superNode[metric] += node[metric];
                     }
                 }
@@ -809,10 +871,12 @@
                 var reportVals = [];
                 for (var metricVal in counter[metric]) {
                     var ratio = (parseFloat(counter[metric][metricVal]) * 100.0 / len).toFixed(2);
-                    reportVals.push({'ratio':ratio, 'val':metricVal});
+                    reportVals.push({'ratio': ratio, 'val': metricVal});
                 }
-                for (var r in reportVals.sort(function (a, b) {return b.ratio - a.ratio})) {  // sort in descending order
-                    report += reportVals[r].val+ ": " + reportVals[r].ratio + "%, ";
+                for (var r in reportVals.sort(function (a, b) {
+                    return b.ratio - a.ratio
+                })) {  // sort in descending order
+                    report += reportVals[r].val + ": " + reportVals[r].ratio + "%, ";
                 }
                 superNode[metric] = report;
             }
@@ -839,37 +903,20 @@
 
             groupMap[superNode.id] = superNode;
         });
+
+
+        collapseMap = (collapseMap === undefined) ? {} : collapseMap;
+
+        selectedNodes.forEach(function (n) {
+            if (groupType != 'None')
+                collapseMap[n[groupType]] = (collapseMap[n[groupType]] === undefined) ? true : collapseMap[n[groupType]];
+        });
     }
 
 
-    function updateGroupIds() {
-        // count members of each group. Groups with less
-        // than 3 member will not be considered (creating
-        // a convex hull need 3 points at least)
-
-        groups.selectAll('.path_placeholder').remove();
-
-        groupIds = d3.set(selectedNodes.map(function (n) {
-            return +n[groupType];
-        }))
-            .values()
-            .map(function (groupId) {
-                return {
-                    groupId: groupId,
-                    count: selectedNodes.filter(function (n) {
-                        return +n[groupType] == groupId;
-                    }).length
-
-                };
-            })
-            .filter(function (group) {
-                return group.count > 2;
-            })
-            .map(function (group) {
-                return group.groupId;
-            });
-
-        fillGroups();
+    function updatePaths() {
+        svg.selectAll('.groups').remove();
+        groups = svg.append('g').attr('class', 'groups');
 
         paths = groups.selectAll('.path_placeholder')
             .data(groupIds, function (d) {
@@ -901,11 +948,10 @@
             )
             .on("mouseover", function (_) {
                 var d = groupMap[_];
-                console.log(d);
                 d3.select(this).select('path').style("fill-opacity", 0.5).style('stroke-width', 3);
 
                 const cx = d3.select(this).attr("cx");
-                    const cy = d3.select(this).attr("cy");
+                const cy = d3.select(this).attr("cy");
 
                 const focus = svg.append('g')
                     .attr('class', 'focus');
@@ -947,16 +993,89 @@
             .on("mouseout", function (d) {
                 d3.select(this).select('path').style("fill-opacity", 0.2).style('stroke-width', 1);
                 d3.selectAll(".focus").remove();
+            })
+            .on("click", bundleNodes);
+    }
+
+    function updateGroupIds() {
+        // count members of each group. Groups with less
+        // than 3 member will not be considered (creating
+        // a convex hull need 3 points at least)
+
+        groupIds = d3.set(selectedNodes.map(function (n) {
+            return +n[groupType];
+        }))
+            .values()
+            .map(function (groupId) {
+                return {
+                    groupId: groupId,
+                    count: selectedNodes.filter(function (n) {
+                        return +n[groupType] == groupId;
+                    }).length
+
+                };
+            })
+            .filter(function (group) {
+                return group.count > 2;
+            })
+            .map(function (group) {
+                return group.groupId;
             });
 
-
+        fillGroups();
+        updatePaths();
     }
 
 
-        function bundleNodes() {
-        // Creating the superNode
-            var clickedGroupId = d3.select(this).data()[0];
-            console.log(clickedGroupId);
+        function bundleNodes(d, i) {
+            /*
+            Bundling steps:
+            1- Get the corresponding superNode (i.e. the node representing the (community or SCC) of that group)
+            2- Switch the collapse state of that group to false
+            3- Remove the groupId from the groupIds so to remove the path (or the hull around the nodes of that group)
+            4- Remove the group convex hull by updating paths with the updated groupIds
+            5- Remove the info box of the superNode which was activated by mouseover event
+            6- Remove all nodes in bundled groups
+            7- Update network links to remove links between bundled sub-nodes and other nodes in the network
+            8- Add the bundled superNode to selectedNodes
+            9- Add links between the superNode and other nodes in the network
+            10- Filter the bidirectional links according to its checkbox
+            * */
+            // Creating the superNode
+
+            var superNode = groupMap[d];
+            collapseMap[d] = collapseMap[d] ? false : true;  // toggle it
+
+            if (!collapseMap[d]) {  // currently not bundled, bundle it
+                var index = groupIds.indexOf(d);
+                groupIds.splice(index, 1);
+
+                d3.selectAll(".focus").remove();
+
+                updatePaths();
+
+                updateLinks();  // filterNodes is called from inside updateLinks
+
+                selectedNodes.push(superNode);  // Add the superNode of the bundled nodes
+
+                updateGroupLinks(superNode, d);
+
+                if (document.getElementById("toggleBidir").checked)
+                    filterBidirEdges();
+        filterEdgelessNodes();
+
+
+            }else{ // currently bundled, collapse it
+                filterNodes();
+                updateGroupIds();
+            }
+
+
+            drawNetwork();
+
+            {#links = simulation.links(),#}
+
+
             // Remove the group from groups and groupsIds
             /*
             var index = groupIds.indexOf(clickedGroupId);
@@ -988,7 +1107,6 @@
             drawNetwork();
             */
 
-            
 
         }
 
