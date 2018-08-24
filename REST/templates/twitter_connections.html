@@ -216,7 +216,6 @@
         nodesIndices,
         selectedNodes,
         selectedLinks,
-        groupedLinks,
         paths,
         groups,
         groupIds,
@@ -375,7 +374,8 @@
             .on("mouseout", function (d) {
                 d3.select(this).style("r", node_scale).style("fill-opacity", 0.7).style('stroke-width', 2);
                 d3.selectAll(".focus").remove();
-            });
+            })
+            .on("click", bundleNodes);
 
 
         simulation
@@ -502,7 +502,7 @@
     }
 
     function group_dragended(groupId) {
-        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        if (!d3.event.active) simulation.alphaTarget(0).restart();
         d3.select(this).select('path').style('stroke-width', 1);
     }
 
@@ -779,13 +779,20 @@
     }*/
 
 
+    function addSuperNodes() {
+        for (var n in collapseMap) {
+            if (!collapseMap[n]) { // superNode
+                selectedNodes.push(groupMap[n]);
+            }
+        }
+    }
+
     function filterNodes() {
         var metrics = ["degree", "betweenness", "pagerank", "community",
                 "closeness_centrality", "eigenvector_centrality", 'clustering_coefficient'];
 
         toggleFociChecked = document.getElementById("toggleFociCB").checked;
 
-        console.log("FROM",selectedNodes.length);
         // replace community label 'foci' by '0'
         graph.nodes.forEach(function(node){
             if (node.community.toString().toLowerCase().includes('foci'))
@@ -817,7 +824,6 @@
         for (var n in selectedNodes){
             nodesIndices[selectedNodes[n].id] = n;
         }
-        console.log("To",selectedNodes.length);
 
     }
 
@@ -1026,89 +1032,102 @@
         updatePaths();
     }
 
+    function getGroupLinks(superNode){
+        var groupNodeIds = [];
+        for (var n in selectedNodes){
+            var node = selectedNodes[n];
+            if (node[groupType] == superNode.id)
+                groupNodeIds.push(node.id);
+        }
 
-        function bundleNodes(d, i) {
-            /*
+        var groupLinks = {};
+
+        for (var _ in selectedLinks){
+            var l = selectedLinks[_];
+            var source, target;
+
+            source = groupNodeIds.includes(getLinkEnd(l.source)) ? superNode : l.source;
+            target = groupNodeIds.includes(getLinkEnd(l.target)) ? superNode : l.target;
+
+            if((source == superNode || target == superNode) && source.id != target.id) { // they are not two connections in the same group
+                var key = source.id.toString()+"-"+target.id.toString();
+                if (groupLinks[key] === undefined){
+                    var link = {};
+                    link['source'] = source;
+                    link['target'] = target;
+                    link['weight'] = 0;
+                    groupLinks[key] = link;
+                }
+                else
+                    groupLinks[key]['weight'] += 1;
+            }
+        }
+        console.log(groupLinks);
+        return groupLinks;
+    }
+
+    function updateGroupLinks(superNode, groupLinks){
+        updateLinks();  // filterNodes is called from inside updateLinks, Adding the superNode of the bundled nodes
+        addSuperNodes();
+        for (var key in groupLinks){
+            selectedLinks.push(groupLinks[key]);
+        }
+    }
+
+    function bundleNodes(d, i) {
+        /*
             Bundling steps:
             1- Get the corresponding superNode (i.e. the node representing the (community or SCC) of that group)
             2- Switch the collapse state of that group to false
             3- Remove the groupId from the groupIds so to remove the path (or the hull around the nodes of that group)
             4- Remove the group convex hull by updating paths with the updated groupIds
             5- Remove the info box of the superNode which was activated by mouseover event
-            6- Remove all nodes in bundled groups
-            7- Update network links to remove links between bundled sub-nodes and other nodes in the network
-            8- Add the bundled superNode to selectedNodes
+            6- Get links between the superNode and other nodes in the network
+            7- Remove all nodes in bundled groups
+            8- Update network links to remove links between bundled sub-nodes and other nodes in the network
+            9- Add the bundled superNode to selectedNodes
             9- Add links between the superNode and other nodes in the network
             10- Filter the bidirectional links according to its checkbox
+            11- Filter edgeless nodes
             * */
-            // Creating the superNode
+        // Creating the superNode
 
-            var superNode = groupMap[d];
-            collapseMap[d] = collapseMap[d] ? false : true;  // toggle it
-
-            if (!collapseMap[d]) {  // currently not bundled, bundle it
-                var index = groupIds.indexOf(d);
-                groupIds.splice(index, 1);
-
-                d3.selectAll(".focus").remove();
-
-                updatePaths();
-
-                updateLinks();  // filterNodes is called from inside updateLinks
-
-                selectedNodes.push(superNode);  // Add the superNode of the bundled nodes
-
-                updateGroupLinks(superNode, d);
-
-                if (document.getElementById("toggleBidir").checked)
-                    filterBidirEdges();
-        filterEdgelessNodes();
-
-
-            }else{ // currently bundled, collapse it
-                filterNodes();
-                updateGroupIds();
-            }
-
-
-            drawNetwork();
-
-            {#links = simulation.links(),#}
-
-
-            // Remove the group from groups and groupsIds
-            /*
-            var index = groupIds.indexOf(clickedGroupId);
-            if (index>-1){
-                groupIds.splice(index, 1);
-            }
-
-            updateGroupIds();
-            updateGroups();
-
-
-            // Adding the superNode to the network nodes
-            selectedNodes[selectedNodes.length] = superNode;
-
-            selectedLinks.forEach(function (l) {
-                var source = selectedNodes[nodesIndices[getLinkEnd(l.source)]];
-                var target = selectedNodes[nodesIndices[getLinkEnd(l.target)]];
-
-                if (source[groupType] == superNode[groupType]) {
-                    console.log(l.source, superNode.id);
-                    l.source = superNode.id;
-                }
-                if (target[groupType] == superNode[groupType]) {
-                    l.target = superNode.id;
-                }
-            });
-
-            updateLinks();
-            drawNetwork();
-            */
-
-
+        if (groupMap[d] === undefined) {
+            if (groupMap[d.id] === undefined)
+                return;
+            else
+                d = d.id;
         }
+        var superNode = groupMap[d];
+
+        collapseMap[d] = collapseMap[d] ? false : true;  // toggle it
+
+        if (!collapseMap[d]) {  // currently not bundled, bundle it
+            var index = groupIds.indexOf(d);
+            groupIds.splice(index, 1);
+
+            d3.selectAll(".focus").remove();
+
+            var groupLinks = getGroupLinks(superNode);
+
+            updatePaths();
+
+            updateGroupLinks(superNode, groupLinks);  // updating links and adding superNode are inside this function
+
+            filterBidirEdges();
+            filterEdgelessNodes();
+
+
+        } else { // currently bundled, collapse it
+            updateGroupIds();
+            updateLinks();  // filterNodes is called from inside updateLinks
+        }
+
+        updatePaths();
+        drawNetwork();
+
+
+    }
 
 
 </script>
