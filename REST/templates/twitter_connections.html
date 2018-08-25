@@ -3,160 +3,194 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
 
-    <style>
-    body {font-family: 'Times', cursive;}
+<style>
+    body {
+        font-family: 'Times', cursive;
+    }
+
     path {
         fill-opacity: .2;
         stroke-opacity: 1;
         stroke-width: 2;
     }
 
+    .column {
+        float: left;
+        padding: 5px;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    body{
+        overflow-wrap: break-word;
+    }
+
 </style>
-<div class="ui-widget">
-    <input id="search" size='54'>
+<body>
+    <input id="search" size='25'>
     <button type="button" onclick="searchNode()">Find Node</button>
     <button type="button" onclick="resetNodes()">Reset</button>
-    <br>
 
-    <form name="myForm" method="POST">
-        {% csrf_token %}
+<div class="row">
+<div id="groupSettings" class="column">
+        Group by: <span id='groupLabel'></span>
+    </div>
+<div class="column">
+    Nodes size by:
+            <select id="sizeBy" onchange="updateSize()">
 
-        <p id="textDate">Date: {{current_date}}</p>
-        <input type="range" id="date_scroller" name="date" min="0" max="{{dates|length|add:"-1"}}" step="1" value="{{date_index}}"
-                        style="width: 400px"
-                onchange="updateDateText(this.value)">
-
-        </br>
-        Nodes: <span id="num_nodes">{{ nodes_number }}</span> </br> Edges: <span id="num_edges">{{ edges_number }}</span>
-        <br>Communities: <span id="num_communities"></span></br>
-        Homophily: {{ homophily_value }} ( Heterogeneity: {{ heterogeneity }}, Threshold: {{ heterogeneity_threshold }})
-        <br>
-        Transitivity: {{ transitivity_value }}
-        <br>
-        Recalculate node metrics:
-        <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
-        <br>
-        Recalculate communities:
-        <input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked">
-        <br>
-        Recalculate SCCs:
-        <input type="checkbox" id="recalculate_SCCs_checked" name="recalculate_SCCs_checked">
-        <br>
-        <input type="submit" value="Construct Network"></br>
-        Include community accounts (e.g. clubs):
-        <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="updateLinks(); drawNetwork();">
-        <br>
-        Friendship network (bidirectional edges only):
-        <input type="checkbox" id="toggleBidir" name="toggleBidir" oninput="updateLinks(); drawNetwork();"> There are {{ bidir_edges }} ({{ bidir_ratio }} %) bidirectional connections out of {{ edges_number }}
-        <br>
-        <br>
-        degree: <input type="text" id="text_degree" value="0" style="width: 50px"
-                       name="text_degree"
-                        onchange="updateScroll(this.value, 'degree')">{{avg_degree}}<br>
-
-        0<input id="degree"
-                type="range" value="0" min="0" max="100" step="1"
-                style="width: 400px"
-                onchange="updateText(this.value, 'text_degree')">100
-        <br>
-
-        betweenness: <input type="text" id="text_betweenness" value="0" style="width: 50px"
-                            name="text_betweenness"
-                        onchange="updateScroll(this.value, 'betweenness')">{{avg_betweenness}}<br>
-
-        0.0<input id="betweenness"
-                type="range" value="0" min="0.0" max="1.0" step="0.01"
-                style="width: 400px"
-                onchange="updateText(this.value, 'text_betweenness')">1.0
-        <br>
-        pagerank: <input type="text" id="text_pagerank" value="0" style="width: 50px"
-                         name="text_pagerank"
-                        onchange="updateScroll(this.value, 'pagerank')">{{avg_pagerank}}<br>
-
-        0.0<input id="pagerank"
-                type="range" value="0" min="0.0" max="1.0" step="0.01"
-                style="width: 400px"
-                onchange="updateText(this.value, 'text_pagerank')">1.0
-        <br>
-        closeness: <input type="text" id="text_closeness_centrality" value="0" style="width: 50px"
-                          name="text_closeness_centrality"
-                        onchange="updateScroll(this.value, 'closeness_centrality')">{{avg_closeness_centrality}}<br>
-
-        0.0<input id="closeness_centrality"
-                type="range" value="0" min="0.0" max="1.0" step="0.01"
-                style="width: 400px"
-                onchange="updateText(this.value, 'text_closeness_centrality')">1.0
-        <br>
-
-        eigenvector: <input type="text" id="text_eigenvector_centrality" value="0" style="width: 50px"
-                            name="text_eigenvector_centrality"
-                        onchange="updateScroll(this.value, 'eigenvector_centrality')">{{avg_eigenvector_centrality}}<br>
-
-        0.0<input id="eigenvector_centrality"
-                type="range" value="0" min="0.0" max="1.0" step="0.01"
-                style="width: 400px"
-                onchange="updateText(this.value, 'text_eigenvector_centrality')">1.0
-
-        <br>
-        Clustering Coefficient: <input type="text" id="text_clustering_coefficient" value="0" style="width: 50px"
-                            name="text_clustering_coefficient"
-                        onchange="updateScroll(this.value, 'clustering_coefficient')">{{avg_clustering_coefficient}}<br>
-
-        0.0<input id="clustering_coefficient"
-                type="range" value="0" min="0.0" max="1.0" step="0.01"
-                style="width: 400px"
-                onchange="updateText(this.value, 'text_clustering_coefficient')">1.0
-
-        <br>
-        Nodes size by:
-        <select id="sizeBy" onchange="updateSize()">
-
-        {% for metric in size_metrics %}
-            <option value="{{ metric }}">{{ metric }}</option>
-        {% endfor %}
-        </select>
-        <br>
-    </form>
-    <p>Include connection-less nodes
-        <input id="edgeLess" type="checkbox" title="include nodes with no connections" onchange="updateLinks(); drawNetwork();" checked></p>
-<p>Highlight edges on mouse-over
-        <input id="edgeInfo" type="checkbox" title="Show edge info when you hover over it" onchange="edgeInfo=this.checked; toggleEdgeInfo();" checked></p>
-{#<input id="filter" type="submit" title="remove nodes with no connections" value="Clean Network" onclick="filterEdgelessNodes();">#}
+                {% for metric in size_metrics %}
+                    <option value="{{ metric }}">{{ metric }}</option>
+                {% endfor %}
+            </select>
 </div>
 
-<div id="groupSettings">
-    <p>Group by: <span id='groupLabel'>None</span></p>
-</div>
-</br>
-{#<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">#}
-{#<div id="curveSettings">#}
-{#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
-{#</div>#}
-
-<div id="scaleFactorSettings">
-    <p>Scale of the groups: <span id='scaleFactorLabel'>1.2</span></p>
-    <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 400px"
-           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroups()">
-
-    <p>Network's gravity: <span id='gravityForce'>-600</span></p>
-    <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 400px"
-           oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
-
-    <p>Node size: <span id='nodeScaler'>100</span></p>
-    <input type="range" min="1" max="500" value="100" step="10" style="width: 400px"
+        Node scale: <span id='nodeScaler'>100</span>
+    <input type="range" min="1" max="500" value="100" step="10" style="width: 150px"
            oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()">
 
-    <p>Edge width: <span id='edgeScaler'>1.0</span></p>
-    <input type="range" min="0.1" max="10" value="1.0" step="0.1" style="width: 400px"
+    Edge width: <span id='edgeScaler'>1.0</span>
+    <input type="range" min="0.1" max="10" value="1.0" step="0.1" style="width: 200px"
            oninput="esizeScaler= value; d3.select('#edgeScaler').text(esizeScaler); resetEdges()">
 
+    Scale of the groups: <span id='scaleFactorLabel'>1.2</span>
+    <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 200px"
+           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroups()">
+
+    Network's gravity: <span id='gravityForce'>-600</span>
+    <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 200px"
+           oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
 </div>
+<div class="row" width="100%">
+    <div class="column" width="15.0%">
+        <form name="myForm" method="POST">
+            {% csrf_token %}
 
+            <p id="textDate">Date: {{ current_date }}</p>
+            <input type="range" id="date_scroller" name="date" min="0" max="{{ dates|length|add:"-1" }}" step="1"
+                   value="{{ date_index }}"
+                   style="width: 200px"
+                   onchange="updateDateText(this.value)">
 
-<svg width="960" height="600"></svg>
-<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+            </br>
+        <p>
+            Nodes: <span id="num_nodes">{{ nodes_number }}</span> </br> Edges: <span
+                id="num_edges">{{ edges_number }}</span>
+            <br>Communities: <span id="num_communities"></span></br>
+            Homophily: {{ homophily_value }} <br>( Heterogeneity: {{ heterogeneity }},
+            Threshold: {{ heterogeneity_threshold }})
+            <br>
+            Transitivity: {{ transitivity_value }}
+            <br>
+        </p>
+        <div id="parameters">
+            <p>
+            Recalculate node metrics:
+            <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
+            <br>
+            Recalculate communities:
+            <input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked">
+            <br>
+            Recalculate SCCs:
+            <input type="checkbox" id="recalculate_SCCs_checked" name="recalculate_SCCs_checked">
+            <br>
+            Include community accounts (e.g. clubs):
+            <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="updateLinks(); drawNetwork();">
+            <br>
+            Friendship (bidirectionals only):
+            <input type="checkbox" id="toggleBidir" name="toggleBidir"
+                   oninput="updateLinks(); drawNetwork();"> {{ bidir_edges }}/{{ edges_number }} ({{ bidir_ratio }}
+            %)
+            <br>
+            <input type="submit" value="Construct Network"><br>
+            </p>
+        </div>
+            degree: <input type="text" id="text_degree" value="0" style="width: 50px"
+                           name="text_degree"
+                           onchange="updateScroll(this.value, 'degree')">{{ avg_degree }}<br>
 
-<body>
+            0<input id="degree"
+                    type="range" value="0" min="0" max="100" step="1"
+                    style="width: 200px"
+                    onchange="updateText(this.value, 'text_degree')">100
+            <br>
+
+            betweenness: <input type="text" id="text_betweenness" value="0" style="width: 50px"
+                                name="text_betweenness"
+                                onchange="updateScroll(this.value, 'betweenness')">{{ avg_betweenness }}<br>
+
+            0.0<input id="betweenness"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_betweenness')">1.0
+            <br>
+            pagerank: <input type="text" id="text_pagerank" value="0" style="width: 50px"
+                             name="text_pagerank"
+                             onchange="updateScroll(this.value, 'pagerank')">{{ avg_pagerank }}<br>
+
+            0.0<input id="pagerank"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_pagerank')">1.0
+            <br>
+            closeness: <input type="text" id="text_closeness_centrality" value="0" style="width: 50px"
+                              name="text_closeness_centrality"
+                              onchange="updateScroll(this.value, 'closeness_centrality')">{{ avg_closeness_centrality }}<br>
+
+            0.0<input id="closeness_centrality"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_closeness_centrality')">1.0
+            <br>
+
+            eigenvector: <input type="text" id="text_eigenvector_centrality" value="0" style="width: 50px"
+                                name="text_eigenvector_centrality"
+                                onchange="updateScroll(this.value, 'eigenvector_centrality')">{{ avg_eigenvector_centrality }}<br>
+
+            0.0<input id="eigenvector_centrality"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_eigenvector_centrality')">1.0
+
+            <br>
+            Clustering Coefficient: <input type="text" id="text_clustering_coefficient" value="0"
+                                           style="width: 50px"
+                                           name="text_clustering_coefficient"
+                                           onchange="updateScroll(this.value, 'clustering_coefficient')">{{ avg_clustering_coefficient }}<br>
+
+            0.0<input id="clustering_coefficient"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_clustering_coefficient')">1.0
+
+            <br>
+        </form>
+        <p>Include connection-less nodes
+            <input id="edgeLess" type="checkbox" title="include nodes with no connections"
+                   onchange="updateLinks(); drawNetwork();" checked></p>
+        <p>Highlight edges on mouse-over
+            <input id="edgeInfo" type="checkbox" title="Show edge info when you hover over it"
+                   onchange="edgeInfo=this.checked; toggleEdgeInfo();" checked></p>
+        {#<input id="filter" type="submit" title="remove nodes with no connections" value="Clean Network" onclick="filterEdgelessNodes();">#}
+
+        {#<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">#}
+        {#<div id="curveSettings">#}
+        {#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
+        {#</div>#}
+
+    </div>
+
+    <svg height="600" class="column" width="70.0%"></svg>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
+    <div class="column" width="15.0%">
+        <div id="hoverInfo"></div>
+    </div>
+</div>
+    <div id="distInfo"></div>
 
 <script>
 
@@ -167,13 +201,13 @@
 
     document.getElementById("toggleBidir").checked = {{bidir}};
 
-    d3.select("svg").attr("width", window.screen.width)
-        .attr("height", window.screen.height-150);
+    d3.select("svg").attr("width", window.screen.height)
+        .attr("height", window.screen.height - 200);
 
     // d3.select("svg").attr("width", 960)
     //     .attr("height", 500);
 
-    const overhead = ["index","x","y","vy","vx"];
+    const overhead = ["index", "x", "y", "vy", "vx"];
 
     var svg2 = d3.select("svg"),
         width = +svg2.attr("width"),
@@ -188,23 +222,27 @@
 
     svg2.call(zoom);
 
-    zoom.scaleTo(svg2, 1/4);
+    zoom.scaleTo(svg2, 1 / 4);
+
     function zoomed() {
         svg.attr("transform", d3.event.transform);
     }
+
     svg.append('defs').append('marker')
-        .attrs({'id':'arrowhead',
-            'viewBox':'-0 -5 10 10',
-            'refX':13,
-            'refY':0,
-            'orient':'auto',
-            'markerWidth':10,
-            'markerHeight':10,
-            'xoverflow':'visible'})
+        .attrs({
+            'id': 'arrowhead',
+            'viewBox': '-0 -5 10 10',
+            'refX': 13,
+            'refY': 0,
+            'orient': 'auto',
+            'markerWidth': 10,
+            'markerHeight': 10,
+            'xoverflow': 'visible'
+        })
         .append('svg:path')
         .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
         .attr('fill', '#999')
-        .style('stroke','none');
+        .style('stroke', 'none');
 
 
     var node,
@@ -213,8 +251,12 @@
         is_directed,
         communitiesSet,
         valueline = d3.line()
-            .x(function(d) { return d[0]; })
-            .y(function(d) { return d[1]; })
+            .x(function (d) {
+                return d[0];
+            })
+            .y(function (d) {
+                return d[1];
+            })
             .curve(d3.curveCatmullRomClosed),
         collapseMap,
         edgeInfo,
@@ -228,19 +270,21 @@
         groupIds,
         scaleFactor = 1.2,
         gravityForce = -600,
-        sizeScaler=100,
-        esizeScaler=1,
+        sizeScaler = 100,
+        esizeScaler = 1,
         polygon,
         centroid,
         graph,
         color = d3.scaleOrdinal(d3.schemeCategory20),
         size_metric, avgSize, maxSize, minSize,
-        groupTypes = ["None","SCC", "community"],
+        groupTypes = ["None", "SCC", "community"],
         groupType = "None",
-        simulation= d3.forceSimulation()
-                            .force("link", d3.forceLink().id(function (d) {return d.id;}))
-                            .force("charge", d3.forceManyBody().strength(gravityForce))
-                            .force("center", d3.forceCenter(width/2, height/2));
+        simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(function (d) {
+                return d.id;
+            }))
+            .force("charge", d3.forceManyBody().strength(gravityForce))
+            .force("center", d3.forceCenter(width / 2, height / 2));
 
     is_directed = true;  // TODO set checkbox for that
 
@@ -253,8 +297,8 @@
 
     var fr = {};
 
-    function initNetwork(){
-        d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, g) {
+    function initNetwork() {
+        d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function (error, g) {
             if (error) throw error;
 
             graph = g;
@@ -268,31 +312,35 @@
             }
 
             d3.select('#groupSettings')
-            .append('select')
-            .attr('class','select_group')
-            .on('change', function() {
-                var val = d3.select('.select_group').property('value');
-                d3.select('#groupLabel').text(val);
-                groupType = val;
-                {#valueline.curve(d3[val]);#}
-                if (fr[groupType] === undefined) {
-                    updateGroupIds();
-                    fr[groupType] = {"ids":groupIds, "groupMap":groupMap};
-                    var i = 0;
-                    groupIds.forEach(function(d){i+=1;});
-                    console.log(groupType, i)
-                }else{
-                    console.log("LOADING:", groupType, "Stats");
-                    groupIds = fr[groupType]["ids"];
-                    groupMap = fr[groupType]["groupMap"];
-                }
-                updatePaths();
-                updateGroups();
-            })
-            .selectAll('option')
+                .append('select')
+                .attr('class', 'select_group')
+                .on('change', function () {
+                    var val = d3.select('.select_group').property('value');
+
+                    groupType = val;
+                    {#valueline.curve(d3[val]);#}
+                    if (fr[groupType] === undefined) {
+                        updateGroupIds();
+                        fr[groupType] = {"ids": groupIds, "groupMap": groupMap};
+                        var i = 0;
+                        groupIds.forEach(function (d) {
+                            i += 1;
+                        });
+                        console.log(groupType, i)
+                    } else {
+                        console.log("LOADING:", groupType, "Stats");
+                        groupIds = fr[groupType]["ids"];
+                        groupMap = fr[groupType]["groupMap"];
+                    }
+                    updatePaths();
+                    updateGroups();
+                })
+                .selectAll('option')
                 .data(groupTypes).enter()
                 .append('option')
-                .text(function (d) { return d; });
+                .text(function (d) {
+                    return d;
+                });
 
 
             // create groups, links and nodes
@@ -311,77 +359,67 @@
 
     }
 
-    function toggleEdgeInfo(){
-        if (edgeInfo){
+    function toggleEdgeInfo() {
+        if (edgeInfo) {
             svg.selectAll("line")
-            .on("mouseover", function(d){
-                d3.select(this).style("stroke-width", link_over);
-                const focus = svg.append('g')
-                    .attr('class', 'focus');
-                const cx = d3.mouse(this)[0];
-                const cy = d3.mouse(this)[1];
-                focus.append('rect')
-                    .attr('height', 180)
-                    .attr('width', 300)
-                    .style("stroke-width","0.05")
-                    .attr("x", cx)
-                    .attr("y", cy);
-                var x = 0.0;
-                for (var metric in d){
-                    var s;
-                    if (metric=="weight"){
-                        s = d[metric];
+                .on("mouseover", function (d) {
+                    d3.select(this).style("stroke-width", link_over);
+                    const focus = svg.append('g')
+                        .attr('class', 'focus');
+                    const cx = svg2.mouse(this)[0];
+                    const cy = svg2.mouse(this)[1];
+                    focus.append('rect')
+                        .attr('height', 180)
+                        .attr('width', 300)
+                        .style("stroke-width", "0.05")
+                        .attr("x", cx)
+                        .attr("y", cy);
+                    var x = 0.0;
+                    for (var metric in d) {
+                        var s;
+                        if (metric == "weight") {
+                            s = d[metric];
+                        }
+                        else {
+                            s = d[metric].name;
+                        }
+                        if (overhead.indexOf(metric) < 0) {
+                            x += 1.2;
+                            focus.append('text')
+                                .attr('x', cx)
+                                .attr('y', cy)
+                                .attr('dy', x + 'em')
+                                .attr('dx', '.5em')
+                                .style("font-size", 30)
+                                .text(metric + ": " + s);
+                        }
                     }
-                    else{
-                        s = d[metric].name;
-                    }
-                    if (overhead.indexOf(metric)<0){
-                        x += 1.2;
-                        focus.append('text')
-                            .attr('x', cx)
-                            .attr('y', cy)
-                            .attr('dy', x + 'em')
-                            .attr('dx', '.5em')
-                            .style("font-size", 30)
-                            .text(metric +": "+s);
-                    }
-                }
-                d3.select('.overlay')
-                    .styles({
-                        fill: 'none',
-                        'pointer-events': 'all'
-                    });
-                d3.selectAll('.focus')
-                    .style('opacity', 0.9);
-                d3.selectAll('.focus rect')
-                    .styles({
-                        fill: '#CFEEF1',
-                        stroke: 'black'
-                    });
-            })
-            .on("mouseout",function(d){
-                d3.select(this).style("stroke-width", link_weight);
-                d3.selectAll(".focus").remove();
-            });
+                    d3.select('.overlay')
+                        .styles({
+                            fill: 'none',
+                            'pointer-events': 'all'
+                        });
+                    d3.selectAll('.focus')
+                        .style('opacity', 0.9);
+                    d3.selectAll('.focus rect')
+                        .styles({
+                            fill: '#CFEEF1',
+                            stroke: 'black'
+                        });
+                })
+                .on("mouseout", function (d) {
+                    d3.select(this).style("stroke-width", link_weight);
+                    d3.selectAll(".focus").remove();
+                });
         }
-        else{
-            svg.selectAll("line").on("mouseover", function(){});
+        else {
+
+            svg.selectAll("line").on("mouseover", null);
         }
     }
 
     function drawNetwork() {
         svg.selectAll("*").remove();
-
-        node = svg.append("g")
-            .attr("class", "nodes")
-            .selectAll("circle")
-            .data(selectedNodes)
-            .enter().append("circle")
-            .call(d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended));
-
 
         link = svg.append("g")
             .style("stroke", "#aaa")
@@ -392,6 +430,16 @@
             .enter().append("line")
             .attr('marker-end', 'url(#arrowhead)');
 
+
+        node = svg.append("g")
+            .attr("class", "nodes")
+            .selectAll("circle")
+            .data(selectedNodes)
+            .enter().append("circle")
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
 
         label = svg.append("g")
             .attr("class", "labels")
@@ -417,23 +465,27 @@
                 const cy = d3.select(this).attr("cy");
 
                 focus.append('rect')
-                    .attr('height', 300 * 4)
+                    .attr('height', 320)
                     .attr('width', 300 * 4)
                     .attr("x", cx)
                     .attr("y", cy);
                 var x = 0.0;
-                for (var metric in d) {
+                var displayMetrics = ["screen_name", "lang", "followers_count", "degree", "community"];
+                displayMetrics.forEach(function (metric){
                     if (overhead.indexOf(metric) < 0) {
                         x += 1.2;
+                        var val = isNaN(d[metric]) ? d[metric] :
+                    (metric.includes("degree") || metric.includes("count") || groupTypes.includes(metric)) ? parseInt(d[metric]) :
+                        parseFloat(d[metric]).toFixed(4);
                         focus.append('text')
                             .attr('x', cx + 10)
                             .attr('y', cy + 10)
                             .attr('dy', x + 'em')
                             .attr('dx', '.5em')
                             .style("font-size", 50)
-                            .text(metric + ": " + d[metric]);
+                            .text(metric + ": " + val);
                     }
-                }
+                });
 
                 d3.select('.overlay')
                     .styles({
@@ -454,10 +506,25 @@
                 d3.select(this).style("r", node_scale).style("fill-opacity", 0.7).style('stroke-width', 2);
                 d3.selectAll(".focus").remove();
             })
-            .on("click", bundleNodes);
+            .on("click", function (d) {
+                if (groupMap === undefined) {
+                    groupOver(d);
+                }
+                else if (groupMap[d] === undefined) {
+                    if (groupMap[d.id] === undefined) {
+                        groupOver(d);
+                    }
+                    else {
+                        bundleNodes(d.id);
+                    }
+                }
+                else {
+                    bundleNodes(d);
+                }
+            });
 
         svg.selectAll("line")
-            .on("mouseover", function(d){
+            .on("mouseover", function (d) {
                 d3.select(this).style("stroke-width", link_over);
                 const focus = svg.append('g')
                     .attr('class', 'focus');
@@ -466,19 +533,19 @@
                 focus.append('rect')
                     .attr('height', 180)
                     .attr('width', 300)
-                    .style("stroke-width","0.05")
+                    .style("stroke-width", "0.05")
                     .attr("x", cx)
                     .attr("y", cy);
                 var x = 0.0;
-                for (var metric in d){
+                for (var metric in d) {
                     var s;
-                    if (metric=="weight"){
+                    if (metric == "weight") {
                         s = d[metric];
                     }
-                    else{
+                    else {
                         s = d[metric].name;
                     }
-                    if (overhead.indexOf(metric)<0){
+                    if (overhead.indexOf(metric) < 0) {
                         x += 1.2;
                         focus.append('text')
                             .attr('x', cx)
@@ -486,7 +553,7 @@
                             .attr('dy', x + 'em')
                             .attr('dx', '.5em')
                             .style("font-size", 30)
-                            .text(metric +": "+s);
+                            .text(metric + ": " + s);
                     }
                 }
                 d3.select('.overlay')
@@ -502,7 +569,7 @@
                         stroke: 'black'
                     });
             })
-            .on("mouseout",function(d){
+            .on("mouseout", function (d) {
                 d3.select(this).style("stroke-width", link_weight);
                 d3.selectAll(".focus").remove();
             });
@@ -585,27 +652,28 @@
     }*/
 
 
-        // .domain([{{minSize}},{{maxSize}}])
-        // .range([1, 50]);
+    // .domain([{{minSize}},{{maxSize}}])
+    // .range([1, 50]);
     function node_scale(d) {
         return Math.max((Math.abs(d[size_metric] - avgSize)) / (maxSize - minSize) * sizeScaler, sizeScaler / 20);
     }
+
     function node_over(d) {
         return Math.max((Math.abs(d[size_metric] - avgSize)) / (maxSize - minSize) * (sizeScaler * 1.8), sizeScaler * 2);
     }
 
-    function dragstarted(d){
+    function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
         d.fx = d.x;
         d.fy = d.y;
     }
 
-    function dragged(d){
+    function dragged(d) {
         d.fx = d3.event.x;
         d.fy = d3.event.y;
     }
 
-    function dragended(d){
+    function dragended(d) {
         if (!d3.event.active) simulation.alphaTarget(0);
         d.fx = null;
         d.fy = null;
@@ -620,9 +688,11 @@
 
     function group_dragged(groupId) {
         node
-            .filter(function(d) { return d[groupType] == groupId; })
+            .filter(function (d) {
+                return d[groupType] == groupId;
+            })
             {#.filter(function(d) { return d['SCC'] == groupId; })#}
-            .each(function(d) {
+            .each(function (d) {
                 d.x += d3.event.dx;
                 d.y += d3.event.dy;
             })
@@ -643,17 +713,19 @@
         return color;
     }*/
 
-    function link_weight(d){
-        if(d.weight === undefined){
+    function link_weight(d) {
+        if (d.weight === undefined) {
             d.weight = 1.0;
         }
-        return Math.max(d.weight*esizeScaler, 1.0).toString();}
+        return Math.max(d.weight * esizeScaler, 1.0).toString();
+    }
 
-    function link_over(d){
-        if(d.weight === undefined){
+    function link_over(d) {
+        if (d.weight === undefined) {
             d.weight = 1.0;
         }
-        return Math.max(d.weight*esizeScaler, 1.0)*5.0.toString();}
+        return Math.max(d.weight * esizeScaler, 1.0) * 5.0.toString();
+    }
 
     function searchNode() {
         var selectedVal = document.getElementById('search').value;
@@ -695,19 +767,22 @@
         drawNetwork();
     }*/
 
-    function resetEdges(){
-        var all_edges = link.filter(function(d, i){return true;});
+    function resetEdges() {
+        var all_edges = link.filter(function (d, i) {
+            return true;
+        });
         all_edges.style("stroke-width", link_weight);
     }
 
-    function resetNodes(){
-        var all_nodes = node.filter(function (d, i){
+    function resetNodes() {
+        var all_nodes = node.filter(function (d, i) {
             return true;
         });
 
         all_nodes.style("r", node_scale)
-            .style("opacity",0.7);
+            .style("opacity", 0.7);
     }
+
     function updateText(threshold, widget) {
         {#var metric = widget.slice(5);  // text_degree => degree  (removing 'text_')#}
 
@@ -716,6 +791,7 @@
         updateLinks();
         drawNetwork();
     }
+
     function updateScroll(threshold, widget) {
 
         document.getElementById(widget).value = threshold;
@@ -724,23 +800,25 @@
         drawNetwork();
     }
 
-    function centerNode(xx, yy){
+    function centerNode(xx, yy) {
         svg.transition()
-        .duration(500)
-        .attr("transform", "translate(" + (width/2 - xx) + "," + (height/2 - yy) + ")scale(" + 1 + ")")
-        .on("end", function(){ svg2.call(zoom.transform, d3.zoomIdentity.translate((width/2 - xx),(height/2 - yy)).scale(1))});
-        }
+            .duration(500)
+            .attr("transform", "translate(" + (width / 2 - xx) + "," + (height / 2 - yy) + ")scale(" + 1 + ")")
+            .on("end", function () {
+                svg2.call(zoom.transform, d3.zoomIdentity.translate((width / 2 - xx), (height / 2 - yy)).scale(1))
+            });
+    }
 
-    function updateDateText(date_index){
+    function updateDateText(date_index) {
         var dates = {{dates_dumped|safe}};
-        document.getElementById("textDate").innerHTML = "Date: "+dates[date_index].toString();
+        document.getElementById("textDate").innerHTML = "Date: " + dates[date_index].toString();
     }
 
 
     // select nodes of the group, retrieve its positions
     // and return the convex hull of the specified points
     // (3 points as minimum, otherwise returns null)
-    var polygonGenerator = function(groupId) {
+    var polygonGenerator = function (groupId) {
         var node_coords = node
             .filter(function (d) {
                 return d[groupType] == groupId;
@@ -779,34 +857,34 @@
         var i;
         if (!((groupIds === undefined) || (groupIds == null))) {
             try {
-            groupIds.forEach(function (groupId) {
-                i = groupId;
-                if (collapseMap[groupId]) {
-                    var path = paths.filter(function (d) {
-                        return collapseMap[d]? d == groupId : false;
-                        // return d == groupId;
-                    });
-                    path.attr('transform', 'scale(1) translate(0,0)')
-                        .attr('d', function (d) {
-                            polygon = polygonGenerator(d);
-                            centroid = d3.polygonCentroid(polygon);
-
-                            // to scale the shape properly around its points:
-                            // move the 'g' element to the centroid point, translate
-                            // all the path around the center of the 'g' and then
-                            // we can scale the 'g' element properly
-                            return valueline(
-                                polygon.map(function (point) {
-                                    return [point[0] - centroid[0], point[1] - centroid[1]];
-                                })
-                            );
+                groupIds.forEach(function (groupId) {
+                    i = groupId;
+                    if (collapseMap[groupId]) {
+                        var path = paths.filter(function (d) {
+                            return collapseMap[d] ? d == groupId : false;
+                            // return d == groupId;
                         });
+                        path.attr('transform', 'scale(1) translate(0,0)')
+                            .attr('d', function (d) {
+                                polygon = polygonGenerator(d);
+                                centroid = d3.polygonCentroid(polygon);
+
+                                // to scale the shape properly around its points:
+                                // move the 'g' element to the centroid point, translate
+                                // all the path around the center of the 'g' and then
+                                // we can scale the 'g' element properly
+                                return valueline(
+                                    polygon.map(function (point) {
+                                        return [point[0] - centroid[0], point[1] - centroid[1]];
+                                    })
+                                );
+                            });
 
 
-                    d3.select(path.node().parentNode).attr('transform', 'translate(' + centroid[0] + ',' + (centroid[1]) + ') scale(' + scaleFactor + ')');
-                }
-            });
-            }catch (err){
+                        d3.select(path.node().parentNode).attr('transform', 'translate(' + centroid[0] + ',' + (centroid[1]) + ') scale(' + scaleFactor + ')');
+                    }
+                });
+            } catch (err) {
                 console.log("ERROR:", i, collapseMap[i]);
             }
         }
@@ -814,27 +892,27 @@
 
     function countCommunities() {
         communitiesSet = new Set([]);
-        selectedNodes.forEach(function (node){
+        selectedNodes.forEach(function (node) {
             communitiesSet.add(parseInt(node.community));
         });
         return communitiesSet.size;
 
     }
 
-    function getLinkEnd(n){
+    function getLinkEnd(n) {
         if (typeof n == 'number')
             return n;
         else
             return parseInt(n.id);
     }
 
-    function updateLinks(){
+    function updateLinks() {
         filterNodes();
-        selectedLinks = graph.links.filter(function(l){
-            var valid=0;  // check if both ends of the connection are in selectedNodes
+        selectedLinks = graph.links.filter(function (l) {
+            var valid = 0;  // check if both ends of the connection are in selectedNodes
 
-            for (var n in selectedNodes){
-                node_id   = getLinkEnd(selectedNodes[n]);
+            for (var n in selectedNodes) {
+                node_id = getLinkEnd(selectedNodes[n]);
                 source_id = getLinkEnd(l.source);
                 target_id = getLinkEnd(l.target);
 
@@ -845,7 +923,7 @@
                     valid += 1;
                 if (node_id === target_id)
                     valid += 1;
-                if (valid>1)
+                if (valid > 1)
                     return true;
             }
             return false;
@@ -858,7 +936,7 @@
         updateStatus();
     }
 
-    function updateGraphLinks(){
+    function updateGraphLinks() {
 
         graph.links.forEach(function (d) {
             d.source = d.source;
@@ -868,7 +946,7 @@
         selectedLinks = JSON.parse(JSON.stringify(graph.links));
     }
 
-    function filterBidirEdges(){
+    function filterBidirEdges() {
         if (document.getElementById("toggleBidir").checked) {
             selectedLinks = selectedLinks.filter(function (l1) {
                 for (var l2_ in selectedLinks) {
@@ -883,7 +961,7 @@
     }
 
 
-    function updateStatus(){
+    function updateStatus() {
         var comCount = countCommunities();
 
         d3.select("#num_nodes").text(selectedNodes.length.toString());
@@ -892,7 +970,7 @@
     }
 
 
-    function filterEdgelessNodes(){
+    function filterEdgelessNodes() {
         if (!document.getElementById("edgeLess").checked) {
             selectedNodes = selectedNodes.filter(function (n) {
                 for (var l_ in selectedLinks) {
@@ -938,12 +1016,12 @@
 
     function filterNodes() {
         var metrics = ["degree", "betweenness", "pagerank", "community",
-                "closeness_centrality", "eigenvector_centrality", 'clustering_coefficient'];
+            "closeness_centrality", "eigenvector_centrality", 'clustering_coefficient'];
 
         toggleFociChecked = document.getElementById("toggleFociCB").checked;
 
         // replace community label 'foci' by '0'
-        graph.nodes.forEach(function(node){
+        graph.nodes.forEach(function (node) {
             if (node.community.toString().toLowerCase().includes('foci'))
                 node.community = 0;
             else {
@@ -954,7 +1032,7 @@
         nodesIndices = {};
 
         selectedNodes =
-            graph.nodes.filter(function(node){
+            graph.nodes.filter(function (node) {
                 for (var metric in node) {
                     if (metrics.includes(metric)) {
                         if (metric.includes("community")) {
@@ -968,9 +1046,9 @@
                         }
                     }
                 }
-                return (groupType.includes('None'))?true:collapseMap[node[groupType]] === undefined || collapseMap[node[groupType]];
+                return (groupType.includes('None')) ? true : collapseMap[node[groupType]] === undefined || collapseMap[node[groupType]];
             });
-        for (var n in selectedNodes){
+        for (var n in selectedNodes) {
             nodesIndices[selectedNodes[n].id] = n;
         }
 
@@ -986,18 +1064,16 @@
 
             var superNode = {};
             var counter = {};
-
             groupNodes.sort(function (a, b) {
                 b.betweenness - a.betweenness
             }).forEach(function (node) {
-
                 for (var metric in node) {
                     var distributable = (
                         isNaN(node[metric]) || metric.includes('SCC') || metric.includes('community'));
 
                     if (metric.includes('name')) {
-                        superNode[metric] = (superNode[metric] === undefined) ? "" : superNode[metric];
-                        superNode[metric] += node[metric] + ", ";
+                        superNode[metric+'s'] = (superNode[metric+'s'] === undefined) ? "" : superNode[metric+'s'];
+                        superNode[metric+'s'] += node[metric] + ", ";
                     }
                     else if (distributable) {
                         var v = node[metric].toString();
@@ -1012,7 +1088,6 @@
                 }
             });
 
-
             var len = parseFloat(groupNodes.length);
             // Taking averages
             for (var metric in superNode) {
@@ -1025,19 +1100,22 @@
             for (var metric in counter) {
                 if (metric.includes(groupType))
                     continue;
+
                 var report = "";
                 var reportVals = [];
                 for (var metricVal in counter[metric]) {
                     var ratio = (parseFloat(counter[metric][metricVal]) * 100.0 / len).toFixed(2);
                     reportVals.push({'ratio': ratio, 'val': metricVal});
                 }
-                for (var r in reportVals.sort(function (a, b) {
-                    return b.ratio - a.ratio
-                })) {  // sort in descending order
+                for (var r in
+                    reportVals.sort(function (a, b) {  // sort in descending order
+                        return b.ratio - a.ratio
+                    })) {
                     report += reportVals[r].val + ": " + reportVals[r].ratio + "%, ";
                 }
-
-                superNode[metric] = report;
+                //if (groupTypes.includes(metric))
+                //superNode[metric] = report.split(":")[0];
+                superNode[metric + "_dist"] = report;
             }
             /* Reporting the most dominant value of nominal metrics
                 for (var metric in counter) {
@@ -1057,7 +1135,7 @@
                 }*/
             delete superNode.i;
             superNode.id = clickedGroupId;
-            superNode.screen_name = groupType + "_" + clickedGroupId;
+            superNode.name = groupType + "_" + clickedGroupId;
             superNode.size = groupNodes.length;
 
             groupMap[superNode.id] = superNode;
@@ -1105,52 +1183,13 @@
                 .on('drag', group_dragged)
                 .on('end', group_dragended)
             )
-            .on("mouseover", function (_) {
-                var d = groupMap[_];
+            .on("mouseover", function(d){
                 d3.select(this).select('path').style("fill-opacity", 0.5).style('stroke-width', 3);
-
-                const cx = d3.select(this).attr("cx");
-                const cy = d3.select(this).attr("cy");
-
-                const focus = svg.append('g')
-                    .attr('class', 'focus');
-
-                focus.append('rect')
-                    .attr('height', 300 * 4)
-                    .attr('width', 300 * 4)
-                    .attr("x", cx)
-                    .attr("y", cy);
-                var x = 0.0;
-                for (var metric in d) {
-                    if (overhead.indexOf(metric) < 0) {
-                        x += 1.2;
-                        focus.append('text')
-                            .attr('x', cx + 10)
-                            .attr('y', cy + 10)
-                            .attr('dy', x + 'em')
-                            .attr('dx', '.5em')
-                            .style("font-size", 50)
-                            .text(metric + ": " + d[metric]);
-                    }
-                }
-
-                d3.select('.overlay')
-                    .styles({
-                        fill: 'none',
-                        'pointer-events': 'all'
-                    });
-
-                d3.selectAll('.focus')
-                    .style('opacity', 0.9);
-
-                d3.selectAll('.focus rect')
-                    .styles({
-                        fill: '#CFEEF1',
-                        stroke: 'black'
-                    });
+                groupOver(groupMap[d]);
             })
             .on("mouseout", function (d) {
                 d3.select(this).select('path').style("fill-opacity", 0.2).style('stroke-width', 1);
+                //document.getElementById("hoverInfo").innerHTML = '';
                 d3.selectAll(".focus").remove();
             })
             .on("click", bundleNodes);
@@ -1184,9 +1223,9 @@
         fillGroups();
     }
 
-    function getGroupLinks(superNode){
+    function getGroupLinks(superNode) {
         var groupNodeIds = [];
-        for (var n in selectedNodes){
+        for (var n in selectedNodes) {
             var node = selectedNodes[n];
             if (node[groupType] == superNode.id) {
                 groupNodeIds.push(node.id);
@@ -1195,16 +1234,16 @@
 
         var groupLinks = {};
 
-        for (var _ in selectedLinks){
+        for (var _ in selectedLinks) {
             var l = selectedLinks[_];
             var source, target;
 
             source = groupNodeIds.includes(getLinkEnd(l.source)) ? superNode : l.source;
             target = groupNodeIds.includes(getLinkEnd(l.target)) ? superNode : l.target;
 
-            if((source == superNode || target == superNode) && source.id != target.id) { // they are not two connections in the same group
-                var key = source.id.toString()+"-"+target.id.toString();
-                if (groupLinks[key] === undefined){
+            if ((source == superNode || target == superNode) && source.id != target.id) { // they are not two connections in the same group
+                var key = source.id.toString() + "-" + target.id.toString();
+                if (groupLinks[key] === undefined) {
                     var link = {};
                     link['source'] = source;
                     link['target'] = target;
@@ -1218,11 +1257,43 @@
         return groupLinks;
     }
 
-    function updateGroupLinks(superNode, groupLinks){
+    function updateGroupLinks(superNode, groupLinks) {
         updateLinks();  // filterNodes is called from inside updateLinks, Adding the superNode of the bundled nodes
-        for (var key in groupLinks){
+        for (var key in groupLinks) {
             selectedLinks.push(groupLinks[key]);
         }
+    }
+
+    function groupOver(d) {
+        document.getElementById("hoverInfo").innerHTML = '';
+        document.getElementById("distInfo").innerHTML = '';
+        d3.selectAll(".focus").remove();
+        console.log(d);
+        var p;
+        var intMetrics = ["SCC", "community", "id"];
+        for (var metric in d) {
+            var metricName;
+            if (overhead.indexOf(metric) < 0 && !["fx","fy"].includes(metric)) {
+                p = document.createElement("p");
+                var val = isNaN(d[metric]) ? d[metric] :
+                    (metric.includes("degree") || metric.includes("count")) || metric.includes("size") || intMetrics.includes(metric) ?
+                        parseInt(d[metric]) : parseFloat(d[metric]).toFixed(8);
+                if (metric.includes("names") || metric.includes('dist')){
+                    var p2 = document.createElement("p");
+                    metricName = metric.includes("names") ? metric.slice(0, -1) : metric.slice(0, -5);
+                    metricName = "Largest "+metricName;
+                    p2.textContent = metric + ": " + val;
+                    document.getElementById("distInfo").appendChild(p2);
+                    val = val.split(',')[0];
+                    p.textContent = metricName + ": " + val;
+                }
+                else{
+                    p.textContent = metric + ": " + val;
+                }
+                document.getElementById("hoverInfo").appendChild(p);
+            }
+        }
+
     }
 
     function bundleNodes(d, i) {
@@ -1243,12 +1314,7 @@
             * */
         // Creating the superNode
 
-        if (groupMap[d] === undefined) {
-            if (groupMap[d.id] === undefined)
-                return;
-            else
-                d = d.id;
-        }
+
         var superNode = groupMap[d];
 
         collapseMap[d] = collapseMap[d] ? false : true;  // toggle it
@@ -1283,7 +1349,6 @@
 
 
 </script>
-
 
 
 </body>

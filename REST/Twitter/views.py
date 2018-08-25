@@ -64,7 +64,7 @@ def networkx_to_snappy(nxg, directed=False):
     return g
 
 
-def get_homophily(nw, metric="lang"):
+def get_homophily(nw, metric="lang", decimals=3):
     langs_probs = dict()
     for n in nw.nodes():
         user = nw.nodes[n]
@@ -77,7 +77,8 @@ def get_homophily(nw, metric="lang"):
     cross_metric_ratio = cross_edges/float(len(nw.edges()))
     print("cross-metric edges ratio: ", cross_metric_ratio)
     print("Heterogeneity Fraction Norm", heterogeneity_fraction_norm)
-    return cross_metric_ratio < heterogeneity_fraction_norm, cross_metric_ratio, heterogeneity_fraction_norm
+    return cross_metric_ratio < heterogeneity_fraction_norm,\
+           round(cross_metric_ratio, decimals), round(heterogeneity_fraction_norm, decimals)
 
 
 def get_bidir_edges(G):
@@ -239,14 +240,14 @@ def get_dates():
 dates = get_dates()
 
 
-def get_avg_metric(graph, metric):
+def get_avg_metric(graph, metric, decimals=4):
     result = 0.0
     for node in graph["nodes"]:
         try:
             result += node[metric]
         except KeyError:
             return 0.
-    return result/len(graph["nodes"])
+    return round(result/len(graph["nodes"]), decimals)
 
 
 @lru_cache(maxsize=None)
@@ -356,7 +357,7 @@ def twitter_connections(request):
     _, bidir_edges = get_bidir_edges(ung.to_directed())
     del _
     homophily, heterogeneity, heterogeneity_threshold = get_homophily(ung)
-    transitivity = nx.transitivity(ung)
+    transitivity = round(nx.transitivity(ung), 4)
 
     avgs = None
     if len(filtered_twitter_connections["nodes"])<1:
