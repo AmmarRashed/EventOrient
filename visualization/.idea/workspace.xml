@@ -23,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twitter_clusters.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="twitter_clusters.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1854">
-              <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+            <state relative-caret-position="427">
+              <caret line="212" column="77" lean-forward="true" selection-start-line="211" selection-start-column="4" selection-end-line="212" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -44,17 +44,17 @@
       <file leaf-file-name="miserables2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miserables2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="241" column="36" lean-forward="true" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
+            <state relative-caret-position="4338">
+              <caret line="241" column="36" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miserables.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="miserables.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/miserables.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="208" column="19" lean-forward="true" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="19" />
+            <state relative-caret-position="3744">
+              <caret line="208" column="19" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -131,7 +131,6 @@
       <list>
         <option value="$PROJECT_DIR$/twitter_fb.html" />
         <option value="$PROJECT_DIR$/vega1.html" />
-        <option value="$PROJECT_DIR$/twitter_clusters.html" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
         <option value="$PROJECT_DIR$/miserables.json" />
         <option value="$PROJECT_DIR$/twitter_users_graph2_focinum.json" />
@@ -139,6 +138,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/miserables.html" />
         <option value="$PROJECT_DIR$/miserables.html" />
         <option value="$PROJECT_DIR$/miserables2.html" />
+        <option value="$PROJECT_DIR$/twitter_clusters.html" />
       </list>
     </option>
   </component>
@@ -162,7 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,6 +173,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,11 +265,13 @@
       <workItem from="1535036044112" duration="1402000" />
       <workItem from="1535043835211" duration="5000" />
       <workItem from="1535061125517" duration="1355000" />
+      <workItem from="1535184741667" duration="55000" />
+      <workItem from="1535184866130" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54066000" />
+    <option name="totallyTimeSpent" value="54143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1865" height="1092" extended-state="6" />
@@ -609,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1854">
-          <caret line="103" column="34" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/twitter_users_graph2_focinum.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -639,15 +634,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/miserables2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="241" column="36" lean-forward="true" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
+        <state relative-caret-position="4338">
+          <caret line="241" column="36" selection-start-line="241" selection-start-column="36" selection-end-line="241" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/miserables.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="208" column="19" lean-forward="true" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="19" />
+        <state relative-caret-position="3744">
+          <caret line="208" column="19" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twitter_clusters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="212" column="77" lean-forward="true" selection-start-line="211" selection-start-column="4" selection-end-line="212" selection-end-column="77" />
         </state>
       </provider>
     </entry>

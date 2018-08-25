@@ -119,6 +119,8 @@
     </form>
     <p>Include connection-less nodes
         <input id="edgeLess" type="checkbox" title="include nodes with no connections" onchange="updateLinks(); drawNetwork();" checked></p>
+<p>Highlight edges on mouse-over
+        <input id="edgeInfo" type="checkbox" title="Show edge info when you hover over it" onchange="edgeInfo=this.checked; toggleEdgeInfo();" checked></p>
 {#<input id="filter" type="submit" title="remove nodes with no connections" value="Clean Network" onclick="filterEdgelessNodes();">#}
 </div>
 
@@ -140,9 +142,13 @@
     <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 400px"
            oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
 
-    <p>Nodes' sizes: <span id='nodeScaler'>100</span></p>
+    <p>Node size: <span id='nodeScaler'>100</span></p>
     <input type="range" min="1" max="500" value="100" step="10" style="width: 400px"
            oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()">
+
+    <p>Edge width: <span id='edgeScaler'>1.0</span></p>
+    <input type="range" min="0.1" max="10" value="1.0" step="0.1" style="width: 400px"
+           oninput="esizeScaler= value; d3.select('#edgeScaler').text(esizeScaler); resetEdges()">
 
 </div>
 
@@ -211,6 +217,7 @@
             .y(function(d) { return d[1]; })
             .curve(d3.curveCatmullRomClosed),
         collapseMap,
+        edgeInfo,
         toggleFociChecked,
         groupMap,
         nodesIndices,
@@ -219,10 +226,10 @@
         paths,
         groups,
         groupIds,
-        groupIdsMaps,
         scaleFactor = 1.2,
         gravityForce = -600,
         sizeScaler=100,
+        esizeScaler=1,
         polygon,
         centroid,
         graph,
@@ -291,6 +298,64 @@
 
     }
 
+    function toggleEdgeInfo(){
+        if (edgeInfo){
+            svg.selectAll("line")
+            .on("mouseover", function(d){
+                d3.select(this).style("stroke-width", link_over);
+                const focus = svg.append('g')
+                    .attr('class', 'focus');
+                const cx = d3.mouse(this)[0];
+                const cy = d3.mouse(this)[1];
+                focus.append('rect')
+                    .attr('height', 180)
+                    .attr('width', 300)
+                    .style("stroke-width","0.05")
+                    .attr("x", cx)
+                    .attr("y", cy);
+                var x = 0.0;
+                for (var metric in d){
+                    var s;
+                    if (metric=="weight"){
+                        s = d[metric];
+                    }
+                    else{
+                        s = d[metric].name;
+                    }
+                    if (overhead.indexOf(metric)<0){
+                        x += 1.2;
+                        focus.append('text')
+                            .attr('x', cx)
+                            .attr('y', cy)
+                            .attr('dy', x + 'em')
+                            .attr('dx', '.5em')
+                            .style("font-size", 30)
+                            .text(metric +": "+s);
+                    }
+                }
+                d3.select('.overlay')
+                    .styles({
+                        fill: 'none',
+                        'pointer-events': 'all'
+                    });
+                d3.selectAll('.focus')
+                    .style('opacity', 0.9);
+                d3.selectAll('.focus rect')
+                    .styles({
+                        fill: '#CFEEF1',
+                        stroke: 'black'
+                    });
+            })
+            .on("mouseout",function(d){
+                d3.select(this).style("stroke-width", link_weight);
+                d3.selectAll(".focus").remove();
+            });
+        }
+        else{
+            svg.selectAll("line").on("mouseover", function(){});
+        }
+    }
+
     function drawNetwork() {
         svg.selectAll("*").remove();
 
@@ -345,8 +410,8 @@
                     .attr("y", cy);
                 var x = 0.0;
                 for (var metric in d) {
-                    x += 1.2;
                     if (overhead.indexOf(metric) < 0) {
+                        x += 1.2;
                         focus.append('text')
                             .attr('x', cx + 10)
                             .attr('y', cy + 10)
@@ -378,6 +443,56 @@
             })
             .on("click", bundleNodes);
 
+        svg.selectAll("line")
+            .on("mouseover", function(d){
+                d3.select(this).style("stroke-width", link_over);
+                const focus = svg.append('g')
+                    .attr('class', 'focus');
+                const cx = d3.mouse(this)[0];
+                const cy = d3.mouse(this)[1];
+                focus.append('rect')
+                    .attr('height', 180)
+                    .attr('width', 300)
+                    .style("stroke-width","0.05")
+                    .attr("x", cx)
+                    .attr("y", cy);
+                var x = 0.0;
+                for (var metric in d){
+                    var s;
+                    if (metric=="weight"){
+                        s = d[metric];
+                    }
+                    else{
+                        s = d[metric].name;
+                    }
+                    if (overhead.indexOf(metric)<0){
+                        x += 1.2;
+                        focus.append('text')
+                            .attr('x', cx)
+                            .attr('y', cy)
+                            .attr('dy', x + 'em')
+                            .attr('dx', '.5em')
+                            .style("font-size", 30)
+                            .text(metric +": "+s);
+                    }
+                }
+                d3.select('.overlay')
+                    .styles({
+                        fill: 'none',
+                        'pointer-events': 'all'
+                    });
+                d3.selectAll('.focus')
+                    .style('opacity', 0.9);
+                d3.selectAll('.focus rect')
+                    .styles({
+                        fill: '#CFEEF1',
+                        stroke: 'black'
+                    });
+            })
+            .on("mouseout",function(d){
+                d3.select(this).style("stroke-width", link_weight);
+                d3.selectAll(".focus").remove();
+            });
 
         simulation
             .nodes(selectedNodes)
@@ -508,14 +623,26 @@
     }
 
 
-    function getRandomColor() {
+    /*function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
         for (var i = 0; i < 6; i++) {
             color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
-    }
+    }*/
+
+    function link_weight(d){
+        if(d.weight === undefined){
+            d.weight = 1.0;
+        }
+        return Math.max(d.weight*esizeScaler, 1.0).toString();}
+
+    function link_over(d){
+        if(d.weight === undefined){
+            d.weight = 1.0;
+        }
+        return Math.max(d.weight*esizeScaler, 1.0)*5.0.toString();}
 
     function searchNode() {
         var selectedVal = document.getElementById('search').value;
@@ -556,6 +683,11 @@
         filterBidirEdges();
         drawNetwork();
     }*/
+
+    function resetEdges(){
+        var all_edges = link.filter(function(d, i){return true;});
+        all_edges.style("stroke-width", link_weight);
+    }
 
     function resetNodes(){
         var all_nodes = node.filter(function (d, i){
@@ -874,6 +1006,8 @@
             superNode[groupType] = clickedGroupId;
             // Reporting the distribution of the values of the nominal metrics
             for (var metric in counter) {
+                if (metric.includes(groupType))
+                    continue;
                 var report = "";
                 var reportVals = [];
                 for (var metricVal in counter[metric]) {
@@ -885,6 +1019,7 @@
                 })) {  // sort in descending order
                     report += reportVals[r].val + ": " + reportVals[r].ratio + "%, ";
                 }
+
                 superNode[metric] = report;
             }
             /* Reporting the most dominant value of nominal metrics
@@ -970,8 +1105,8 @@
                     .attr("y", cy);
                 var x = 0.0;
                 for (var metric in d) {
-                    x += 1.2;
                     if (overhead.indexOf(metric) < 0) {
+                        x += 1.2;
                         focus.append('text')
                             .attr('x', cx + 10)
                             .attr('y', cy + 10)
