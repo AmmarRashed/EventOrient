@@ -228,23 +228,6 @@
         svg.attr("transform", d3.event.transform);
     }
 
-    svg.append('defs').append('marker')
-        .attrs({
-            'id': 'arrowhead',
-            'viewBox': '-0 -5 10 10',
-            'refX': 13,
-            'refY': 0,
-            'orient': 'auto',
-            'markerWidth': 10,
-            'markerHeight': 10,
-            'xoverflow': 'visible'
-        })
-        .append('svg:path')
-        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-        .attr('fill', '#999')
-        .style('stroke', 'none');
-
-
     var node,
         link,
         label,
@@ -421,6 +404,24 @@
     function drawNetwork() {
         svg.selectAll("*").remove();
 
+        svg.append('defs').append('marker')
+        .attrs({
+            'id': 'arrowhead',
+            'viewBox': '-0 -5 10 10',
+            'refX': 13,
+            'refY': 0,
+            'orient': 'auto',
+            'markerWidth': 10,
+            'markerHeight': 10,
+            'xoverflow': 'visible'
+        })
+        .append('svg:path')
+        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+        .attr('fill', '#999')
+        .style('stroke', 'none');
+
+
+
         link = svg.append("g")
             .style("stroke", "#aaa")
             .style("stroke-opacity", "0.8")
@@ -470,8 +471,17 @@
                     .attr("x", cx)
                     .attr("y", cy);
                 var x = 0.0;
-                var displayMetrics = ["screen_name", "lang", "followers_count", "degree", "community"];
+                var displayMetrics;
+                var toGroupOver = false;
+                if (groupMap === undefined || groupMap[d.id] === undefined){
+                    displayMetrics = ["screen_name", "lang", "followers_count", "degree", "community"];
+                }else{
+                    console.log(d);
+                    displayMetrics = ["name","community","size"];
+                    toGroupOver = true;
+                }
                 displayMetrics.forEach(function (metric){
+
                     if (overhead.indexOf(metric) < 0) {
                         x += 1.2;
                         var val = isNaN(d[metric]) ? d[metric] :
@@ -501,6 +511,8 @@
                         fill: '#CFEEF1',
                         stroke: 'black'
                     });
+                if (toGroupOver)
+                    groupOver(groupMap[d.id]);
             })
             .on("mouseout", function (d) {
                 d3.select(this).style("r", node_scale).style("fill-opacity", 0.7).style('stroke-width', 2);
@@ -620,8 +632,8 @@
         .
             style("font-size", "10px")
                 .style("fill", "#4393c3")
-                .text(d => d.screen_name
-        )
+                .text(function(d){return (groupMap === undefined || groupMap[d.id] === undefined)?
+                    d.screen_name:d.name;})
             ;
 
             updateGroups();
@@ -1268,7 +1280,6 @@
         document.getElementById("hoverInfo").innerHTML = '';
         document.getElementById("distInfo").innerHTML = '';
         d3.selectAll(".focus").remove();
-        console.log(d);
         var p;
         var intMetrics = ["SCC", "community", "id"];
         for (var metric in d) {
