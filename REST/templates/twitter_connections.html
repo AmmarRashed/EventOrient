@@ -251,6 +251,8 @@
     {#drawNetwork(selectedDegree, is_directed);#}
     initNetwork();
 
+    var fr = {};
+
     function initNetwork(){
         d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function(error, g) {
             if (error) throw error;
@@ -273,7 +275,18 @@
                 d3.select('#groupLabel').text(val);
                 groupType = val;
                 {#valueline.curve(d3[val]);#}
-                updateGroupIds();
+                if (fr[groupType] === undefined) {
+                    updateGroupIds();
+                    fr[groupType] = {"ids":groupIds, "groupMap":groupMap};
+                    var i = 0;
+                    groupIds.forEach(function(d){i+=1;});
+                    console.log(groupType, i)
+                }else{
+                    console.log("LOADING:", groupType, "Stats");
+                    groupIds = fr[groupType]["ids"];
+                    groupMap = fr[groupType]["groupMap"];
+                }
+                updatePaths();
                 updateGroups();
             })
             .selectAll('option')
@@ -544,9 +557,7 @@
         )
             ;
 
-
             updateGroups();
-
         }
     }
 
@@ -765,16 +776,19 @@
     }
 
     function updateGroups() {
+        var i;
         if (!((groupIds === undefined) || (groupIds == null))) {
             try {
-                groupIds.forEach(function (groupId) {
+            groupIds.forEach(function (groupId) {
+                i = groupId;
+                if (collapseMap[groupId]) {
                     var path = paths.filter(function (d) {
-                        return d == groupId;
-                    })
-                        .attr('transform', 'scale(1) translate(0,0)')
+                        return collapseMap[d]? d == groupId : false;
+                        // return d == groupId;
+                    });
+                    path.attr('transform', 'scale(1) translate(0,0)')
                         .attr('d', function (d) {
                             polygon = polygonGenerator(d);
-
                             centroid = d3.polygonCentroid(polygon);
 
                             // to scale the shape properly around its points:
@@ -788,10 +802,12 @@
                             );
                         });
 
+
                     d3.select(path.node().parentNode).attr('transform', 'translate(' + centroid[0] + ',' + (centroid[1]) + ') scale(' + scaleFactor + ')');
-                });
+                }
+            });
             }catch (err){
-                console.log("ERROR:", err)
+                console.log("ERROR:", i, collapseMap[i]);
             }
         }
     }
@@ -914,9 +930,9 @@
 
     function addSuperNodes() {
         for (var n in collapseMap) {
-            if (!collapseMap[n]) { // superNode
+            if (!collapseMap[n])  // superNode
                 selectedNodes.push(groupMap[n]);
-            }
+
         }
     }
 
@@ -958,6 +974,7 @@
             nodesIndices[selectedNodes[n].id] = n;
         }
 
+        addSuperNodes();
     }
 
     function fillGroups() {
@@ -1165,15 +1182,15 @@
             });
 
         fillGroups();
-        updatePaths();
     }
 
     function getGroupLinks(superNode){
         var groupNodeIds = [];
         for (var n in selectedNodes){
             var node = selectedNodes[n];
-            if (node[groupType] == superNode.id)
+            if (node[groupType] == superNode.id) {
                 groupNodeIds.push(node.id);
+            }
         }
 
         var groupLinks = {};
@@ -1198,13 +1215,11 @@
                     groupLinks[key]['weight'] += 1;
             }
         }
-        console.log(groupLinks);
         return groupLinks;
     }
 
     function updateGroupLinks(superNode, groupLinks){
         updateLinks();  // filterNodes is called from inside updateLinks, Adding the superNode of the bundled nodes
-        addSuperNodes();
         for (var key in groupLinks){
             selectedLinks.push(groupLinks[key]);
         }
@@ -1239,14 +1254,15 @@
         collapseMap[d] = collapseMap[d] ? false : true;  // toggle it
 
         if (!collapseMap[d]) {  // currently not bundled, bundle it
-            var index = groupIds.indexOf(d);
-            groupIds.splice(index, 1);
+            //var index = groupIds.indexOf(d);
+            //groupIds.splice(index, 1);
 
             d3.selectAll(".focus").remove();
 
             var groupLinks = getGroupLinks(superNode);
 
-            updatePaths();
+            updateGroups();
+            //updatePaths();
 
             updateGroupLinks(superNode, groupLinks);  // updating links and adding superNode are inside this function
 
@@ -1255,11 +1271,11 @@
 
 
         } else { // currently bundled, collapse it
+            //updateGroupIds();
             updateGroups();
             updateLinks();  // filterNodes is called from inside updateLinks
         }
 
-        updatePaths();
         drawNetwork();
 
 
