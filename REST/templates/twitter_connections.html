@@ -11,7 +11,6 @@
 .hoverP{
     white-space: normal;
     width: 300px;
-    overflow:hidden;
     }
 
     path {
@@ -404,9 +403,11 @@
     }
 
     function drawNetwork() {
-        svg.selectAll("*").remove();
+        svg.selectAll(".links").remove();
+        svg.selectAll(".nodes").remove();
+        svg.selectAll(".labels").remove();
 
-        svg.append('defs').append('marker')
+        /*svg.append('defs').append('marker')
         .attrs({
             'id': 'arrowhead',
             'viewBox': '-0 -5 10 10',
@@ -420,7 +421,7 @@
         .append('svg:path')
         .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
         .attr('fill', '#999')
-        .style('stroke', 'none');
+        .style('stroke', 'none');*/
 
 
 
@@ -868,11 +869,9 @@
     }
 
     function updateGroups() {
-        var i;
         if (!((groupIds === undefined) || (groupIds == null))) {
             try {
                 groupIds.forEach(function (groupId) {
-                    i = groupId;
                     if (collapseMap[groupId]) {
                         var path = paths.filter(function (d) {
                             return collapseMap[d] ? d == groupId : false;
@@ -899,7 +898,7 @@
                     }
                 });
             } catch (err) {
-                console.log("ERROR:", i, collapseMap[i]);
+                console.log("ERROR:", err);
             }
         }
     }
@@ -926,9 +925,9 @@
             var valid = 0;  // check if both ends of the connection are in selectedNodes
 
             for (var n in selectedNodes) {
-                node_id = getLinkEnd(selectedNodes[n]);
-                source_id = getLinkEnd(l.source);
-                target_id = getLinkEnd(l.target);
+                var node_id = getLinkEnd(selectedNodes[n]);
+                var source_id = getLinkEnd(l.source);
+                var target_id = getLinkEnd(l.target);
 
 
                 {#console.log(node_id, source_id, l.source);#}
@@ -1096,8 +1095,10 @@
                         counter[metric][v] += 1
                     }
                     else { // numeric metric
-                        superNode['avg_'+metric] = (superNode['avg_'+metric] === undefined) ? 0.0 : superNode['avg_'+metric];
-                        superNode['avg_'+metric] += node[metric];
+                        //superNode['avg_'+metric] = (superNode['avg_'+metric] === undefined) ? 0.0 : superNode['avg_'+metric];
+                        //superNode['avg_'+metric] += node[metric];
+                        superNode[metric] = (superNode[metric] === undefined) ? 0.0 : superNode[metric];
+                        superNode[metric] += node[metric];
                     }
                 }
             });
@@ -1282,11 +1283,12 @@
         document.getElementById("hoverInfo").innerHTML = '';
         document.getElementById("distInfo").innerHTML = '';
         d3.selectAll(".focus").remove();
+        const isGroup = groupMap === undefined ? false : groupMap[d.id] !== undefined;
         var p;
         var intMetrics = ["SCC", "community", "id"];
         for (var metric in d) {
             var metricName;
-            if (overhead.indexOf(metric) < 0 && !["avg_x","avg_y", "avg_vx","avg_vy", "avg_index"].includes(metric)) {
+            if (overhead.indexOf(metric) < 0 && !["fx","fy","x","y", "vx","vy", "index"].includes(metric)) {
                 p = document.createElement("p");
                 p.className = "hoverP";
 
@@ -1303,7 +1305,10 @@
                     p.textContent = metricName + ": " + val;
                 }
                 else{
-                    p.textContent = metric + ": " + val;
+
+                    const numericMetricName = (["name", "size", "id", groupType].includes(metric)) ? metric:
+                                        isGroup? "avg_"+metric:metric;
+                    p.textContent = numericMetricName + ": " + val;
                 }
                 document.getElementById("hoverInfo").appendChild(p);
             }
