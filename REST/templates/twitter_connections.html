@@ -8,6 +8,12 @@
         font-family: 'Times', cursive;
     }
 
+.hoverP{
+    white-space: normal;
+    width: 300px;
+    overflow:hidden;
+    }
+
     path {
         fill-opacity: .2;
         stroke-opacity: 1;
@@ -23,9 +29,6 @@
         content: "";
         clear: both;
         display: table;
-    }
-    body{
-        overflow-wrap: break-word;
     }
 
 </style>
@@ -186,8 +189,7 @@
     <svg height="600" class="column" width="70.0%"></svg>
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
 
-    <div class="column" width="15.0%">
-        <div id="hoverInfo"></div>
+    <div id="hoverInfo" class="column" width="15.0%">
     </div>
 </div>
     <div id="distInfo"></div>
@@ -466,8 +468,8 @@
                 const cy = d3.select(this).attr("cy");
 
                 focus.append('rect')
-                    .attr('height', 320)
-                    .attr('width', 300 * 4)
+                    .attr('height', 520)
+                    .attr('width', 850)
                     .attr("x", cx)
                     .attr("y", cy);
                 var x = 0.0;
@@ -492,7 +494,7 @@
                             .attr('y', cy + 10)
                             .attr('dy', x + 'em')
                             .attr('dx', '.5em')
-                            .style("font-size", 50)
+                            .style("font-size", 70)
                             .text(metric + ": " + val);
                     }
                 });
@@ -1094,8 +1096,8 @@
                         counter[metric][v] += 1
                     }
                     else { // numeric metric
-                        superNode[metric] = (superNode[metric] === undefined) ? 0.0 : superNode[metric];
-                        superNode[metric] += node[metric];
+                        superNode['avg_'+metric] = (superNode['avg_'+metric] === undefined) ? 0.0 : superNode['avg_'+metric];
+                        superNode['avg_'+metric] += node[metric];
                     }
                 }
             });
@@ -1284,8 +1286,10 @@
         var intMetrics = ["SCC", "community", "id"];
         for (var metric in d) {
             var metricName;
-            if (overhead.indexOf(metric) < 0 && !["fx","fy"].includes(metric)) {
+            if (overhead.indexOf(metric) < 0 && !["avg_x","avg_y", "avg_vx","avg_vy", "avg_index"].includes(metric)) {
                 p = document.createElement("p");
+                p.className = "hoverP";
+
                 var val = isNaN(d[metric]) ? d[metric] :
                     (metric.includes("degree") || metric.includes("count")) || metric.includes("size") || intMetrics.includes(metric) ?
                         parseInt(d[metric]) : parseFloat(d[metric]).toFixed(8);
