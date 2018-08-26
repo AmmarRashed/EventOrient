@@ -60,7 +60,7 @@
 
     Scale of the groups: <span id='scaleFactorLabel'>1.2</span>
     <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 200px"
-           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroups()">
+           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroupPolygons()">
 
     Network's gravity: <span id='gravityForce'>-600</span>
     <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 200px"
@@ -259,7 +259,7 @@
         polygon,
         centroid,
         graph,
-        color = d3.scaleOrdinal(d3.schemeCategory20),
+        color = d3.scaleOrdinal({{ colors|safe }}),
         size_metric, avgSize, maxSize, minSize,
         groupTypes = ["None", "SCC", "community"],
         groupType = "None",
@@ -271,7 +271,7 @@
             .force("center", d3.forceCenter(width / 2, height / 2));
 
     is_directed = true;  // TODO set checkbox for that
-
+    //color = d3.scaleOrdinal(d3.schemeCategory20);
     {#var curveTypes = ['curveBasisClosed', 'curveCardinalClosed', 'curveCatmullRomClosed', 'curveLinearClosed'],#}
 
     {#selectedDegree = document.getElementById('degree').value;#}
@@ -317,7 +317,7 @@
                         groupMap = fr[groupType]["groupMap"];
                     }
                     updatePaths();
-                    updateGroups();
+                    updateGroupPolygons();
                 })
                 .selectAll('option')
                 .data(groupTypes).enter()
@@ -330,14 +330,16 @@
             // create groups, links and nodes
             groups = svg.append('g').attr('class', 'groups');
 
-            /*var colors = [];
-
-            communitiesSet.forEach(function (c){
+            /*communitiesSet.forEach(function (c){
                colors.push(getRandomColor());
-            });
+            });*/
 
-            color = d3.scaleOrdinal(colors);
-            */
+            /*if (communitiesSet.size > colors.length) {
+                for (var i = 0; i < Math.max(communitiesSet.size, 50); i++)  // add more 50 colors
+                    colors.push(getRandomColor());
+            }
+
+            color = d3.scaleOrdinal(colors);*/
             drawNetwork();
         });
 
@@ -406,8 +408,11 @@
         svg.selectAll(".links").remove();
         svg.selectAll(".nodes").remove();
         svg.selectAll(".labels").remove();
-
-        /*svg.append('defs').append('marker')
+        if (groupType != 'None'){
+            updatePaths();
+            updateGroupPolygons();
+        }
+        svg.append('defs').append('marker')
         .attrs({
             'id': 'arrowhead',
             'viewBox': '-0 -5 10 10',
@@ -421,7 +426,7 @@
         .append('svg:path')
         .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
         .attr('fill', '#999')
-        .style('stroke', 'none');*/
+        .style('stroke', 'none');
 
 
 
@@ -639,7 +644,7 @@
                     d.screen_name:d.name;})
             ;
 
-            updateGroups();
+            updateGroupPolygons();
         }
     }
 
@@ -718,12 +723,20 @@
         d3.select(this).select('path').style('stroke-width', 1);
     }
 
+    /*var seed = 120;
 
-    /*function getRandomColor() {
+    function random() {
+        var x = Math.sin(seed++) * 10000;
+        return x - Math.floor(x);
+    }
+
+
+    function getRandomColor() {
         var letters = '0123456789ABCDEF';
         var color = '#';
         for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
+            //color += letters[Math.floor(Math.random() * 16)];
+            color += letters[Math.floor(random() * 16)];
         }
         return color;
     }*/
@@ -868,7 +881,7 @@
         resetNodes();
     }
 
-    function updateGroups() {
+    function updateGroupPolygons() {
         if (!((groupIds === undefined) || (groupIds == null))) {
             try {
                 groupIds.forEach(function (groupId) {
@@ -1347,8 +1360,8 @@
 
             var groupLinks = getGroupLinks(superNode);
 
-            updateGroups();
-            //updatePaths();
+            {#updatePaths();#}
+            {#updateGroupPolygons();#}
 
             updateGroupLinks(superNode, groupLinks);  // updating links and adding superNode are inside this function
 
@@ -1358,7 +1371,8 @@
 
         } else { // currently bundled, collapse it
             //updateGroupIds();
-            updateGroups();
+            {#updatePaths();#}
+            {#updateGroupPolygons();#}
             updateLinks();  // filterNodes is called from inside updateLinks
         }
 

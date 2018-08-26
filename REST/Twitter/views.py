@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import random
+
 try:
     from functools import lru_cache
 except ImportError:
@@ -24,6 +26,7 @@ from networkx.readwrite import json_graph
 
 _dir = os.path.dirname(os.path.realpath(__file__))
 root_dir = os.path.dirname(_dir)
+
 
 user = "postgres"
 password = "1_sehir_1"
@@ -91,7 +94,6 @@ def get_bidir_edges(G):
             G.remove_edge(f, t)
     return G, bidir_edges
 
-
 def label_nodes_SCCs(G):
     nodes_sccs = {}  # {node: scc_id}
     snappy_directed = networkx_to_snappy(G, True)
@@ -119,6 +121,7 @@ def calculate_communities(G):
         for NI in Cmty:
             nodes_communities.setdefault(NI, [])
             nodes_communities[NI].append(i + 2)
+
     return nodes_communities
 
 
@@ -221,6 +224,7 @@ size_metrics = ["degree", "in_degree", "out_degree",
                 "pagerank","clustering_coefficient", "followers_count"]
 
 
+
 @lru_cache(maxsize=None)
 def get_connections_by_date(date):
     nw = deepcopy(user_connections)
@@ -306,9 +310,11 @@ def present_in_date(changes_dates, queried_date):
         present = changes_dates[d]
     return present
 
+def get_communities_count(data, group='community'):
+    return len(set([i[group] for i in data['nodes']]))
+
 
 def twitter_connections(request):
-
     global degree_threshold, filtered_twitter_connections, \
         btw_threshold, pagerank_threshold, closeness_threshold, \
         eigenvector_threshold, size_metric,size_metrics, recalculate_checked, foci_checked,\
@@ -367,12 +373,14 @@ def twitter_connections(request):
         avgs = {"avg_"+metric:get_avg_metric(filtered_twitter_connections, metric) for metric in size_metrics}
         sizes = [n[size_metric] for n in filtered_twitter_connections["nodes"]]
 
+    all_colors = json.load(open(root_dir + "/static/communities/colors.json", 'r'))
+    colors = [str(c) for c in all_colors[:get_communities_count(filtered_twitter_connections)]]
+    del all_colors
     # "degree_threshold": degree_threshold,
     # "btw_threshold": btw_threshold,
     # "pagerank_threshold": pagerank_threshold,
     # "closeness_threshold": closeness_threshold,
     # "eigenvector_threshold": eigenvector_threshold,
-
     context = {"size_metrics": size_metrics,
                "recalculate_checked":int(recalculate_checked),
                "recalculate_coms_checked": int(recalculate_coms_checked),
@@ -392,7 +400,8 @@ def twitter_connections(request):
                "heterogeneity_threshold":heterogeneity_threshold,
                "bidir_edges":bidir_edges,
                "bidir_ratio":bidir_edges*100/len(filtered_twitter_connections["links"]),
-               "recalculate_SCCs_checked":int(recalculate_SCCs_checked)}
+               "recalculate_SCCs_checked":int(recalculate_SCCs_checked),
+               "colors":colors}
     if avgs:
         context.update(avgs)
 
