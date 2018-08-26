@@ -636,7 +636,12 @@
         )
         .
             style('fill-opacity', 0.7)
-                .style('fill', d => color(d.community)
+                .style('fill', function(d) {
+                    if(groupType == "SCC" && groupMap[d.id] != undefined)
+                        return color(parseInt(d.SCC));
+                    else
+                        return color(parseInt(d.community))
+                }
         )
         .
             style('stroke', "none");
@@ -1262,10 +1267,10 @@
             .attr('class', 'path_placeholder')
             .append('path')
             .attr('stroke', function (d) {
-                return color(d);
+                return color(parseInt(groupMap[d][groupType]));
             })
             .attr('fill', function (d) {
-                return color(d);
+                return color(parseInt(groupMap[d][groupType]));
             })
             .attr('opacity', 0);
 
@@ -1470,6 +1475,7 @@
 
         //console.log(groupOutLinks);
         drawNetwork();
+
 
 
 
