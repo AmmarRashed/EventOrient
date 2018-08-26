@@ -33,8 +33,8 @@
 </style>
 <body>
     <input id="search" size='25'>
-    <button type="button" onclick="searchNode()">Find Node</button>
-    <button type="button" onclick="resetNodes()">Reset</button>
+    <button id="searchBtn" type="button" onclick="searchNode()">Find Node</button>
+    <button id="resetBtn" type="button" onclick="resetNodes()">Reset</button>
 
 <div class="row">
 <div id="groupSettings" class="column">
@@ -773,15 +773,35 @@
         }
         else {
             var selected = node.filter(function (d, i) {
-                return (d.screen_name.includes(selectedVal) ||
-                    d.match_name.includes(selectedVal) ||
-                    d.name.includes(selectedVal));
+                if (d.screen_name !== undefined){
+                    if (d.screen_name.includes(selectedVal))
+                        return true;
+                }
+                else if (d.match_name !== undefined){
+                    if(d.match_name.includes(selectedVal))
+                        return true;
+                }
+                else if(d.name !== undefined){
+                    if (d.name.includes(selectedVal))
+                        return true;
+                }
+                return false;
             });
 
             var nonselected = node.filter(function (d, i) {
-                return !(d.screen_name.includes(selectedVal) ||
-                    d.match_name.includes(selectedVal) ||
-                    d.name.includes(selectedVal));
+                if (d.screen_name !== undefined){
+                    if (d.screen_name.includes(selectedVal))
+                        return false;
+                }
+                else if (d.match_name !== undefined){
+                    if(d.match_name.includes(selectedVal))
+                        return false;
+                }
+                else if(d.name !== undefined){
+                    if (d.name.includes(selectedVal))
+                        return false;
+                }
+                return true;
             });
             nonselected.style("opacity", "0.1");
             selected.style("opacity", 1.0);
@@ -1440,24 +1460,17 @@
 
         collapseMap[d] = collapseMap[d] ? false : true;  // toggle it
 
-        if (!collapseMap[d]) {  // currently not bundled, bundle it
-            //var index = groupIds.indexOf(d);
-            //groupIds.splice(index, 1);
-
+        if (!collapseMap[d])  // currently not bundled, bundle it
             d3.selectAll(".focus").remove();
 
-            //updateGroupLinks(superNode);
-            //updateAllGroupsLinks(superNode);
-
-
-        }
 
         AddGroupsLinks();  // updating links and adding superNode are inside this function
-        //filterBidirEdges();
+        filterBidirEdges();
         filterEdgelessNodes();
 
         //console.log(groupOutLinks);
         drawNetwork();
+
 
 
     }

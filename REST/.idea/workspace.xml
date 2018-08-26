@@ -42,8 +42,8 @@
       <file leaf-file-name="twitter_connections.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-429">
-              <caret line="1341" column="25" lean-forward="true" selection-start-line="1341" selection-start-column="25" selection-end-line="1341" selection-end-column="25" />
+            <state relative-caret-position="315">
+              <caret line="1472" column="0" lean-forward="false" selection-start-line="1472" selection-start-column="0" selection-end-line="1472" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,15 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ins</find>
-      <find>INs</find>
-      <find>communityOutLinks</find>
-      <find>groupInLinks</find>
-      <find>GroupInLinks</find>
-      <find>bidirEdges</find>
-      <find>defs</find>
-      <find>vx</find>
-      <find>overhead</find>
       <find>avg_</find>
       <find>mouseover</find>
       <find>text =</find>
@@ -100,6 +91,15 @@
       <find>addLinks</find>
       <find>sort</find>
       <find>new Set</find>
+      <find>find nod</find>
+      <find>bundleNodes</find>
+      <find>click</find>
+      <find>byId</find>
+      <find>settings</find>
+      <find>bundleNon</find>
+      <find>alert</find>
+      <find>searchNode</find>
+      <find>searc</find>
     </findStrings>
     <replaceStrings>
       <replace>groupingType(</replace>
@@ -747,8 +747,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/twitter_connections.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-429">
-          <caret line="1341" column="25" lean-forward="true" selection-start-line="1341" selection-start-column="25" selection-end-line="1341" selection-end-column="25" />
+        <state relative-caret-position="315">
+          <caret line="1472" column="0" lean-forward="false" selection-start-line="1472" selection-start-column="0" selection-end-line="1472" selection-end-column="0" />
           <folding />
         </state>
       </provider>
