@@ -51,7 +51,7 @@
 </div>
 
         Node scale: <span id='nodeScaler'>100</span>
-    <input type="range" min="1" max="500" value="100" step="10" style="width: 150px"
+    <input type="range" min="1" max="500" value="100" step="1" style="width: 150px"
            oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()">
 
     Edge width: <span id='edgeScaler'>1.0</span>
@@ -59,7 +59,7 @@
            oninput="esizeScaler= value; d3.select('#edgeScaler').text(esizeScaler); resetEdges()">
 
     Scale of the groups: <span id='scaleFactorLabel'>1.2</span>
-    <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 200px"
+    <input type="range" min="0.9" max="3" value="1.2" step=".1" style="width: 200px"
            oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroupPolygons()">
 
     Network's gravity: <span id='gravityForce'>-600</span>
@@ -81,7 +81,8 @@
         <p>
             Nodes: <span id="num_nodes">{{ nodes_number }}</span> </br> Edges: <span
                 id="num_edges">{{ edges_number }}</span>
-            <br>Communities: <span id="num_communities"></span></br>
+            <br>Communities: <span id="num_communities"></span>
+            <br>SCCs: <span id="num_SCCs"></span></br>
             Homophily: {{ homophily_value }} <br>( Heterogeneity: {{ heterogeneity }},
             Threshold: {{ heterogeneity_threshold }})
             <br>
@@ -95,9 +96,6 @@
             <br>
             Recalculate communities:
             <input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked">
-            <br>
-            Recalculate SCCs:
-            <input type="checkbox" id="recalculate_SCCs_checked" name="recalculate_SCCs_checked">
             <br>
             Include community accounts (e.g. clubs):
             <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="updateLinks(); drawNetwork();">
@@ -197,9 +195,7 @@
 
     document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
     document.getElementById("recalculate_coms_checked").checked = {{recalculate_coms_checked}};
-    document.getElementById("recalculate_SCCs_checked").checked = {{recalculate_SCCs_checked}};
     document.getElementById("toggleFociCB").checked = {{foci_checked}};
-
     document.getElementById("toggleBidir").checked = {{bidir}};
 
     d3.select("svg").attr("width", window.screen.height)
@@ -953,12 +949,25 @@
         }
     }
 
-    function countCommunities() {
-        communitiesSet = new Set([]);
+    function countCommunities(group, minSize=1) {
+        var groupSizes = {};
+        if (group.includes("community") && groupType.includes("community"))
+            communitiesSet = new Set([]);
         selectedNodes.forEach(function (node) {
-            communitiesSet.add(parseInt(node.community));
+            var id = node[group];
+            if (id !== undefined) {
+                groupSizes[id] = groupSizes[id] === undefined ? 0 : groupSizes[id];
+                groupSizes[id] += 1;
+                if (group.includes("community") && groupType.includes("community"))
+                    communitiesSet.add(id);
+            }
         });
-        return communitiesSet.size;
+        var count = 0;
+        for (var g in groupSizes){
+            if ((groupSizes[g]>=minSize) || (group===groupType && (!collapseMap[g])))
+                count += 1;
+        }
+        return count;
 
     }
 
@@ -1040,11 +1049,12 @@
 
 
     function updateStatus() {
-        var comCount = countCommunities();
-
+        var comCount = countCommunities("community");
+        var sccCount = countCommunities("SCC", 2);
         d3.select("#num_nodes").text(selectedNodes.length.toString());
         d3.select("#num_edges").text(selectedLinks.length.toString());
         d3.select("#num_communities").text(comCount.toString());
+        d3.select("#num_SCCs").text(sccCount.toString());
     }
 
 

@@ -171,8 +171,7 @@ def construct_network(connections):
 
     filtered_g = label_nodes_communities(filtered_g)
 
-    if recalculate_SCCs_checked:
-        filtered_g = label_nodes_SCCs(filtered_g)
+    filtered_g = label_nodes_SCCs(filtered_g)
 
 
 
@@ -214,8 +213,6 @@ DEFAULT_BIDIR = 0
 foci_checked = DEFAULT_FOCI_CHECKED
 bidir = DEFAULT_BIDIR
 recalculate_coms_checked = DEFAULT_RECALCULATE_COMMUNITIES
-
-recalculate_SCCs_checked = True
 
 date_index = 0
 size_metric = "degree"
@@ -318,7 +315,7 @@ def twitter_connections(request):
     global degree_threshold, filtered_twitter_connections, \
         btw_threshold, pagerank_threshold, closeness_threshold, \
         eigenvector_threshold, size_metric,size_metrics, recalculate_checked, foci_checked,\
-        dates, date_index, clust_threshold, bidir, recalculate_coms_checked, recalculate_SCCs_checked
+        dates, date_index, clust_threshold, bidir, recalculate_coms_checked
 
     check = {"on":True, False:False}
     filtering = False
@@ -334,7 +331,6 @@ def twitter_connections(request):
         date_index = int(request.POST["date"])
         recalculate_checked = check[request.POST.get("recalculate_metrics", False)]
         recalculate_coms_checked = check[request.POST.get("recalculate_coms_checked", False)]
-        recalculate_SCCs_checked = check[request.POST.get("recalculate_SCCs_checked", "on")]
 
         foci_checked = check[request.POST.get("toggleFociCB", False)]
         bidir = check[request.POST.get("toggleBidir", False)]
@@ -400,7 +396,6 @@ def twitter_connections(request):
                "heterogeneity_threshold":heterogeneity_threshold,
                "bidir_edges":bidir_edges,
                "bidir_ratio":bidir_edges*100/len(filtered_twitter_connections["links"]),
-               "recalculate_SCCs_checked":int(recalculate_SCCs_checked),
                "colors":colors}
     if avgs:
         context.update(avgs)
