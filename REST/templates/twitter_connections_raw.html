@@ -2,16 +2,15 @@
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <style>
     body {
         font-family: 'Times', cursive;
     }
 
-    .hoverP {
-        white-space: normal;
-        width: 300px;
+.hoverP{
+    white-space: normal;
+    width: 300px;
     }
 
     path {
@@ -20,370 +19,179 @@
         stroke-width: 2;
     }
 
-    .SideBar {
-        width: 15%;
-        height: 100%;
-        display: none;
-        background-color: #4C7EB7;
-        color: white;
-        overflow-y: auto;
+    .column {
+        float: left;
+        padding: 5px;
     }
 
-    html {
-        height: 100%;
-    }
-
-    body {
-        height: 100%;
-
-    }
-
-    .btn {
-        background-color: transparent;
-        border: none;
-        color: black;
-        cursor: pointer;
-    }
-
-    .btn:hover {
-        color: grey;
-    }
-
-    .dropdownbtn {
-        cursor: pointer;
-        margin-bottom: 5px;
-        border: none;
-        color: white;
-        size: 30px;
-        width: 100%;
-        background-color: #305177;
-    }
-
-    .dropdownbtn:hover {
-        background-color: #173251;
-    }
-
-    table {
-        width: 100%;
-        background-color: #3571B5;
-    }
-
-    th {
-        width: 100%;
-        background-color: #8CB5E4;
-    }
-
-    .OptionsTable {
-        align-content: center;
-        width: 100%;
-        display: none;
-        table-layout: fixed;
-    }
-
-    .SubMenu {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    svg {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 95%;
-        z-index: 1;
-        transition: 0.4s;
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
     }
 
 </style>
 <body>
-<button class="btn" id="OpenSideBarButton" onclick="Open()"><i class="w3-jumbo fa fa-bars"></i></button>
-<div class="SideBar" id="MainSideBar" style="float: left;">
-    <button class="btn" style="float: right" onclick="Close()"><i class="w3-xxxlarge fa fa-close"></i></button>
+    <input id="search" size='25'>
+    <button id="searchBtn" type="button" onclick="searchNode()">Find Node</button>
+    <button id="resetBtn" type="button" onclick="resetNodes()">Reset</button>
 
-    <div class="SubMenu">
-        <button class="dropdownbtn" onclick="OpenSubMenu(1)" type="button">Find Nodes</button>
-        <table class="OptionsTable" id="Sub_1">
-            <tr>
-                <th colspan="2"><input id="search" width='100%'></th>
-            </tr>
-            <tr>
-                <th>
-                    <button type="button" onclick="searchNode()">Find Node</button>
-                </th>
-                <th>
-                    <button type="button" onclick="resetNodes()">Reset</button>
-                </th>
-            </tr>
-
-        </table>
+<div class="row">
+<div id="groupSettings" class="column">
+        Group by: <span id='groupLabel'></span>
     </div>
+<div class="column">
+    Nodes size by:
+            <select id="sizeBy" onchange="updateSize()">
 
-
-    <div class="SubMenu">
-        <button class="dropdownbtn" onclick="OpenSubMenu(2)" type="button">Network Visualization</button>
-        <table class="OptionsTable" id="Sub_2">
-            <tr>
-                <div id="groupSettings">
-                    <th>Group by:</th>
-                    <th><select id="grp_set_drop" style="width: 100%"></select></th>
-                </div>
-            </tr>
-            <tr>
-                <div>
-                    <th>Nodes size by:</th>
-                    <th><select id="sizeBy" onchange="updateSize()" style="width: 100%">
-
-                        {% for metric in size_metrics %}
-                            <option value="{{ metric }}">{{ metric }}</option>
-                        {% endfor %}
-                    </select></th>
-                </div>
-            </tr>
-            <tr>
-                <th>Node scale:</th>
-                <th><span id='nodeScaler'>100</span>
-                    <input type="range" min="1" max="500" value="100" step="10" style="width: 100%"
-                           oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()"></th>
-            </tr>
-
-            <tr>
-                <th>Edge width:</th>
-                <th><span id='edgeScaler'>1.0</span>
-                    <input type="range" min="0.1" max="10" value="1.0" step="0.1" style="width: 100%"
-                           oninput="esizeScaler= value; d3.select('#edgeScaler').text(esizeScaler); resetEdges()"></th>
-            </tr>
-
-            <tr>
-                <th>Scale of the groups:</th>
-                <th><span id='scaleFactorLabel'>1.2</span>
-                    <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 100%"
-                           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroupPolygons()">
-                </th>
-            </tr>
-
-            <tr>
-                <th>Network's gravity:</th>
-                <th><span id='gravityForce'>-600</span>
-                    <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 100%"
-                           oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
-                </th>
-            </tr>
-            <tr>
-                <th>Include connection-less nodes</th>
-                <th><input id="edgeLess" type="checkbox" title="include nodes with no connections"
-                           onchange="filterEdgelessNodes(); drawNetwork();" checked></th>
-            </tr>
-            <tr>
-                <th>Highlight edges on mouse-over</th>
-                <th><input id="edgeInfo" type="checkbox" title="Show edge info when you hover over it"
-                           onchange="edgeInfo=this.checked; toggleEdgeInfo();" checked></th>
-            </tr>
-        </table>
-    </div>
-
-    <div class="SubMenu">
-        <button class="dropdownbtn" onclick="OpenSubMenu(3)" type="button">General Information</button>
-        <table class="OptionsTable" id="Sub_3">
-            <tr>
-                <th>Nodes: <span id="num_nodes">{{ nodes_number }}</span></th>
-            </tr>
-            <tr>
-                <th> Edges: <span
-                        id="num_edges">{{ edges_number }}</span></th>
-            </tr>
-            <tr>
-                <th>Communities: <span id="num_communities"></span></th>
-            </tr>
-            <tr>
-                <th>SCCs: <span id="num_SCCs"></span></th>
-            </tr>
-            <tr>
-                <th>Homophily: {{ homophily_value }} <br>( Heterogeneity: {{ heterogeneity }},
-                    Threshold: {{ heterogeneity_threshold }})
-                </th>
-            </tr>
-            <tr>
-                <th>Transitivity: {{ transitivity_value }}</th>
-            </tr>
-        </table>
-    </div>
-    <form name="myForm" method="POST">
-
-
-        <div class="SubMenu">
-            <button class="dropdownbtn" onclick="OpenSubMenu(4)" type="button">Network Reconstruction</button>
-            <table class="OptionsTable" id="Sub_4">
-                {% csrf_token %}
-                <tr>
-                    <th id="textDate">
-                        Date: {{ current_date }}</th>
-                    <th><input type="range" id="date_scroller" name="date" min="0" max="{{ dates|length|add:"-1" }}"
-                               step="1"
-                               value="{{ date_index }}"
-                               style="width: 100%"
-                               onchange="updateDateText(this.value)">
-                    </th>
-                </tr>
-
-
-                <tr>
-                    <th>Recalculate node metrics:</th>
-                    <th><input type="checkbox" id="recalculate_metrics" name="recalculate_metrics"></th>
-                </tr>
-                <tr>
-                    <th>Recalculate communities:</th>
-                    <th><input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked"></th>
-                </tr>
-                <tr>
-                    <th>Include community accounts (e.g. clubs):</th>
-                    <th><input type="checkbox" id="toggleFociCB" name="toggleFociCB"
-                               oninput="updateLinks(); drawNetwork();"></th>
-                </tr>
-                <tr>
-                    <th>Friendship (bidirectionals only):</th>
-                    <th><input type="checkbox" id="toggleBidir" name="toggleBidir"
-                               oninput="filterBidirEdges(); drawNetwork();"> {{ bidir_edges }}/{{ edges_number }}
-                        ({{ bidir_ratio }}
-                        %)
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="2"><input type="submit" value="Construct Network"></th>
-                </tr>
-            </table>
-        </div>
-
-        <div class="SubMenu">
-            <button class="dropdownbtn" onclick="OpenSubMenu(5)" type="button">Parameters</button>
-            <table class="OptionsTable" id="Sub_5">
-                <tr>
-                    <th>degree:</th>
-                    <th><input type="text" id="text_degree" value="0" style="width: 100%"
-                               name="text_degree"
-                               onchange="updateScroll(this.value, 'degree')">{{ avg_degree }}</th>
-
-                    <th>0<input id="degree"
-                                type="range" value="0" min="0" max="100" step="1"
-                                style="width: 100%"
-                                onchange="updateText(this.value, 'text_degree')">100
-                    </th>
-                </tr>
-
-                <tr>
-                    <th>betweenness:</th>
-                    <th><input type="text" id="text_betweenness" value="0" style="width: 50px"
-                               name="text_betweenness"
-                               onchange="updateScroll(this.value, 'betweenness')">{{ avg_betweenness }}</th>
-
-                    <th>0.0<input id="betweenness"
-                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
-                                  style="width: 100%"
-                                  onchange="updateText(this.value, 'text_betweenness')">1.0
-                    </th>
-                </tr>
-                <tr>
-                    <th>pagerank:</th>
-                    <th><input type="text" id="text_pagerank" value="0" style="width: 50px"
-                               name="text_pagerank"
-                               onchange="updateScroll(this.value, 'pagerank')">{{ avg_pagerank }}</th>
-
-                    <th>0.0<input id="pagerank"
-                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
-                                  style="width: 100%"
-                                  onchange="updateText(this.value, 'text_pagerank')">1.0
-                    </th>
-                </tr>
-                <tr>
-                    <th>closeness:</th>
-                    <th><input type="text" id="text_closeness_centrality" value="0" style="width: 50px"
-                               name="text_closeness_centrality"
-                               onchange="updateScroll(this.value, 'closeness_centrality')">{{ avg_closeness_centrality }}
-                    </th>
-
-                    <th>0.0<input id="closeness_centrality"
-                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
-                                  style="width: 100%"
-                                  onchange="updateText(this.value, 'text_closeness_centrality')">1.0
-                    </th>
-                </tr>
-
-                <tr>
-                    <Th>eigenvector:</Th>
-                    <th><input type="text" id="text_eigenvector_centrality" value="0" style="width: 50px"
-                               name="text_eigenvector_centrality"
-                               onchange="updateScroll(this.value, 'eigenvector_centrality')">{{ avg_eigenvector_centrality }}
-                    </th>
-
-                    <th>0.0<input id="eigenvector_centrality"
-                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
-                                  style="width: 100%"
-                                  onchange="updateText(this.value, 'text_eigenvector_centrality')">1.0
-                    </th>
-
-                </tr>
-                <tr>
-                    <th>Clustering Coefficient:</th>
-                    <th><input type="text" id="text_clustering_coefficient" value="0"
-                               style="width: 50px"
-                               name="text_clustering_coefficient"
-                               onchange="updateScroll(this.value, 'clustering_coefficient')">{{ avg_clustering_coefficient }}
-                    </th>
-
-                    <th>0.0<input id="clustering_coefficient"
-                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
-                                  style="width: 100%"
-                                  onchange="updateText(this.value, 'text_clustering_coefficient')">1.0
-                    </th>
-
-                </tr>
-            </table>
-        </div>
-    </form>
-
-
+                {% for metric in size_metrics %}
+                    <option value="{{ metric }}">{{ metric }}</option>
+                {% endfor %}
+            </select>
 </div>
 
-<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+        Node scale: <span id='nodeScaler'>100</span>
+    <input type="range" min="1" max="500" value="100" step="1" style="width: 150px"
+           oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()">
 
-<svg id="svg"></svg>
+    Edge width: <span id='edgeScaler'>1.0</span>
+    <input type="range" min="0.1" max="10" value="1.0" step="0.1" style="width: 200px"
+           oninput="esizeScaler= value; d3.select('#edgeScaler').text(esizeScaler); resetEdges()">
 
-<div id="hoverInfo" style="float: right;">
+    Scale of the groups: <span id='scaleFactorLabel'>1.2</span>
+    <input type="range" min="0.9" max="3" value="1.2" step=".1" style="width: 200px"
+           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroupPolygons()">
+
+    Network's gravity: <span id='gravityForce'>-600</span>
+    <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 200px"
+           oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
 </div>
+<div class="row" width="100%">
+    <div class="column" width="15.0%">
+        <form name="myForm" method="POST">
+            {% csrf_token %}
 
-<div id="distInfo" style="clear: both"></div>
-</body>
+            <p id="textDate">Date: {{ current_date }}</p>
+            <input type="range" id="date_scroller" name="date" min="0" max="{{ dates|length|add:"-1" }}" step="1"
+                   value="{{ date_index }}"
+                   style="width: 200px"
+                   onchange="updateDateText(this.value)">
 
+            </br>
+        <p>
+            Nodes: <span id="num_nodes">{{ nodes_number }}</span> </br> Edges: <span
+                id="num_edges">{{ edges_number }}</span>
+            <br>Communities: <span id="num_communities"></span>
+            <br>SCCs: <span id="num_SCCs"></span></br>
+            Homophily: {{ homophily_value }} <br>( Heterogeneity: {{ heterogeneity }},
+            Threshold: {{ heterogeneity_threshold }})
+            <br>
+            Transitivity: {{ transitivity_value }}
+            <br>
+        </p>
+        <div id="parameters">
+            <p>
+            Recalculate node metrics:
+            <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
+            <br>
+            Recalculate communities:
+            <input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked">
+            <br>
+            Include community accounts (e.g. clubs):
+            <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="updateLinks(); drawNetwork();">
+            <br>
+            Friendship (bidirectionals only):
+            <input type="checkbox" id="toggleBidir" name="toggleBidir"
+                   oninput="filterBidirEdges(); drawNetwork();"> {{ bidir_edges }}/{{ edges_number }} ({{ bidir_ratio }}
+            %)
+            <br>
+            <input type="submit" value="Construct Network"><br>
+            </p>
+        </div>
+            degree: <input type="text" id="text_degree" value="0" style="width: 50px"
+                           name="text_degree"
+                           onchange="updateScroll(this.value, 'degree')">{{ avg_degree }}<br>
+
+            0<input id="degree"
+                    type="range" value="0" min="0" max="100" step="1"
+                    style="width: 200px"
+                    onchange="updateText(this.value, 'text_degree')">100
+            <br>
+
+            betweenness: <input type="text" id="text_betweenness" value="0" style="width: 50px"
+                                name="text_betweenness"
+                                onchange="updateScroll(this.value, 'betweenness')">{{ avg_betweenness }}<br>
+
+            0.0<input id="betweenness"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_betweenness')">1.0
+            <br>
+            pagerank: <input type="text" id="text_pagerank" value="0" style="width: 50px"
+                             name="text_pagerank"
+                             onchange="updateScroll(this.value, 'pagerank')">{{ avg_pagerank }}<br>
+
+            0.0<input id="pagerank"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_pagerank')">1.0
+            <br>
+            closeness: <input type="text" id="text_closeness_centrality" value="0" style="width: 50px"
+                              name="text_closeness_centrality"
+                              onchange="updateScroll(this.value, 'closeness_centrality')">{{ avg_closeness_centrality }}<br>
+
+            0.0<input id="closeness_centrality"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_closeness_centrality')">1.0
+            <br>
+
+            eigenvector: <input type="text" id="text_eigenvector_centrality" value="0" style="width: 50px"
+                                name="text_eigenvector_centrality"
+                                onchange="updateScroll(this.value, 'eigenvector_centrality')">{{ avg_eigenvector_centrality }}<br>
+
+            0.0<input id="eigenvector_centrality"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_eigenvector_centrality')">1.0
+
+            <br>
+            Clustering Coefficient: <input type="text" id="text_clustering_coefficient" value="0"
+                                           style="width: 50px"
+                                           name="text_clustering_coefficient"
+                                           onchange="updateScroll(this.value, 'clustering_coefficient')">{{ avg_clustering_coefficient }}<br>
+
+            0.0<input id="clustering_coefficient"
+                      type="range" value="0" min="0.0" max="1.0" step="0.01"
+                      style="width: 200px"
+                      onchange="updateText(this.value, 'text_clustering_coefficient')">1.0
+
+            <br>
+        </form>
+        <p>Include connection-less nodes
+            <input id="edgeLess" type="checkbox" title="include nodes with no connections"
+                   onchange="filterEdgelessNodes(); drawNetwork();" checked></p>
+        <p>Highlight edges on mouse-over
+            <input id="edgeInfo" type="checkbox" title="Show edge info when you hover over it"
+                   onchange="edgeInfo=this.checked; toggleEdgeInfo();" checked></p>
+        {#<input id="filter" type="submit" title="remove nodes with no connections" value="Clean Network" onclick="filterEdgelessNodes();">#}
+
+        {#<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">#}
+        {#<div id="curveSettings">#}
+        {#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
+        {#</div>#}
+
+    </div>
+
+    <svg height="600" class="column" width="70.0%"></svg>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
+    <div id="hoverInfo" class="column" width="15.0%">
+    </div>
+</div>
+    <div id="distInfo"></div>
 
 <script>
-    var TabsOpen = [false, false, false, false, false];
-
-    //Open side bar
-    function Open() {
-        document.getElementById("OpenSideBarButton").style.display = "none";
-        document.getElementById("MainSideBar").style.width = "15%";
-        document.getElementById("svg").style.width = "85%";
-        document.getElementById("MainSideBar").style.display = "block";
-    }
-
-    function Close() {
-        document.getElementById("OpenSideBarButton").style.display = "block";
-        document.getElementById("MainSideBar").style.width = "0%";
-        document.getElementById("svg").style.width = "95%";
-        document.getElementById("MainSideBar").style.display = "none";
-    }
-
-    function OpenSubMenu(SubMenu) {
-        var ItemName = "Sub_" + SubMenu.toString();
-        var disp = "none";
-        if (!TabsOpen[SubMenu])
-            disp = "table";
-
-        document.getElementById(ItemName).style.display = disp;
-        document.getElementById(ItemName).style.width = "100%";
-
-        TabsOpen[SubMenu] = !TabsOpen[SubMenu];
-    }
 
     document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
     document.getElementById("recalculate_coms_checked").checked = {{recalculate_coms_checked}};
@@ -487,7 +295,8 @@
                 updateLinks();
             }
 
-            d3.select('#grp_set_drop')
+            d3.select('#groupSettings')
+                .append('select')
                 .attr('class', 'select_group')
                 .on('change', function () {
                     var val = d3.select('.select_group').property('value');
@@ -507,6 +316,7 @@
                         groupIds = fr[groupType]["ids"];
                         groupMap = fr[groupType]["groupMap"];
                     }
+                    updateAllGroupLinks();
                     updatePaths();
                     updateGroupPolygons();
                 })
@@ -563,7 +373,7 @@
                         if (overhead.indexOf(metric) < 0) {
                             x += 1.2;
                             metric = metric.includes("weight") || (!document.getElementById("toggleBidir").checked) ?
-                                metric : "node";
+                                metric: "node";
                             focus.append('text')
                                 .attr('x', cx)
                                 .attr('y', cy)
@@ -602,26 +412,26 @@
         svg.selectAll(".nodes").remove();
         svg.selectAll(".labels").remove();
 
-        if (groupType != 'None') {
+        if (groupType != 'None'){
             updatePaths();
             updateGroupPolygons();
         }
-        if (!document.getElementById("toggleBidir").checked) {
+        if (!document.getElementById("toggleBidir").checked){
             svg.append('defs').append('marker')
-                .attrs({
-                    'id': 'arrowhead',
-                    'viewBox': '-0 -5 10 10',
-                    'refX': 13,
-                    'refY': 0,
-                    'orient': 'auto',
-                    'markerWidth': 10,
-                    'markerHeight': 10,
-                    'xoverflow': 'visible'
-                })
-                .append('svg:path')
-                .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-                .attr('fill', '#999')
-                .style('stroke', 'none');
+            .attrs({
+                'id': 'arrowhead',
+                'viewBox': '-0 -5 10 10',
+                'refX': 13,
+                'refY': 0,
+                'orient': 'auto',
+                'markerWidth': 10,
+                'markerHeight': 10,
+                'xoverflow': 'visible'
+            })
+            .append('svg:path')
+            .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+            .attr('fill', '#999')
+            .style('stroke', 'none');
 
         }
 
@@ -676,19 +486,19 @@
                 var x = 0.0;
                 var displayMetrics;
                 var toGroupOver = false;
-                if (groupMap === undefined || groupMap[d.id] === undefined) {
+                if (groupMap === undefined || groupMap[d.id] === undefined){
                     displayMetrics = ["screen_name", "lang", "followers_count", "degree", "community"];
-                } else {
-                    displayMetrics = ["name", "community", "size"];
+                }else{
+                    displayMetrics = ["name","community","size"];
                     toGroupOver = true;
                 }
-                displayMetrics.forEach(function (metric) {
+                displayMetrics.forEach(function (metric){
 
                     if (overhead.indexOf(metric) < 0) {
                         x += 1.2;
                         var val = isNaN(d[metric]) ? d[metric] :
-                            (metric.includes("degree") || metric.includes("count") || groupTypes.includes(metric)) ? parseInt(d[metric]) :
-                                parseFloat(d[metric]).toFixed(4);
+                    (metric.includes("degree") || metric.includes("count") || groupTypes.includes(metric)) ? parseInt(d[metric]) :
+                        parseFloat(d[metric]).toFixed(4);
                         focus.append('text')
                             .attr('x', cx + 10)
                             .attr('y', cy + 10)
@@ -762,7 +572,7 @@
                     if (overhead.indexOf(metric) < 0) {
                         x += 1.2;
                         metric = metric.includes("weight") || (!document.getElementById("toggleBidir").checked) ?
-                            metric : "node";
+                                metric: "node";
                         focus.append('text')
                             .attr('x', cx)
                             .attr('y', cy)
@@ -822,14 +632,15 @@
         )
         .
             style('fill-opacity', 0.7)
-                .style('fill', function (d) {
-                        if (groupType == "SCC" && groupMap[d.id] != undefined)
-                            return color(parseInt(d.SCC));
-                        else
-                            return color(parseInt(d.community))
-                    }
-                )
-                .style('stroke', "none");
+                .style('fill', function(d) {
+                    if(groupType == "SCC" && groupMap[d.id] != undefined)
+                        return color(parseInt(d.SCC));
+                    else
+                        return color(parseInt(d.community))
+                }
+        )
+        .
+            style('stroke', "none");
 
             label
                 .attr("x", d => d.x
@@ -840,10 +651,8 @@
         .
             style("font-size", "10px")
                 .style("fill", "#4393c3")
-                .text(function (d) {
-                    return (groupMap === undefined || groupMap[d.id] === undefined) ?
-                        d.screen_name : d.name;
-                })
+                .text(function(d){return (groupMap === undefined || groupMap[d.id] === undefined)?
+                    d.screen_name:d.name;})
             ;
 
             updateGroupPolygons();
@@ -877,12 +686,12 @@
     // .domain([{{minSize}},{{maxSize}}])
     // .range([1, 50]);
     function node_scale(d) {
-        var size = (d.size === undefined) ? d[size_metric] : d[size_metric] * (Math.min(d.size, 20.0));
-        return Math.max((Math.abs(size - avgSize)) / (maxSize - minSize) * sizeScaler, sizeScaler / 20);
+        var size = (d.size === undefined)?d[size_metric] : d[size_metric]*(Math.min(d.size, 20.0));
+        return Math.max((Math.abs(size  - avgSize)) / (maxSize - minSize) * sizeScaler, sizeScaler / 20);
     }
 
     function node_over(d) {
-        var size = (d.size === undefined) ? d[size_metric] : d[size_metric] * (Math.min(d.size, 20.0));
+        var size = (d.size === undefined)?d[size_metric] : d[size_metric]*(Math.min(d.size, 20.0));
         return Math.max((Math.abs(size - avgSize)) / (maxSize - minSize) * (sizeScaler * 1.8), sizeScaler * 2);
     }
 
@@ -965,15 +774,15 @@
         }
         else {
             var selected = node.filter(function (d, i) {
-                if (d.screen_name !== undefined) {
+                if (d.screen_name !== undefined){
                     if (d.screen_name.includes(selectedVal))
                         return true;
                 }
-                else if (d.match_name !== undefined) {
-                    if (d.match_name.includes(selectedVal))
+                else if (d.match_name !== undefined){
+                    if(d.match_name.includes(selectedVal))
                         return true;
                 }
-                else if (d.name !== undefined) {
+                else if(d.name !== undefined){
                     if (d.name.includes(selectedVal))
                         return true;
                 }
@@ -981,15 +790,15 @@
             });
 
             var nonselected = node.filter(function (d, i) {
-                if (d.screen_name !== undefined) {
+                if (d.screen_name !== undefined){
                     if (d.screen_name.includes(selectedVal))
                         return false;
                 }
-                else if (d.match_name !== undefined) {
-                    if (d.match_name.includes(selectedVal))
+                else if (d.match_name !== undefined){
+                    if(d.match_name.includes(selectedVal))
                         return false;
                 }
-                else if (d.name !== undefined) {
+                else if(d.name !== undefined){
                     if (d.name.includes(selectedVal))
                         return false;
                 }
@@ -1154,8 +963,8 @@
             }
         });
         var count = 0;
-        for (var g in groupSizes) {
-            if ((groupSizes[g] >= minSize) || (group === groupType && (!collapseMap[g])))
+        for (var g in groupSizes){
+            if ((groupSizes[g]>=minSize) || (group===groupType && (!collapseMap[g])))
                 count += 1;
         }
         return count;
@@ -1231,8 +1040,8 @@
             });
             selectedLinks = bidirEdges;
         }
-        else if (unidirEdges !== undefined) {
-            unidirEdges.forEach(function (l) {
+        else if (unidirEdges !==undefined){
+            unidirEdges.forEach(function(l){
                 selectedLinks.push(l);
             })
         }
@@ -1271,8 +1080,8 @@
             selectedNodes = edgedNodes;
 
         }
-        else if (edgelessNodes != undefined) {
-            edgelessNodes.forEach(function (d) {
+        else if (edgelessNodes != undefined){
+            edgelessNodes.forEach(function(d){
                 selectedNodes.push(d);
             })
         }
@@ -1309,8 +1118,8 @@
         }
     }
 
-    function isSelected(id) {
-        var selected = selectedNodes.filter(function (d) {
+    function isSelected(id){
+        var selected = selectedNodes.filter(function(d) {
             return d.id == id;
         });
         return selected.length;
@@ -1374,8 +1183,8 @@
                         isNaN(node[metric]) || metric.includes('SCC') || metric.includes('community'));
 
                     if (metric.includes('name')) {
-                        superNode[metric + 's'] = (superNode[metric + 's'] === undefined) ? "" : superNode[metric + 's'];
-                        superNode[metric + 's'] += node[metric] + ", ";
+                        superNode[metric+'s'] = (superNode[metric+'s'] === undefined) ? "" : superNode[metric+'s'];
+                        superNode[metric+'s'] += node[metric] + ", ";
                     }
                     else if (distributable) {
                         var v = node[metric].toString();
@@ -1487,7 +1296,7 @@
                 .on('drag', group_dragged)
                 .on('end', group_dragended)
             )
-            .on("mouseover", function (d) {
+            .on("mouseover", function(d){
                 d3.select(this).select('path').style("fill-opacity", 0.5).style('stroke-width', 3);
                 groupOver(groupMap[d]);
             })
@@ -1527,7 +1336,7 @@
         fillGroups();
     }
 
-    function getGroupNodes(superNode) {
+    function getGroupNodes(superNode){
         var groupNodes = [];
         for (var n in selectedNodes) {
             var node = selectedNodes[n];
@@ -1551,46 +1360,44 @@
 
 
             if (groupMap != undefined && sourceGroup != targetGroup) {
-                groupOutLinks[sourceGroup] = groupOutLinks[sourceGroup] === undefined ? [] : groupOutLinks[sourceGroup];
-                groupOutLinks[sourceGroup].push(target);
+                    groupOutLinks[sourceGroup] = groupOutLinks[sourceGroup] === undefined ? [] : groupOutLinks[sourceGroup];
+                    groupOutLinks[sourceGroup].push(target);
 
-                groupInLinks[targetGroup] = groupInLinks[targetGroup] === undefined ? [] : groupInLinks[targetGroup];
-                groupInLinks[targetGroup].push(source);
+                    groupInLinks[targetGroup] = groupInLinks[targetGroup] === undefined ? [] : groupInLinks[targetGroup];
+                    groupInLinks[targetGroup].push(source);
             }
         })
     }
 
 
-    function addLinks(inputLinks, isOut) {
+    function addLinks(inputLinks, isOut){
         for (var community in inputLinks) {
-            if (isSelected(community) < 1)
+            if (isSelected(community)<1)
                 continue;
             //console.log("LOOKING AT",community);
             var outLinks = inputLinks[community];
             var glinks = {};
 
-            for (var i in outLinks) {
+            for (var i in outLinks){
                 var n = outLinks[i];
 
                 n = isSelected(n.id) ? n : groupMap[n[groupType]];  // Either a normal node or a bundled node
 
                 var key = document.getElementById("toggleBidir").checked ? [community, n.id].sort(
-                    function (a, b) {
-                        return b - a;
-                    }).toString() : [community.toString() + "," + n.id.toString()];
+                    function (a, b) {return b - a;}).toString() : [community.toString()+","+n.id.toString()];
 
                 var newLink;
                 if (isOut)
-                    newLink = {"source": groupMap[community], "target": n, "weight": 0};
+                    newLink = {"source": groupMap[community], "target":n, "weight":0};
                 else
-                    newLink = {"source": n, "target": groupMap[community], "weight": 0};
+                    newLink = {"source": n, "target":groupMap[community], "weight":0};
 
                 glinks [key] = glinks [key] === undefined ? newLink : glinks [key];
                 glinks [key]["weight"] += 1;
 
             }
 
-            for (var key in glinks) {
+            for (var key in glinks){
                 selectedLinks.push(glinks[key]);
             }
 
@@ -1627,19 +1434,19 @@
                 var val = isNaN(d[metric]) ? d[metric] :
                     (metric.includes("degree") || metric.includes("count")) || metric.includes("size") || intMetrics.includes(metric) ?
                         parseInt(d[metric]) : parseFloat(d[metric]).toFixed(8);
-                if (metric.includes("names") || metric.includes('dist')) {
+                if (metric.includes("names") || metric.includes('dist')){
                     var p2 = document.createElement("p");
                     metricName = metric.includes("names") ? metric.slice(0, -1) : metric.slice(0, -5);
-                    metricName = "Largest " + metricName;
+                    metricName = "Largest "+metricName;
                     p2.textContent = metric + ": " + val;
                     document.getElementById("distInfo").appendChild(p2);
                     val = val.split(',')[0];
                     p.textContent = metricName + ": " + val;
                 }
-                else {
+                else{
 
-                    const numericMetricName = (["name", "size", "id", groupType].includes(metric)) ? metric :
-                        isGroup ? "avg_" + metric : metric;
+                    const numericMetricName = (["name", "size", "id", groupType].includes(metric)) ? metric:
+                                        isGroup? "avg_"+metric:metric;
                     p.textContent = numericMetricName + ": " + val;
                 }
                 document.getElementById("hoverInfo").appendChild(p);
@@ -1678,6 +1485,8 @@
 
         //console.log(groupOutLinks);
         drawNetwork();
+
+
 
 
     }
