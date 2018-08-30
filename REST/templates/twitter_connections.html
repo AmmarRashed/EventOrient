@@ -2,15 +2,16 @@
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
     body {
         font-family: 'Times', cursive;
     }
 
-.hoverP{
-    white-space: normal;
-    width: 300px;
+    .hoverP {
+        white-space: normal;
+        width: 300px;
     }
 
     path {
@@ -19,187 +20,374 @@
         stroke-width: 2;
     }
 
-    .column {
-        float: left;
-        padding: 5px;
+    .SideBar {
+        width: 15%;
+        height: 100%;
+        display: none;
+        background-color: #4C7EB7;
+        color: white;
+        overflow-y: auto;
     }
 
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
+    html {
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+
+    }
+
+    .btn {
+        background-color: transparent;
+        border: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        color: grey;
+    }
+
+    .dropdownbtn {
+        cursor: pointer;
+        margin-bottom: 5px;
+        border: none;
+        color: white;
+        size: 30px;
+        width: 100%;
+        background-color: #305177;
+    }
+
+    .dropdownbtn:hover {
+        background-color: #173251;
+    }
+
+    table {
+        width: 100%;
+        background-color: #3571B5;
+    }
+
+    th {
+        width: 100%;
+        background-color: #8CB5E4;
+    }
+
+    .OptionsTable {
+        align-content: center;
+        width: 100%;
+        display: none;
+        table-layout: fixed;
+    }
+
+    .SubMenu {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    svg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 95%;
+        z-index: 1;
+        transition: 0.4s;
     }
 
 </style>
 <body>
-    <input id="search" size='25'>
-    <button type="button" onclick="searchNode()">Find Node</button>
-    <button type="button" onclick="resetNodes()">Reset</button>
+<button class="btn" id="OpenSideBarButton" onclick="Open()"><i class="w3-jumbo fa fa-bars"></i></button>
+<div class="SideBar" id="MainSideBar" style="float: left;">
+    <button class="btn" style="float: right" onclick="Close()"><i class="w3-xxxlarge fa fa-close"></i></button>
 
-<div class="row">
-<div id="groupSettings" class="column">
-        Group by: <span id='groupLabel'></span>
+    <div class="SubMenu">
+        <button class="dropdownbtn" onclick="OpenSubMenu(1)" type="button">Find Nodes</button>
+        <table class="OptionsTable" id="Sub_1">
+            <tr>
+                <th colspan="2"><input id="search" width='100%'></th>
+            </tr>
+            <tr>
+                <th>
+                    <button type="button" onclick="searchNode()">Find Node</button>
+                </th>
+                <th>
+                    <button type="button" onclick="resetNodes()">Reset</button>
+                </th>
+            </tr>
+
+        </table>
     </div>
-<div class="column">
-    Nodes size by:
-            <select id="sizeBy" onchange="updateSize()">
 
-                {% for metric in size_metrics %}
-                    <option value="{{ metric }}">{{ metric }}</option>
-                {% endfor %}
-            </select>
-</div>
 
-        Node scale: <span id='nodeScaler'>100</span>
-    <input type="range" min="1" max="500" value="100" step="10" style="width: 150px"
-           oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()">
+    <div class="SubMenu">
+        <button class="dropdownbtn" onclick="OpenSubMenu(2)" type="button">Network Visualization</button>
+        <table class="OptionsTable" id="Sub_2">
+            <tr>
+                <div id="groupSettings">
+                    <th>Group by:</th>
+                    <th><select id="grp_set_drop" style="width: 100%"></select></th>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <th>Nodes size by:</th>
+                    <th><select id="sizeBy" onchange="updateSize()" style="width: 100%">
 
-    Edge width: <span id='edgeScaler'>1.0</span>
-    <input type="range" min="0.1" max="10" value="1.0" step="0.1" style="width: 200px"
-           oninput="esizeScaler= value; d3.select('#edgeScaler').text(esizeScaler); resetEdges()">
+                        {% for metric in size_metrics %}
+                            <option value="{{ metric }}">{{ metric }}</option>
+                        {% endfor %}
+                    </select></th>
+                </div>
+            </tr>
+            <tr>
+                <th>Node scale:</th>
+                <th><span id='nodeScaler'>100</span>
+                    <input type="range" min="1" max="500" value="100" step="10" style="width: 100%"
+                           oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()"></th>
+            </tr>
 
-    Scale of the groups: <span id='scaleFactorLabel'>1.2</span>
-    <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 200px"
-           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroupPolygons()">
+            <tr>
+                <th>Edge width:</th>
+                <th><span id='edgeScaler'>1.0</span>
+                    <input type="range" min="0.1" max="10" value="1.0" step="0.1" style="width: 100%"
+                           oninput="esizeScaler= value; d3.select('#edgeScaler').text(esizeScaler); resetEdges()"></th>
+            </tr>
 
-    Network's gravity: <span id='gravityForce'>-600</span>
-    <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 200px"
-           oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
-</div>
-<div class="row" width="100%">
-    <div class="column" width="15.0%">
-        <form name="myForm" method="POST">
-            {% csrf_token %}
+            <tr>
+                <th>Scale of the groups:</th>
+                <th><span id='scaleFactorLabel'>1.2</span>
+                    <input type="range" min="1" max="3" value="1.2" step=".1" style="width: 100%"
+                           oninput="scaleFactor = value; d3.select('#scaleFactorLabel').text(scaleFactor); updateGroupPolygons()">
+                </th>
+            </tr>
 
-            <p id="textDate">Date: {{ current_date }}</p>
-            <input type="range" id="date_scroller" name="date" min="0" max="{{ dates|length|add:"-1" }}" step="1"
-                   value="{{ date_index }}"
-                   style="width: 200px"
-                   onchange="updateDateText(this.value)">
+            <tr>
+                <th>Network's gravity:</th>
+                <th><span id='gravityForce'>-600</span>
+                    <input type="range" min="-5000" max="200" value="-600" step="10" style="width: 100%"
+                           oninput="gravityForce = value; d3.select('#gravityForce').text(gravityForce); updateForce()">
+                </th>
+            </tr>
+            <tr>
+                <th>Include connection-less nodes</th>
+                <th><input id="edgeLess" type="checkbox" title="include nodes with no connections"
+                           onchange="filterEdgelessNodes(); drawNetwork();" checked></th>
+            </tr>
+            <tr>
+                <th>Highlight edges on mouse-over</th>
+                <th><input id="edgeInfo" type="checkbox" title="Show edge info when you hover over it"
+                           onchange="edgeInfo=this.checked; toggleEdgeInfo();" checked></th>
+            </tr>
+        </table>
+    </div>
 
-            </br>
-        <p>
-            Nodes: <span id="num_nodes">{{ nodes_number }}</span> </br> Edges: <span
-                id="num_edges">{{ edges_number }}</span>
-            <br>Communities: <span id="num_communities"></span></br>
-            Homophily: {{ homophily_value }} <br>( Heterogeneity: {{ heterogeneity }},
-            Threshold: {{ heterogeneity_threshold }})
-            <br>
-            Transitivity: {{ transitivity_value }}
-            <br>
-        </p>
-        <div id="parameters">
-            <p>
-            Recalculate node metrics:
-            <input type="checkbox" id="recalculate_metrics" name="recalculate_metrics">
-            <br>
-            Recalculate communities:
-            <input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked">
-            <br>
-            Recalculate SCCs:
-            <input type="checkbox" id="recalculate_SCCs_checked" name="recalculate_SCCs_checked">
-            <br>
-            Include community accounts (e.g. clubs):
-            <input type="checkbox" id="toggleFociCB" name="toggleFociCB" oninput="updateLinks(); drawNetwork();">
-            <br>
-            Friendship (bidirectionals only):
-            <input type="checkbox" id="toggleBidir" name="toggleBidir"
-                   oninput="updateLinks(); drawNetwork();"> {{ bidir_edges }}/{{ edges_number }} ({{ bidir_ratio }}
-            %)
-            <br>
-            <input type="submit" value="Construct Network"><br>
-            </p>
+    <div class="SubMenu">
+        <button class="dropdownbtn" onclick="OpenSubMenu(3)" type="button">General Information</button>
+        <table class="OptionsTable" id="Sub_3">
+            <tr>
+                <th>Nodes: <span id="num_nodes">{{ nodes_number }}</span></th>
+            </tr>
+            <tr>
+                <th> Edges: <span
+                        id="num_edges">{{ edges_number }}</span></th>
+            </tr>
+            <tr>
+                <th>Communities: <span id="num_communities"></span></th>
+            </tr>
+            <tr>
+                <th>SCCs: <span id="num_SCCs"></span></th>
+            </tr>
+            <tr>
+                <th>Homophily: {{ homophily_value }} <br>( Heterogeneity: {{ heterogeneity }},
+                    Threshold: {{ heterogeneity_threshold }})
+                </th>
+            </tr>
+            <tr>
+                <th>Transitivity: {{ transitivity_value }}</th>
+            </tr>
+        </table>
+    </div>
+    <form name="myForm" method="POST">
+
+
+        <div class="SubMenu">
+            <button class="dropdownbtn" onclick="OpenSubMenu(4)" type="button">Network Reconstruction</button>
+            <table class="OptionsTable" id="Sub_4">
+                {% csrf_token %}
+                <tr>
+                    <th id="textDate">
+                        Date: {{ current_date }}</th>
+                    <th><input type="range" id="date_scroller" name="date" min="0" max="{{ dates|length|add:"-1" }}"
+                               step="1"
+                               value="{{ date_index }}"
+                               style="width: 100%"
+                               onchange="updateDateText(this.value)">
+                    </th>
+                </tr>
+
+
+                <tr>
+                    <th>Recalculate node metrics:</th>
+                    <th><input type="checkbox" id="recalculate_metrics" name="recalculate_metrics"></th>
+                </tr>
+                <tr>
+                    <th>Recalculate communities:</th>
+                    <th><input type="checkbox" id="recalculate_coms_checked" name="recalculate_coms_checked"></th>
+                </tr>
+                <tr>
+                    <th>Include community accounts (e.g. clubs):</th>
+                    <th><input type="checkbox" id="toggleFociCB" name="toggleFociCB"
+                               oninput="updateLinks(); drawNetwork();"></th>
+                </tr>
+                <tr>
+                    <th>Friendship (bidirectionals only):</th>
+                    <th><input type="checkbox" id="toggleBidir" name="toggleBidir"
+                               oninput="filterBidirEdges(); drawNetwork();"> {{ bidir_edges }}/{{ edges_number }}
+                        ({{ bidir_ratio }}
+                        %)
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit" value="Construct Network"></th>
+                </tr>
+            </table>
         </div>
-            degree: <input type="text" id="text_degree" value="0" style="width: 50px"
-                           name="text_degree"
-                           onchange="updateScroll(this.value, 'degree')">{{ avg_degree }}<br>
 
-            0<input id="degree"
-                    type="range" value="0" min="0" max="100" step="1"
-                    style="width: 200px"
-                    onchange="updateText(this.value, 'text_degree')">100
-            <br>
+        <div class="SubMenu">
+            <button class="dropdownbtn" onclick="OpenSubMenu(5)" type="button">Parameters</button>
+            <table class="OptionsTable" id="Sub_5">
+                <tr>
+                    <th>degree:</th>
+                    <th><input type="text" id="text_degree" value="0" style="width: 100%"
+                               name="text_degree"
+                               onchange="updateScroll(this.value, 'degree')">{{ avg_degree }}</th>
 
-            betweenness: <input type="text" id="text_betweenness" value="0" style="width: 50px"
-                                name="text_betweenness"
-                                onchange="updateScroll(this.value, 'betweenness')">{{ avg_betweenness }}<br>
+                    <th>0<input id="degree"
+                                type="range" value="0" min="0" max="100" step="1"
+                                style="width: 100%"
+                                onchange="updateText(this.value, 'text_degree')">100
+                    </th>
+                </tr>
 
-            0.0<input id="betweenness"
-                      type="range" value="0" min="0.0" max="1.0" step="0.01"
-                      style="width: 200px"
-                      onchange="updateText(this.value, 'text_betweenness')">1.0
-            <br>
-            pagerank: <input type="text" id="text_pagerank" value="0" style="width: 50px"
-                             name="text_pagerank"
-                             onchange="updateScroll(this.value, 'pagerank')">{{ avg_pagerank }}<br>
+                <tr>
+                    <th>betweenness:</th>
+                    <th><input type="text" id="text_betweenness" value="0" style="width: 50px"
+                               name="text_betweenness"
+                               onchange="updateScroll(this.value, 'betweenness')">{{ avg_betweenness }}</th>
 
-            0.0<input id="pagerank"
-                      type="range" value="0" min="0.0" max="1.0" step="0.01"
-                      style="width: 200px"
-                      onchange="updateText(this.value, 'text_pagerank')">1.0
-            <br>
-            closeness: <input type="text" id="text_closeness_centrality" value="0" style="width: 50px"
-                              name="text_closeness_centrality"
-                              onchange="updateScroll(this.value, 'closeness_centrality')">{{ avg_closeness_centrality }}<br>
+                    <th>0.0<input id="betweenness"
+                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
+                                  style="width: 100%"
+                                  onchange="updateText(this.value, 'text_betweenness')">1.0
+                    </th>
+                </tr>
+                <tr>
+                    <th>pagerank:</th>
+                    <th><input type="text" id="text_pagerank" value="0" style="width: 50px"
+                               name="text_pagerank"
+                               onchange="updateScroll(this.value, 'pagerank')">{{ avg_pagerank }}</th>
 
-            0.0<input id="closeness_centrality"
-                      type="range" value="0" min="0.0" max="1.0" step="0.01"
-                      style="width: 200px"
-                      onchange="updateText(this.value, 'text_closeness_centrality')">1.0
-            <br>
+                    <th>0.0<input id="pagerank"
+                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
+                                  style="width: 100%"
+                                  onchange="updateText(this.value, 'text_pagerank')">1.0
+                    </th>
+                </tr>
+                <tr>
+                    <th>closeness:</th>
+                    <th><input type="text" id="text_closeness_centrality" value="0" style="width: 50px"
+                               name="text_closeness_centrality"
+                               onchange="updateScroll(this.value, 'closeness_centrality')">{{ avg_closeness_centrality }}
+                    </th>
 
-            eigenvector: <input type="text" id="text_eigenvector_centrality" value="0" style="width: 50px"
-                                name="text_eigenvector_centrality"
-                                onchange="updateScroll(this.value, 'eigenvector_centrality')">{{ avg_eigenvector_centrality }}<br>
+                    <th>0.0<input id="closeness_centrality"
+                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
+                                  style="width: 100%"
+                                  onchange="updateText(this.value, 'text_closeness_centrality')">1.0
+                    </th>
+                </tr>
 
-            0.0<input id="eigenvector_centrality"
-                      type="range" value="0" min="0.0" max="1.0" step="0.01"
-                      style="width: 200px"
-                      onchange="updateText(this.value, 'text_eigenvector_centrality')">1.0
+                <tr>
+                    <Th>eigenvector:</Th>
+                    <th><input type="text" id="text_eigenvector_centrality" value="0" style="width: 50px"
+                               name="text_eigenvector_centrality"
+                               onchange="updateScroll(this.value, 'eigenvector_centrality')">{{ avg_eigenvector_centrality }}
+                    </th>
 
-            <br>
-            Clustering Coefficient: <input type="text" id="text_clustering_coefficient" value="0"
-                                           style="width: 50px"
-                                           name="text_clustering_coefficient"
-                                           onchange="updateScroll(this.value, 'clustering_coefficient')">{{ avg_clustering_coefficient }}<br>
+                    <th>0.0<input id="eigenvector_centrality"
+                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
+                                  style="width: 100%"
+                                  onchange="updateText(this.value, 'text_eigenvector_centrality')">1.0
+                    </th>
 
-            0.0<input id="clustering_coefficient"
-                      type="range" value="0" min="0.0" max="1.0" step="0.01"
-                      style="width: 200px"
-                      onchange="updateText(this.value, 'text_clustering_coefficient')">1.0
+                </tr>
+                <tr>
+                    <th>Clustering Coefficient:</th>
+                    <th><input type="text" id="text_clustering_coefficient" value="0"
+                               style="width: 50px"
+                               name="text_clustering_coefficient"
+                               onchange="updateScroll(this.value, 'clustering_coefficient')">{{ avg_clustering_coefficient }}
+                    </th>
 
-            <br>
-        </form>
-        <p>Include connection-less nodes
-            <input id="edgeLess" type="checkbox" title="include nodes with no connections"
-                   onchange="updateLinks(); drawNetwork();" checked></p>
-        <p>Highlight edges on mouse-over
-            <input id="edgeInfo" type="checkbox" title="Show edge info when you hover over it"
-                   onchange="edgeInfo=this.checked; toggleEdgeInfo();" checked></p>
-        {#<input id="filter" type="submit" title="remove nodes with no connections" value="Clean Network" onclick="filterEdgelessNodes();">#}
+                    <th>0.0<input id="clustering_coefficient"
+                                  type="range" value="0" min="0.0" max="1.0" step="0.01"
+                                  style="width: 100%"
+                                  onchange="updateText(this.value, 'text_clustering_coefficient')">1.0
+                    </th>
 
-        {#<input id="bundleReset" type="submit" title="Ungroup all groups" value="Clear grouping" onclick="resetBundling();">#}
-        {#<div id="curveSettings">#}
-        {#    <p>Type of curve: <span id='curveLabel'>curveBasisClosed</span></p>#}
-        {#</div>#}
+                </tr>
+            </table>
+        </div>
+    </form>
 
-    </div>
 
-    <svg height="600" class="column" width="70.0%"></svg>
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
-
-    <div id="hoverInfo" class="column" width="15.0%">
-    </div>
 </div>
-    <div id="distInfo"></div>
+
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+
+<svg id="svg"></svg>
+
+<div id="hoverInfo" style="float: right;">
+</div>
+
+<div id="distInfo" style="clear: both"></div>
+</body>
+
 
 <script>
+    var TabsOpen = [false, false, false, false, false];
+
+    //Open side bar
+    function Open() {
+        document.getElementById("OpenSideBarButton").style.display = "none";
+        document.getElementById("MainSideBar").style.width = "15%";
+        document.getElementById("svg").style.width = "85%";
+        document.getElementById("MainSideBar").style.display = "block";
+    }
+
+    function Close() {
+        document.getElementById("OpenSideBarButton").style.display = "block";
+        document.getElementById("MainSideBar").style.width = "0%";
+        document.getElementById("svg").style.width = "95%";
+        document.getElementById("MainSideBar").style.display = "none";
+    }
+
+    function OpenSubMenu(SubMenu) {
+        var ItemName = "Sub_" + SubMenu.toString();
+        var disp = "none";
+        if (!TabsOpen[SubMenu])
+            disp = "table";
+
+        document.getElementById(ItemName).style.display = disp;
+        document.getElementById(ItemName).style.width = "100%";
+
+        TabsOpen[SubMenu] = !TabsOpen[SubMenu];
+    }
 
     document.getElementById("recalculate_metrics").checked = {{recalculate_checked}};
     document.getElementById("recalculate_coms_checked").checked = {{recalculate_coms_checked}};
-    document.getElementById("recalculate_SCCs_checked").checked = {{recalculate_SCCs_checked}};
     document.getElementById("toggleFociCB").checked = {{foci_checked}};
-
     document.getElementById("toggleBidir").checked = {{bidir}};
 
     d3.select("svg").attr("width", window.screen.height)
@@ -208,7 +396,7 @@
     // d3.select("svg").attr("width", 960)
     //     .attr("height", 500);
 
-    const overhead = ["index", "x", "y", "vy", "vx"];
+    const overhead = ["index", "x", "y", "vy", "vx", "fx", "fy"];
 
     var svg2 = d3.select("svg"),
         width = +svg2.attr("width"),
@@ -247,8 +435,12 @@
         toggleFociChecked,
         groupMap,
         nodesIndices,
+        groupOutLinks,
+        groupInLinks,
         selectedNodes,
         selectedLinks,
+        unidirEdges,
+        edgelessNodes,
         paths,
         groups,
         groupIds,
@@ -295,8 +487,7 @@
                 updateLinks();
             }
 
-            d3.select('#groupSettings')
-                .append('select')
+            d3.select('#grp_set_drop')
                 .attr('class', 'select_group')
                 .on('change', function () {
                     var val = d3.select('.select_group').property('value');
@@ -371,6 +562,8 @@
                         }
                         if (overhead.indexOf(metric) < 0) {
                             x += 1.2;
+                            metric = metric.includes("weight") || (!document.getElementById("toggleBidir").checked) ?
+                                metric : "node";
                             focus.append('text')
                                 .attr('x', cx)
                                 .attr('y', cy)
@@ -408,27 +601,29 @@
         svg.selectAll(".links").remove();
         svg.selectAll(".nodes").remove();
         svg.selectAll(".labels").remove();
-        if (groupType != 'None'){
+
+        if (groupType != 'None') {
             updatePaths();
             updateGroupPolygons();
         }
-        svg.append('defs').append('marker')
-        .attrs({
-            'id': 'arrowhead',
-            'viewBox': '-0 -5 10 10',
-            'refX': 13,
-            'refY': 0,
-            'orient': 'auto',
-            'markerWidth': 10,
-            'markerHeight': 10,
-            'xoverflow': 'visible'
-        })
-        .append('svg:path')
-        .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
-        .attr('fill', '#999')
-        .style('stroke', 'none');
+        if (!document.getElementById("toggleBidir").checked) {
+            svg.append('defs').append('marker')
+                .attrs({
+                    'id': 'arrowhead',
+                    'viewBox': '-0 -5 10 10',
+                    'refX': 13,
+                    'refY': 0,
+                    'orient': 'auto',
+                    'markerWidth': 10,
+                    'markerHeight': 10,
+                    'xoverflow': 'visible'
+                })
+                .append('svg:path')
+                .attr('d', 'M 0,-5 L 10 ,0 L 0,5')
+                .attr('fill', '#999')
+                .style('stroke', 'none');
 
-
+        }
 
         link = svg.append("g")
             .style("stroke", "#aaa")
@@ -481,20 +676,19 @@
                 var x = 0.0;
                 var displayMetrics;
                 var toGroupOver = false;
-                if (groupMap === undefined || groupMap[d.id] === undefined){
+                if (groupMap === undefined || groupMap[d.id] === undefined) {
                     displayMetrics = ["screen_name", "lang", "followers_count", "degree", "community"];
-                }else{
-                    console.log(d);
-                    displayMetrics = ["name","community","size"];
+                } else {
+                    displayMetrics = ["name", "community", "size"];
                     toGroupOver = true;
                 }
-                displayMetrics.forEach(function (metric){
+                displayMetrics.forEach(function (metric) {
 
                     if (overhead.indexOf(metric) < 0) {
                         x += 1.2;
                         var val = isNaN(d[metric]) ? d[metric] :
-                    (metric.includes("degree") || metric.includes("count") || groupTypes.includes(metric)) ? parseInt(d[metric]) :
-                        parseFloat(d[metric]).toFixed(4);
+                            (metric.includes("degree") || metric.includes("count") || groupTypes.includes(metric)) ? parseInt(d[metric]) :
+                                parseFloat(d[metric]).toFixed(4);
                         focus.append('text')
                             .attr('x', cx + 10)
                             .attr('y', cy + 10)
@@ -567,6 +761,8 @@
                     }
                     if (overhead.indexOf(metric) < 0) {
                         x += 1.2;
+                        metric = metric.includes("weight") || (!document.getElementById("toggleBidir").checked) ?
+                            metric : "node";
                         focus.append('text')
                             .attr('x', cx)
                             .attr('y', cy)
@@ -626,10 +822,14 @@
         )
         .
             style('fill-opacity', 0.7)
-                .style('fill', d => color(d.community)
-        )
-        .
-            style('stroke', "none");
+                .style('fill', function (d) {
+                        if (groupType == "SCC" && groupMap[d.id] != undefined)
+                            return color(parseInt(d.SCC));
+                        else
+                            return color(parseInt(d.community))
+                    }
+                )
+                .style('stroke', "none");
 
             label
                 .attr("x", d => d.x
@@ -640,8 +840,10 @@
         .
             style("font-size", "10px")
                 .style("fill", "#4393c3")
-                .text(function(d){return (groupMap === undefined || groupMap[d.id] === undefined)?
-                    d.screen_name:d.name;})
+                .text(function (d) {
+                    return (groupMap === undefined || groupMap[d.id] === undefined) ?
+                        d.screen_name : d.name;
+                })
             ;
 
             updateGroupPolygons();
@@ -675,11 +877,13 @@
     // .domain([{{minSize}},{{maxSize}}])
     // .range([1, 50]);
     function node_scale(d) {
-        return Math.max((Math.abs(d[size_metric] - avgSize)) / (maxSize - minSize) * sizeScaler, sizeScaler / 20);
+        var size = (d.size === undefined) ? d[size_metric] : d[size_metric] * (Math.min(d.size, 20.0));
+        return Math.max((Math.abs(size - avgSize)) / (maxSize - minSize) * sizeScaler, sizeScaler / 20);
     }
 
     function node_over(d) {
-        return Math.max((Math.abs(d[size_metric] - avgSize)) / (maxSize - minSize) * (sizeScaler * 1.8), sizeScaler * 2);
+        var size = (d.size === undefined) ? d[size_metric] : d[size_metric] * (Math.min(d.size, 20.0));
+        return Math.max((Math.abs(size - avgSize)) / (maxSize - minSize) * (sizeScaler * 1.8), sizeScaler * 2);
     }
 
     function dragstarted(d) {
@@ -761,15 +965,35 @@
         }
         else {
             var selected = node.filter(function (d, i) {
-                return (d.screen_name.includes(selectedVal) ||
-                    d.match_name.includes(selectedVal) ||
-                    d.name.includes(selectedVal));
+                if (d.screen_name !== undefined) {
+                    if (d.screen_name.includes(selectedVal))
+                        return true;
+                }
+                else if (d.match_name !== undefined) {
+                    if (d.match_name.includes(selectedVal))
+                        return true;
+                }
+                else if (d.name !== undefined) {
+                    if (d.name.includes(selectedVal))
+                        return true;
+                }
+                return false;
             });
 
             var nonselected = node.filter(function (d, i) {
-                return !(d.screen_name.includes(selectedVal) ||
-                    d.match_name.includes(selectedVal) ||
-                    d.name.includes(selectedVal));
+                if (d.screen_name !== undefined) {
+                    if (d.screen_name.includes(selectedVal))
+                        return false;
+                }
+                else if (d.match_name !== undefined) {
+                    if (d.match_name.includes(selectedVal))
+                        return false;
+                }
+                else if (d.name !== undefined) {
+                    if (d.name.includes(selectedVal))
+                        return false;
+                }
+                return true;
             });
             nonselected.style("opacity", "0.1");
             selected.style("opacity", 1.0);
@@ -916,12 +1140,25 @@
         }
     }
 
-    function countCommunities() {
-        communitiesSet = new Set([]);
+    function countCommunities(group, minSize=1) {
+        var groupSizes = {};
+        if (group.includes("community") && groupType.includes("community"))
+            communitiesSet = new Set([]);
         selectedNodes.forEach(function (node) {
-            communitiesSet.add(parseInt(node.community));
+            var id = node[group];
+            if (id !== undefined) {
+                groupSizes[id] = groupSizes[id] === undefined ? 0 : groupSizes[id];
+                groupSizes[id] += 1;
+                if (group.includes("community") && groupType.includes("community"))
+                    communitiesSet.add(id);
+            }
         });
-        return communitiesSet.size;
+        var count = 0;
+        for (var g in groupSizes) {
+            if ((groupSizes[g] >= minSize) || (group === groupType && (!collapseMap[g])))
+                count += 1;
+        }
+        return count;
 
     }
 
@@ -974,7 +1211,7 @@
 
     function filterBidirEdges() {
         if (document.getElementById("toggleBidir").checked) {
-            selectedLinks = selectedLinks.filter(function (l1) {
+            var bidirEdges = selectedLinks.filter(function (l1) {
                 for (var l2_ in selectedLinks) {
                     var l2 = selectedLinks[l2_];
                     {#console.log(l1.source, l2.source);#}
@@ -983,22 +1220,38 @@
                 }
                 return false;
             });
+            unidirEdges = selectedLinks.filter(function (l1) {
+                for (var l2_ in selectedLinks) {
+                    var l2 = selectedLinks[l2_];
+                    {#console.log(l1.source, l2.source);#}
+                    if ((getLinkEnd(l1.source) == getLinkEnd(l2.target)) && (getLinkEnd(l2.source) == getLinkEnd(l1.target)))
+                        return false;
+                }
+                return true;
+            });
+            selectedLinks = bidirEdges;
+        }
+        else if (unidirEdges !== undefined) {
+            unidirEdges.forEach(function (l) {
+                selectedLinks.push(l);
+            })
         }
     }
 
 
     function updateStatus() {
-        var comCount = countCommunities();
-
+        var comCount = countCommunities("community");
+        var sccCount = countCommunities("SCC", 2);
         d3.select("#num_nodes").text(selectedNodes.length.toString());
         d3.select("#num_edges").text(selectedLinks.length.toString());
         d3.select("#num_communities").text(comCount.toString());
+        d3.select("#num_SCCs").text(sccCount.toString());
     }
 
 
     function filterEdgelessNodes() {
         if (!document.getElementById("edgeLess").checked) {
-            selectedNodes = selectedNodes.filter(function (n) {
+            var edgedNodes = selectedNodes.filter(function (n) {
                 for (var l_ in selectedLinks) {
                     var l = selectedLinks[l_];
                     if ((getLinkEnd(l.source) == n.id) || (getLinkEnd(l.target) == n.id))
@@ -1006,6 +1259,22 @@
                 }
                 return false;
             });
+            edgelessNodes = selectedNodes.filter(function (n) {
+                for (var l_ in selectedLinks) {
+                    var l = selectedLinks[l_];
+                    if ((getLinkEnd(l.source) == n.id) || (getLinkEnd(l.target) == n.id))
+                        return false;
+                }
+                return true;
+            });
+
+            selectedNodes = edgedNodes;
+
+        }
+        else if (edgelessNodes != undefined) {
+            edgelessNodes.forEach(function (d) {
+                selectedNodes.push(d);
+            })
         }
     }
 
@@ -1038,6 +1307,13 @@
                 selectedNodes.push(groupMap[n]);
 
         }
+    }
+
+    function isSelected(id) {
+        var selected = selectedNodes.filter(function (d) {
+            return d.id == id;
+        });
+        return selected.length;
     }
 
     function filterNodes() {
@@ -1098,8 +1374,8 @@
                         isNaN(node[metric]) || metric.includes('SCC') || metric.includes('community'));
 
                     if (metric.includes('name')) {
-                        superNode[metric+'s'] = (superNode[metric+'s'] === undefined) ? "" : superNode[metric+'s'];
-                        superNode[metric+'s'] += node[metric] + ", ";
+                        superNode[metric + 's'] = (superNode[metric + 's'] === undefined) ? "" : superNode[metric + 's'];
+                        superNode[metric + 's'] += node[metric] + ", ";
                     }
                     else if (distributable) {
                         var v = node[metric].toString();
@@ -1192,10 +1468,10 @@
             .attr('class', 'path_placeholder')
             .append('path')
             .attr('stroke', function (d) {
-                return color(d);
+                return color(parseInt(groupMap[d][groupType]));
             })
             .attr('fill', function (d) {
-                return color(d);
+                return color(parseInt(groupMap[d][groupType]));
             })
             .attr('opacity', 0);
 
@@ -1211,7 +1487,7 @@
                 .on('drag', group_dragged)
                 .on('end', group_dragended)
             )
-            .on("mouseover", function(d){
+            .on("mouseover", function (d) {
                 d3.select(this).select('path').style("fill-opacity", 0.5).style('stroke-width', 3);
                 groupOver(groupMap[d]);
             })
@@ -1251,45 +1527,88 @@
         fillGroups();
     }
 
-    function getGroupLinks(superNode) {
-        var groupNodeIds = [];
+    function getGroupNodes(superNode) {
+        var groupNodes = [];
         for (var n in selectedNodes) {
             var node = selectedNodes[n];
             if (node[groupType] == superNode.id) {
-                groupNodeIds.push(node.id);
+                groupNodes.push(node.id);
             }
         }
-
-        var groupLinks = {};
-
-        for (var _ in selectedLinks) {
-            var l = selectedLinks[_];
-            var source, target;
-
-            source = groupNodeIds.includes(getLinkEnd(l.source)) ? superNode : l.source;
-            target = groupNodeIds.includes(getLinkEnd(l.target)) ? superNode : l.target;
-
-            if ((source == superNode || target == superNode) && source.id != target.id) { // they are not two connections in the same group
-                var key = source.id.toString() + "-" + target.id.toString();
-                if (groupLinks[key] === undefined) {
-                    var link = {};
-                    link['source'] = source;
-                    link['target'] = target;
-                    link['weight'] = 0;
-                    groupLinks[key] = link;
-                }
-                else
-                    groupLinks[key]['weight'] += 1;
-            }
-        }
-        return groupLinks;
+        return groupNodes;
     }
 
-    function updateGroupLinks(superNode, groupLinks) {
-        updateLinks();  // filterNodes is called from inside updateLinks, Adding the superNode of the bundled nodes
-        for (var key in groupLinks) {
-            selectedLinks.push(groupLinks[key]);
+    function updateAllGroupLinks() {
+        console.log("LOADING GROUP LINKS");
+        groupOutLinks = {};  // {community : [nodes connected FROM the community Community -> node]}
+        groupInLinks = {};  // {community : [nodes connecting TO the community node -> Community]}
+        selectedLinks.forEach(function (link) {
+            var source = link.source;
+            var sourceGroup = source[groupType];
+
+            var target = link.target;
+            var targetGroup = target[groupType];
+
+
+            if (groupMap != undefined && sourceGroup != targetGroup) {
+                groupOutLinks[sourceGroup] = groupOutLinks[sourceGroup] === undefined ? [] : groupOutLinks[sourceGroup];
+                groupOutLinks[sourceGroup].push(target);
+
+                groupInLinks[targetGroup] = groupInLinks[targetGroup] === undefined ? [] : groupInLinks[targetGroup];
+                groupInLinks[targetGroup].push(source);
+            }
+        })
+    }
+
+
+    function addLinks(inputLinks, isOut) {
+        for (var community in inputLinks) {
+            if (isSelected(community) < 1)
+                continue;
+            //console.log("LOOKING AT",community);
+            var outLinks = inputLinks[community];
+            var glinks = {};
+
+            for (var i in outLinks) {
+                var n = outLinks[i];
+
+                n = isSelected(n.id) ? n : groupMap[n[groupType]];  // Either a normal node or a bundled node
+
+                var key = document.getElementById("toggleBidir").checked ? [community, n.id].sort(
+                    function (a, b) {
+                        return b - a;
+                    }).toString() : [community.toString() + "," + n.id.toString()];
+
+                var newLink;
+                if (isOut)
+                    newLink = {"source": groupMap[community], "target": n, "weight": 0};
+                else
+                    newLink = {"source": n, "target": groupMap[community], "weight": 0};
+
+                glinks [key] = glinks [key] === undefined ? newLink : glinks [key];
+                glinks [key]["weight"] += 1;
+
+            }
+
+            for (var key in glinks) {
+                selectedLinks.push(glinks[key]);
+            }
+
+            /*for (var n in counter){
+                console.log(n, counter[n]);
+                var link = {"source":groupMap[community], "target":groupMap[n], "weight":counter[n]};
+                if(isSelected(community) && isSelected(n)) {
+                    console.log("PUSHING", link);
+                    selectedLinks.push(link);
+                }
+            }*/
         }
+    }
+
+    function AddGroupsLinks() {
+        updateLinks();  // filterNodes is called from inside updateLinks, Adding the superNode of the bundled nodes
+        addLinks(groupOutLinks, true);
+        addLinks(groupInLinks, false);
     }
 
     function groupOver(d) {
@@ -1301,26 +1620,26 @@
         var intMetrics = ["SCC", "community", "id"];
         for (var metric in d) {
             var metricName;
-            if (overhead.indexOf(metric) < 0 && !["fx","fy","x","y", "vx","vy", "index"].includes(metric)) {
+            if (overhead.indexOf(metric) < 0) {
                 p = document.createElement("p");
                 p.className = "hoverP";
 
                 var val = isNaN(d[metric]) ? d[metric] :
                     (metric.includes("degree") || metric.includes("count")) || metric.includes("size") || intMetrics.includes(metric) ?
                         parseInt(d[metric]) : parseFloat(d[metric]).toFixed(8);
-                if (metric.includes("names") || metric.includes('dist')){
+                if (metric.includes("names") || metric.includes('dist')) {
                     var p2 = document.createElement("p");
                     metricName = metric.includes("names") ? metric.slice(0, -1) : metric.slice(0, -5);
-                    metricName = "Largest "+metricName;
+                    metricName = "Largest " + metricName;
                     p2.textContent = metric + ": " + val;
                     document.getElementById("distInfo").appendChild(p2);
                     val = val.split(',')[0];
                     p.textContent = metricName + ": " + val;
                 }
-                else{
+                else {
 
-                    const numericMetricName = (["name", "size", "id", groupType].includes(metric)) ? metric:
-                                        isGroup? "avg_"+metric:metric;
+                    const numericMetricName = (["name", "size", "id", groupType].includes(metric)) ? metric :
+                        isGroup ? "avg_" + metric : metric;
                     p.textContent = numericMetricName + ": " + val;
                 }
                 document.getElementById("hoverInfo").appendChild(p);
@@ -1332,50 +1651,32 @@
     function bundleNodes(d, i) {
         /*
             Bundling steps:
-            1- Get the corresponding superNode (i.e. the node representing the (community or SCC) of that group)
-            2- Switch the collapse state of that group to false
-            3- Remove the groupId from the groupIds so to remove the path (or the hull around the nodes of that group)
-            4- Remove the group convex hull by updating paths with the updated groupIds
-            5- Remove the info box of the superNode which was activated by mouseover event
-            6- Get links between the superNode and other nodes in the network
-            7- Remove all nodes in bundled groups
-            8- Update network links to remove links between bundled sub-nodes and other nodes in the network
-            9- Add the bundled superNode to selectedNodes
-            9- Add links between the superNode and other nodes in the network
-            10- Filter the bidirectional links according to its checkbox
-            11- Filter edgeless nodes
+            - Get the corresponding superNode (i.e. the node representing the (community or SCC) of that group)
+            - Switch the collapse state of that group to false
+            - Remove the info box of the superNode which was activated by mouseover event
+            - Get links between the superNode and other nodes in the network
+            - Remove all nodes in bundled groups
+            - Update network links to remove links between bundled sub-nodes and other nodes in the network
+            - Add the bundled superNode to selectedNodes
+            - Add links between the superNode and other nodes in the network
+            - Filter the bidirectional links according to its checkbox
+            - Filter edgeless nodes
+            - Draw the network without the polygon of the clicked group
             * */
         // Creating the superNode
 
 
-        var superNode = groupMap[d];
-
         collapseMap[d] = collapseMap[d] ? false : true;  // toggle it
 
-        if (!collapseMap[d]) {  // currently not bundled, bundle it
-            //var index = groupIds.indexOf(d);
-            //groupIds.splice(index, 1);
-
+        if (!collapseMap[d])  // currently not bundled, bundle it
             d3.selectAll(".focus").remove();
 
-            var groupLinks = getGroupLinks(superNode);
 
-            {#updatePaths();#}
-            {#updateGroupPolygons();#}
+        AddGroupsLinks();  // updating links and adding superNode are inside this function
+        filterBidirEdges();
+        filterEdgelessNodes();
 
-            updateGroupLinks(superNode, groupLinks);  // updating links and adding superNode are inside this function
-
-            filterBidirEdges();
-            filterEdgelessNodes();
-
-
-        } else { // currently bundled, collapse it
-            //updateGroupIds();
-            {#updatePaths();#}
-            {#updateGroupPolygons();#}
-            updateLinks();  // filterNodes is called from inside updateLinks
-        }
-
+        //console.log(groupOutLinks);
         drawNetwork();
 
 
