@@ -27,6 +27,8 @@
         background-color: #4C7EB7;
         color: white;
         overflow-y: auto;
+        position: fixed;
+        z-index: 1;
     }
 
     html {
@@ -39,6 +41,8 @@
     }
 
     .btn {
+        position: relative;
+        z-index: 1;
         background-color: transparent;
         border: none;
         color: black;
@@ -69,6 +73,7 @@
     }
 
     th {
+        color: black;
         width: 100%;
         background-color: #8CB5E4;
     }
@@ -90,9 +95,19 @@
         top: 0;
         right: 0;
         height: 100%;
-        width: 95%;
-        z-index: 1;
+        width: 100%;
+        z-index: 0;
         transition: 0.4s;
+    }
+
+    #MainHover {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        right: 3%;
+        border: 1px solid black;
+        background-color: #aec7ef;
+        margin-right: 2%;
     }
 
 </style>
@@ -347,11 +362,12 @@
 <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
 
 <svg id="svg"></svg>
-
-<div id="hoverInfo" style="float: right;">
+<div id="MainHover">
+            <button class="btn" style="float: right" onclick="CloseInfo()"><i class="w3-xxxlarge fa fa-close"></i></button>
+<div id="hoverInfo">
 </div>
-
-<div id="distInfo" style="clear: both"></div>
+</div>
+<div id="distInfo" style="clear: both;"></div>
 </body>
 
 
@@ -362,15 +378,21 @@
     function Open() {
         document.getElementById("OpenSideBarButton").style.display = "none";
         document.getElementById("MainSideBar").style.width = "15%";
-        document.getElementById("svg").style.width = "85%";
+        document.getElementById("svg").style.width="85%";
         document.getElementById("MainSideBar").style.display = "block";
     }
 
     function Close() {
         document.getElementById("OpenSideBarButton").style.display = "block";
         document.getElementById("MainSideBar").style.width = "0%";
-        document.getElementById("svg").style.width = "95%";
         document.getElementById("MainSideBar").style.display = "none";
+        document.getElementById("svg").style.width="100%";
+
+    }
+    
+    function CloseInfo() {
+        document.getElementById("MainHover").style.display = "none";
+
     }
 
     function OpenSubMenu(SubMenu) {
@@ -1613,6 +1635,7 @@
 
     function groupOver(d) {
         document.getElementById("hoverInfo").innerHTML = '';
+
         document.getElementById("distInfo").innerHTML = '';
         d3.selectAll(".focus").remove();
         const isGroup = groupMap === undefined ? false : groupMap[d.id] !== undefined;
@@ -1645,6 +1668,7 @@
                 document.getElementById("hoverInfo").appendChild(p);
             }
         }
+        document.getElementById("MainHover").style.display = 'block';
 
     }
 
