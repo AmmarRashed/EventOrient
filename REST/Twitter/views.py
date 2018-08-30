@@ -311,11 +311,24 @@ def get_communities_count(data, group='community'):
     return len(set([i[group] for i in data['nodes']]))
 
 
+template_name = "twitter_connections.html"
+
+def twitter_connections_raw(request):
+    global template_name
+    template_name = "twitter_connections_raw.html"
+    return twitter_connections(request)
+
+
+def twitter_connections_reset(request):
+    global template_name
+    template_name = "twitter_connections.html"
+    return twitter_connections(request)
+
 def twitter_connections(request):
     global degree_threshold, filtered_twitter_connections, \
         btw_threshold, pagerank_threshold, closeness_threshold, \
         eigenvector_threshold, size_metric,size_metrics, recalculate_checked, foci_checked,\
-        dates, date_index, clust_threshold, bidir, recalculate_coms_checked
+        dates, date_index, clust_threshold, bidir, recalculate_coms_checked, template_name
 
     check = {"on":True, False:False}
     filtering = False
@@ -400,7 +413,7 @@ def twitter_connections(request):
     if avgs:
         context.update(avgs)
 
-    return render(request, "twitter_connections.html", context)
+    return render(request, template_name, context)
 
 
 @lru_cache(maxsize=None)
