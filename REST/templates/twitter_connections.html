@@ -661,6 +661,7 @@
 
         svg.selectAll("circle")
             .on("mouseover", function (d) {
+                var z = d3.zoomTransform(svg2.node()).k;
 
                 d3.select(this).style("r", node_over);
                 d3.select(this).style("fill-opacity", 0.9).style('stroke-width', 3);
@@ -671,8 +672,8 @@
                 const cy = d3.select(this).attr("cy");
 
                 focus.append('rect')
-                    .attr('height', 520)
-                    .attr('width', 850)
+                    .attr('height', 220/z)
+                    .attr('width', 550/z)
                     .attr("x", cx)
                     .attr("y", cy);
                 var x = 0.0;
@@ -692,11 +693,11 @@
                             (metric.includes("degree") || metric.includes("count") || groupTypes.includes(metric)) ? parseInt(d[metric]) :
                                 parseFloat(d[metric]).toFixed(4);
                         focus.append('text')
-                            .attr('x', cx + 10)
-                            .attr('y', cy + 10)
+                            .attr('x', cx + 5)
+                            .attr('y', cy + 5)
                             .attr('dy', x + 'em')
                             .attr('dx', '.5em')
-                            .style("font-size", 70)
+                            .style("font-size", 30/z)
                             .text(metric + ": " + val);
                     }
                 });
@@ -741,14 +742,15 @@
 
         svg.selectAll("line")
             .on("mouseover", function (d) {
+                var z = d3.zoomTransform(svg2.node()).k;
                 d3.select(this).style("stroke-width", link_over);
                 const focus = svg.append('g')
                     .attr('class', 'focus');
                 const cx = d3.mouse(this)[0];
                 const cy = d3.mouse(this)[1];
                 focus.append('rect')
-                    .attr('height', 180)
-                    .attr('width', 300)
+                    .attr('height', 180/z)
+                    .attr('width', 300/z)
                     .style("stroke-width", "0.05")
                     .attr("x", cx)
                     .attr("y", cy);
@@ -770,7 +772,7 @@
                             .attr('y', cy)
                             .attr('dy', x + 'em')
                             .attr('dx', '.5em')
-                            .style("font-size", 30)
+                            .style("font-size", 30/z)
                             .text(metric + ": " + s);
                     }
                 }
