@@ -143,7 +143,7 @@
             <tr>
                 <th>Node scale:</th>
                 <th><span id='nodeScaler'>100</span>
-                    <input type="range" min="1" max="500" value="100" step="10" style="width: 100%"
+                    <input type="range" min="1" max="1000" value="100" step="1" style="width: 100%"
                            oninput="sizeScaler= value; d3.select('#nodeScaler').text(sizeScaler); resetNodes()"></th>
             </tr>
 
@@ -261,7 +261,7 @@
                     <th>degree:</th>
                     <th><input type="text" id="text_degree" value="0" style="width: 100%"
                                name="text_degree"
-                               onchange="updateScroll(this.value, 'degree')">{{ avg_degree }}</th>
+                               onchange="updateScroll(this.value, 'degree'); _degree_threshold=this.value">{{ avg_degree }}</th>
 
                     <th>0<input id="degree"
                                 type="range" value="0" min="0" max="100" step="1"
@@ -279,7 +279,7 @@
                     <th>0.0<input id="betweenness"
                                   type="range" value="0" min="0.0" max="1.0" step="0.01"
                                   style="width: 100%"
-                                  onchange="updateText(this.value, 'text_betweenness')">1.0
+                                  onchange="updateText(this.value, 'text_betweenness'); _btw_threshold=this.value">1.0
                     </th>
                 </tr>
                 <tr>
@@ -291,7 +291,7 @@
                     <th>0.0<input id="pagerank"
                                   type="range" value="0" min="0.0" max="1.0" step="0.01"
                                   style="width: 100%"
-                                  onchange="updateText(this.value, 'text_pagerank')">1.0
+                                  onchange="updateText(this.value, 'text_pagerank'); _pagerank_threshold=this.value">1.0
                     </th>
                 </tr>
                 <tr>
@@ -359,7 +359,6 @@
 
 <script>
     var TabsOpen = [false, false, false, false, false];
-
     //Open side bar
     function Open() {
         document.getElementById("OpenSideBarButton").style.display = "none";
@@ -472,11 +471,10 @@
 
     {#drawNetwork(selectedDegree, is_directed);#}
     initNetwork();
-
     var fr = {};
 
     function initNetwork() {
-        d3.json("{% url 'Twitter:load_twitter_connections_json' %}", function (error, g) {
+        d3.json("{% url 'Twitter:load_twitter_connections_json' degree_threshold btw_threshold pagerank_threshold closeness_threshold eigenvector_threshold clust_threshold date_index recalculate_checked recalculate_coms_checked bidir foci_checked%}", function (error, g) {
             if (error) throw error;
 
             graph = g;
