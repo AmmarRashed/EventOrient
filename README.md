@@ -11,7 +11,7 @@
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/final_report.pdf">Report</a>
 - <a href="https://github.com/AmmarRashed/EventOrient/blob/master/docs/final_presentation.pdf">Slides</a>
 
-<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/ss2.png?raw=true" >
+<img src="https://github.com/AmmarRashed/EventOrient/blob/master/misc/pics/screenshot.png?raw=true" >
 
 ## Abstract
 
